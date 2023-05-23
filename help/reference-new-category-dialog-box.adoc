@@ -1,0 +1,74 @@
+---
+permalink: help/reference-new-category-dialog-box.html 
+sidebar: sidebar 
+keywords: new, category, dialog box, enable, create, workflow 
+summary: La finestra di dialogo Nuova categoria consente di creare una nuova categoria di flusso di lavoro. 
+---
+= Nuova categoria
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Nuova categoria consente di creare una nuova categoria di flusso di lavoro.
+
+* *Nome*
++
+Consente di immettere un nome per la categoria. Immettere un nome per salvare la categoria.
+
+* *Descrizione*
++
+Consente di immettere una descrizione per la categoria.
+
+* *Flussi di lavoro disponibili*
++
+Visualizza tutti i flussi di lavoro disponibili che non vengono spostati nella casella *flussi di lavoro selezionati*.
+
+* *Flussi di lavoro selezionati*
++
+Visualizza tutti i flussi di lavoro selezionati per la categoria.
+
+* *Categoria utilizzata per l'autorizzazione del flusso di lavoro*
++
+Consente di selezionare gli utenti con ruolo di operatore che possono eseguire la categoria. Per impostazione predefinita, la casella di controllo non è selezionata e la categoria è disponibile per tutti gli utenti.
+
+* *Limitare l'accesso ai flussi di lavoro di questa categoria ai seguenti utenti e gruppi Active Directory*
++
+Consente di limitare l'accesso ai flussi di lavoro della categoria selezionata agli utenti e ai gruppi Active Directory selezionati.
+
+* *Responsabili dell'approvazione e operatori disponibili*
++
+Visualizza tutti gli utenti con ruoli di responsabile dell'approvazione e operatore.
+
+* *Approvatori e operatori selezionati*
++
+Visualizza gli utenti autorizzati a eseguire la categoria.
+
+* *Gruppi di operatori e approvatori disponibili*
++
+Visualizza tutti i gruppi con ruoli di responsabile dell'approvazione e operatore.
+
+* *Gruppi di responsabili dell'approvazione e operatori selezionati*
++
+Visualizza i gruppi ai quali è consentito eseguire la categoria.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Pulsanti di selezione*
++
+Consente di spostare la voce selezionata da una casella all'altra.
+
+* *Salva*
++
+Salva la categoria e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Non salva la categoria e chiude la finestra di dialogo.
+
+

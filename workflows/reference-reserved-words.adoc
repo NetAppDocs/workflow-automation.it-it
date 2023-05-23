@@ -1,0 +1,95 @@
+---
+permalink: workflows/reference-reserved-words.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, reserved, words, must, attributes, parameters, variable names, user input, constants, return parameters 
+summary: 'OnCommand Workflow Automation (Wfa) include alcune parole riservate. Non è necessario utilizzare le parole riservate nei flussi di lavoro per attributi o parametri quali nomi di variabili, input dell"utente, costanti e parametri di ritorno.' 
+---
+= Parole riservate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (Wfa) include alcune parole riservate. Non è necessario utilizzare le parole riservate nei flussi di lavoro per attributi o parametri quali nomi di variabili, input dell'utente, costanti e parametri di ritorno.
+
+Di seguito viene riportato un elenco delle parole riservate in WFA:
+
+[cols="3*"]
+|===
+
+
+ a| 
+* e.
+* Array
+* asserire
+* Booleano
+* booleano
+* Byte
+* byte
+* car
+* Carattere
+* CharSequence
+* Classe
+* Classloader
+* Compilatore
+* contiene
+* convertable_to
+* def
+* fai
+* Doppio
+* doppio
+* altrimenti
+* vuoto
+* falso
+
+ a| 
+* Fluttuare
+* fluttuare
+* per
+* foreach
+* funzione
+* se
+* importa
+* import_static
+* poll
+* istanza di
+* int
+* Intero
+* è
+* isdef
+* Lungo
+* lungo
+* Matematica
+* novità
+* nullo
+* Numero
+* Oggetto
+* oppure
+
+ a| 
+* proto
+* tornare indietro
+* Runtime
+* SecurityManager
+* In breve
+* in breve
+* audio
+* StrictMath
+* Stringa
+* Stringbuffer
+* StringBuilder
+* strsim
+* switch
+* Sistema
+* Thread
+* ThreadLocal
+* vero
+* fino a.
+* var
+* Vuoto
+* mentre
+* con
+
+
+|===

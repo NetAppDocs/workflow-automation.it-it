@@ -1,0 +1,40 @@
+---
+permalink: workflows/task-create-a-finder.html 
+sidebar: sidebar 
+keywords: create, wfa, finder, search, resources, predefined, suitable, required 
+summary: È possibile creare un WFA Finder in grado di cercare le risorse se non esiste un WFA Finder predefinito adatto per la ricerca delle risorse richieste. 
+---
+= Crea un Finder
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un WFA Finder in grado di cercare le risorse se non esiste un WFA Finder predefinito adatto per la ricerca delle risorse richieste.
+
+.Di cosa hai bisogno
+È necessario aver creato i filtri necessari utilizzati nel Finder.
+
+.Fasi
+. Fare clic su *Workflow Design* > *Finders*.
+. Fare clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+. Nella scheda *Proprietà* della finestra di dialogo *nuovo Finder*, immettere o selezionare i dettagli richiesti nei campi *Nome*, *tipo* e *Descrizione*.
+. Nella scheda *filtri*, selezionare i filtri richiesti dall'elenco *filtri disponibili* e fare clic su image:../media/right_arrow_button.gif["Pulsante freccia destra"].
++
+È possibile aggiungere o rimuovere filtri in base alle proprie esigenze.
+
+. Nella scheda attributi restituiti, selezionare gli attributi richiesti per il filtro dall'elenco *Available* e fare clic su image:../media/right_arrow_button.gif["Pulsante freccia destra"].
+. *Opzionale:* fare clic su *Test* per verificare il Finder.
++
+.. Nella finestra di dialogo *Test Finder <FinderName>*, immettere i parametri di test richiesti.
+.. Deselezionare la casella di controllo *Usa i dati di prenotazione nel test* se non si desidera utilizzare i dati di prenotazione per il test del Finder.
+.. Fare clic su *Test*.
++
+Viene visualizzato il risultato del test.
+
+.. Chiudere la finestra di dialogo.
+
+
+. Fare clic su *Save* (Salva).
+

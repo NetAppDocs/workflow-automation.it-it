@@ -1,0 +1,38 @@
+---
+permalink: workflows/concept-what-conditional-execution-is.html 
+sidebar: sidebar 
+keywords: condition, execution, help, design, workflows, execute, commands, specified, meet 
+summary: 'L"esecuzione condizionale consente di progettare flussi di lavoro in grado di eseguire comandi quando vengono soddisfatte le condizioni specificate.' 
+---
+= Che cos'è l'esecuzione condizionale
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'esecuzione condizionale consente di progettare flussi di lavoro in grado di eseguire comandi quando vengono soddisfatte le condizioni specificate.
+
+L'esecuzione dei comandi in un flusso di lavoro può essere dinamica. È possibile specificare una condizione per l'esecuzione di ciascun comando o di una riga di comandi nel flusso di lavoro. Ad esempio, è possibile che il comando "`Add volume to dataset`" (Aggiungi volume al dataset) venga eseguito solo quando viene trovato un dataset specifico e non si desidera che il flusso di lavoro non abbia esito positivo se il dataset non viene trovato. In questo caso, è possibile attivare il comando "`Add volume to dataset`" (Aggiungi volume al dataset) per cercare un dataset specifico e, se non viene trovato, è possibile disattivare il comando nel flusso di lavoro.
+
+Le opzioni per l'esecuzione condizionale dei comandi sono disponibili in `Dictionary object` E la scheda Advanced (Avanzate) della finestra Parameters (parametri) per `commands` finestra di dialogo.
+
+È possibile interrompere un flusso di lavoro o disattivare un comando specifico nel flusso di lavoro. Inoltre, è possibile impostare l'esecuzione di un comando utilizzando una delle seguenti opzioni:
+
+* Senza alcuna condizione
+* Quando vengono trovate le variabili specificate
+* Quando le variabili specificate non vengono trovate
+* Quando l'espressione specificata è true
+
+
+È inoltre possibile impostare un comando per attendere un intervallo di tempo specifico.
+
+
+
+== Esempi di esecuzione condizionale in flussi di lavoro predefiniti
+
+È possibile aprire i dettagli dei comandi dei seguenti flussi di lavoro predefiniti nella finestra di progettazione per comprendere come viene utilizzata l'esecuzione condizionale dei comandi:
+
+* Creare un volume Clustered Data ONTAP di base
+* Creare un volume NFS Data ONTAP in cluster
+

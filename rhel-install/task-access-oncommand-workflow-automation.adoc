@@ -1,0 +1,33 @@
+---
+permalink: rhel-install/task-access-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: access, oncommand, workflow, automation 
+summary: 'È possibile accedere a OnCommand Workflow Automation (WFA) tramite un browser Web da qualsiasi sistema che abbia accesso al server WFA.' 
+---
+= Accedere a OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile accedere a OnCommand Workflow Automation (WFA) tramite un browser Web da qualsiasi sistema che abbia accesso al server WFA.
+
+È necessario aver installato Adobe Flash Player per il browser Web.
+
+.Fasi
+. Aprire un browser Web e immettere una delle seguenti informazioni nella barra degli indirizzi:
++
+** `+https://wfa_server_ip+`
++
+wfa_server_ip è l'indirizzo IP (indirizzo IPv4 o IPv6) o il nome di dominio completo (FQDN) del server WFA.
+
+** Se si accede a WFA sul server WFA: `+https://localhost/wfa+`Se è stata specificata una porta non predefinita per WFA, è necessario includere il numero della porta come segue:
+** `+https://wfa_server_ip:port+`
+** `+https://localhost:port+`Port (porta) è il numero della porta TCP utilizzato per il server WFA durante l'installazione.
+
+
+. Nella sezione Sign in (accesso), immettere le credenziali dell'utente amministratore immesse durante l'installazione.
+. Nel menu *Settings* > *Setup*, impostare le credenziali e un'origine dati.
+. Aggiungi ai preferiti l'interfaccia grafica Web WFA per un facile accesso.
+

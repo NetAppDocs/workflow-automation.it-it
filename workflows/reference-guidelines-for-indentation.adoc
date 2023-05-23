@@ -1,0 +1,64 @@
+---
+permalink: workflows/reference-guidelines-for-indentation.html 
+sidebar: sidebar 
+keywords: aware, guidelines, indentation, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 'È necessario conoscere le linee guida per il rientro durante la scrittura di uno script PowerShell o Perl per OnCommand Workflow Automation (Wfa).' 
+---
+= Linee guida per il rientro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario conoscere le linee guida per il rientro durante la scrittura di uno script PowerShell o Perl per OnCommand Workflow Automation (Wfa).
+
+[cols="2*"]
+|===
+| Linee guida | Esempio 
+
+
+ a| 
+Una scheda equivale a quattro spazi vuoti.
+ a| 
+
+
+
+ a| 
+Utilizzare le schede e le parentesi graffe per visualizzare l'inizio e la fine di un blocco.
+ a| 
+Script PowerShell
+
+[listing]
+----
+if
+($pair.length-ne 2)
+{
+throw "Got wrong input data"
+}
+----
+Script Perl
+
+[listing]
+----
+if
+(defined $MaxDirectorySize)
+{
+# convert from MBytes to Bytes
+my $MaxDirectorySizeBytes = $MaxDirectorySize *
+1024 * 1024;
+}
+----
+
+
+ a| 
+Aggiungere righe vuote tra set di operazioni o blocchi di codice.
+ a| 
+[listing]
+----
+$options=$option.trim();
+$pair=$option.split(" ");
+Get-WFAlogger -Info -messages $("split options: "+
+$Pair)
+----
+|===

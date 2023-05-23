@@ -1,0 +1,62 @@
+---
+permalink: help/reference-edit-category-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, category, dialog box, enable, workflow 
+summary: La finestra di dialogo Modifica categoria consente di modificare una categoria di flusso di lavoro. 
+---
+= Finestra di dialogo Edit Category (Modifica categoria)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Modifica categoria consente di modificare una categoria di flusso di lavoro.
+
+* *Nome*
++
+Consente di modificare il nome della categoria.
+
+* *Descrizione*
++
+Consente di modificare la descrizione della categoria.
+
+* *Flussi di lavoro disponibili*
++
+Visualizza tutti i flussi di lavoro disponibili che non vengono spostati nella casella flussi di lavoro selezionati.
+
+* *Flussi di lavoro selezionati*
++
+Visualizza tutti i flussi di lavoro selezionati per la categoria.
+
+* *Categoria utilizzata per l'autorizzazione del flusso di lavoro*
++
+Consente di concedere l'accesso agli utenti con ruolo di operatore per eseguire la categoria. La casella di controllo non è selezionata per impostazione predefinita.
+
+* *Operatori disponibili*
++
+Visualizza tutti gli utenti con ruolo operatore che non hanno accesso alla categoria.
+
+* *Operatori selezionati*
++
+Visualizza gli utenti ai quali è consentito l'accesso alla categoria.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Pulsanti di selezione*
++
+Sposta la voce selezionata da una casella all'altra.
+
+* *Salva*
++
+Salva la categoria e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Non salva la categoria e chiude la finestra di dialogo.
+
+

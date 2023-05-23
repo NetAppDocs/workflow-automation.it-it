@@ -1,0 +1,20 @@
+---
+permalink: windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database, cli 
+summary: 'Durante un disastro, durante il ripristino dei dati è possibile ripristinare il database OnCommand Workflow Automation (Wfa) e le configurazioni supportate di cui è stato eseguito il backup in precedenza utilizzando l"interfaccia a riga di comando (CLI). Le configurazioni supportate includono accesso ai dati, timeout HTTP e certificati SSL.' 
+---
+= Ripristino del database WFA utilizzando la CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durante un disastro, durante il ripristino dei dati è possibile ripristinare il database OnCommand Workflow Automation (Wfa) e le configurazioni supportate di cui è stato eseguito il backup in precedenza utilizzando l'interfaccia a riga di comando (CLI). Le configurazioni supportate includono accesso ai dati, timeout HTTP e certificati SSL.
+
+Di seguito sono riportati i due tipi di ripristino:
+
+* Ripristino completo
+* Ripristino regolare
+

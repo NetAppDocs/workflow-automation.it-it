@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-creating-building-blocks-for-workflows.html 
+sidebar: sidebar 
+keywords: workflow, automation, include, several, building, blocks, use, construct, workflow, create, require 
+summary: 'L"automazione del workflow (WFA) include diversi building block, che vengono utilizzati per costruire i flussi di lavoro. È possibile creare i blocchi WFA Buildings necessari per i flussi di lavoro.' 
+---
+= Creazione di blocchi di base per i flussi di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'automazione del workflow (WFA) include diversi building block, che vengono utilizzati per costruire i flussi di lavoro. È possibile creare i blocchi WFA Buildings necessari per i flussi di lavoro.

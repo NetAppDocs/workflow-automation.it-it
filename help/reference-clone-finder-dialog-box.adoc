@@ -1,0 +1,117 @@
+---
+permalink: help/reference-clone-finder-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, finder, dialog box, enable, create, copy, finder, edit 
+summary: La finestra di dialogo Clone Finder consente di creare una copia del Finder e di modificare il Finder clonato. 
+---
+= Finestra di dialogo Clone Finder
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Clone Finder consente di creare una copia del Finder e di modificare il Finder clonato.
+
+* Scheda Proprietà
+* Filtri
+* Scheda attributi restituiti
+
+
+
+
+== Scheda Proprietà
+
+La scheda Proprietà consente di modificare il nome del Finder, il tipo di oggetto e la descrizione del Finder. La scheda visualizza anche i parametri di input del filtro utilizzato nel Finder.
+
+* *Nome*
++
+Consente di modificare il nome del Finder. Il nome del Finder selezionato per la clonazione viene utilizzato come nome per il clone e aggiunto con `- copy` per impostazione predefinita.
+
+* *Tipo*
++
+Consente di selezionare il tipo di oggetto dall'elenco. I filtri per l'oggetto selezionato vengono visualizzati nella scheda filtri.
+
+* *Versione entità*
++
+Consente di inserire il numero di versione del Finder in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Descrizione*
++
+Consente di modificare la descrizione del Finder.
+
+* *Tabella Input Parameters*
++
+Visualizza i parametri di input dei filtri selezionati.
+
+
+
+
+
+== Scheda Filters (filtri)
+
+Consente di selezionare i filtri richiesti dall'elenco di filtri disponibili.
+
+* *Filtri disponibili*
++
+Visualizza l'elenco dei filtri disponibili per l'oggetto selezionato nella scheda Proprietà.
+
+* *Filtri selezionati*
++
+Visualizza l'elenco dei filtri selezionati dai filtri disponibili.
+
+* *Pulsanti di selezione*
++
+Consente di spostare la voce selezionata da una casella all'altra.
+
+
+
+
+
+== Scheda attributi restituiti
+
+Consente di visualizzare i dettagli dei filtri disponibili, selezionare gli attributi richiesti dei filtri disponibili e specificare il criterio di ordinamento degli attributi.
+
+* *Disponibile*
++
+Visualizza i filtri disponibili e gli attributi per i filtri.
+
+* *Selezionato*
++
+Visualizza i filtri selezionati e gli attributi, gli alias e l'ordinamento dei filtri selezionati.
+
+* *Pulsanti di comando*
++
+** *Su*
++
+Sposta la voce selezionata in alto di una riga nella tabella selezionata.
+
+** *Giù*
++
+Sposta la voce selezionata in basso di una riga nella tabella selezionata.
+
+** *Pulsanti di selezione*
++
+Sposta la voce selezionata da una tabella all'altra.
+
+
+
+
+
+
+
+== Pulsanti di comando
+
+* *Test*
++
+Consente di testare il Finder selezionato per la clonazione.
+
+* *Salva*
++
+Salva il Finder e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

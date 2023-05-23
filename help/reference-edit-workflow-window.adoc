@@ -1,0 +1,273 @@
+---
+permalink: help/reference-edit-workflow-window.html 
+sidebar: sidebar 
+keywords: workflow, window, display, select, associated, commands, parameters, blue boxes, columns, arranged, sequential, order, execution, left, right, variables, objects, gray boxes 
+summary: 'La finestra Workflow <workflow name> (flusso di lavoro) visualizza il flusso di lavoro selezionato e i relativi comandi e parametri. I comandi associati al flusso di lavoro vengono visualizzati sotto forma di caselle blu in colonne disposte in ordine sequenziale di esecuzione, da sinistra a destra. Le variabili e gli oggetti di ciascun comando vengono visualizzati sotto il comando sotto forma di caselle grigie.' 
+---
+= Finestra Workflow <workflow name>
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Workflow <workflow name> (flusso di lavoro) visualizza il flusso di lavoro selezionato e i relativi comandi e parametri. I comandi associati al flusso di lavoro vengono visualizzati sotto forma di caselle blu in colonne disposte in ordine sequenziale di esecuzione, da sinistra a destra. Le variabili e gli oggetti di ciascun comando vengono visualizzati sotto il comando sotto forma di caselle grigie.
+
+
+
+== Scheda workflow
+
+La scheda Workflow consente di selezionare e utilizzare i comandi e i flussi di lavoro secondari e personalizzare il nome visualizzato.
+
+* *Fasi disponibili*
++
+Fornisce un elenco dei flussi di lavoro secondari e dei comandi disponibili che è possibile aggiungere al flusso di lavoro.
+
++
+È possibile cercare i comandi o i flussi di lavoro secondari utilizzando il nome, lo schema e la versione minima del software come stringhe di ricerca nella casella di testo.
+
++
+È possibile personalizzare la visualizzazione del flusso di lavoro riordinando l'ordine dei comandi. Per riorganizzare i comandi, è possibile trascinare i comandi nell'ordine desiderato. Facendo doppio clic su un comando, il comando viene spostato alla fine dell'elenco. È possibile modificare il nome visualizzato facendo doppio clic sul nome visualizzato del comando nella casella blu. Per eliminare un comando, spostare il cursore sulla casella blu e fare clic su "`X`" nell'angolo in alto a destra.
+
++
+È possibile fare clic sul numero di riga per eseguire diverse funzioni sulla riga.
+
++
+** *Inserire una riga*
++
+Inserisce una nuova riga sopra o sotto la riga selezionata nel flusso di lavoro.
+
+** *Copia riga*
++
+Copia la riga selezionata dal flusso di lavoro e la salva negli Appunti. I dettagli di ripetizione impostati per la riga vengono copiati quando viene copiata una riga.
+
+** *Ripeti riga*
++
+Apre la finestra di dialogo Row Repetition Details (Dettagli ripetizione riga), che consente di specificare il tipo di ripetizione.
+
+** *Aggiungi condizione*
++
+Apre la finestra di dialogo Condition for Row <row number> (condizione per la riga), che consente di selezionare una condizione. La condizione selezionata è applicabile a tutti i comandi della riga. Tutti i comandi nella riga verranno eseguiti solo se la condizione selezionata viene soddisfatta.
+
+** *Rimuovi riga*
++
+Elimina la riga selezionata dal flusso di lavoro.
+
+
+
+* *Incolla riga*
++
+Incolla la riga copiata sopra o sotto la riga selezionata. Questa opzione è disponibile dopo aver selezionato la funzione Copia riga.
+
+
+
+
+
+== Scheda Dettagli
+
+La scheda Dettagli consente di fornire informazioni generali sul flusso di lavoro.
+
+* *Nome del flusso di lavoro*
++
+Consente di specificare il nome del flusso di lavoro utilizzando una stringa alfanumerica.
+
+* *Versione entità*
++
+Consente di immettere un numero di versione per il flusso di lavoro in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Categorie*
++
+Visualizza la categoria associata al flusso di lavoro. È possibile assegnare un flusso di lavoro a una categoria dalla finestra Categoria.
+
+* *Descrizione del flusso di lavoro*
++
+Consente di immettere una descrizione del flusso di lavoro. Fare clic nel campo per aprire la finestra di dialogo Modifica descrizione.
+
+* *Pronto per la produzione*
++
+Consente di contrassegnare il flusso di lavoro come pronto per la produzione, consentendo l'esecuzione e l'elenco del flusso di lavoro nella finestra dei flussi di lavoro.
+
+* *Considera elementi riservati*
++
+Consente di utilizzare la funzione di prenotazione per il flusso di lavoro, quando le risorse selezionate sono disponibili per il flusso di lavoro fino al periodo di scadenza della prenotazione configurato. La funzione di prenotazione consente di escludere le risorse riservate da altri flussi di lavoro durante la selezione delle risorse.
+
++
+
+NOTE: Non selezionare questa casella di controllo se si desidera che i filtri ricerchi solo il contenuto della cache persistente senza considerare le prenotazioni impostate da altri flussi di lavoro.
+
+* *Attiva la convalida dell'esistenza dell'elemento*
++
+Consente di convalidare l'esistenza di elementi ed evitare il malfunzionamento di determinate azioni durante l'esecuzione dei flussi di lavoro. Ad esempio, è possibile evitare di creare un nuovo volume in un array con lo stesso nome di un volume esistente.
+
+* *Versioni minime del software*
++
+Specifica le versioni minime del software necessarie per eseguire il flusso di lavoro. Ad esempio, il software può essere Clustered Data ONTAP 8.2.0 e vCenter 6.0. Le versioni vengono visualizzate come valori separati da virgole.
+
+
+
+
+
+== Scheda User Inputs
+
+La scheda User Inputs (input utente) consente di visualizzare e modificare gli attributi di input utente creati quando si definiscono gli oggetti del flusso di lavoro e si creano input utente. I valori per gli attributi di input dell'utente vengono riempiti quando si visualizza in anteprima o si esegue il flusso di lavoro.
+
+È possibile fare doppio clic sull'input utente che si desidera modificare e aprire la finestra di dialogo Modifica variabile: <user_input>, che consente di modificare l'input dell'utente.
+
+È possibile personalizzare la visualizzazione della tabella riordinando l'ordine delle colonne. Per riorganizzare le colonne, è possibile trascinarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+
+* *Nome*
++
+Visualizza il nome dell'attributo di input dell'utente.
+
+* *Nome visualizzato*
++
+Visualizza il nome visualizzato dall'utente del flusso di lavoro.
+
+* *Tipo*
++
+Visualizza il tipo di input dell'utente, ad esempio stringa, query, booleano, tabella, o password.
+
+* *Valori*
++
+Visualizza i valori consentiti per l'input dell'utente, ad esempio l'intervallo per i numeri e l'espressione regolare per le stringhe.
+
+* *Valore predefinito*
++
+Visualizza il valore predefinito dell'input dell'utente.
+
+* *Dipendenza input*
++
+Visualizza un altro input dell'utente dall'elenco che fornisce un valore all'input dell'utente selezionato.
+
+* *Gruppo*
++
+Visualizza il nome del gruppo per gli attributi di input dell'utente.
+
+* *Obbligatorio*
++
+Visualizza lo stato dell'input dell'utente. Se la casella di controllo viene visualizzata come selezionata, gli attributi di input dell'utente sono obbligatori per l'esecuzione del flusso di lavoro.
+
+* *Pulsanti di comando*
++
+** *Su*
++
+Sposta la voce selezionata in alto di una riga della tabella.
+
+** *Giù*
++
+Sposta la voce selezionata in basso di una riga della tabella.
+
+
+
+
+
+
+
+== Scheda Constants (costanti)
+
+La scheda Constants (costanti) consente di definire il valore delle costanti che possono essere utilizzate più volte nel flusso di lavoro. È possibile specificare quanto segue come valore delle costanti:
+
+* Numeri
+* Stringhe
+* Espressioni MVEL
+* Funzioni
+* Input dell'utente
+* Variabili
+
+
+È possibile personalizzare la visualizzazione della tabella ordinando ciascuna colonna e riordinando l'ordine delle colonne.
+
+* *Nome*
++
+Visualizza il nome della costante.
+
+* *Descrizione*
++
+Consente di specificare una descrizione per la costante.
+
+* *Valore*
++
+Consente di specificare un valore per la costante.
+
+* *Pulsanti di comando*
++
+** *Aggiungi*
++
+Aggiunge una nuova riga nella tabella Constants.
+
+** *Rimuovi*
++
+Elimina la riga selezionata dalla tabella delle costanti.
+
+
+
++
+È anche possibile fare clic con il pulsante destro del mouse sulle costanti per utilizzare la funzionalità di copia e incolla.
+
+
+
+
+
+== Scheda parametri di ritorno
+
+La scheda parametri di ritorno consente di definire e fornire una descrizione dei parametri di ritorno per il flusso di lavoro che possono essere visualizzati dalla finestra Monitoring (monitoraggio) o dai servizi Web.
+
+* *Valore del parametro*
++
+Consente di specificare il valore del parametro.
+
+* *Nome parametro*
++
+Consente di specificare il nome del parametro.
+
+* *Descrizione*
++
+Consente di specificare una descrizione per il parametro selezionato.
+
+* *Pulsanti di comando*
++
+** *Aggiungi riga*
++
+Aggiunge una nuova riga nella tabella parametri di ritorno.
+
+** *Rimuovi riga*
++
+Elimina la riga selezionata dalla tabella parametri di ritorno.
+
+
+
+
+
+
+
+== Scheda contenuto della Guida
+
+La scheda contenuto della Guida consente di aggiungere, visualizzare e rimuovere il contenuto della Guida per il flusso di lavoro. Il contenuto della Guida del workflow fornisce informazioni sul flusso di lavoro per gli operatori dello storage.
+
+
+
+== Scheda Advanced (Avanzate)
+
+La scheda Advanced (Avanzate) consente di configurare un percorso URI personalizzato per l'esecuzione del flusso di lavoro tramite chiamate API. Ogni segmento nel percorso URI può essere una stringa o un nome valido dell'input utente del flusso di lavoro tra parentesi.
+
+Ad esempio, /devops/{ProjectName}/clone. Il flusso di lavoro può essere richiamato come chiamata a _https:_//WFA-Server:HTTPS_PORT/REST/devops/Project1/clone/jobs.
+
+
+
+== Pulsanti di comando
+
+I pulsanti di comando sono disponibili nella parte inferiore della finestra del flusso di lavoro. È possibile accedere ai comandi anche dal menu di scelta rapida nella finestra.
+
+* *Anteprima*
++
+Apre la finestra di dialogo Anteprima del flusso di lavoro, che consente di specificare gli attributi di input dell'utente.
+
+* *Salva con nome*
++
+Consente di salvare il flusso di lavoro con un nuovo nome.
+
+* *Salva*
++
+Salva le impostazioni di configurazione.
+
+

@@ -1,0 +1,52 @@
+---
+permalink: help/concept-overview-of-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, software, solution, help, automate, storage, management, tasks, provision, migration, decommissioning, data, protection, configuration, cloning, complete, specified, process 
+summary: 'OnCommand Workflow Automation (Wfa) è una soluzione software che consente di automatizzare le attività di gestione dello storage, come provisioning, migrazione, disattivazione, configurazioni per la protezione dei dati, e clonando lo storage. È possibile utilizzare WFA per creare flussi di lavoro per completare le attività specificate dai processi.' 
+---
+= Panoramica di OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (Wfa) è una soluzione software che consente di automatizzare le attività di gestione dello storage, come provisioning, migrazione, disattivazione, configurazioni per la protezione dei dati, e clonando lo storage. È possibile utilizzare WFA per creare flussi di lavoro per completare le attività specificate dai processi.
+
+Un flusso di lavoro è un'attività ripetitiva e procedurale che consiste in fasi sequenziali, tra cui i seguenti tipi di attività:
+
+* Provisioning, migrazione o disattivazione dello storage per database o file system
+* Configurazione di un nuovo ambiente di virtualizzazione, inclusi switch storage e datastore
+* Configurazione dello storage per un'applicazione come parte di un processo di orchestrazione end-to-end
+
+
+Gli architetti dello storage possono definire i flussi di lavoro per seguire le Best practice e soddisfare i requisiti organizzativi, come ad esempio:
+
+* Utilizzando le convenzioni di denominazione richieste
+* Impostazione di opzioni univoche per gli oggetti di storage
+* Selezione delle risorse
+* Integrazione del database di gestione della configurazione interna (CMDB) e delle applicazioni di ticketing
+
+
+
+
+== Funzionalità DI WFA
+
+* Portale per la progettazione del workflow per creare flussi di lavoro
++
+Il portale per la progettazione del workflow include diversi elementi di base, come comandi, modelli, finder, filtri, e funzioni, utilizzate per creare flussi di lavoro. La finestra di progettazione consente di includere funzionalità avanzate per i flussi di lavoro, ad esempio selezione automatica delle risorse, ripetizione delle righe (loop) e punti di approvazione.
+
++
+Il portale per la progettazione del workflow include anche building block, come voci del dizionario, query della cache e tipi di origine dati, per il caching dei dati da sistemi esterni.
+
+* Portale di esecuzione per l'esecuzione dei flussi di lavoro, la verifica dello stato di esecuzione del flusso di lavoro e i log di accesso
+* Opzione Administration/Settings (Amministrazione/Impostazioni) per attività come la configurazione di WFA, la connessione alle origini dati e la configurazione delle credenziali utente
+* Interfacce di servizi Web per richiamare flussi di lavoro da portali esterni e software di orchestrazione del data center
+* Storage Automation Store per scaricare i pacchetti WFA
+
+
+
+
+== Informazioni sulla licenza WFA
+
+Non è richiesta alcuna licenza per l'utilizzo del server OnCommand Workflow Automation.

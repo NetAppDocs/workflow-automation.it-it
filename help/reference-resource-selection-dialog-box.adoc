@@ -1,0 +1,109 @@
+---
+permalink: help/reference-resource-selection-dialog-box.html 
+sidebar: sidebar 
+keywords: resource, selection, dialog box, enable, search, map, command 
+summary: 'La finestra di dialogo Resource Selection (selezione risorse) consente di cercare le risorse e di associarle a un comando.' 
+---
+= Finestra di dialogo Resource Selection (selezione risorsa)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Resource Selection (selezione risorse) consente di cercare le risorse e di associarle a un comando.
+
+* Selezionare la scheda <dictionary object> by (Seleziona per)
+* Scheda Advanced (Avanzate)
+
+
+
+
+== Selezionare la scheda <dictionary object> by (Seleziona per)
+
+Questa scheda consente di specificare uno o più filtri come criteri di ricerca e di immettere gli attributi per i criteri di ricerca selezionati. È inoltre possibile salvare i filtri selezionati come Finder.
+
+* *Definire le regole di filtro*
++
+Consente di definire un set di regole per le risorse di immissione del dizionario, ad esempio unità vFiler, aggregati e macchine virtuali.
+
++
+Le regole di filtro possono contenere uno o più gruppi di regole.
+
++
+Una regola è costituita da un attributo di voce del dizionario, un operatore e un valore. L'attributo può anche includere gli attributi dei relativi riferimenti. Ad esempio, puoi specificare una regola per gli aggregati come segue: Elenca tutti gli aggregati con nome che inizia con la stringa "`aggr`" e hanno una dimensione disponibile maggiore di 5 GB. La prima regola del gruppo è l'attributo "`name`", con l'operatore "`starts-with`" e il valore "`aggr`". La seconda regola per lo stesso gruppo è l'attributo "`available_size_mb`", con l'operatore "`>`" e il valore "`5000`".
+
++
+L'opzione *Definisci regole filtro* è disattivata se è stato selezionato un Finder.
+
++
+È possibile cancellare i valori specificati facendo clic sul pulsante *Reset*.
+
+* *Selezionare una risorsa in base alle proprie chiavi naturali*
++
+Consente di selezionare una risorsa in base alle chiavi naturali della risorsa.
+
+* *Finder*
++
+Consente di selezionare un Finder dall'elenco. *Nessuno* è selezionato per impostazione predefinita.
+
++
+I filtri vengono visualizzati sotto l'elenco di ricerca. Non è possibile selezionare i filtri se è stato selezionato un Finder.
+
+* *Parametri*
++
+Consente di immettere i valori per il Finder o i filtri selezionati. Per completare i criteri di ricerca, è necessario immettere tutti i valori richiesti.
+
+* *Pulsanti di comando*
++
+** *Salva come Finder*
++
+Salva i filtri selezionati come Finder.
+
+** *Test*
++
+Consente di verificare i parametri per i filtri selezionati prima di specificare i valori nell'area Parameters (parametri).
+
+** *OK*
++
+Salva le impostazioni di configurazione e chiude la finestra di dialogo.
+
+** *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+
+
+
+
+
+
+== Scheda Advanced (Avanzate)
+
+Questa scheda consente di specificare quando eseguire la ricerca e di ordinare gli attributi delle risorse e lo stato degli attributi delle risorse.
+
+* *Eseguire sempre questa ricerca*
++
+Esegue la ricerca senza alcuna restrizione quando viene eseguito il comando.
+
+* *Eseguire la ricerca solo quando l'espressione seguente restituisce TRUE*
++
+Esegue la ricerca solo quando il valore dell'attributo opzionale specificato nella casella è "`true`". È possibile utilizzare la sintassi MVFLEX Expression Language (MVEL) per specificare l'attributo facoltativo.
+
+* *Tabella di ordinamento*
++
+Visualizza gli attributi e l'ordinamento dei filtri selezionati nella scheda *Select <dictionary object> by* (Seleziona filtri per). Il criterio di ordinamento è significativo per la selezione delle risorse, ad esempio se si seleziona decrescente come criterio di ordinamento per gli aggregati, l'aggregato con massimo `available_space` è selezionato come risorsa. Per modificare l'ordinamento di un attributo, fare clic sulla colonna di stato dell'attributo e selezionare l'ordinamento desiderato dall'elenco.
+
+* *Pulsanti di comando*
++
+** *Su*
++
+Sposta la voce selezionata in alto di una riga nella tabella di ordinamento.
+
+** *Giù*
++
+Sposta la voce selezionata in basso di una riga nella tabella di ordinamento.
+
+
+
+

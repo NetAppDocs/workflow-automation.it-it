@@ -1,0 +1,47 @@
+---
+permalink: windows-install/task-upgrade-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: upgrade, oncommand, workflow, automation 
+summary: 'Se è stata installata una versione precedente di OnCommand Workflow Automation (Wfa), è possibile eseguire l"aggiornamento alla versione più recente di Wfa per utilizzare le nuove funzionalità e i miglioramenti.' 
+---
+= Aggiornare OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se è stata installata una versione precedente di OnCommand Workflow Automation (Wfa), è possibile eseguire l'aggiornamento alla versione più recente di Wfa per utilizzare le nuove funzionalità e i miglioramenti.
+
+* È possibile eseguire l'aggiornamento a WFA 5.1 solo da WFA 5.0 o 4.2.
++
+Se si utilizza WFA 4.1 o versioni precedenti di WFA, è necessario prima eseguire l'aggiornamento a WFA 5.0 o 4.2, quindi eseguire l'aggiornamento a WFA 5.1.
+
+* È possibile ripristinare un backup eseguito su WFA 5.0 o 4.2 su WFA 5.1. Un backup del database WFA può essere ripristinato solo su un sistema che esegue la stessa versione o una versione successiva di WFA.
++
+Ad esempio, se è stato creato un backup su un sistema che esegue WFA 4.2, il backup può essere ripristinato solo sui sistemi che eseguono WFA 4.2 o versioni successive.
+
+* Non è possibile installare MySQL da solo quando si esegue l'aggiornamento da versioni precedenti a WFA 4.2.
++
+Tuttavia, puoi installare MySQL da solo:
+
++
+** Durante una nuova installazione di WFA 4.2 e versioni successive oppure
+** Quando si esegue l'aggiornamento da WFA 4.2 a versioni successive di WFA.
++
+... Eseguire il backup del database WFA utilizzando una delle seguenti opzioni:
+
+
+** Portale Web DI WFA
+** Script PowerShell se si desidera ripristinare la stessa versione di WFA, è possibile utilizzare il backup creato per ripristinare il database WFA.
++
+... Disinstallare la versione esistente di WFA.
+... Installare la versione più recente di WFA.
+... Ripristinare il database WFA.
+
+
+
+
+
+
+È possibile esaminare il contenuto ripristinato per verificare la completezza delle funzionalità, ad esempio, è possibile controllare il funzionamento dei flussi di lavoro personalizzati.

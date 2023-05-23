@@ -1,0 +1,161 @@
+---
+permalink: help/reference-commands-window.html 
+sidebar: sidebar 
+keywords: commands, window, display, available, alphabetical order, access, select, workflow, design 
+summary: 'La finestra dei comandi visualizza i comandi disponibili in ordine alfabetico. Per accedere a questa finestra, selezionare Workflow Design Commands (comandi di progettazione flusso di lavoro).' 
+---
+= Finestra dei comandi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra dei comandi visualizza i comandi disponibili in ordine alfabetico. Per accedere a questa finestra, selezionare *Workflow Design* > *Commands*.
+
+
+NOTE: A seconda del ruolo e dei privilegi dell'account, questa finestra potrebbe non essere visualizzata.
+
+Un comando viene definito come un'azione intrapresa come parte di un flusso di lavoro.
+
+* Tabella dei comandi
+* Barra degli strumenti
+
+
+
+
+== Tabella dei comandi
+
+La tabella dei comandi elenca i comandi disponibili.
+
+È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella dei comandi contiene le seguenti colonne:
+
+* *Certificazione*
++
+Indica se il comando è stato creato dall'utente (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), community (image:../media/community_certification.gif[""]), bloccato dall'utente (image:../media/lock_icon_wfa.gif[""]), o con certificazione NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Nome*
++
+Visualizza il nome del comando.
+
+* *Schema*
++
+Visualizza lo schema associato ai comandi. Uno schema rappresenta il modello di dati per un sistema. Ad esempio, uno schema vc contiene dati rilevanti per l'ambiente virtuale, come macchine virtuali, host e datastore.
+
+* *Versione entità*
++
+Visualizza il numero di versione dell'oggetto in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Descrizione*
++
+Visualizza la descrizione del comando.
+
++
+È possibile cercare i comandi immettendo la descrizione nella casella di testo del filtro *Cerca*.
+
+* *Compatibilità del sistema operativo*
++
+Indica se il comando è compatibile con il sistema operativo host.
+
+* *Ultimo aggiornamento in data*
++
+Visualizza la data e l'ora dell'ultimo aggiornamento del comando.
+
+* *Aggiornato da*
++
+Visualizza l'utente che ha aggiornato il comando.
+
+* *Bloccato da*
++
+Visualizza l'utente che ha bloccato il comando.
+
++
+È possibile cercare i comandi immettendo il nome utente nella casella di testo del filtro *Cerca*.
+
+* *Lingua dei comandi*
++
+Visualizza il linguaggio di programmazione in cui è scritto il comando (Perl o PowerShell).
+
+* *Min. Versioni software*
++
+Specifica le versioni minime del software necessarie per eseguire il flusso di lavoro. Ad esempio, il software può essere Clustered Data ONTAP 8.2.0 e vCenter 6.0. Le versioni vengono visualizzate come valori separati da virgole.
+
+* *Parametri obbligatori*
++
+Visualizza i parametri selezionati come obbligatori per il comando.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/new_wfa_icon.gif["Nuova icona"] (Novità)*
++
+Apre la finestra New Command Definition, che consente di creare un comando.
+
+* *image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] (Modifica)*
++
+Apre la finestra Edit Command Definition (Modifica definizione comando) per il comando selezionato, che consente di modificare il comando. È inoltre possibile fare doppio clic sul comando per aprire la finestra Modifica definizione comando.
+
+* *image:../media/clone_wfa_icon.gif["Icona Clona"] (Clone)*
++
+Apre la finestra Edit Command Definition <command_name> - copy, che consente di creare un clone o una copia del comando selezionato.
+
+* *image:../media/lock_wfa_icon.gif["Icona a forma di lucchetto"] (Blocco)*
++
+Apre la finestra di dialogo di conferma del comando di blocco, che consente di bloccare il comando selezionato. Questa opzione è abilitata solo per i comandi creati.
+
+* *image:../media/unlock_wfa_icon.gif["Icona di sblocco"] (Sblocca)*
++
+Apre la finestra di dialogo di conferma del comando di sblocco, che consente di sbloccare il comando selezionato. Questa opzione è abilitata solo per i comandi bloccati dall'utente. Tuttavia, gli amministratori possono sbloccare i comandi bloccati da altri utenti.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo di conferma del comando Elimina, che consente di eliminare il comando creato dall'utente selezionato.
+
++
+
+NOTE: Non è possibile eliminare un comando WFA o PS.
+
+* *image:../media/export_wfa_icon.gif["Icona Export (Esporta)"] (Esportazione)*
++
+Consente di esportare il comando creato dall'utente selezionato.
+
++
+
+NOTE: Non è possibile esportare un comando WFA o PS.
+
+* *image:../media/test_wfa_icon.gif["icona di test"] (Test)*
++
+Apre la finestra di dialogo verifica comando <CommandName> in <ScriptLanguage>, che consente di verificare il comando selezionato.
+
+* *image:../media/add_to_pack.png["icona add to pack (aggiungi al pacchetto)"] (Aggiungi al pacchetto)*
++
+Apre la finestra di dialogo Aggiungi al comando Pack, che consente di aggiungere il comando e le relative entità affidabili a un pacchetto, modificabile.
+
++
+
+NOTE: La funzione Add to Pack (Aggiungi al pacchetto) è attivata solo per i comandi per i quali la certificazione è impostata su *None.*
+
+* *image:../media/remove_from_pack.png["icona remove from pack (rimuovi dalla confezione)"] (Remove from Pack)*
++
+Apre la finestra di dialogo Remove from Pack Command relativa al comando selezionato, che consente di eliminare o rimuovere il comando dal pacchetto.
+
++
+
+NOTE: La funzione Remove from Pack (Rimuovi dal pacchetto) è abilitata solo per i comandi per i quali la certificazione è impostata su *None.*
+
+

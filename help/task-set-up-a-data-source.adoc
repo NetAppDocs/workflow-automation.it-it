@@ -1,0 +1,113 @@
+---
+permalink: help/task-set-up-a-data-source.html 
+sidebar: sidebar 
+keywords: set up, connection, data, source, oncommand, source, workflow, autumation, acquire 
+summary: 'Per acquisire i dati dall"origine dati, è necessario impostare una connessione con un"origine dati in OnCommand Workflow Automation (Wfa).' 
+---
+= Impostare un'origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per acquisire i dati dall'origine dati, è necessario impostare una connessione con un'origine dati in OnCommand Workflow Automation (Wfa).
+
+*Cosa ti serve*
+
+* Per Active IQ Unified Manager6.0 e versioni successive, è necessario aver creato un account utente del database sul server Unified Manager.
++
+Per ulteriori informazioni, consultare la _Guida in linea di Unified Manager OnCommand_.
+
+* La porta TCP per le connessioni in entrata sul server Unified Manager deve essere aperta.
++
+Per ulteriori informazioni, consultare la documentazione sul firewall.
+
++
+Di seguito sono riportati i numeri di porta TCP predefiniti:
+
++
+[cols="3*"]
+|===
+| Numero della porta TCP | Versione del server Unified Manager | Descrizione 
+
+
+ a| 
+3306
+ a| 
+6.x
+ a| 
+Server di database MySQL
+
+|===
+* Per Performance Advisor, è necessario aver creato un account utente Active IQ Unified Manager con un ruolo minimo di GlobalRead.
++
+Per ulteriori informazioni, consultare la _Guida in linea di Unified Manager OnCommand_.
+
+* La porta TCP per le connessioni in entrata su VMware vCenter Server deve essere aperta.
++
+Il numero di porta TCP predefinito è 443. Per ulteriori informazioni, consultare la documentazione sul firewall.
+
+
+
+*A proposito di questa attività*
+
+Questa procedura consente di aggiungere più origini dati del server Unified Manager a WFA. Tuttavia, non è necessario utilizzare questa procedura se si desidera associare Unified Manager Server 6.3 e versioni successive a WFA e utilizzare la funzionalità di protezione nel server Unified Manager.
+
+Per ulteriori informazioni sull'associazione di WFA con Unified Manager Server 6.x, consultare la _Guida in linea di Unified Manager OnCommand_.
+
+
+NOTE: Durante la configurazione di un'origine dati con WFA, è necessario tenere presente che i tipi di origine dati Active IQ Unified Manager 6.0, 6.1 e 6.2 sono deprecati nella release WFA 4.0 e che questi tipi di origine dati non saranno supportati nelle versioni future.
+
+.Fasi
+. Accedere a WFA utilizzando un browser Web.
+. Fare clic su *Impostazioni* e sotto *Setup* fare clic su *origini dati*.
+. Scegliere l'azione appropriata:
++
+[cols="2*"]
+|===
+| Per... | Eseguire questa operazione... 
+
+
+ a| 
+Creare una nuova origine dati
+ a| 
+Fare clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+
+
+
+ a| 
+Modificare un'origine dati ripristinata se si è aggiornato Wfa
+ a| 
+Selezionare la voce dell'origine dati esistente e fare clic su image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] sulla barra degli strumenti.
+
+|===
++
+Se è stata aggiunta un'origine dati del server Unified Manager a WFA e successivamente è stata aggiornata la versione del server Unified Manager, WFA non riconosce la versione aggiornata del server Unified Manager. È necessario eliminare la versione precedente del server Unified Manager e aggiungere la versione aggiornata del server Unified Manager a WFA.
+
+. Nella finestra di dialogo *Nuova origine dati*, selezionare il tipo di origine dati richiesto e immettere un nome per l'origine dati e il nome host.
++
+In base al tipo di origine dati selezionato, i campi porta, nome utente, password e timeout potrebbero essere popolati automaticamente con i dati predefiniti, se disponibili. È possibile modificare queste voci in base alle esigenze.
+
+. Scegliere un'azione appropriata:
++
+[cols="2*"]
+|===
+| Per... | Eseguire questa operazione... 
+
+
+ a| 
+Active IQ Unified Manager 6.3 e versioni successive
+ a| 
+Inserire le credenziali dell'account Database User creato sul server Unified Manager. Per ulteriori informazioni sulla creazione di un account utente per database, consultare la _Guida in linea di Unified Manager OnCommand_.
+
+[NOTE]
+====
+Non è necessario fornire le credenziali di un account utente database Active IQ Unified Manager creato utilizzando l'interfaccia della riga di comando o lo strumento ocsetup.
+
+====
+|===
+. Fare clic su *Save* (Salva).
+. *Opzionale:* nella tabella origini dati, selezionare l'origine dati e fare clic su image:../media/acquire_now_wfa_icon.gif["Icona Acquire Now (Acquisisci ora)"] sulla barra degli strumenti.
+. Verificare lo stato del processo di acquisizione dei dati.
+

@@ -1,0 +1,188 @@
+---
+permalink: rhel-install/task-install-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, linux 
+summary: 'È possibile installare OnCommand Workflow Automation (Wfa) utilizzando l"interfaccia della riga di comando (CLI).' 
+---
+= Installare OnCommand Workflow Automation su Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile installare OnCommand Workflow Automation (Wfa) utilizzando l'interfaccia della riga di comando (CLI).
+
+* È necessario aver esaminato i prerequisiti di installazione.
++
+xref:reference-prerequisites-for-installing-workflow-automation.adoc[Prerequisiti per l'installazione]
+
+* È necessario aver scaricato il programma di installazione WFA dal sito del supporto NetApp.
+
+
+Se si installa WFA su una macchina virtuale (VM), il nome della macchina virtuale non deve includere il carattere di sottolineatura (_).
+
+È possibile modificare il percorso di installazione predefinito al prompt della shell: `./WFA-version_number.bin [-i WFA_install_directory] [-d mysql_data_directory]`
+
+Se si modifica il percorso di installazione predefinito, la directory dei dati MySQL non viene eliminata quando si disinstalla WFA. È necessario eliminare manualmente la directory.
+
+
+NOTE: Prima di reinstallare WFA 4.2 o versioni successive, è necessario eliminare la directory dei dati MySQL se MySQL è stato disinstallato.
+
+.Fasi
+. Accedere al server Linux come `root` utente.
+. Accedere alla directory in cui si trova il file .bin eseguibile.
+. Installare WFA scegliendo uno dei seguenti metodi:
++
+** Installazione interattiva
++
+... Avviare la sessione interattiva: `./WFA-version_number.bin`
+... Immettere le credenziali per l'utente amministratore predefinito, quindi premere Invio.
++
+Annotare le credenziali dell'utente amministratore e assicurarsi che la password soddisfi i seguenti criteri:
+
++
+**** Minimo otto caratteri
+**** Un carattere maiuscolo
+**** Un carattere minuscolo
+**** Un numero
+**** Un carattere speciale
+**** I seguenti caratteri speciali non sono supportati in una password e causano un errore di installazione:
++
+`" ; < > , = & {caret} |
+
+
+
+... Accettare le porte predefinite per la configurazione WFA o fornire porte personalizzate, quindi premere Invio.
+... Specificare il nome della società e del sito, quindi premere Invio.
++
+Il nome del sito può includere la posizione dell'installazione WFA, ad esempio Pittsburgh, PA.
+
+... Verificare che WFA sia installato correttamente scegliendo una delle seguenti azioni:
++
+**** Accedere a WFA tramite un browser Web.
+**** Verificare che il servizio NetApp WFA Server e il servizio NetApp WFA Database siano in esecuzione:
++
+....
+service wfa-server status
+service wfa-db status
+....
+
+
+
+
+** Installazione invisibile all'utente
++
+Al prompt della shell:
+
++
+`./WFA-version_number.bin [-u admin_user_ name] [-p admin_user_password] [-m https_port] [-n http_port] [-c company_name] [-s site_name] [-i install_directory] [-d mysql_data_directory][-y] [-b]`
+
++
+Se si desidera eseguire un'installazione automatica, è necessario specificare i valori per tutte le opzioni dei comandi. Le opzioni dei comandi sono le seguenti:
+
++
+[cols="2*"]
+|===
+| Opzione | Descrizione 
+
+
+ a| 
+-y
+ a| 
+L'opzione per saltare salta la conferma dell'installazione
+
+
+
+ a| 
+-b
+ a| 
+Opzione per saltare i salti durante la creazione di un backup del database WFA durante un aggiornamento
+
+
+
+ a| 
+-u
+ a| 
+Nome utente amministratore
+
+
+
+ a| 
+-p
+ a| 
+Admin user password la password admin user deve soddisfare i seguenti criteri:
+
+*** Minimo otto caratteri
+*** Un carattere maiuscolo
+*** Un carattere minuscolo
+*** Un numero
+*** Un carattere speciale
+*** I seguenti caratteri non sono consentiti e causano un errore nell'immissione della password:
++
+`" ; < > , = & {caret} |
+
+
+
+
+
+ a| 
+-m
+ a| 
+Porta HTTPS
+
+
+
+ a| 
+-n
+ a| 
+Porta HTTP
+
+
+
+ a| 
+ a| 
+
+
+
+ a| 
+-s
+ a| 
+Nome del sito
+
+
+
+ a| 
+-c
+ a| 
+Nome della società
+
+
+
+ a| 
+-i
+ a| 
+Percorso della directory di installazione
+
+
+
+ a| 
+-d
+ a| 
+Directory dei dati MySQL
+
+
+
+ a| 
+-h
+ a| 
+L'opzione da visualizzare consente di visualizzare la Guida
+
+|===
+
+
+
+
+*Informazioni correlate*
+
+https://mysupport.netapp.com/site/["Supporto NetApp"^]

@@ -1,0 +1,27 @@
+---
+permalink: windows-install/task-configure-the-timeout-value-for-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, timeout value 
+summary: 'È possibile configurare il valore di timeout per la GUI Web di automazione del flusso di lavoro (WFA), invece di utilizzare il valore di timeout predefinito.' 
+---
+= Configurare il valore di timeout per Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare il valore di timeout per la GUI Web di automazione del flusso di lavoro (WFA), invece di utilizzare il valore di timeout predefinito.
+
+Il valore di timeout predefinito per la GUI Web WFA è 180 minuti. È possibile configurare il valore di timeout per soddisfare i requisiti tramite CLI. Non è possibile impostare il valore di timeout dalla GUI Web WFA.
+
+
+NOTE: Il valore di timeout impostato è un timeout assoluto anziché un timeout correlato all'inattività. Ad esempio, se si imposta questo valore su 30 minuti, si viene disconnessi dopo 30 minuti, anche se si è attivi al termine di questo intervallo di tempo.
+
+.Fasi
+. Accedere come amministratore sul computer host WFA.
+. Impostare il valore di timeout:
++
+`installdir bin/wfa -S=timeout value in minutes`
+
+

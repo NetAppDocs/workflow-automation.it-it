@@ -1,0 +1,58 @@
+---
+permalink: rhel-install/task-configure-vcs-to-install-wfa.html 
+sidebar: sidebar 
+keywords: configure, vcs, install, oncommand, workflow, automation 
+summary: 'Prima di installare OnCommand Workflow Automation (Wfa) in Veritas Cluster Server (VCS), è necessario assicurarsi che i nodi del cluster siano configurati correttamente per supportare Wfa.' 
+---
+= Configurare VCS per installare OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di installare OnCommand Workflow Automation (Wfa) in Veritas Cluster Server (VCS), è necessario assicurarsi che i nodi del cluster siano configurati correttamente per supportare Wfa.
+
+* VCS deve essere installato su entrambi i nodi del cluster in base alle istruzioni contenute nella _Guida all'installazione di Veritas Cluster Server 6.1.1_.
+* Per ricevere notifiche sugli eventi del cluster, il software VCS deve essere configurato per SNMP e SMTP in base alle istruzioni contenute nella _Veritas Cluster Server Administrator's Guide_.
+* Tutti i requisiti e le linee guida per la configurazione dei server cluster devono essere soddisfatti in base alla documentazione VCS.
+* SnapDrive per UNIX deve essere installato se si desidera creare LUN utilizzando SnapDrive per UNIX.
+* Entrambi i nodi del cluster devono eseguire una versione supportata del sistema operativo.
++
+I sistemi operativi minimi supportati sono Red Hat Enterprise Linux 7.0 e VCS 6.1.1.
+
+* La stessa versione di WFA deve essere installata utilizzando lo stesso percorso su entrambi i nodi del cluster.
+* Il server WFA deve essere collegato al sistema storage tramite Fibre Channel (FC) o iSCSI.
+* La latenza deve essere minima tra il server WFA e il sistema storage.
+* Il collegamento FC deve essere attivo e le LUN create devono essere accessibili a entrambi i nodi del cluster.
+* È necessario impostare almeno due interfacce di rete su ciascun sistema: Una per la comunicazione nodo-nodo e l'altra per la comunicazione nodo-client.
+* Il nome dell'interfaccia di rete utilizzata per la comunicazione nodo-client deve essere lo stesso su entrambi i sistemi.
+* È necessario stabilire un collegamento heartbeat separato tra i nodi del cluster; in caso contrario, l'interfaccia di rete viene utilizzata per comunicare tra i nodi del cluster.
+* Per ottenere una disponibilità elevata, è necessario creare una posizione condivisa.
++
+È possibile utilizzare SnapDrive per UNIX per creare la posizione condivisa.
+
++
+È inoltre possibile gestire le LUN utilizzando SnapDrive o l'interfaccia della riga di comando del sistema di storage. Per ulteriori informazioni, consultare la matrice di compatibilità di SnapDrive per UNIX.
+
+
+
+.Fasi
+. Verificare che VCS sia installato correttamente: `hastatus –summary`
++
+Entrambi i nodi devono essere in linea e il servizio VCS deve essere in esecuzione su entrambi i nodi.
+
+. Verificare che i LUN siano accessibili a entrambi i nodi utilizzando una delle seguenti opzioni:
++
+** Gestire le LUN in modo nativo.
+** USA SnapDrive per UNIX:
++
+... Installare SnapDrive per UNIX su entrambi i nodi.
+... Configurare SnapDrive per UNIX su entrambi i nodi.
+... Dal primo nodo, eseguire `snapdrive storage create` Per creare un LUN.
+... Verificare che il LUN creato sul primo nodo sia visibile sul secondo nodo eseguendo il `snapdrive storage show –all` comando.
+
+
+
+
+

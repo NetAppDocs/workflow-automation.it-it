@@ -1,0 +1,33 @@
+---
+permalink: rhel-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database 
+summary: 'È possibile ripristinare il database di OnCommand Workflow Automation (Wfa) di cui è stato eseguito il backup in precedenza.' 
+---
+= Ripristinare il database WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile ripristinare il database di OnCommand Workflow Automation (Wfa) di cui è stato eseguito il backup in precedenza.
+
+* È necessario aver creato un backup del database WFA.
+* È necessario disporre delle credenziali di amministratore o architetto.
+* Il ripristino di un database WFA cancella il database corrente.
+* È possibile ripristinare un backup del database WFA solo su un sistema che esegue la stessa versione o una versione successiva di OnCommand Workflow Automation.
++
+Ad esempio, se è stato creato un backup su un sistema che esegue OnCommand Workflow Automation 4.2, il backup può essere ripristinato solo sui sistemi che eseguono OnCommand Workflow Automation 4.2 o versioni successive.
+
+
+
+.Fasi
+. Accedere alla GUI Web di WFA come amministratore.
+. Fare clic su *Impostazioni* e sotto *manutenzione*, fare clic su *Backup e ripristino*.
+. Fare clic su *Scegli file*.
+. Nella finestra di dialogo visualizzata, selezionare il file di backup WFA e fare clic su *Apri*.
+. Fare clic su *Restore* (Ripristina).
+
+
+È possibile esaminare il contenuto ripristinato per verificare la completezza delle funzionalità, ad esempio il funzionamento dei flussi di lavoro personalizzati.

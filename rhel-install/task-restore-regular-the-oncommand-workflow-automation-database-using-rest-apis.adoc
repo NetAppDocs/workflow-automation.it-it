@@ -1,0 +1,36 @@
+---
+permalink: rhel-install/task-restore-regular-the-oncommand-workflow-automation-database-using-rest-apis.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, regular, wfa, database, rest apis 
+summary: 'È possibile eseguire un ripristino regolare del database OnCommand Workflow Automation (WFA) utilizzando le API REST. In un ripristino regolare, è possibile ripristinare solo il database WFA.' 
+---
+= Ripristinare (regolarmente) il database WFA utilizzando API REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire un ripristino regolare del database OnCommand Workflow Automation (WFA) utilizzando le API REST. In un ripristino regolare, è possibile ripristinare solo il database WFA.
+
+* È necessario aver creato un backup .zip del database WFA.
+* È necessario disporre delle credenziali di amministratore o architetto.
+* Se si sta ripristinando il database come parte della procedura di migrazione, è necessario eseguire un ripristino completo.
+
+
+.Fasi
+. Inserire il seguente URL nel browser del client REST: `+https://IP address of WFA server/rest/backups+`
+. Nella finestra Backup, selezionare il metodo *POST*.
+. Nell'elenco a discesa *Part* (parte), selezionare *Multipart Body* (corpo multiparte).
+. Nel campo *file*, immettere le seguenti informazioni:
++
+.. Nell'elenco a discesa *tipo di contenuto*, selezionare *multi-part/form-data*.
+.. Nell'elenco a discesa *charset*, selezionare *ISO-8859-1*.
+.. Nel campo **Nome file**, immettere il nome del file di backup come backupFile.
+.. Fare clic su *Sfoglia*.
+.. Selezionare la posizione del file di backup .zip.
+
+
+. Accedere alla directory /opt/netapp/wfa/bin e riavviare i servizi WFA.
+. Verificare che l'operazione di ripristino sia riuscita e che WFA sia accessibile.
+

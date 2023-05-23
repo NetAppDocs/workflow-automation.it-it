@@ -1,0 +1,50 @@
+---
+permalink: workflows/task-remove-entities-from-a-pack.html 
+sidebar: sidebar 
+keywords: remove, pack, entities, oncommand, workflow, automation, check, updated, source, control, management, server 
+summary: 'È possibile rimuovere un pacchetto dalle entità in OnCommand Workflow Automation (Wfa) e fare il check in del pacchetto aggiornato nel server di gestione del controllo del codice sorgente (SCM).' 
+---
+= Rimuovere i pacchetti di workflow WFA dalle entità
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile rimuovere un pacchetto dalle entità in OnCommand Workflow Automation (Wfa) e fare il check in del pacchetto aggiornato nel server di gestione del controllo del codice sorgente (SCM).
+
+.Di cosa hai bisogno
+È necessario configurare SCM e disporre delle credenziali di amministratore o architetto.
+
+.A proposito di questa attività
+È possibile rimuovere un pacchetto dalle seguenti entità:
+
+* Workflow
+* I finder
+* Filtri
+* Comandi
+* Funzioni
+* Modelli
+* Schemi
+* Dizionario
+* Tipi di origini dati
+* Tipi di sistema remoto
+* Query della cache
+* Categorie
+
+
+.Fasi
+. Accedere alla finestra *WFA* tramite un browser Web.
+. Nel portale di progettazione del flusso di lavoro, accedere all'entità che si desidera rimuovere e fare clic su *<Entity>*.
+. Fare clic sull'icona *Remove from Pack* (Rimuovi dal pacchetto).
+. Nella finestra di dialogo *Rimuovi da Pack <Entity>*, selezionare il pacchetto che si desidera eliminare dall'entità.
+. Fare clic su *OK*.
+. Fare clic sulla scheda *Pack*.
+. Fare clic sull'icona *Export to Server* (Esporta sul server).
+. Nella finestra di dialogo *Export to Server Folder* (Esporta in cartella server), nel campo *Folder location at server system* (percorso cartella nel sistema server), immettere la posizione della cartella del server in cui il pacchetto viene salvato nel server.
++
+In questo modo il pacchetto viene esportato in forma esplosa nel file system in cui viene creato il client SCM.
+
+. Nella posizione del client SCM, eseguire il check-in del contenuto del pacchetto nel server SCM.
+. Utilizzare gli strumenti diff forniti da SCM per verificare le modifiche rispetto alla versione SCM del pacchetto.
+

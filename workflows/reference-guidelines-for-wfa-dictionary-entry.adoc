@@ -1,0 +1,117 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-dictionary-entry.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, dictionary, entries, oncommand, workflow, automation 
+summary: 'È necessario conoscere le linee guida per la creazione di voci dizionario in OnCommand Workflow Automation (WFA).' 
+---
+= Linee guida per le voci del dizionario WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario conoscere le linee guida per la creazione di voci dizionario in OnCommand Workflow Automation (WFA).
+
+[cols="2*"]
+|===
+| Linee guida | Esempio 
+
+
+ a| 
+I nomi delle voci del dizionario devono contenere solo caratteri alfanumerici e caratteri di sottolineatura.
+ a| 
+Licenza_cluster
+
+Switch_23
+
+
+
+ a| 
+I nomi delle voci del dizionario devono iniziare con un carattere maiuscolo. Inizia ogni parola del nome con un carattere maiuscolo e separa ogni parola con un carattere di sottolineatura (_).
+ a| 
+Volume
+
+Array_License
+
+
+
+ a| 
+I nomi degli attributi delle voci del dizionario non devono includere il nome della voce del dizionario.
+ a| 
+Nessuno
+
+
+
+ a| 
+Gli attributi e i riferimenti in una voce del dizionario devono essere in caratteri minuscoli.
+ a| 
+aggregato, size_mb
+
+
+
+ a| 
+Separare le parole con un carattere di sottolineatura. Gli spazi non sono consentiti.
+ a| 
+pool_risorse
+
+
+
+ a| 
+Le voci del dizionario non possono includere riferimenti provenienti da uno schema diverso. Quando una voce del dizionario richiede un riferimento incrociato a un oggetto in uno schema diverso, assicurarsi che tutte le chiavi naturali dell'oggetto a cui si fa riferimento siano presenti nella voce del dizionario.
+ a| 
+La voce del dizionario Array_Performance richiede tutte le chiavi naturali della voce del dizionario Array come attributi diretti.
+
+
+
+ a| 
+Utilizzare i tipi di dati appropriati per gli attributi.
+ a| 
+Nessuno
+
+
+
+ a| 
+Utilizzare il tipo di dati Long per gli attributi relativi alla dimensione o allo spazio.
+ a| 
+Size_mb e available_size_mb nella voce storage.Volume dictionary
+
+
+
+ a| 
+Utilizzare Enum quando un attributo ha un set di valori fisso.
+ a| 
+raid_type in storage.Volume dictionary entry
+
+
+
+ a| 
+Impostare "`da memorizzare nella cache`" come true per un attributo o un riferimento quando un'origine dati fornisce un valore per tale attributo o riferimento.per l'origine dati Active IQ Unified Manager, aggiungere attributi memorizzabili nella cache se l'origine dati è in grado di fornirlo.
+ a| 
+Nessuno
+
+
+
+ a| 
+Impostare "`CAN be null`" come true se l'origine dati che fornisce il valore per questo attributo o riferimento può restituire NULL.
+ a| 
+Nessuno
+
+
+
+ a| 
+Fornire una descrizione significativa di ciascun attributo e riferimento.la descrizione viene visualizzata nei dettagli del comando durante la progettazione di un flusso di lavoro.
+ a| 
+Nessuno
+
+
+
+ a| 
+Non utilizzare "`id`" come nome di un attributo nelle voci del dizionario.è riservato all'utilizzo interno di WFA.
+ a| 
+Nessuno
+
+|===
+*Informazioni correlate*
+
+xref:reference-references-to-learning-material.adoc[Riferimenti al materiale di apprendimento]

@@ -1,0 +1,237 @@
+---
+permalink: help/reference-execution-status-window.html 
+sidebar: sidebar 
+keywords: execution, window, display, status, process, workflow, submitted, enable, view, details, process, control, access, select 
+summary: 'La finestra delle esecuzioni visualizza lo stato del processo di esecuzione per ogni flusso di lavoro inoltrato per l"esecuzione. La finestra consente di visualizzare i dettagli del processo di esecuzione e controllare l"esecuzione di un flusso di lavoro. Per accedere a questa finestra, selezionare Execution > Execution (esecuzione > esecuzioni).' 
+---
+= Finestra delle esecuzioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra delle esecuzioni visualizza lo stato del processo di esecuzione per ogni flusso di lavoro inoltrato per l'esecuzione. La finestra consente di visualizzare i dettagli del processo di esecuzione e controllare l'esecuzione di un flusso di lavoro. Per accedere a questa finestra, selezionare *esecuzione* > *esecuzioni*.
+
+* Tabella del flusso di lavoro
+* Barra degli strumenti
+
+
+
+
+== Tabella del flusso di lavoro
+
+La tabella Workflow elenca i flussi di lavoro inviati per l'esecuzione. È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella seguente descrive gli operatori supportati per le colonne alfabetiche e numeriche nella tabella Workflow, disponibile nella casella di testo del filtro *Search*.
+
+[cols="2*"]
+|===
+| Alfabetico | Numerico 
+
+
+ a| 
+* Contiene
+* Non contiene
+* Inizia con
+* Termina con
+* Uguale a
+* Non uguale
+* Resettare
+
+ a| 
+* Uguale a
+* Non uguale
+* Inferiore a.
+* Maggiore di
+* Minore o uguale a.
+* Maggiore o uguale a.
+* Tra
+* Resettare
+
+
+|===
+La tabella Workflow contiene le seguenti colonne:
+
+* *N. commessa*
++
+Visualizza il numero di identificazione del lavoro.
+
++
+Il numero di identificazione del lavoro è univoco e viene assegnato dal server all'avvio del lavoro.
+
+* *Nome*
++
+Visualizza il nome del flusso di lavoro.
+
+* *Ora di inizio*
++
+Visualizza la data e l'ora in cui è stato avviato il flusso di lavoro.
+
++
+Fare clic sull'icona del calendario nella casella di testo Search filter (filtro di ricerca) per cercare i flussi di lavoro con una data di inizio specifica.
+
+* *Ora di fine*
++
+Visualizza la data e l'ora in cui il flusso di lavoro è terminato.
+
++
+Fare clic sull'icona del calendario nella casella di testo Search filter (filtro di ricerca) per cercare i flussi di lavoro con una data di fine specifica.
+
+* *Stato*
++
+Visualizza lo stato di esecuzione del lavoro. Lo stato può essere uno dei seguenti:
+
++
+** Non riuscito
++
+Indica che il flusso di lavoro non è riuscito durante l'esecuzione. In base al tempo trascorso dall'esecuzione del flusso di lavoro, è possibile riprendere il flusso di lavoro dal comando non riuscito.
+
+** In esecuzione
++
+Indica che il flusso di lavoro è in esecuzione. Il flusso di lavoro esegue il piano creato nella fase di pianificazione, che precede qualsiasi altra esecuzione.
+
+** Riuscito
++
+Indica che il flusso di lavoro è stato eseguito correttamente.
+
+** Annullato
++
+Indica che il flusso di lavoro è stato annullato da un utente.
+
+** In attesa di approvazione
++
+Indica che un punto di approvazione fa parte del flusso di lavoro. Il flusso di lavoro rimane in questo stato fino a quando l'utente specificato non approva l'esecuzione del flusso di lavoro.
+
+** Pianificato
++
+Indica che la pianificazione del flusso di lavoro è completa e che il flusso di lavoro è pianificato per l'esecuzione.
+
+** Interruzione
++
+Indica che il flusso di lavoro è stato interrotto. Un flusso di lavoro interrotto non continua con l'esecuzione; qualsiasi parte del flusso di lavoro precedentemente completata rimane completata.
+
+** Obsoleto
++
+Indica che il flusso di lavoro pianificato non è stato eseguito entro il tempo specificato in base alla pianificazione.
+
+** Pianificazione
++
+Indica la risoluzione della progettazione del workflow, l'ubicazione di tutte le risorse, la verifica della fattibilità del progetto e la formulazione del piano di esecuzione. La pianificazione può essere un'azione autonoma, parte della verifica del progetto o parte dell'esecuzione, perché ogni esecuzione inizia con una nuova pianificazione.
+
+** In sospeso
++
+Indica che il flusso di lavoro si trova nella coda di pianificazione. Si tratta di uno stato interno. Il flusso di lavoro viene recuperato per la pianificazione da questo stato.
+
+** Parzialmente riuscito
++
+Indica che, sebbene il flusso di lavoro sia stato eseguito correttamente, vi sono uno o più passaggi non riusciti. L'esecuzione viene completata perché i passaggi non riusciti sono stati configurati in modo che l'esecuzione del flusso di lavoro continui anche quando il passaggio non è riuscito.
+
+
+
+* *Completato*
++
+Visualizza il numero di operazioni completate del numero totale di operazioni per il flusso di lavoro selezionato.
+
+* *Inviato da*
++
+Visualizza il nome utente dell'utente che ha inviato il flusso di lavoro.
+
+* *Inviato a*
++
+Visualizza la data e l'ora in cui il flusso di lavoro è stato inviato.
+
++
+Fare clic sull'icona del calendario nella casella di testo Search filter (filtro di ricerca) per cercare i flussi di lavoro con uno specifico inviato alla data.
+
+* *Commento esecuzione*
++
+Visualizza il commento specificato per l'esecuzione del flusso di lavoro.
+
+* *Pianificato per*
++
+Visualizza la data e l'ora pianificate per l'esecuzione del flusso di lavoro.
+
++
+Fare clic sull'icona del calendario nella casella di testo Search filter (filtro di ricerca) per cercare i flussi di lavoro con una data pianificata specifica. Quando nella colonna viene applicato un filtro per visualizzare i lavori in un secondo momento, è possibile che vengano visualizzati i lavori con "`Job n. zero`". Questo indica che il lavoro non è ancora stato creato e verrà creato all'ora pianificata.
+
+* *ID ricorrente*
++
+Visualizza l'identificativo della pianificazione ricorrente.
+
+* *Nome pianificazione*
++
+Visualizza il nome della pianificazione.
+
+* *Ultima modifica dello stato*
++
+Visualizza l'ora in cui è stato modificato uno stato.
+
++
+Fare clic sull'icona del calendario nella casella di testo Search filter (filtro di ricerca) per cercare i flussi di lavoro con una data specifica dell'ultima modifica dello stato.
+
+* *Commento punto di approvazione*
++
+Indica il messaggio visualizzato all'utente all'ultimo punto di approvazione, se applicabile, durante l'esecuzione del flusso di lavoro.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/details_wfa_icon.gif["Icona Dettagli"] (Dettagli)*
++
+Apre la finestra Monitoring (monitoraggio) per il flusso di lavoro selezionato, che contiene le seguenti schede per informazioni dettagliate sul flusso di lavoro:
+
++
+** Flusso
+** Piano di esecuzione
+** Input dell'utente
+** Parametri restituiti
+** Storia
+
+
+
+
+È inoltre possibile fare doppio clic su una voce della tabella per aprire la finestra Monitoring (monitoraggio) e visualizzare informazioni dettagliate.
+
+* *image:../media/abort_wfa_icon.gif["Icona di interruzione"] (Interruzione)*
++
+Interrompe il processo di esecuzione. Questa opzione è attivata per i flussi di lavoro in modalità di esecuzione.
+
+* *image:../media/reschedule_wfa_icon.gif["Icona di rischecule (Nuova scansione)"] (Riprogrammare)*
++
+Apre la finestra di dialogo Ripianifica flusso di lavoro, che consente di modificare l'ora di esecuzione del flusso di lavoro. L'opzione è attivata per i flussi di lavoro che si trovano nello stato pianificato.
+
+* *image:../media/resume_wfa_icon.gif["Icona Riprendi"] (Riprendi)*
++
+Apre una finestra di dialogo Resume Workflow (Riprendi flusso di lavoro), che consente di riprendere l'esecuzione del flusso di lavoro dopo aver modificato i problemi dell'ambiente (ad esempio, credenziali errate per un array, licenze mancanti o array non attivi). L'opzione è attivata per i flussi di lavoro che si trovano in `Failed` stato.
+
+* *image:../media/approve_resume_wfa_icon.gif["Icona approva e ripristina"] (Approva e Riprendi)*
++
+Consente di approvare l'esecuzione del flusso di lavoro e continuare il processo di esecuzione. Questa opzione è attivata per i flussi di lavoro che si trovano in `Waiting For Approval state`.
+
+* *image:../media/reject_abort_wfa_icon.gif["Icona di rifiuto e interruzione"] (Rifiuto e interruzione)*
++
+Consente di rifiutare l'esecuzione del flusso di lavoro e interrompere il processo di esecuzione. Questa opzione è attivata per i flussi di lavoro che si trovano in `Waiting For Approval state`.
+
+* *image:../media/clean_reservation_wfa_icon.gif["Icona di pulizia della prenotazione"] (Prenotazione pulita)*
++
+Consente di eliminare dalla cache locale la riserva di risorse effettuata per un workflow. La prenotazione pulita è disponibile solo per i flussi di lavoro pianificati, non riusciti e parzialmente riusciti. Non è possibile riprendere la prenotazione dopo la pulizia.
+
+* *image:../media/refresh_wfa_icon.gif["Icona Refrech"] (Refresh)*
++
+Aggiorna l'elenco dei flussi di lavoro. La vista viene aggiornata automaticamente. È possibile attivare e disattivare l'aggiornamento automatico facendo clic su image:../media/refresh_icon_wfa.gif[""] nella barra di stato.
+
+

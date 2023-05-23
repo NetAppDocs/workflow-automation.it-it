@@ -1,0 +1,71 @@
+---
+permalink: workflows/concept-how-commands-work.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, commands, execution, blocks, step 
+summary: I comandi OnCommand Workflow Automation sono i blocchi di esecuzione dei flussi di lavoro. È possibile utilizzare un comando per ogni fase del flusso di lavoro. 
+---
+= Come funzionano i comandi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I comandi OnCommand Workflow Automation sono i blocchi di esecuzione dei flussi di lavoro. È possibile utilizzare un comando per ogni fase del flusso di lavoro.
+
+I comandi WFA vengono scritti utilizzando gli script PowerShell e Perl. I comandi PowerShell utilizzano il toolkit Data ONTAP PowerShell e VMware PowerCLI, se il pacchetto è installato. I comandi Perl utilizzano la distribuzione Perl e i moduli Perl installati sul server WFA. Se si includono più linguaggi di scripting in un comando, come PowerShell e Perl, lo script appropriato viene scelto da WFA in base al sistema operativo su cui è installato e all'ordine preferito del linguaggio specificato nel menu di configurazione WFA.
+
+Gli script per i comandi WFA includono diversi parametri. Questi parametri potrebbero essere mappati agli attributi delle voci del dizionario.
+
+Si noti che ogni comando WFA può includere diversi comandi Data ONTAP.
+
+Alcuni dei comandi WFA sono noti come comandi di attesa perché possono attendere operazioni a esecuzione prolungata ed eseguire periodicamente il polling, ad esempio il comando *wait for multiple volume Moves*. L'intervallo di attesa in cui viene eseguito il comando di polling può essere configurato per verificare se l'operazione è stata completata.
+
+Un comando WFA viene avviato da WFA mentre il flusso di lavoro è in fase di esecuzione. WFA esegue i comandi in modo seriale, in ordine da sinistra a destra e dall'alto verso il basso. La pianificazione del flusso di lavoro conferma la disponibilità e la validità dei parametri forniti al comando. Il server WFA fornisce tutti i parametri necessari per i comandi prima dell'esecuzione dei comandi.
+
+I parametri dei comandi vengono finalizzati durante la pianificazione del workflow. Il flusso di lavoro passa quindi questi parametri ai comandi durante il tempo di esecuzione. I comandi non possono restituire i parametri al flusso di lavoro. Tuttavia, se si desidera scambiare informazioni ottenute durante il tempo di esecuzione tra comandi in un flusso di lavoro, è possibile utilizzare i cmdlet o le funzioni Perl di Wfa PowerShell.
+
+I comandi WFA PowerShell non utilizzano il flag di arresto -ErrorAction per i cmdlet PowerShell; pertanto, le esecuzioni del flusso di lavoro continuano anche quando i cmdlet non funzionano a causa di un errore. Se si desidera che il flag -ErrorAction stop sia incluso in un comando specifico, è possibile clonare il comando e modificare lo script PowerShell per aggiungere il flag.
+
+Di seguito sono riportati i cmdlet PowerShell e le funzioni Perl incluse in WFA per consentire lo scambio di informazioni tra i comandi:
+
+[cols="2*"]
+|===
+| Cmdlet PowerShell | Funzioni Perl 
+
+
+ a| 
+Add-WfaWorkflowParameter
+ a| 
+AddWfaWorkflowParameter
+
+
+
+ a| 
+Get-WfaWorkflowParameter
+ a| 
+GetWfaWorkflowParameter
+
+|===
+I parametri aggiunti dai cmdlet "`add`" o dalle funzioni a un comando possono essere recuperati da un comando che viene eseguito successivamente e utilizza i cmdlet o le funzioni "`get`". Ad esempio, in un comando PowerShell WFA, è possibile utilizzare quanto segue nel codice per aggiungere un parametro chiamato volumeId: `Add-WfaWorkflowParameter -Name "VolumeUUID" -Value “12345” -AddAsReturnParameter $true`. Quindi, è possibile utilizzare quanto segue in un comando successivo per recuperare il valore di volumeId: `$volumeId = Get-WfaWorkflowParameter -Name volumeId`.
+
+I comandi WFA possono eseguire query nel database WFA e ottenere il risultato richiesto. In questo modo è possibile creare un comando senza utilizzare filtri e finder. È possibile utilizzare le seguenti funzioni per eseguire query nel database:
+
+[cols="2*"]
+|===
+| Cmdlet PowerShell | Funzione Perl 
+
+
+ a| 
+Invoke-MySqlQuery ad esempio: `Invoke-MySqlQuery -Query "SELECT cluster.name AS 'Cluster Name' FROM cm_storage.cluster"`
+ a| 
+InvokeMySqlQuery
+
+|===
+*Informazioni correlate*
+
+xref:task-create-a-filter.adoc[Creare un filtro]
+
+xref:task-create-a-finder.adoc[Crea un Finder]
+
+xref:task-create-a-command.adoc[Creare un comando]

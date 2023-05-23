@@ -1,0 +1,50 @@
+---
+permalink: help/reference-edit-template-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, template, dialog box, enable 
+summary: La finestra di dialogo Modifica modello consente di modificare un modello. 
+---
+= Finestra di dialogo Edit Template (Modifica modello)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Modifica modello consente di modificare un modello.
+
+* *Nome*
++
+Consente di modificare il nome del modello.
+
+* *Tipo*
++
+Consente di selezionare un oggetto dizionario dall'elenco.
+
+* *Versione entità*
++
+Consente di immettere il numero di versione del modello in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Descrizione*
++
+Consente di modificare la descrizione del modello.
+
+* *Attributi*
++
+Visualizza gli attributi per l'oggetto dizionario selezionato e consente di immettere un valore per ciascun attributo, ad esempio enum e Function.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Salva*
++
+Salva le modifiche e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Non salva le modifiche, se presenti, e chiude la finestra di dialogo.
+
+

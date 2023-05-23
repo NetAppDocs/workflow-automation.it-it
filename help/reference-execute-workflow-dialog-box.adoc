@@ -1,0 +1,46 @@
+---
+permalink: help/reference-execute-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: execute, workflow, dialog box, enable, specify, user, iputs, time, execution, comment 
+summary: La finestra di dialogo Execute Workflow consente di specificare gli input utente richiesti, il tempo di esecuzione e il commento di esecuzione per un flusso di lavoro. 
+---
+= Finestra di dialogo Execute Workflow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Execute Workflow consente di specificare gli input utente richiesti, il tempo di esecuzione e il commento di esecuzione per un flusso di lavoro.
+
+
+
+== Input dell'utente
+
+Consente di specificare gli input per il flusso di lavoro. Gli attributi obbligatori sono contrassegnati da un asterisco (*) e il bordo delle caselle è rosso.
+
+
+
+== Opzioni
+
+Consente di specificare l'ora di esecuzione del flusso di lavoro.
+
+* *Esegui ora*
++
+Consente di eseguire il workflow immediatamente.
+
+* *Eseguire in modo ricorrente*
++
+Consente di impostare il flusso di lavoro in modo che si ripeta periodicamente. Questa opzione viene visualizzata solo quando è stata creata una pianificazione.
+
+* *Eseguire una volta*
++
+Consente di pianificare l'esecuzione del flusso di lavoro.
+
+
+
+
+
+== Commento all'esecuzione
+
+Consente di specificare un commento per l'esecuzione del flusso di lavoro. Questo commento viene visualizzato nella finestra Execution Status (Stato esecuzione).

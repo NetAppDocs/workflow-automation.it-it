@@ -1,0 +1,30 @@
+---
+permalink: workflows/task-create-a-template.html 
+sidebar: sidebar 
+keywords: create, template, use, blueprint, fill, attribute, command, details 
+summary: È possibile creare un modello da utilizzare come modello per la compilazione degli attributi nei dettagli dei comandi. 
+---
+= Creare un modello
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un modello da utilizzare come modello per la compilazione degli attributi nei dettagli dei comandi.
+
+.Fasi
+. Fare clic su *Workflow Design* > *Templates*.
+. Fare clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+. Nella finestra di dialogo *nuovo modello*, immettere o selezionare i dettagli richiesti nei campi *Nome*, *tipo* e *Descrizione*.
++
+La tabella Attributes viene popolata in base all'oggetto dizionario selezionato nel campo *Type*.
+
+. Fare clic sulla colonna Value di ciascun attributo ed eseguire una delle seguenti operazioni:
++
+** Inserire o selezionare il valore desiderato dall'elenco.
+** Inserire una voce di input dell'utente, ad esempio `$size` per l'input dell'utente delle dimensioni.
+
+
+. Fare clic su *Save* (Salva).
+

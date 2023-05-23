@@ -1,0 +1,142 @@
+---
+permalink: help/reference-reservations-window.html 
+sidebar: sidebar 
+keywords: reservations, window, display, workflow, marked, reservation, enable, manage, access, selecting, execution 
+summary: 'La finestra Prenotazioni visualizza ogni flusso di lavoro contrassegnato per la prenotazione e consente di gestire le prenotazioni. Per accedere a questa finestra, selezionare Execution > Reservations (esecuzione > Prenotazioni).' 
+---
+= Finestra delle prenotazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Prenotazioni visualizza ogni flusso di lavoro contrassegnato per la prenotazione e consente di gestire le prenotazioni. Per accedere a questa finestra, selezionare *esecuzione* > *Prenotazioni*.
+
+Una prenotazione aiuta a garantire che una risorsa selezionata sia disponibile per un workflow pianificato specifico quando tale workflow viene eseguito.
+
+* Tabella delle prenotazioni
+* Barra degli strumenti
+
+
+
+
+== Tabella delle prenotazioni
+
+La tabella Prenotazioni elenca i flussi di lavoro inviati per la prenotazione. È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella seguente elenca gli operatori supportati per le colonne alfabetiche e numeriche nella tabella Prenotazioni, disponibile nella casella di testo del filtro *Cerca*.
+
+[cols="2*"]
+|===
+| Alfabetico | Numerico 
+
+
+ a| 
+* Contiene
+* Non contiene
+* Inizia con
+* Termina con
+* Uguale a
+* Non uguale
+* Resettare
+
+ a| 
+* Uguale a
+* Non uguale
+* Inferiore a.
+* Maggiore di
+* Minore o uguale a.
+* Maggiore o uguale a.
+* Tra
+* Resettare
+
+
+|===
+La tabella Reservations contiene le seguenti colonne:
+
+* *N. commessa*
++
+Visualizza il numero di identificazione del lavoro.
+
++
+Il numero di identificazione del lavoro è univoco e viene assegnato dal server all'avvio del lavoro.
+
+* *Flusso di lavoro*
++
+Visualizza il nome del flusso di lavoro.
+
+* *Ora di esecuzione*
++
+Visualizza l'ora in cui il processo viene pianificato per l'esecuzione o quando è stato eseguito.
+
++
+Fare clic sull'icona del calendario nella casella di testo del filtro *Search* per cercare una data di esecuzione specifica.
+
+* *Ora della prenotazione*
++
+Visualizza l'ora in cui è stata pianificata la commessa, ovvero l'ora in cui è stata creata la prenotazione.
+
++
+Fare clic sull'icona del calendario nella casella di testo del filtro *Cerca* per cercare una data di prenotazione specifica.
+
+* *Nome comando*
++
+Visualizza il comando per cui è stata effettuata la prenotazione. Ad esempio, per un flusso di lavoro che esegue il comando `Create Volume myVolume of size 20MB`Viene visualizzato Create Volume (Crea volume).
+
+* *Prenotazione*
++
+Visualizza la descrizione della prenotazione, generata dalla rappresentazione stringa del comando.
+
+* *Stato del flusso di lavoro*
++
+Visualizza lo stato del processo di esecuzione del flusso di lavoro. Le opzioni di stato sono le seguenti:
+
++
+** Tutto
+** Non riuscito
+** In esecuzione
+** Riuscito
+** Annullato
+** In attesa di approvazione
+** Pianificato
+** Interruzione
+** Obsoleto
+** Pianificazione
+** In sospeso
+** Parzialmente riuscito
+
+
+* *Cache aggiornata*
++
+Visualizza se la prenotazione è stata verificata e riflessa nei dati memorizzati nella cache (sì o NO). Questo aggiornamento della cache viene eseguito dal processo di acquisizione dei dati.
+
+* *Ultimo errore*
++
+Visualizza il messaggio di errore generato quando la prenotazione viene simulata.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo di conferma Elimina prenotazioni, che consente di eliminare la prenotazione selezionata.
+
+* *image:../media/refresh_wfa_icon.gif["Icona Refrech"] (Refresh)*
++
+Aggiorna il contenuto della tabella Prenotazioni.
+
+

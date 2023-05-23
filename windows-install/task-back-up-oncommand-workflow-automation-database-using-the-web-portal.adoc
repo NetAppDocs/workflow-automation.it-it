@@ -1,0 +1,25 @@
+---
+permalink: windows-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa, database, web portal 
+summary: 'È possibile eseguire il backup del database OnCommand Workflow Automation (Wfa) dal portale Web e utilizzare il file di backup per il ripristino dei dati. Non è possibile eseguire un backup completo dal portale Web.' 
+---
+= Eseguire il backup del database WFA dal portale Web
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire il backup del database OnCommand Workflow Automation (Wfa) dal portale Web e utilizzare il file di backup per il ripristino dei dati. Non è possibile eseguire un backup completo dal portale Web.
+
+Per eseguire questa attività, è necessario disporre delle credenziali di amministratore o architetto.
+
+Un utente WFA con ruolo di backup non può accedere al portale Web per eseguire un backup. Gli utenti WFA con ruolo di backup possono eseguire solo backup remoti o con script.
+
+.Fasi
+. Accedere alla GUI Web di WFA come amministratore.
+. Fare clic su *Impostazioni* e sotto *manutenzione*, fare clic su *Backup e ripristino*.
+. Fare clic su *Backup*.
+. Nella finestra di dialogo che si apre, selezionare un percorso, quindi salvare il file.
+

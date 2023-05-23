@@ -1,0 +1,63 @@
+---
+permalink: workflows/task-create-a-data-source-type.html 
+sidebar: sidebar 
+keywords: create, data, source, type, enable, acquisition, predefined, oncommand, workflow, automation 
+summary: 'È necessario creare un tipo di origine dati per consentire l"acquisizione dei dati da un"origine dati, che non è predefinita in OnCommand Workflow Automation (Wfa).' 
+---
+= Creare un tipo di origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario creare un tipo di origine dati per consentire l'acquisizione dei dati da un'origine dati, che non è predefinita in OnCommand Workflow Automation (Wfa).
+
+.Di cosa hai bisogno
+* Se si crea un tipo di origine dati personalizzata non predefinito in WFA, è necessario aver creato la voce e lo schema del dizionario richiesti.
+* Per creare un tipo di origine dati che utilizzi il metodo script, è necessario conoscere lo scripting di PowerShell.
+
+
+.Fasi
+. Fare clic su *progettazione origine dati* > *tipi origine dati*.
+. Fare clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+. Nella finestra di dialogo *nuovo tipo di origine dati*, immettere o selezionare i dettagli richiesti nei campi *origine dati*, *versione origine dati* e *Schema*.
+. Nel campo *Default port* (porta predefinita), inserire il numero della porta.
++
+`2638`
+
++
+Il numero di porta inserito viene popolato quando si aggiunge questo tipo di origine dati per l'acquisizione dei dati. Per impostazione predefinita, la porta viene utilizzata da WFA per comunicare con l'origine dati e deve essere aperta sul server di origine dati.
+
+. Dall'elenco *Method* (metodo), selezionare il metodo che WFA deve utilizzare per acquisire i dati:
++
+[cols="2*"]
+|===
+| Se si seleziona... | Quindi... 
+
+
+ a| 
+SQL
+ a| 
+Dall'elenco *tipo di driver*, selezionare uno dei seguenti driver appropriati per l'origine dati:
+
+** *MySQL Connector/J*
+** *MySQL Server JDBC driver 3.0*
+** *Driver Oracle JDBC 11.2.0.3*
+
+
+
+
+ a| 
+SCRIPT
+ a| 
+Nel campo *script*, immettere lo script PowerShell utilizzato per la connessione e il recupero dei dati dall'origine dati.
+
+[NOTE]
+====
+I dati nei file CSV equivalenti delle voci del dizionario devono includere schede come separatore di campo. Ad esempio, vedere lo script PowerShell per il tipo di origine dati VMware vCenter.
+
+====
+|===
+. Fare clic su *Save* (Salva).
+

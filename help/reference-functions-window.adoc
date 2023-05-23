@@ -1,0 +1,138 @@
+---
+permalink: help/reference-functions-window.html 
+sidebar: sidebar 
+keywords: functions, window, display, available, oncommand, workflow, automation, enable, manage 
+summary: 'La finestra Functions (funzioni) visualizza le funzioni WFA (Available OnCommand Workflow Automation) e consente di gestire queste funzioni.' 
+---
+= Finestra delle funzioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Functions (funzioni) visualizza le funzioni WFA (Available OnCommand Workflow Automation) e consente di gestire queste funzioni.
+
+Le funzioni sono strumenti complementari per l'esecuzione di operazioni significative o black-box necessarie per la pianificazione delle esecuzioni dei flussi di lavoro. Le funzioni vengono elaborate durante la fase di pianificazione. Le funzioni possono essere utilizzate per completare attività ripetitive e complesse, come la definizione di una complessa convenzione di naming. Le funzioni vengono eseguite nel proprio sandbox e potrebbero utilizzare altre funzioni durante l'esecuzione. Le funzioni sono scritte in MVFLEX Expression Language (MVEL).
+
+
+
+== Tabella delle funzioni
+
+La tabella delle funzioni elenca le funzioni WFA disponibili. Ciascuna voce è identificata come una delle seguenti:
+
+* image:../media/community_certification.gif[""] - contenuto creato dagli utenti
+* image:../media/ps_certified_icon_wfa.gif[""] Contenuto sviluppato da Professional Services (PS), disponibile solo per installazioni personalizzate realizzate da PS
+* image:../media/community_certification.gif[""] - pacchetti sviluppati dagli utenti
+* image:../media/lock_icon_wfa.gif[""] - contenuto creato dagli utenti bloccati
+* image:../media/netapp_certified.gif[""] - Contenuti certificati NetApp
+
+
+È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella delle funzioni contiene le seguenti colonne:
+
+* *Certificazione*
++
+Indica se la funzione è stata creata dall'utente (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), community (image:../media/community_certification.gif[""]), bloccato dall'utente (image:../media/lock_icon_wfa.gif[""]), o con certificazione NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Nome*
++
+Visualizza il nome della funzione.
+
+* *Versione entità*
++
+Visualizza il numero di versione dell'oggetto in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Descrizione*
++
+Visualizza la descrizione delle funzioni.
+
+* *Ultimo aggiornamento in data*
++
+Visualizza la data e l'ora dell'ultimo aggiornamento della funzione.
+
+* *Aggiornato da*
++
+Visualizza l'utente che ha aggiornato la funzione.
+
+* *Bloccato da*
++
+Visualizza l'utente che ha bloccato la funzione.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/new_wfa_icon.gif["Nuova icona"] (Novità)*
++
+Apre la finestra New Function (Nuova funzione), che consente di creare una nuova funzione.
+
+* *image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] (Modifica)*
++
+Apre la finestra Function <EntryName> (Modifica funzione) per la funzione selezionata, che consente di modificarla.
+
+* *image:../media/clone_wfa_icon.gif["Icona Clona"] (Clone)*
++
+Apre la finestra New Function <EntryName>_copy, che consente di creare una copia della funzione selezionata.
+
+* *image:../media/lock_wfa_icon.gif["Icona a forma di lucchetto"] (Blocco)*
++
+Apre la finestra di dialogo Lock the function confirmation (Blocca la funzione), che consente di bloccare la funzione selezionata. Questa opzione è abilitata solo per le funzioni create.
+
+* *image:../media/unlock_wfa_icon.gif["Icona di sblocco"] (Sblocca)*
++
+Apre la finestra di dialogo Unlock the function confirmation (Sblocca la funzione), che consente di sbloccare la funzione selezionata.
+
++
+Questa opzione è abilitata solo per le funzioni bloccate. Gli amministratori possono sbloccare le funzioni bloccate da altri utenti.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo Delete function confirmation, che consente di eliminare la funzione creata dall'utente selezionata.
+
++
+
+NOTE: Non è possibile eliminare una funzione WFA o PS.
+
+* *image:../media/export_wfa_icon.gif["Icona Export (Esporta)"] (Esportazione)*
++
+Consente di esportare la funzione creata dall'utente selezionata.
+
++
+
+NOTE: Non è possibile esportare una funzione WFA o PS.
+
+* *image:../media/test_wfa_icon.gif["icona di test"] (Test)*
++
+Apre la finestra di dialogo Test, che consente di verificare la funzione selezionata.
+
+* *image:../media/add_to_pack.png["icona add to pack (aggiungi al pacchetto)"] (Aggiungi al pacchetto)*
++
+Apre la finestra di dialogo Add to Pack Functions, che consente di aggiungere la funzione e le relative entità affidabili a un pacchetto, modificabile.
+
++
+
+NOTE: La funzione Add to Pack (Aggiungi al pacchetto) è abilitata per le funzioni con certificazione impostata su None (Nessuna) e Lock (Blocca).
+
+* *image:../media/remove_from_pack.png["icona remove from pack (rimuovi dalla confezione)"] (Remove from Pack)*
++
+Apre la finestra di dialogo Remove from Pack Functions (Rimuovi da funzioni pacchetto) per la funzione selezionata, che consente di eliminare o rimuovere la funzione dal pacchetto.
+
++
+
+NOTE: La funzione Remove from Pack (Rimuovi dal pacchetto) è abilitata per le funzioni con certificazione impostata su None (Nessuna) e Lock (Blocca).
+
+

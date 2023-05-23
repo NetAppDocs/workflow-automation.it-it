@@ -1,0 +1,27 @@
+---
+permalink: rhel-install/task-configure-your-preferred-perl-distribution-linux.html 
+sidebar: sidebar 
+keywords: configure, preferred, perl distribution 
+summary: 'Il pacchetto Perl installato sul sistema viene utilizzato da OnCommand Workflow Automation. Se si desidera utilizzare un"altra distribuzione Perl, è possibile configurare la distribuzione Perl preferita in modo che funzioni con WFA.' 
+---
+= Configurare la distribuzione Perl preferita
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il pacchetto Perl installato sul sistema viene utilizzato da OnCommand Workflow Automation. Se si desidera utilizzare un'altra distribuzione Perl, è possibile configurare la distribuzione Perl preferita in modo che funzioni con WFA.
+
+È necessario aver installato la distribuzione Perl richiesta sul server WFA.
+
+.Fasi
+. Al prompt della shell, accedere alla seguente directory sul server WFA: WFA_install_location/wfa/bin/
+. Immettere il seguente comando:
++
+`/wfa --custom-perl[=PERL_PATH] --restart=WFA`
+
++
+`/wfa --custom-perl=/usr/local/perl5-11/bin/perl --restart=WFA`
+
+

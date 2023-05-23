@@ -1,0 +1,122 @@
+---
+permalink: help/reference-recurring-executions-window.html 
+sidebar: sidebar 
+keywords: recurring, execution, window, enable, suspend, resume, delete, associate, workflow, specified, frequency, access 
+summary: 'La finestra delle esecuzioni ricorrenti consente di sospendere, riprendere o eliminare un"esecuzione ricorrente associata a un flusso di lavoro. Un flusso di lavoro con un"esecuzione ricorrente viene eseguito su base ricorrente a una frequenza specificata. Per accedere a questa finestra, selezionare esecuzione > esecuzioni ricorrenti.' 
+---
+= Finestra delle esecuzioni ricorrenti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra *esecuzioni ricorrenti* consente di sospendere, riprendere o eliminare un'esecuzione ricorrente associata a un flusso di lavoro. Un flusso di lavoro con un'esecuzione ricorrente viene eseguito su base ricorrente a una frequenza specificata. Per accedere a questa finestra, selezionare *esecuzione* > *esecuzioni ricorrenti*.
+
+* Tabella delle esecuzioni ricorrenti
+* Barra degli strumenti
+
+
+
+
+== Tabella delle esecuzioni ricorrenti
+
+La tabella Pianificazioni ricorrenti elenca le pianificazioni ricorrenti esistenti associate a un flusso di lavoro in formato tabella. È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella seguente descrive gli operatori supportati per le colonne alfabetiche e numeriche nella tabella delle esecuzioni ricorrenti, disponibile nella casella di testo del filtro *Cerca*.
+
+[cols="2*"]
+|===
+| Alfabetico | Numerico 
+
+
+ a| 
+* Contiene
+* Non contiene
+* Inizia con
+* Termina con
+* Uguale a
+* Non uguale
+* Resettare
+
+ a| 
+* Uguale a
+* Non uguale
+* Inferiore a.
+* Maggiore di
+* Minore o uguale a.
+* Maggiore o uguale a.
+* Tra
+* Resettare
+
+
+|===
+La tabella delle pianificazioni ricorrenti contiene le seguenti colonne:
+
+* *ID*
++
+Visualizza l'identificativo della pianificazione.
+
+* *Nome flusso di lavoro*
++
+Visualizza il nome del flusso di lavoro.
+
+* *Input utente*
++
+Visualizza i nomi e i valori degli input utente associati al flusso di lavoro.
+
+* *Pianificazione*
++
+Visualizza il nome della pianificazione associata al flusso di lavoro.
+
+* *Stato*
++
+Visualizza lo stato della pianificazione. I valori possibili sono Active (attivo) e Suspended (sospeso).
+
+* *Data di esecuzione successiva*
++
+Visualizza la data e l'ora in cui verrà eseguito il flusso di lavoro associato alla pianificazione successiva.
+
++
+È possibile cercare un programma inserendo la data e l'ora di esecuzione nella casella di testo del filtro *Ricerca*.
+
+* *Aggiornato alle*
++
+Visualizza la data e l'ora in cui è stata aggiornata l'associazione del flusso di lavoro con la pianificazione.
+
++
+Fare clic sull'icona del calendario nella casella di testo del filtro *Cerca* per cercare le pianificazioni ricorrenti in una data specifica.
+
+* *Aggiornato da*
++
+Visualizza il nome dell'utente che ha modificato l'associazione del flusso di lavoro con la pianificazione.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/suspend_icon.gif[""] (Sospensione)*
++
+Apre la finestra di dialogo Sospendi esecuzione ricorrente, che consente di sospendere l'esecuzione di un flusso di lavoro attivo.
+
+* *image:../media/resume_wfa_icon.gif["Icona Riprendi"] (Riprendi)*
++
+Riprende l'esecuzione di un flusso di lavoro sospeso.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo Delete ricorrenti Execution confirmation (Elimina conferma esecuzione ricorrente), che consente di eliminare la pianificazione selezionata.
+
+

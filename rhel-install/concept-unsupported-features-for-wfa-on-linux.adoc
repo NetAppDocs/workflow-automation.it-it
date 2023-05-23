@@ -1,0 +1,48 @@
+---
+permalink: rhel-install/concept-unsupported-features-for-wfa-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, limitations 
+summary: 'OnCommand Workflow Automation (WFA) 5.1 include alcune limitazioni e funzionalità non supportate che è necessario conoscere prima di installare e configurare WFA.' 
+---
+= Limitazioni note per OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) 5.1 include alcune limitazioni e funzionalità non supportate che è necessario conoscere prima di installare e configurare WFA.
+
+* *Autenticazione LDAP*
++
+** Per l'autenticazione LDAP, è possibile utilizzare solo il server LDAP (Lightweight Directory Access Protocol) di Microsoft Active Directory.
+** Per utilizzare l'autenticazione LDAP, è necessario essere membri di un gruppo LDAP.
+** Non è necessario utilizzare un nome utente LDAP che fa parte di una struttura gerarchica di più domini per l'autenticazione o la notifica.
+
+
+
+
+[NOTE]
+====
+Microsoft Active Directory Lightweight Directory Services (ad LDS) non è supportato.
+
+====
+* *Tipi di origini dati WFA*
++
+I tipi di origine dati di OnCommand Unified Manager 6.0, 6.1 e 6.2 non sono supportati nella release WFA 4.1 e questi tipi di origine dati non saranno supportati nelle release future.
+
+* *WFA installato su Linux*
++
+** I contenuti certificati di Data ONTAP che operano in 7-Mode non sono attualmente disponibili.
+** I comandi che includono solo il codice PowerShell non sono compatibili con Linux.
+** I comandi certificati per 7-Mode e VMware non sono attualmente trasferiti su Perl e non sono quindi compatibili con Linux.
+
+
+* *Creazione dei nomi delle categorie*
++
+** Quando un trattino (-) viene utilizzato nel nome di una categoria, viene sostituito con uno spazio una volta salvata la categoria. Ad esempio, se viene fornito il nome della categoria "abc-xyz", il nome della categoria viene salvato come "abc xyz", con il trattino rimosso. Per evitare questo problema, non utilizzare trattini nei nomi delle categorie.
+** Quando si utilizza un punto (:) nel nome di una categoria, la stringa di testo che precede i due punti viene ignorata una volta salvata la categoria. Ad esempio, se viene fornito il nome della categoria "abc : xyz", il nome della categoria viene salvato come "xyz", con la stringa "abc" rimossa. Per evitare questo problema, non utilizzare i due punti nei nomi delle categorie.
+** Non esiste alcun segno di spunta per impedire che due categorie abbiano lo stesso nome. Tuttavia, questo causa un problema quando si selezionano queste categorie dal riquadro di navigazione. Per evitare questo problema, assicurarsi che il nome di ciascuna categoria sia univoco.
+
+
+

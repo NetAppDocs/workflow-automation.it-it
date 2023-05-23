@@ -1,0 +1,32 @@
+---
+permalink: help/concept-how-you-define-workflows.html 
+sidebar: sidebar 
+keywords: goal, workflow, steps, execute, arrange, complete, workflow 
+summary: 'È necessario suddividere l"obiettivo di un flusso di lavoro nelle fasi che devono essere eseguite dal flusso di lavoro. È quindi possibile organizzare i passaggi per completare il flusso di lavoro.' 
+---
+= Come definire i flussi di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario suddividere l'obiettivo di un flusso di lavoro nelle fasi che devono essere eseguite dal flusso di lavoro. È quindi possibile organizzare i passaggi per completare il flusso di lavoro.
+
+Un workflow è un algoritmo che include una serie di passaggi necessari per completare un processo end-to-end. L'ambito del processo potrebbe variare a seconda dell'obiettivo del flusso di lavoro. L'obiettivo di un workflow potrebbe essere definito in modo da gestire solo le operazioni di storage o processi più complessi come la gestione di reti, virtualizzazione, sistemi IT e altre applicazioni come parte di un singolo processo. I flussi di lavoro OnCommand Workflow Automation (WFA) sono progettati dagli architetti dello storage e vengono eseguiti dagli operatori dello storage.
+
+La definizione del flusso di lavoro include la riduzione dell'obiettivo del flusso di lavoro in una serie di passaggi, ad esempio la creazione di un volume NFS include i seguenti passaggi:
+
+. Creazione di un oggetto volume
+. Creazione di un nuovo criterio di esportazione e associazione del criterio al volume
+
+
+È possibile utilizzare un comando WFA o un flusso di lavoro per ogni fase del flusso di lavoro. WFA include comandi e flussi di lavoro predefiniti, basati su casi di utilizzo dello storage comuni. Se non si trova un comando o un flusso di lavoro predefinito che è possibile utilizzare per una determinata fase, è possibile eseguire una delle seguenti operazioni:
+
+* Scegliere un comando o un flusso di lavoro predefinito che corrisponda a quello della fase, quindi clonare e modificare il comando o il flusso di lavoro predefinito in base alle proprie esigenze.
+* Creare un nuovo comando o flusso di lavoro.
+
+
+Puoi quindi organizzare i comandi o i flussi di lavoro in un nuovo workflow per creare il workflow che raggiunge il tuo obiettivo.
+
+All'inizio dell'esecuzione del flusso di lavoro, WFA pianifica l'esecuzione e verifica che il flusso di lavoro possa essere eseguito utilizzando l'input del flusso di lavoro e dei comandi. Quando si pianifica il flusso di lavoro, tutte le risorse selezionate e l'input dell'utente vengono risolti per creare un piano di esecuzione. Una volta completata la pianificazione, WFA esegue il piano di esecuzione, che consiste in una serie di comandi WFA con i parametri applicabili.

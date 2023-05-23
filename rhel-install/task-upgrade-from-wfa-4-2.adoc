@@ -1,0 +1,60 @@
+---
+permalink: rhel-install/task-upgrade-from-wfa-4-2.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, later 
+summary: 'È possibile eseguire un aggiornamento in-place da OnCommand Workflow Automation (Wfa) 3.1 o versione successiva all"ultima versione disponibile di Wfa per utilizzare le nuove funzionalità e i miglioramenti.' 
+---
+= Aggiornamento da OnCommand Workflow Automation 3.1 o versioni successive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire un aggiornamento in-place da OnCommand Workflow Automation (Wfa) 3.1 o versione successiva all'ultima versione disponibile di Wfa per utilizzare le nuove funzionalità e i miglioramenti.
+
+È necessario aver scaricato il file binario .bin dal NetApp Support Site sul computer host WFA.
+
+È possibile eseguire il ripristino a Wfa 5.1 solo da WFA 5.0 o 4.2. Un backup del database WFA può essere ripristinato solo su un sistema che esegue la stessa versione o una versione successiva di WFA.
+
+La connessione cluster WFA 5.1 deve accettare il certificato SSL. Quando si esegue l'aggiornamento da una versione precedente di WFA a WFA 5.1, è necessario certificare la connessione del cluster. Salvare i dettagli della connessione al cluster per la certificazione del cluster dopo l'aggiornamento in-place.
+
+Non è possibile installare MYSQL da solo quando si esegue l'aggiornamento da versioni precedenti di WFA. Puoi installare MySQL da solo:
+
+* Quando si esegue l'aggiornamento da WFA 4.2 a versioni successive di WFA.
+* Eseguire l'aggiornamento da WFA 3.1 o versioni successive scegliendo uno dei seguenti metodi:
++
+** Installazione interattiva
++
+... Accedere al file binario .bin nel computer host WFA ed eseguire il file.
+... Per completare l'aggiornamento, seguire le istruzioni visualizzate sullo schermo.
+
+
+** Installazione invisibile all'utente
++
+Al prompt della shell:
+
++
+`./WFA-version_number-build_number.bin [-y] [-u admin_user_name] [-p admin_user_password]`
+
++
+*Esempio:*
+
++
+`./WFA-3.1-Z3234343435.bin -y -u admin -p Company*234`
+
++
+Durante l'aggiornamento silent, è necessario includere i valori per tutte le seguenti opzioni di comando:
+
++
+*** `-y` ignora la conferma dell'installazione.
+*** `-u` specifica il nome utente admin.
+*** `-p` specifica la password dell'utente admin.
++
+Se non è stata fornita la password dell'utente amministratore, è necessario immetterla quando richiesto.
+
+
+
+
+
+

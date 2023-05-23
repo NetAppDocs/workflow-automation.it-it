@@ -1,0 +1,14 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-building-blocks.html 
+sidebar: sidebar 
+keywords: aware, guidelines, workflow, automation, building, blocks 
+summary: 'È necessario conoscere le linee guida per l"utilizzo degli elementi di base per l"automazione del flusso di lavoro.' 
+---
+= Linee guida per gli elementi di base WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario conoscere le linee guida per l'utilizzo degli elementi di base per l'automazione del flusso di lavoro.

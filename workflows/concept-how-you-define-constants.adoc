@@ -1,0 +1,40 @@
+---
+permalink: workflows/concept-how-you-define-constants.html 
+sidebar: sidebar 
+keywords: create, use, constants, define, value, across, single, window, workflow, level 
+summary: È possibile creare e utilizzare costanti per definire un valore che può essere utilizzato in un singolo flusso di lavoro. Le costanti sono definite a livello di workflow. 
+---
+= Come definire le costanti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare e utilizzare costanti per definire un valore che può essere utilizzato in un singolo flusso di lavoro. Le costanti sono definite a livello di workflow.
+
+Le costanti utilizzate nel flusso di lavoro e il relativo valore vengono visualizzati nella finestra di monitoraggio del flusso di lavoro durante la pianificazione e l'esecuzione. È necessario utilizzare nomi univoci per le costanti.
+
+È possibile utilizzare le seguenti convenzioni di denominazione per definire le costanti:
+
+* Maiuscolo per la prima lettera di ogni parola, senza caratteri di sottolineatura o spazi tra le parole
++
+Tutti i termini e le abbreviazioni devono utilizzare lettere maiuscole, ad esempio `ActualVolumeSizeInMB`.
+
+* Maiuscolo per tutte le lettere
++
+È possibile utilizzare i caratteri di sottolineatura per separare le parole, ad esempio `AGGREGATE_USED_SPACE_THRESHOLD`.
+
+
+
+È possibile includere i seguenti valori come valori per le costanti del flusso di lavoro:
+
+* Numeri
+* Stringhe
+* Espressioni MVEL
++
+Le espressioni vengono valutate durante le fasi di pianificazione ed esecuzione dei flussi di lavoro. Nelle espressioni, non è necessario fare riferimento a variabili definite in un loop.
+
+* Input dell'utente
+* Variabili
+

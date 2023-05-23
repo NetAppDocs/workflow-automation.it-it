@@ -1,0 +1,22 @@
+---
+permalink: windows-install/reference-cannot-view-performance-advisor-data-in-wfa.html 
+sidebar: sidebar 
+keywords: cannot, view, performance, advisor, data, wfa 
+summary: 'Se non è possibile visualizzare i dati di Performance Advisor in WFA o se il processo di acquisizione dei dati dall"origine dati di Performance Advisor non riesce, è necessario eseguire alcune azioni per risolvere il problema.' 
+---
+= Impossibile visualizzare i dati di Performance Advisor in WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se non è possibile visualizzare i dati di Performance Advisor in WFA o se il processo di acquisizione dei dati dall'origine dati di Performance Advisor non riesce, è necessario eseguire alcune azioni per risolvere il problema.
+
+* Assicurarsi di aver specificato le credenziali di un utente Active IQ Unified Manager con un ruolo minimo di GlobalRead durante la configurazione di Performance Advisor come origine dati in WFA.
+* Assicurarsi di aver specificato la porta corretta durante la configurazione di Performance Advisor come origine dati in WFA.
++
+Per impostazione predefinita, Active IQ Unified Manager utilizza la porta 8088 per una connessione HTTP e la porta 8488 per una connessione HTTPS.
+
+* Assicurarsi che i dati sulle performance siano raccolti dal server Active IQ Unified Manager.
+

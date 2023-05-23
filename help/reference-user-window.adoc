@@ -1,0 +1,149 @@
+---
+permalink: help/reference-user-window.html 
+sidebar: sidebar 
+keywords: users, window, enable, view, create, edit, delete, oncommand, workflow, automation, access, settings, under, management 
+summary: 'La finestra utenti consente di visualizzare, creare, modificare ed eliminare gli utenti WFA (OnCommand Workflow Automation). Per accedere a questa finestra, selezionare Impostazioni e, in Gestione, fare clic su utenti.' 
+---
+= Finestra utenti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra utenti consente di visualizzare, creare, modificare ed eliminare gli utenti WFA (OnCommand Workflow Automation). È possibile accedere a questa finestra selezionando *Impostazioni* e in *Gestione* fare clic su *utenti*.
+
+
+NOTE: A seconda del ruolo e dei privilegi dell'account, questa finestra potrebbe non essere visualizzata.
+
+
+
+== Tabella utenti
+
+La finestra Users (utenti) visualizza gli utenti esistenti. È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella seguente elenca gli operatori supportati per le colonne alfabetiche e numeriche nella tabella Users, disponibile nella casella di testo del filtro *Search*.
+
+[cols="2*"]
+|===
+| Alfabetico | Numerico 
+
+
+ a| 
+* Contiene
+* Non contiene
+* Inizia con
+* Termina con
+* Uguale a
+* Non uguale
+* Resettare
+
+ a| 
+* Uguale a
+* Non uguale
+* Inferiore a.
+* Maggiore di
+* Minore o uguale a.
+* Maggiore o uguale a.
+* Tra
+* Resettare
+
+
+|===
+La tabella Users contiene le seguenti colonne:
+
+* *Nome utente*
++
+Visualizza il nome utente dell'account.
+
+* *Ruolo*
++
+Visualizza il ruolo assegnato all'utente. I ruoli possono includere:
+
++
+** *Ospite*
++
+Questo utente può solo visualizzare lo stato di un'esecuzione del flusso di lavoro o essere informato di una modifica dello stato di un'esecuzione del flusso di lavoro.
+
+** *Operatore*
++
+A questo utente è consentito visualizzare in anteprima ed eseguire i flussi di lavoro per i quali l'utente ha accesso.
+
+** *Approvatore*
++
+A questo utente è consentito visualizzare in anteprima, eseguire, approvare e rifiutare i flussi di lavoro per i quali l'utente ha accesso.
+
++
+
+NOTE: È necessario fornire l'ID e-mail del responsabile dell'approvazione e lo stato del flusso di lavoro che deve essere notificato al responsabile dell'approvazione. Se sono presenti più responsabili dell'approvazione, è possibile fornire un ID e-mail di gruppo nel campo *e-mail*.
+
+** *Architetto*
++
+Questo utente ha pieno accesso alla creazione di flussi di lavoro, ma non può modificare le impostazioni globali del server WFA.
+
+** *Amministratore*
++
+Questo utente ha accesso completo al server WFA.
+
++
+
+NOTE: È necessario configurare almeno un utente amministratore.
+
+** *Backup*
++
+Si tratta dell'unico utente in grado di generare in remoto i backup del server WFA; tuttavia, questo utente è limitato da tutti gli altri accessi.
+
+
+
+* *Categorie*
++
+Visualizza la categoria di flusso di lavoro assegnata a un operatore, che fornisce l'autorizzazione e i privilegi del flusso di lavoro all'operatore designato.
+
++
+È possibile impostare questa impostazione di autorizzazione facendo clic su *Content Management* > *Categories*.
+
+* *E-mail*
++
+Visualizza l'indirizzo e-mail dell'utente. Puoi utilizzare questo messaggio e-mail per ricevere notifiche sullo stato del flusso di lavoro.
+
+* *Notifiche attivate*
++
+Indica se l'utente può ricevere notifiche e-mail (vero o falso) sullo stato delle esecuzioni del flusso di lavoro attivate dall'utente.
+
+* *LDAP*
++
+Indica se il provisioning dell'utente viene eseguito tramite il server Active Directory esterno a cui si accede tramite LDAP (vero o falso).
+
+* *Gruppo Active Directory*
++
+Indica se l'utente fa parte di gruppi LDAP o Active Directory.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/new_wfa_icon.gif["Nuova icona"] (Novità)*
++
+Apre la finestra di dialogo nuovo utente, che consente di aggiungere un nuovo account utente.
+
+* *image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] (Modifica)*
++
+Apre la finestra di dialogo Edit User (Modifica utente), che consente di modificare l'account utente selezionato.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo Delete User confirmation (Conferma eliminazione utente), che consente di eliminare l'account utente selezionato.
+
+

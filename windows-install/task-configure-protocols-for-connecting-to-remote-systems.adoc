@@ -1,0 +1,53 @@
+---
+permalink: windows-install/task-configure-protocols-for-connecting-to-remote-systems.html 
+sidebar: sidebar 
+keywords: configure, protocols, connect, remote systems 
+summary: 'È possibile configurare il protocollo utilizzato da OnCommand Workflow Automation (Wfa) per la connessione ai sistemi remoti. È possibile configurare il protocollo in base ai requisiti di sicurezza dell"organizzazione e al protocollo supportato dal sistema remoto.' 
+---
+= Configurare i protocolli per la connessione ai sistemi remoti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare il protocollo utilizzato da OnCommand Workflow Automation (Wfa) per la connessione ai sistemi remoti. È possibile configurare il protocollo in base ai requisiti di sicurezza dell'organizzazione e al protocollo supportato dal sistema remoto.
+
+.Fasi
+. Accedere a WFA tramite un browser Web come amministratore.
+. Fare clic su *progettazione origine dati* > *tipi di sistema remoto*.
+. Eseguire una delle seguenti operazioni:
++
+[cols="2*"]
+|===
+| Se si desidera... | Eseguire questa operazione... 
+
+
+ a| 
+Configurare un protocollo per un nuovo sistema remoto
+ a| 
+.. Fare clic su image:../media/new_wfa_icon.gif["Nuova icona"].
+.. Nella finestra di dialogo nuovo tipo di sistema remoto, specificare i dettagli, ad esempio nome, descrizione e versione.
+
+
+
+
+ a| 
+Modificare la configurazione del protocollo di un sistema remoto esistente
+ a| 
+.. Selezionare e fare doppio clic sul sistema remoto che si desidera modificare.
+.. Fare clic su image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"].
+
+
+|===
+. Dall'elenco Connection Protocol (protocollo di connessione), selezionare una delle seguenti opzioni:
++
+** HTTPS con fallback su HTTP (impostazione predefinita)
+** Solo HTTPS
+** Solo HTTP
+** Personalizzato
+
+
+. Specificare i dettagli relativi al protocollo, alla porta predefinita e al timeout predefinito.
+. Fare clic su *Save* (Salva).
+

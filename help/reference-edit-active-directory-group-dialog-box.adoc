@@ -1,0 +1,95 @@
+---
+permalink: help/reference-edit-active-directory-group-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, active directory, dialog box, enable, view, modify, oncommand, workflow, automation, group 
+summary: La finestra di dialogo Modifica gruppo Active Directory consente di visualizzare e modificare le impostazioni del gruppo Active Directory di OnCommand Workflow Automation. 
+---
+= Finestra di dialogo Edit Active Directory Group (Modifica gruppo Active Directory)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Modifica gruppo Active Directory consente di visualizzare e modificare le impostazioni del gruppo Active Directory di OnCommand Workflow Automation.
+
+A seconda dei privilegi e del ruolo del gruppo Active Directory, potrebbe non essere possibile accedere alla finestra gruppi di Active Directory. Tuttavia, è possibile modificare le impostazioni del gruppo Active Directory selezionando *Impostazioni* e in *Gestione* fare clic su *gruppi Active Directory*.
+
+
+NOTE: I campi disponibili per la modifica dipendono dai privilegi del gruppo Active Directory.
+
+* *Nome gruppo*
++
+Visualizza il nome del gruppo Active Directory.
+
+* *Ruolo*
++
+Visualizza il ruolo assegnato per l'account utente.
+
++
+Visualizza uno dei seguenti ruoli di gruppo assegnati al gruppo Active Directory:
+
++
+** *Ospite*
++
+Questo gruppo può solo visualizzare lo stato dell'esecuzione di un flusso di lavoro o essere informato di una modifica dello stato dell'esecuzione di un flusso di lavoro.
+
+** *Operatore*
++
+A questo gruppo è consentito visualizzare in anteprima ed eseguire i flussi di lavoro per i quali viene fornito l'accesso al gruppo.
+
+** *Approvatore*
++
+A questo gruppo è consentito visualizzare in anteprima, eseguire, approvare e rifiutare i flussi di lavoro per i quali il gruppo ha accesso.
+
++
+
+NOTE: È necessario fornire l'ID e-mail del responsabile dell'approvazione e lo stato del flusso di lavoro che deve essere notificato al responsabile dell'approvazione. Se sono presenti più responsabili dell'approvazione, è possibile fornire un ID e-mail di gruppo nel campo *e-mail*.
+
+** *Architetto*
++
+Questo gruppo dispone dell'accesso completo per creare flussi di lavoro, ma non può modificare le impostazioni globali del server WFA.
+
+** *Amministratore*
++
+Questo gruppo ha accesso completo al server WFA.
+
++
+
+NOTE: È necessario configurare almeno un gruppo di amministratori.
+
+
+
+* *E-mail*
++
+Specifica il messaggio di posta elettronica per il gruppo Active Directory a cui vengono inviate le notifiche se è selezionata l'opzione *notifica attivata*.
+
+* *Notifica attivata*
++
+Consente di selezionare quando il gruppo Active Directory deve essere notificato tramite e-mail durante l'esecuzione del flusso di lavoro attivato da tale gruppo Active Directory. È possibile selezionare qualsiasi combinazione delle seguenti opzioni:
+
++
+** Esecuzione del flusso di lavoro avviata: Notifica all'utente quando inizia l'esecuzione del flusso di lavoro.
+** Esecuzione del flusso di lavoro non riuscita/parzialmente riuscita: Notifica all'utente se l'esecuzione del flusso di lavoro non riesce o se il flusso di lavoro è stato eseguito correttamente anche se uno o più passaggi non sono riusciti.
++
+L'esecuzione viene completata perché i passaggi non riusciti sono stati configurati per consentire all'esecuzione del flusso di lavoro di continuare anche quando il passaggio non riesce.
+
+** Esecuzione del flusso di lavoro completata correttamente: Notifica all'utente quando l'esecuzione del flusso di lavoro è stata completata correttamente.
+** Esecuzione del flusso di lavoro in attesa di approvazione: Notifica all'utente se l'esecuzione del flusso di lavoro è in attesa di approvazione da parte di un utente Operator o Architect, a seconda dell'impostazione di configurazione WFA.
+
+
+
+
+
+
+== Pulsanti di comando
+
+* *Salva*
++
+Salva le impostazioni di configurazione e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

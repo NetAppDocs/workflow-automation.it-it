@@ -1,0 +1,61 @@
+---
+permalink: help/reference-client-preferences-dialog-box.html 
+sidebar: sidebar 
+keywords: preference, window, enable, view, modify, refresh, logging, options, client, associated specific, workflow, automation, server, access, settings, setup, click 
+summary: 'La finestra Preferences (Preferenze) consente di visualizzare e modificare le opzioni di refresh e logging per tutti i client associati allo specifico server Workflow Automation (Wfa). Per accedere a questa finestra, selezionare Impostazioni, quindi fare clic su Preferenze in Setup.' 
+---
+= Finestra Preferences (Preferenze)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Preferences (Preferenze) consente di visualizzare e modificare le opzioni di refresh e logging per tutti i client associati allo specifico server Workflow Automation (Wfa). Per accedere a questa finestra, selezionare *Impostazioni* e in *Setup* fare clic su *Preferenze*.
+
+* *Attiva aggiornamento automatico*
++
+Consente di scegliere l'aggiornamento automatico del client, attivato dal server. Questa opzione è selezionata per impostazione predefinita. Quando questa opzione è selezionata, le seguenti tabelle WFA vengono aggiornate automaticamente:
+
++
+** Stato di esecuzione
+** Origini dati
+** Prenotazioni
+
+
+
+
+Se questa opzione non è selezionata, le tabelle non vengono aggiornate fino a quando non si fa clic su *Refresh* (Aggiorna). Questa casella di controllo è selezionata per impostazione predefinita.
+
+* *Intervallo di aggiornamento (secondi)*
++
+Consente di selezionare l'intervallo di refresh. Il valore predefinito è 3 secondi.
+
+* *Numero massimo di righe da visualizzare*
++
+Consente di fare clic sul valore nella colonna *Max Size* e modificare il numero di righe che il server recupera e visualizza all'utente per tipo di elenco.
+
++
+Ad esempio, l'impostazione *Workflow Execution* (esecuzione flusso di lavoro) visualizza il numero di esecuzioni precedenti per l'utente. Di seguito sono riportati i valori predefiniti:
+
++
+** Esecuzione del workflow: 100
+** Cronologia di acquisizione: 30
+** Prenotazioni: 100
+** Aggiungere righe di inventario: 1000
++
+Consente di specificare il numero massimo di risultati che devono essere ottenuti dall'inventario. Il valore predefinito è 1000.
+
+
+
+
+
+
+
+== Pulsante di comando
+
+* *Salva*
++
+Salva le impostazioni di configurazione.
+
+

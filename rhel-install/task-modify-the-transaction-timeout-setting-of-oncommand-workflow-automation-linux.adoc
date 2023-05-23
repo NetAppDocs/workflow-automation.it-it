@@ -1,0 +1,29 @@
+---
+permalink: rhel-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation-linux.html 
+sidebar: sidebar 
+keywords: modify, transaction, timeout, setting, oncommand, workflow, automation 
+summary: 'Per impostazione predefinita, la transazione del database OnCommand Workflow Automation (WFA) viene fuori servizio in 300 secondi. È possibile aumentare la durata di timeout predefinita durante il ripristino di un database WFA di grandi dimensioni da un backup per evitare potenziali errori di ripristino del database.' 
+---
+= Modificare l'impostazione di timeout della transazione di OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per impostazione predefinita, la transazione del database OnCommand Workflow Automation (WFA) viene fuori servizio in 300 secondi. È possibile aumentare la durata di timeout predefinita durante il ripristino di un database WFA di grandi dimensioni da un backup per evitare potenziali errori di ripristino del database.
+
+È necessario aver effettuato l'accesso al sistema host WFA come utente root.
+
+In questa procedura viene utilizzato il percorso di installazione predefinito di WFA. Se è stata modificata la posizione predefinita durante l'installazione, è necessario utilizzare il percorso di installazione WFA modificato.
+
+.Fasi
+. Al prompt della shell, accedere alla seguente directory sul server WFA: WFA_install_location/wfa/bin/
+. Immettere il seguente comando:
++
+`./wfa --txn-timeout[=TIMEOUT] --restart=WFA`
+
++
+`./wfa --txn-timeout=1000 --restart=WFA`
+
+

@@ -1,0 +1,39 @@
+---
+permalink: help/task-import-oncommand-workflow-automation-content.html 
+sidebar: sidebar 
+keywords: import, user-created, oncommand, workflow, automation, content, finders, commands, installation, downloaded, storage, community, packs, include, data, ontap, powershell, toolkits, perl, nmsdk 
+summary: 'È possibile importare contenuti Wfa (OnCommand Workflow Automation) creati dall"utente, ad esempio flussi di lavoro, finder e comandi. È inoltre possibile importare contenuti esportati da un"altra installazione WFA, contenuti scaricati dall"archivio di automazione dello storage o dalla community WFA, oltre a pacchetti, tra Data ONTAP cui toolkit PowerShell e toolkit Perl NMSDK.' 
+---
+= Importa contenuto OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile importare contenuti Wfa (OnCommand Workflow Automation) creati dall'utente, ad esempio flussi di lavoro, finder e comandi. È inoltre possibile importare contenuti esportati da un'altra installazione WFA, contenuti scaricati dall'archivio di automazione dello storage o dalla community WFA, oltre a pacchetti, tra Data ONTAP cui toolkit PowerShell e toolkit Perl NMSDK.
+
+*Cosa ti serve*
+
+* È necessario disporre dell'accesso al contenuto WFA che si desidera importare.
+* Il contenuto che si desidera importare deve essere stato creato su un sistema che esegue la stessa versione o una versione precedente di WFA.
++
+Ad esempio, se si esegue WFA 2.2, non è possibile importare il contenuto creato utilizzando WFA 3.0.
+
+* È possibile importare il contenuto sviluppato sulle versioni N-2 di WFA solo in WFA 5.1.
+* Se il `.dar` Il file fa riferimento a contenuti certificati da NetApp, i pacchetti di contenuti certificati da NetApp devono essere importati.
++
+I pacchetti di contenuti certificati NetApp possono essere scaricati dallo Storage Automation Store. Per verificare che tutti i requisiti siano soddisfatti, consultare la documentazione del pacchetto.
+
+
+
+.Fasi
+. Accedere a WFA tramite un browser Web.
+. Fare clic su *Impostazioni* e sotto *manutenzione* fare clic su *Importa flussi di lavoro*.
+. Fare clic su *Choose file* (Scegli file) per selezionare `.dar` File che si desidera importare, quindi fare clic su *Importa*.
+. Nella finestra di dialogo Import Success (importazione riuscita), fare clic su *OK*.
+
+
+*Informazioni correlate*
+
+http://community.netapp.com/t5/OnCommand-Storage-Management-Software-Articles-and-Resources/tkb-p/oncommand-storage-management-software-articles-and-resources/label-name/workflow%20automation%20%28wfa%29?labels=workflow+automation+%28wfa%29["Community NetApp: OnCommand Workflow Automation"^]

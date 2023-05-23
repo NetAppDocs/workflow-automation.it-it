@@ -1,0 +1,55 @@
+---
+permalink: help/task-configure-snmp-version-3.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation, simple, network, management, protocol, version 3, traps, about, status, operations 
+summary: 'È inoltre possibile configurare OnCommand Workflow Automation (Wfa) per inviare trap SNMP (Simple Network Management Protocol) versione 3 sullo stato delle operazioni del flusso di lavoro.' 
+---
+= Configurare SNMP versione 3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È inoltre possibile configurare OnCommand Workflow Automation (Wfa) per inviare trap SNMP (Simple Network Management Protocol) versione 3 sullo stato delle operazioni del flusso di lavoro.
+
+*A proposito di questa attività*
+
+La versione 3 offre due opzioni di sicurezza aggiuntive:
+
+* Versione 3 con autenticazione
++
+I trap vengono inviati non crittografati sulla rete. Le applicazioni di gestione SNMP, configurate con gli stessi parametri di autenticazione dei messaggi trap SNMP, possono ricevere trap.
+
+* Versione 3 con autenticazione e crittografia
++
+I trap vengono inviati in modo crittografato sulla rete. Per ricevere e decrittare questi trap, è necessario configurare le applicazioni di gestione SNMP con gli stessi parametri di autenticazione e chiave di crittografia dei trap SNMP.
+
+
+
+.Fasi
+. Accedere a WFA tramite un browser Web come utente amministratore, quindi accedere al server WFA.
+. Fare clic su *Settings* (Impostazioni) e in *Setup* (Configurazione) fare clic su *SNMP*.
+. Selezionare la casella di controllo *Enable SNMP* (attiva SNMP).
+. Nell'elenco a discesa *Version*, selezionare una delle seguenti opzioni:
++
+** Versione 3
+** Versione 3 con autenticazione
+** Versione 3 con autenticazione e crittografia
+
+
+. Selezionare le opzioni di configurazione SNMP corrispondenti all'opzione SNMP versione 3 selezionata al passaggio 4.
+. Inserire un indirizzo IPv4 o IPv6 o il nome host e il numero di porta dell'host di gestione. WFA invia i trap SNMP al numero di porta specificato. Il numero di porta predefinito è 162.
+. Nella sezione *notifica on*, selezionare una o più delle seguenti caselle di controllo:
++
+** Pianificazione del workflow avviata/non riuscita/completata
+** Esecuzione del flusso di lavoro avviata
+** Esecuzione del flusso di lavoro completata correttamente
+** Esecuzione del flusso di lavoro non riuscita/parzialmente riuscita
+** Esecuzione del workflow in attesa di approvazione
+** Errore di acquisizione
+
+
+. Fare clic su *Send Test Notification* (Invia notifica test) per verificare le impostazioni.
+. Fare clic su *Save* (Salva).
+

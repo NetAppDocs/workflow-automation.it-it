@@ -1,0 +1,29 @@
+---
+permalink: workflows/concept-how-you-execute-custom-rest-end-points.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, mechanism, configure, custom, end points, execute, help, architect, configure, easy, understand, intuitive, uniform, resource, identifiers, follow, conventions, post, put, delete, based, semantics, client, code, developers 
+summary: 'OnCommand Workflow Automation (Wfa) offre un meccanismo per configurare gli end point REST personalizzati per eseguire i flussi di lavoro. I punti finali REST personalizzati aiutano un architetto a configurare URI (Resource Identifier) semplici da comprendere, intuitivi e uniformi per l"esecuzione dei flussi di lavoro, che seguono le restanti convenzioni di POST, PUT o DELETE in base alla semantica del workflow. Questi URI facilitano lo sviluppo del codice client per gli sviluppatori client.' 
+---
+= Come eseguire end point REST personalizzati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (Wfa) offre un meccanismo per configurare gli end point REST personalizzati per eseguire i flussi di lavoro. I punti finali REST personalizzati aiutano un architetto a configurare URI (Resource Identifier) semplici da comprendere, intuitivi e uniformi per l'esecuzione dei flussi di lavoro, che seguono le restanti convenzioni di POST, PUT o DELETE in base alla semantica del workflow. Questi URI facilitano lo sviluppo del codice client per gli sviluppatori client.
+
+WFA consente di configurare un percorso URI personalizzato per l'esecuzione del flusso di lavoro attraverso le chiamate API. Ciascun segmento nel percorso URI può essere una stringa o un nome valido dell'input utente del flusso di lavoro tra parentesi, ad esempio `/devops/\{ProjectName}/clone.` Il flusso di lavoro può essere richiamato come chiamata a. `_https_://WFAServer: HTTPS_PORT/rest/devops/Project1/clone/jobs.`
+
+La convalida per il percorso URI è la seguente:
+
+* Il percorso DI PAUSA deve iniziare con "`/`".
+* I caratteri consentiti sono lettere, cifre e caratteri di sottolineatura.
+* Il nome immesso dall'utente deve essere circondato da "`{}`".
++
+
+NOTE: Verificare che il valore circondato da "`{}`" sia un nome utente valido.
+
+* Non devono essere presenti segmenti di percorso vuoti, ad esempio //, /{}/ e così via.
+* La configurazione del metodo HTTP e la configurazione personalizzata del percorso URI devono essere configurate o non configurate.
+

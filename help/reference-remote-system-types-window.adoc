@@ -1,0 +1,130 @@
+---
+permalink: help/reference-remote-system-types-window.html 
+sidebar: sidebar 
+keywords: remote, system, types, windows, display, type, remote, oncommand, Workflow, automation, work, include, clustered, data, cloud manager, active, unified manager, datafabric, manager, server, e-series 
+summary: 'La finestra Remote System Types (tipi di sistema remoto) visualizza il tipo di sistemi remoti con cui OnCommand Workflow Automation (Wfa) può funzionare. I sistemi remoti includono Clustered Data ONTAP, Cloud Manager, Active IQ Unified Manager, server DataFabric Manager e sistemi e-Series.' 
+---
+= Finestra Remote System Types
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Remote System Types (tipi di sistema remoto) visualizza il tipo di sistemi remoti con cui OnCommand Workflow Automation (Wfa) può funzionare. I sistemi remoti includono Clustered Data ONTAP, Cloud Manager, Active IQ Unified Manager, server DataFabric Manager e sistemi e-Series.
+
+* Tabella dei tipi di sistema remoto
+* Barra degli strumenti
+
+
+
+
+== Tabella dei tipi di sistema remoto
+
+La tabella dei tipi di sistema remoto elenca in formato tabulare i sistemi remoti con cui WFA può lavorare. È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella dei tipi di sistema remoto contiene le seguenti colonne:
+
+* *Nome*
++
+Visualizza il nome del tipo di sistema remoto.
+
++
+È possibile cercare un tipo di sistema remoto immettendo il nome nella casella di testo del filtro *Cerca*.
+
+* *Versione entità*
++
+Visualizza la versione corrente del tipo di sistema remoto in `major.minor.revision` format--ad esempio, 1.0.0.
+
++
+È possibile cercare un tipo di sistema remoto inserendo il numero di versione nella casella di testo del filtro *Cerca*.
+
+* *Descrizione*
++
+Visualizza la descrizione del tipo di sistema remoto.
+
++
+È possibile cercare un tipo di sistema remoto immettendo la relativa descrizione nella casella di testo del filtro *Cerca*.
+
+* *Ultimo aggiornamento in data*
++
+Visualizza la data e l'ora dell'ultimo aggiornamento del tipo di sistema remoto.
+
++
+È possibile cercare i tipi di sistema remoto selezionando la categoria di tempo richiesta dall'elenco a discesa del filtro.
+
+* *Aggiornato da*
++
+Visualizza il nome dell'utente che ha aggiornato il tipo di sistema remoto.
+
++
+È possibile cercare i tipi di sistema remoti inserendo il nome utente nella casella di testo del filtro *Search*.
+
+* *Bloccato da*
++
+Visualizza il nome dell'utente che ha bloccato il tipo di sistema remoto.
+
++
+È possibile cercare i tipi di sistema remoti inserendo il nome utente nella casella di testo del filtro *Search*.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/new_wfa_icon.gif["Nuova icona"] (Novità)*
++
+Apre la finestra di dialogo New Remote System Type (nuovo tipo di sistema remoto), che consente di inserire i dettagli per aggiungere un nuovo tipo di sistema remoto a Wfa.
+
+* *image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] (Modifica)*
++
+Apre la finestra di dialogo <RemoteSystemTypeName> tipo di sistema remoto per il tipo di sistema remoto selezionato, che consente di modificare il tipo di sistema remoto.
+
+* *image:../media/clone_wfa_icon.gif["Icona Clona"] (Clone)*
++
+Apre la finestra di dialogo <RemoteSystemTypeName> nuovo tipo di sistema remoto - copia, che consente di creare un clone o una copia del tipo di sistema remoto selezionato.
+
+* *image:../media/lock_wfa_icon.gif["Icona a forma di lucchetto"] (Blocco)*
++
+Apre la finestra di dialogo di conferma Lock Remote System Type, che consente di bloccare il tipo di sistema remoto selezionato. Questa opzione è abilitata solo per i tipi di sistema remoto creati.
+
+* *image:../media/unlock_wfa_icon.gif["Icona di sblocco"] (Sblocca)*
++
+Apre la finestra di dialogo di conferma Unlock Remote System Type, che consente di sbloccare il tipo di sistema remoto selezionato. Questa opzione è abilitata solo per i tipi di sistema remoto bloccati. Gli amministratori possono sbloccare tipi di sistema remoti bloccati da altri utenti.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo Delete Remote System Type (Elimina tipo di sistema remoto), che consente di eliminare il tipo di sistema remoto selezionato.
+
+* *image:../media/export_wfa_icon.gif["Icona Export (Esporta)"] (Esportazione)*
++
+Consente di esportare il tipo di sistema remoto selezionato.
+
+* *image:../media/add_to_pack.png["icona add to pack (aggiungi al pacchetto)"] (Aggiungi al pacchetto)*
++
+Apre la finestra di dialogo Add to Pack Remote System Types, che consente di aggiungere il tipo di sistema remoto e le relative entità affidabili a un pacchetto, modificabile.
+
++
+
+NOTE: La funzione Add to Pack (Aggiungi al pacchetto) è attivata solo per i tipi di sistema remoti per i quali la certificazione è impostata su *None.*
+
+* *image:../media/remove_from_pack.png["icona remove from pack (rimuovi dalla confezione)"] (Remove from Pack)*
++
+Apre la finestra di dialogo Remove from Pack Remote System Types (Rimuovi da pacchetti di sistemi remoti) per il tipo di sistema remoto selezionato, che consente di eliminare o rimuovere il tipo di sistema remoto dal pacchetto.
+
++
+
+NOTE: La funzione Remove from Pack (Rimuovi da pacchetto) è abilitata solo per i tipi di sistema remoti per i quali la certificazione è impostata su *None.*
+
+

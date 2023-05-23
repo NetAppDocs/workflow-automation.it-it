@@ -1,0 +1,59 @@
+---
+permalink: help/task-configure-email-notifications-for-data-source-acquisition-failures.html 
+sidebar: sidebar 
+keywords: control, notifications, generate, oncommand, workflow, automation, data, source, acquisition, fail, configure, threshold, interval, factor, notifications 
+summary: 'È possibile controllare le notifiche generate in OnCommand Workflow Automation (Wfa) quando un"acquisizione dell"origine dati non riesce. È possibile configurare la soglia e il fattore di intervallo per le notifiche.' 
+---
+= Configurare le notifiche e-mail per gli errori di acquisizione dell'origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile controllare le notifiche generate in OnCommand Workflow Automation (Wfa) quando un'acquisizione dell'origine dati non riesce. È possibile configurare la soglia e il fattore di intervallo per le notifiche.
+
+*Cosa ti serve*
+
+Le notifiche e-mail devono essere configurate in OnCommand Workflow Automation (Wfa).
+
+.Fasi
+. Accedere a WFA tramite un browser Web come amministratore.
+. Configurare la soglia di notifica:
++
+.. Fare clic su *Impostazioni* e in *Setup* fare clic su *Impostazioni flusso di lavoro*.
+.. Scorrere verso il basso fino alla sezione *Avanzate*.
+.. Nel campo *Acquisition notification threshold* (soglia notifica acquisizione), inserire il valore richiesto.
++
+Il valore predefinito è 2.
+
++
+Se il valore specificato è 2, WFA attende due errori consecutivi di acquisizione dell'origine dati prima di inviare una notifica via email.
+
+
+
+. Fare clic su *Save* (Salva).
+. Configurare il fattore dell'intervallo di notifica:
++
+.. Fare clic su *Impostazioni* e sotto *Setup* fare clic su *origini dati*.
+.. Prendere nota dell'intervallo specificato per l'origine dati richiesta.
++
+Il valore predefinito è 30. È possibile modificare l'origine dati per modificare l'intervallo di tempo.
+
+.. Fare clic su *Impostazioni* e in *Setup* fare clic su *Impostazioni flusso di lavoro*.
+.. Scorrere verso il basso fino alla sezione *Avanzate*.
+.. Nel campo *Acquisition notification interval factor* (fattore intervallo notifica acquisizione), inserire il valore richiesto.
++
+Il valore predefinito è 6.
+
++
+Se l'intervallo specificato per un'origine dati è di 30 minuti e il fattore di moltiplicazione è 6, viene inviata una notifica via email quando l'acquisizione dell'origine dati per l'origine dati non avviene per 180 minuti.
+
++
+
+NOTE: Se si specifica 12 ore o più come intervallo di acquisizione per un'origine dati, WFA considera il fattore di intervallo come 1 e invia una notifica dopo l'intervallo di acquisizione specificato per l'origine dati.
+
+
+
+. Fare clic su *Save* (Salva).
+

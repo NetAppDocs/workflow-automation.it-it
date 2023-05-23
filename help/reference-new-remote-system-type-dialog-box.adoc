@@ -1,0 +1,76 @@
+---
+permalink: help/reference-new-remote-system-type-dialog-box.html 
+sidebar: sidebar 
+keywords: new, remote, system, type, dialog box, enable, add, oncommand, workflow, automation, predefined, meet, requirement, change, configuration 
+summary: 'La finestra di dialogo nuovo tipo di sistema remoto consente di aggiungere un nuovo tipo di sistema remoto a OnCommand Workflow Automation (Wfa) se un tipo di sistema predefinito non soddisfa i requisiti o se si desidera modificare la configurazione di un tipo di sistema predefinito.' 
+---
+= Finestra di dialogo nuovo tipo di sistema remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo nuovo tipo di sistema remoto consente di aggiungere un nuovo tipo di sistema remoto a OnCommand Workflow Automation (Wfa) se un tipo di sistema predefinito non soddisfa i requisiti o se si desidera modificare la configurazione di un tipo di sistema predefinito.
+
+* Scheda Dettagli
+* Scheda Validation script
+
+
+
+
+== Scheda Dettagli
+
+Consente di specificare i dettagli del tipo di sistema remoto, ad esempio il nome, la descrizione, la versione e il protocollo di connessione.
+
+* *Nome*
++
+Consente di specificare un nome per il tipo di sistema remoto. Specificare un nome per salvare il tipo di sistema remoto.
+
+* *Descrizione*
++
+Consente di immettere una descrizione per il tipo di sistema remoto.
+
+* *Versione*
++
+Consente di specificare il numero di versione per il tipo di sistema remoto in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Protocollo di connessione*
++
+Consente di selezionare uno dei seguenti protocolli da utilizzare da WFA durante la connessione al sistema remoto:
+
++
+** HTTPS con fallback su HTTP
++
+La connessione utilizza principalmente HTTPS. Se la connessione tramite HTTPS non riesce, viene utilizzato HTTP. Se anche la connessione tramite HTTP non riesce, il tentativo di connessione viene interrotto.
+
+** Solo HTTPS
+** Solo HTTP
+** Personalizzato
+
+
+
+
+Quando si seleziona un protocollo di connessione, i campi Protocol (protocollo), default port (porta predefinita) e default timeout (sec) (timeout predefinito (sec)) vengono popolati con i dati.
+
+
+
+== Scheda Validation script
+
+Consente di verificare la connettività del protocollo selezionato con il tipo di sistema remoto.
+
+È possibile fare clic su *Test Perl script* per eseguire lo script per verificare la connettività.
+
+
+
+== Pulsanti di comando
+
+* *Salva*
++
+Salva le impostazioni di configurazione del tipo di sistema remoto e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

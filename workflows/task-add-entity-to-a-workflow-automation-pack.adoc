@@ -1,0 +1,43 @@
+---
+permalink: workflows/task-add-entity-to-a-workflow-automation-pack.html 
+sidebar: sidebar 
+keywords: entity, workflow, pack, oncommand, automation, storage, integration, requirements 
+summary: 'È possibile aggiungere una o più entità a un pacchetto di workflow in OnCommand Workflow Automation (Wfa ) per i requisiti di integrazione e automazione dello storage.' 
+---
+= Aggiungere entità ai pacchetti di workflow WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere una o più entità a un pacchetto di workflow in OnCommand Workflow Automation (Wfa) per i requisiti di integrazione e automazione dello storage.
+
+.A proposito di questa attività
+È possibile rimuovere un pacchetto dalle seguenti entità:
+
+* Workflow
+* I finder
+* Filtri
+* Comandi
+* Funzioni
+* Modelli
+* Schemi
+* Dizionario
+* Tipi di origini dati
+* Tipi di sistema remoto
+* Query della cache
+* Categorie
+
+
+.Fasi
+. Accedere alla finestra *WFA* tramite un browser Web.
+. Nel portale di progettazione del flusso di lavoro, accedere all'entità che si desidera aggiungere e fare clic su *<Entity>*.
+. Nella finestra *Entity*, selezionare l'entità da aggiungere al pacchetto.
+. Fare clic sull'icona *Aggiungi al pacchetto*.
++
+"`Add to Pack`" è abilitato solo per le entità per le quali la certificazione è impostata su *None.*
+
+. Nella finestra di dialogo *Aggiungi al pacchetto <Entity>*, dall'elenco a discesa *pacchetti disponibili*, selezionare il pacchetto al quale si desidera aggiungere l'entità.
+. Fare clic su *OK*.
+

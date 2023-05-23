@@ -1,0 +1,66 @@
+---
+permalink: help/reference-add-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: add, cache, query, dialog, enable, create, new, dictionary, entry, associate, data, provide, type, specific, unified manager, version 
+summary: La finestra di dialogo Aggiungi query cache consente di creare una nuova query cache per una voce del dizionario e di associare la query a un tipo di dati forniti, ad esempio una versione specifica di Active IQ Unified Manager. 
+---
+= Finestra di dialogo Add cache Query (Aggiungi query cache)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Aggiungi query cache consente di creare una nuova query cache per una voce del dizionario e di associare la query a un tipo di dati forniti, ad esempio una versione specifica di Active IQ Unified Manager.
+
+* *Voce dizionario*
++
+Consente di selezionare una voce del dizionario per la quale si desidera creare una query della cache.
+
+* *Versione entità*
++
+Consente di immettere il numero di versione della query cache in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Tipi di origine dati*
++
+Consente di selezionare i tipi di origine dati da associare alla query della cache, ad esempio Active IQ_6.0.
+
+
+
+
+
+== Struttura della tabella
+
+* Scheda attributi*
++
+Visualizza gli attributi associati alla voce del dizionario.
+
+* *Scheda SQL Crea tabella*
++
+Visualizza lo script Create Table per la voce del dizionario.
+
+
+
+
+
+== Query di selezione SQL
+
+Consente di immettere la query SQL Select che recupera i dati dalla tabella del provider di dati specificato.
+
+
+
+== Pulsanti di comando
+
+* *Test*
++
+Consente di verificare la query SQL immessa nel campo *query selezione SQL*.
+
+* *Salva*
++
+Salva la query della cache e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

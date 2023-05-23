@@ -1,0 +1,36 @@
+---
+permalink: help/task-create-a-scheme.html 
+sidebar: sidebar 
+keywords: create, scheme, data, cached, new, data, source, type, store, workflows, directly, database 
+summary: È necessario creare uno schema quando i dati devono essere memorizzati nella cache da un nuovo tipo di origine dati o quando i dati devono essere memorizzati dai flussi di lavoro direttamente nel database. 
+---
+= Creare uno schema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario creare uno schema quando i dati devono essere memorizzati nella cache da un nuovo tipo di origine dati o quando i dati devono essere memorizzati dai flussi di lavoro direttamente nel database.
+
+*Cosa ti serve*
+
+* È necessario aver installato WFA.
+* È necessario disporre dei privilegi di amministratore o delle credenziali di architetto per WFA.
+
+
+*A proposito di questa attività*
+
+Per impostazione predefinita, WFA supporta due tipi di schemi: Acquisizione origine dati e Altro.
+
+* Schemi di acquisizione origine dati: Le tabelle in questi schemi vengono memorizzate nella cache dalle origini dati definite per acquisire dati da sistemi remoti.
+* Altri schemi: Le tabelle di questi schemi vengono popolate con i dati attraverso flussi di lavoro personalizzati per risolvere problemi specifici.
+
+
+.Fasi
+. Accedere a WFA tramite un browser Web come amministratore o architetto.
+. Fare clic su *Data Source Design* > *Schemes*.
+. Creare un nuovo schema facendo clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+. Inserire le informazioni richieste, ad esempio il nome, il tipo, la descrizione e la versione dell'entità dello schema nella finestra di dialogo *nuovi schemi*.
+. Fare clic su *Save* (Salva).
+

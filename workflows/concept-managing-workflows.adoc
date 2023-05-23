@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-managing-workflows.html 
+sidebar: sidebar 
+keywords: customize, predefined, workflow, create, part, managing, understand, relevant, concepts 
+summary: È possibile personalizzare i flussi di lavoro predefiniti o creare nuovi flussi di lavoro come parte della gestione dei flussi di lavoro. Prima di iniziare a gestire i flussi di lavoro, è inoltre necessario comprendere i concetti pertinenti. 
+---
+= Gestione dei flussi di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile personalizzare i flussi di lavoro predefiniti o creare nuovi flussi di lavoro come parte della gestione dei flussi di lavoro. Prima di iniziare a gestire i flussi di lavoro, è inoltre necessario comprendere i concetti pertinenti.

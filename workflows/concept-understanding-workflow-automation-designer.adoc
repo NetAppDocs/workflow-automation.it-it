@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-understanding-workflow-automation-designer.html 
+sidebar: sidebar 
+keywords: create, workflows, automation, designer, use, building blocks, finders, filters, commands, understanding, important, before, start 
+summary: 'I flussi di lavoro vengono creati nella finestra di progettazione dell"automazione del flusso di lavoro (WFA) utilizzando i blocchi di base, ad esempio finder, filtri e comandi. Comprendere i blocchi costitutivi e il processo di creazione del workflow è importante prima di iniziare a creare i flussi di lavoro.' 
+---
+= Comprendere Workflow Automation Designer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I flussi di lavoro vengono creati nella finestra di progettazione dell'automazione del flusso di lavoro (WFA) utilizzando i blocchi di base, ad esempio finder, filtri e comandi. Comprendere i blocchi costitutivi e il processo di creazione del workflow è importante prima di iniziare a creare i flussi di lavoro.

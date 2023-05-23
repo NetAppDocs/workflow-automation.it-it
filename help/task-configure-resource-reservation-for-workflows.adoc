@@ -1,0 +1,34 @@
+---
+permalink: help/task-configure-resource-reservation-for-workflows.html 
+sidebar: sidebar 
+keywords: configure, resource, reservation, capability, oncommand, workflow, automation, ensure, required, available, successful, execution 
+summary: 'È possibile configurare la funzione di prenotazione delle risorse per i flussi di lavoro OnCommand Workflow Automation (Wfa) per garantire che le risorse necessarie siano disponibili per l"esecuzione corretta dei flussi di lavoro.' 
+---
+= Configurare la prenotazione delle risorse per i flussi di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare la funzione di prenotazione delle risorse per i flussi di lavoro OnCommand Workflow Automation (Wfa) per garantire che le risorse necessarie siano disponibili per l'esecuzione corretta dei flussi di lavoro.
+
+.Fasi
+. Accedere a WFA tramite un browser Web come amministratore.
+. Fare clic su *Impostazioni* e in *Setup* fare clic su *Impostazioni flusso di lavoro*.
+. Assicurarsi che la casella di controllo *Enable reservation for comands* (attiva prenotazione per i comandi) sia selezionata.
+. Nel campo *scadenza prenotazione (H)*, inserire il valore richiesto.
++
+Il valore predefinito è 4.
+
+. Fare clic su *Save* (Salva).
+. Abilitare la prenotazione delle risorse in ogni flusso di lavoro richiesto:
++
+.. Fare clic su *Workflow* > *Details* (Dettagli) del flusso di lavoro richiesto.
++
+`Workflow` è il flusso di lavoro che richiede la prenotazione delle risorse.
+
+.. Selezionare *considera elementi riservati*.
+
+
+

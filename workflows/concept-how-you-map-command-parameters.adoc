@@ -1,0 +1,133 @@
+---
+permalink: workflows/concept-how-you-map-command-parameters.html 
+sidebar: sidebar 
+keywords: parameter, workflow, automation, commands, mapped, specific, attributes, dictionary, entry, references, certain, rules, aware, map, command, create, edit 
+summary: 'I parametri dei comandi WFA (Workflow Automation) sono mappati a specifici attributi e riferimenti alle voci del dizionario in base a determinate regole. È necessario conoscere le regole per mappare i parametri dei comandi quando si crea o modifica un comando WFA.' 
+---
+= Come mappare i parametri dei comandi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I parametri dei comandi WFA (Workflow Automation) sono mappati a specifici attributi e riferimenti alle voci del dizionario in base a determinate regole. È necessario conoscere le regole per mappare i parametri dei comandi quando si crea o modifica un comando WFA.
+
+La mappatura dei parametri dei comandi definisce la modalità di definizione dei dettagli dei comandi nei flussi di lavoro. I parametri dei comandi mappati di un comando vengono visualizzati nelle schede quando si specificano i dettagli dei comandi nei flussi di lavoro. Le schede vengono denominate in base al nome del gruppo specificato nella colonna Nome oggetto della scheda mappatura parametri. I parametri non mappati vengono visualizzati nella scheda altri parametri quando si specificano i dettagli del comando nei flussi di lavoro.
+
+Le regole per la mappatura dei parametri di comando sono applicabili in base alla categoria di comando e alla modalità di rappresentazione dei comandi nell'editor del flusso di lavoro.
+
+Di seguito sono riportate le categorie di comandi:
+
+* Comandi che creano oggetti
+* Comandi che aggiornano gli oggetti
+* Comandi che rimuovono gli oggetti
+* Comandi che gestiscono oggetti padre e figlio opzionali
+* Comandi che aggiornano le associazioni tra oggetti
+
+
+Le regole sono elencate di seguito per ciascuna categoria:
+
+
+
+== Tutte le categorie di comandi
+
+Quando si esegue il mapping di un parametro di comando, è necessario utilizzare il percorso naturale in base all'utilizzo del comando nei flussi di lavoro.
+
+I seguenti esempi mostrano come definire un percorso naturale:
+
+* Per il parametro ArrayIP, a seconda del comando, utilizzare l'attributo aggregate.array.ip della voce Volume dictionary e non l'attributo array.ip.
++
+Ciò è importante quando un flusso di lavoro crea un volume ed esegue un'ulteriore fase con il volume creato facendo riferimento ad esso. Di seguito sono riportati alcuni esempi simili:
+
++
+** Volume.aggregate.array.ip della voce del dizionario Qtree
+** Volume.aggregate.array.ip della voce del dizionario LUN
+
+
+* Per il cluster utilizzato nei comandi, utilizzare uno dei seguenti comandi:
++
+** vserver.cluster.Primary_address della voce Volume dictionary
+** Volume.vserver.cluster.Primary_address della voce del dizionario Qtree
+
+
+
+
+
+
+== Comandi che creano oggetti
+
+Questa categoria di comandi viene utilizzata per uno dei seguenti comandi:
+
+* Ricerca di un oggetto padre e definizione di nuovi oggetti
+* Ricerca di un oggetto e creazione dell'oggetto se non esiste
+
+
+Per questa categoria di comandi, utilizzare le seguenti regole di mappatura dei parametri:
+
+* Mappare i parametri rilevanti dell'oggetto creato nella voce del dizionario dell'oggetto.
+* Mappare l'oggetto padre attraverso i riferimenti della voce del dizionario creata.
+* Assicurarsi che l'attributo pertinente sia presente nella voce del dizionario quando si aggiunge un nuovo parametro.
++
+Di seguito sono riportati gli scenari di eccezione per questa regola:
+
++
+** Alcuni oggetti creati non dispongono di una voce dizionario corrispondente e solo l'oggetto padre viene mappato alla relativa voce dizionario padre, ad esempio il comando *Create VIF*, in cui è possibile mappare solo una matrice alla voce del dizionario matrice.
+** La mappatura dei parametri non è richiesta
++
+Ad esempio, il parametro ExecutionTimeout nel comando *Create or resize aggregate* è un parametro non mappato.
+
+
+
+
+
+I seguenti comandi certificati sono esempi per questa categoria:
+
+* Crea volume
+* Creare il LUN
+
+
+
+
+== Comandi che aggiornano gli oggetti
+
+Questa categoria di comandi viene utilizzata per trovare un oggetto e aggiornare gli attributi.
+
+Per questa categoria di comandi, utilizzare le seguenti regole di mappatura dei parametri:
+
+* Mappare gli oggetti aggiornati alla voce del dizionario.
+* Non mappare i parametri aggiornati per l'oggetto.
++
+Ad esempio, nel comando *Set Volume state*, il parametro Volume viene mappato ma il nuovo stato non viene mappato.
+
+
+
+
+
+== Comandi che rimuovono gli oggetti
+
+Questa categoria di comandi viene utilizzata per trovare un oggetto ed eliminarlo.
+
+È necessario mappare l'oggetto eliminato dal comando alla relativa voce del dizionario. Ad esempio, nel comando *Remove Volume*, il volume da eliminare viene mappato agli attributi e ai riferimenti pertinenti della voce del dizionario volume.
+
+
+
+== Comandi che gestiscono oggetti padre e figlio opzionali
+
+Per questa categoria di comandi, utilizzare le seguenti regole di mappatura dei parametri:
+
+* Non mappare alcun parametro obbligatorio di un comando come riferimento da un parametro opzionale del comando.
++
+Questa regola è più rilevante quando un comando gestisce oggetti figlio facoltativi di uno specifico oggetto padre. In questo caso, l'oggetto figlio e l'oggetto padre devono essere mappati esplicitamente. Ad esempio, nel comando *Stop Deduplication Jobs*, il comando interrompe un processo di deduplica in esecuzione su un volume specifico quando specificato insieme ad Array o su tutti i volumi di un determinato array. In questo caso, il parametro array deve essere mappato direttamente alla voce del dizionario array e non a Volume.Array perché Volume è un parametro facoltativo in questo comando.
+
+* Se esiste una relazione padre e figlio tra le voci del dizionario a livello logico ma non tra le istanze effettive di un comando specifico, questi oggetti devono essere mappati separatamente.
++
+Ad esempio, nel comando *Move Volume*, il volume viene spostato dall'aggregato principale corrente a un nuovo aggregato di destinazione. Pertanto, i parametri del volume vengono mappati a una voce del dizionario volume e i parametri dell'aggregato di destinazione vengono mappati separatamente alla voce del dizionario aggregato, ma non a volume.aggregate.name.
+
+
+
+
+
+== Comandi che aggiornano le associazioni tra oggetti
+
+Per questa categoria di comandi, è necessario associare sia l'associazione che gli oggetti alle voci del dizionario pertinenti. Ad esempio, nel comando Add Volume to vFiler (Aggiungi volume a vFiler), i parametri Volume e vFiler vengono mappati agli attributi pertinenti delle voci del dizionario Volume e vFiler.

@@ -1,0 +1,65 @@
+---
+permalink: workflows/task-create-a-function.html 
+sidebar: sidebar 
+keywords: create, wfa, function, use, utility, predefined, suitable, task 
+summary: 'È possibile creare una funzione WFA che può essere utilizzata come utility, se non esiste una funzione WFA predefinita adatta all"attività.' 
+---
+= Creare una funzione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare una funzione WFA che può essere utilizzata come utility, se non esiste una funzione WFA predefinita adatta all'attività.
+
+.Di cosa hai bisogno
+Per creare una funzione, è necessario conoscere le sintassi MVFLEX Expression Language (MVEL).
+
+.A proposito di questa attività
+Per le definizioni delle funzioni, è necessario includere quanto segue:
+
+* Name (Nome): Nome della funzione
++
+Non utilizzare una parola riservata nella sintassi MVEL. Ogni funzione deve avere un nome univoco.
+
+* MVEL Definition (definizione MVEL): Stringa che specifica la sintassi MVEL della definizione della funzione
+
+
+.Fasi
+. Fare clic su *Workflow Design* > *Functions*.
+. Fare clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+. Nella finestra di dialogo *Nuova funzione*, immettere o selezionare i dettagli richiesti nei campi *descrizione funzione* e *definizione funzione*.
++
+[listing]
+----
+def actualVolumeSize(data_size, snap_pct)
+{
+   if (snap_pct < 0 ) {
+        snap_pct = 0;
+   } else if (snap_pct > 99) {
+        snap_pct = 99;
+   }
+
+   div = 1 - (snap_pct/100);
+   return (int)(data_size/div);
+}
+----
++
+Il campo *nome funzione* viene compilato in base ai dati utilizzati nella sintassi MVEL.
+
+. *Opzionale:* fare clic su *Test* per verificare la funzione:
++
+.. Nella sezione *espressione* della finestra di dialogo *Test*, immettere l'espressione richiesta della funzione.
++
+`actualVolumeSize(600, 1)`
+
+.. Fare clic su *Test*.
++
+Viene visualizzato il risultato del test.
+
+.. Chiudere la finestra di dialogo.
+
+
+. Fare clic su *Save* (Salva).
+

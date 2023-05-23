@@ -1,0 +1,304 @@
+---
+permalink: workflows/reference-guidelines-for-workflows.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, modify, predefined, workflow, oncommand, workflow, automation 
+summary: 'È necessario conoscere le linee guida per la creazione o la modifica di un flusso di lavoro predefinito per OnCommand Workflow Automation (WFA).' 
+---
+= Linee guida per i flussi di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario conoscere le linee guida per la creazione o la modifica di un flusso di lavoro predefinito per OnCommand Workflow Automation (WFA).
+
+
+
+== Linee guida generali
+
+[cols="2*"]
+|===
+| Linee guida | Esempio 
+
+
+ a| 
+Assegnare un nome al flusso di lavoro in modo che rifletta l'operazione eseguita dall'operatore di storage.
+ a| 
+`Create a CIFS Share`
+
+
+
+ a| 
+Per i nomi dei flussi di lavoro, scrivere in maiuscolo la lettera iniziale della prima parola e ogni parola che è un oggetto. Lettere maiuscole per abbreviazioni e acronimi.
+ a| 
+Volume
+
+Qtree
+
+Creare una condivisione CIFS Qtree Data ONTAP in cluster
+
+
+
+ a| 
+Per le descrizioni del flusso di lavoro, includere tutte le fasi importanti del flusso di lavoro, inclusi eventuali prerequisiti, risultato del flusso di lavoro o aspetti condizionali dell'esecuzione.
+ a| 
+Vedere la descrizione del flusso di lavoro di esempio `Create VMware NFS Datastore on Clustered Data ONTAP Storage,` che include i prerequisiti.
+
+
+
+ a| 
+Impostare "`Ready for Production`" su `true` solo quando il flusso di lavoro è pronto per la produzione e può essere visualizzato nella pagina del portale.
+ a| 
+Nessuno
+
+
+
+ a| 
+Per impostazione predefinita, impostare "`considerare elementi riservati`" su true. Durante l'anteprima di un flusso di lavoro per l'esecuzione, il pianificatore WFA prende in considerazione tutti gli oggetti riservati insieme agli oggetti esistenti nel database della cache. Gli effetti di altri flussi di lavoro pianificati o di flussi di lavoro in esecuzione in parallelo vengono presi in considerazione quando si pianifica un flusso di lavoro specifico, se questa opzione è impostata su `true.`
+ a| 
+* Scenario 1
++
+Workflow 1 crea un volume e viene pianificato per l'esecuzione una settimana dopo. Workflow 2 crea qtree o LUN nei volumi ricercati e, se il workflow 2 viene eseguito entro un giorno, è necessario disattivare "`considerare elementi riservati`" per il workflow 2 per evitare che prenda in considerazione il volume che deve essere creato in una settimana.
+
+* Scenario 2
++
+Il flusso di lavoro 1 utilizza `Create Volume` comando. Se esiste un flusso di lavoro pianificato 2 che consuma 100 GB da un aggregato, il flusso di lavoro 1 deve considerare i requisiti per il flusso di lavoro 2 durante la pianificazione.
+
+
+
+
+
+ a| 
+Per impostazione predefinita, "`Enable Element existence validation`" è impostato su `true.`
+ a| 
+* Scenario 1
++
+Se si crea un flusso di lavoro che prima rimuove un volume in base al nome utilizzando il comando `Remove Volume` solo se il volume esiste e lo crea nuovamente utilizzando un altro comando, ad esempio `Create Volume` oppure `Clone Volume,` il flusso di lavoro non deve utilizzare questo flag. L'effetto della rimozione del volume non sarà disponibile per `Create volume` di conseguenza, il flusso di lavoro non riesce.
+
+* Scenario 2
++
+Il `Create Volume` il comando viene utilizzato in un flusso di lavoro con un nome specifico come "`vol198`".
+
++
+Se questa opzione è impostata su true, WFA Planner verifica durante la pianificazione se un volume con tale nome esiste nell'array specificato. Se il volume esiste, il flusso di lavoro non riesce durante la pianificazione.
+
+
+
+
+
+ a| 
+Quando lo stesso comando viene selezionato più di una volta in un flusso di lavoro, fornire i nomi di visualizzazione appropriati per le istanze di comando.
+ a| 
+Il flusso di lavoro di esempio "`creazione, mappatura e protezione LUN con SnapVault`" utilizza `Create Volume` comando due volte. Tuttavia, utilizza i nomi visualizzati come `Create Primary Volume` e. `Create Secondary Volume` appropriato per il volume primario e il volume di destinazione mirrorato.
+
+|===
+
+
+== Input dell'utente
+
+[cols="2*"]
+|===
+| Linee guida | Esempio 
+
+
+ a| 
+Nomi:
+
+* Iniziare il nome con il carattere "``".
+* Utilizzare una lettera maiuscola all'inizio di ciascuna parola.
+* Utilizzare lettere maiuscole per tutti i termini e le abbreviazioni.
+* Non utilizzare i caratteri di sottolineatura.
+
+ a| 
+`$Array`
+
+`$VolumeName`
+
+
+
+ a| 
+Nomi visualizzati:
+
+* Utilizzare una lettera maiuscola all'inizio di ciascuna parola.
+* Separare le parole con spazi.
+* Se gli input hanno unità specifiche, specificare direttamente l'unità tra parentesi nel nome visualizzato.
+
+ a| 
+`Volume Name`
+
+`Volume Size (MB)`
+
+
+
+ a| 
+Descrizioni:
+
+* Fornire una descrizione significativa per ogni input dell'utente.
+* Fornire esempi quando necessario.
++
+Questa operazione deve essere eseguita in particolare quando si prevede che l'input dell'utente sia in un formato specifico.
+
+
+
+Le descrizioni degli input dell'utente vengono visualizzate come descrizioni dei comandi per gli input dell'utente durante l'esecuzione del flusso di lavoro.
+ a| 
+Iniziatori da aggiungere a un "`iGroup`". Ad esempio, IQN o WWPN dell'iniziatore.
+
+
+
+ a| 
+Type (tipo): Selezionare Enum (tipo) se si desidera limitare l'input a un set di valori specifico.
+ a| 
+Protocollo: "`iscsi`", "`fcp`", "`mixed`"
+
+
+
+ a| 
+Type (tipo): Selezionare Query come tipo quando l'utente può selezionare i valori disponibili nella cache WFA.
+ a| 
+Array: Tipo DI QUERY con query come segue:
+
+[listing]
+----
+SELECT
+	ip, name
+FROM
+	storage.array
+----
+
+
+ a| 
+Type (tipo): Contrassegna l'input dell'utente come bloccato quando l'input dell'utente deve essere limitato ai valori ottenuti da una query o deve essere limitato solo ai tipi di enum supportati.
+ a| 
+Array: Tipo di query bloccata: È possibile selezionare solo gli array nella cache. Protocollo: Tipo di enum bloccato con valori validi come iscsi, fcp, misto. Non sono supportati valori diversi da quelli validi.
+
+
+
+ a| 
+Type: Query TypeAggiungi colonne aggiuntive come valori di ritorno nella query quando aiuta l'operatore di storage a scegliere l'input dell'utente corretto.
+ a| 
+Aggregato di dollari: Fornire nome, dimensione totale e dimensione disponibile in modo che l'operatore conosca gli attributi prima di selezionare l'aggregato.
+
+
+
+ a| 
+Type: Query TypeQuery SQL per gli input dell'utente può fare riferimento a qualsiasi altro input dell'utente che lo precede. Questo può essere utilizzato per limitare i risultati di una query basata su altri input dell'utente, come unità vFiler di un array, volumi di un aggregato, LUN in una macchina virtuale di storage (SVM).
+ a| 
+Nel flusso di lavoro di esempio `Create a Clustered Data ONTAP Volume,` La query per VserverName è la seguente:
+
+[listing]
+----
+SELECT
+    vserver.name
+FROM
+    cm_storage.cluster cluster,
+    cm_storage.vserver vserver
+WHERE
+    vserver.cluster_id = cluster.id
+    AND cluster.name = '${ClusterName}'
+    AND vserver.type = 'cluster'
+ORDER BY
+    vserver.name ASC
+----
+La query si riferisce a{ClusterName}, dove NomeClusterNomeClusterNomeClusterNomeClusterNomeClusterNomeClusterNomeClusterNomeClusterNomeClusterNomeClusterNomeClusterNomeClusterNomeClusterNome
+
+
+
+ a| 
+Type (tipo): Utilizzare il tipo booleano con valori come "`true, false`" per gli input utente di natura booleano. Ciò consente di scrivere espressioni interne nella progettazione del flusso di lavoro utilizzando direttamente l'input dell'utente. Ad esempio, NomeUtente anziché NomeUtente == '`Sì'.
+ a| 
+`$CreateCIFSShare`: Tipo booleano con valori validi come "`true`" o "`false`"
+
+
+
+ a| 
+Type:per il tipo di stringa e numero, utilizzare espressioni regolari nella colonna valori quando si desidera convalidare il valore con formati specifici.
+
+Utilizzare espressioni regolari per gli input di indirizzo IP e maschera di rete.
+ a| 
+L'input utente specifico della posizione può essere espresso come "`[A-Z][A-Z]`-0[1-9]". Questo input utente accetta valori come "`US-01`", "`NB-02`", ma non "`nb-00`".
+
+
+
+ a| 
+Type (tipo): Per il tipo di numero, è possibile specificare una convalida basata sull'intervallo nella colonna Values (valori).
+ a| 
+Per il numero di LUN da creare, la voce nella colonna valori è 1-20.
+
+
+
+ a| 
+Group (Gruppo): Raggruppa gli input utente correlati nei bucket appropriati e assegna un nome al gruppo.
+ a| 
+"`storage Details`" per tutti gli input utente relativi allo storage. "`dAtastore Details`" per tutti gli input utente relativi a VMware.
+
+
+
+ a| 
+Obbligatorio: Se il valore di qualsiasi input dell'utente è necessario per l'esecuzione del flusso di lavoro, contrassegnare l'input dell'utente come obbligatorio. In questo modo, la schermata di input dell'utente accetta in modo manuale l'input dell'utente.
+ a| 
+"` VolumeName`" nel flusso di lavoro "`Create NFS Volume`".
+
+
+
+ a| 
+Default value (valore predefinito): Se un input utente ha un valore predefinito che può funzionare per la maggior parte delle esecuzioni del flusso di lavoro, fornire i valori. Ciò consente all'utente di fornire un minor numero di input durante l'esecuzione, se l'impostazione predefinita serve a tale scopo.
+ a| 
+Nessuno
+
+|===
+
+
+== Costanti, variabili e parametri di ritorno
+
+|===
+
+
+| Linee guida | Esempio 
+
+
+ a| 
+Costanti: Consente di definire le costanti quando si utilizza un valore comune per la definizione dei parametri a più comandi.
+ a| 
+_AGGREGATE_OVERCOMMITMENT_THRESHOLD_ in `Create, map, and protect LUNs with SnapVault sample workflow`.
+
+
+
+ a| 
+Costanti:nomi
+
+* Utilizzare una lettera maiuscola all'inizio di ciascuna parola.
+* Utilizzare lettere maiuscole per tutti i termini e le abbreviazioni.
+* Non utilizzare i caratteri di sottolineatura.
+* Utilizzare lettere maiuscole per tutte le lettere di nomi costanti.
+
+ a| 
+_AGGREGATE_USED_SPACE_THRESHOLD_
+
+_ActualVolumeSizeInMB_
+
+
+
+ a| 
+Variables (variabili): Fornire un nome a un oggetto definito in una delle caselle dei parametri di comando. Le variabili sono nomi generati automaticamente e possono essere modificate.
+ a| 
+Nessuno
+
+
+
+ a| 
+Variabili: I nomi utilizzano caratteri minuscoli per i nomi delle variabili.
+ a| 
+volume1
+
+cifs_share
+
+
+
+ a| 
+Parametri di ritorno: Utilizzare i parametri di ritorno quando la pianificazione e l'esecuzione del workflow devono restituire alcuni valori calcolati o selezionati durante la pianificazione. I valori vengono resi disponibili nella modalità di anteprima quando il flusso di lavoro viene eseguito anche da un servizio Web.
+ a| 
+Aggregato: Se l'aggregato viene selezionato utilizzando la logica di selezione delle risorse, l'aggregato effettivo selezionato può essere definito come parametro di ritorno.
+
+|===

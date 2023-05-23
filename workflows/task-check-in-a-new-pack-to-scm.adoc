@@ -1,0 +1,35 @@
+---
+permalink: workflows/task-check-in-a-new-pack-to-scm.html 
+sidebar: sidebar 
+keywords: create, new, workflow, pack, oncommand, automation, check, source, control, management 
+summary: 'È possibile creare un nuovo pacchetto di workflow con OnCommand Workflow Automation (Wfa) e fare il check-in in Gestione controllo di origine (SCM).' 
+---
+= Check-in di un nuovo pacchetto di workflow per SCM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un nuovo pacchetto di workflow con OnCommand Workflow Automation (Wfa) e fare il check-in in Gestione controllo di origine (SCM).
+
+.Di cosa hai bisogno
+È necessario configurare SCM e disporre delle credenziali di amministratore o architetto.
+
+.Fasi
+. Accedere alla finestra *WFA* tramite un browser Web.
+. Creare un nuovo pacchetto di workflow.
++
+xref:task-create-a-workflow-automation-pack.adoc[Creare un pacchetto di automazione del workflow]
+
+. Aggiungere le entità al pacchetto creato.
++
+xref:task-add-entity-to-a-workflow-automation-pack.adoc[Aggiungere entità a un pacchetto OnCommand Workflow Automation]
+
+. Fare clic sull'icona *Export to Server* (Esporta sul server).
+. Nella finestra di dialogo Export to Server Folder (Esporta in cartella server), nel campo *Folder location at server system* (percorso cartella nel sistema server), immettere la posizione del file system in cui salvare il pacchetto nel server contenente il client SCM.
++
+Per modificare o riesportare il pacchetto o il contenuto, fare clic sull'icona *Sblocca*.
+
+. Nella posizione del client SCM, eseguire il check-in del contenuto del pacchetto nel server SCM.
+

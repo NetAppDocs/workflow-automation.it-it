@@ -1,0 +1,254 @@
+---
+permalink: help/reference-data-sources-window.html 
+sidebar: sidebar 
+keywords: data, source, window, enable, view, edit, delete, exist, acquire, access, settings, setup 
+summary: 'La finestra origini dati consente di visualizzare, modificare ed eliminare le origini dati esistenti, creare nuove origini dati e acquisire un"origine dati. Per accedere a questa finestra, selezionare Impostazioni, quindi fare clic su origini dati in Setup.' 
+---
+= Finestra origini dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra origini dati consente di visualizzare, modificare ed eliminare le origini dati esistenti, creare nuove origini dati e acquisire un'origine dati. Per accedere a questa finestra, selezionare *Impostazioni* e sotto *Setup* fare clic su *origini dati*.
+
+Un'origine dati è una struttura di dati di sola lettura che contiene informazioni sulla provenienza dei dati in un database specifico. È necessario definire le origini dati prima di poter eseguire il polling degli ambienti. Ad esempio, un'origine dati può essere un database Active IQ Unified Manager che contiene informazioni su un ambiente di storage o un database VMware con informazioni su un data center.
+
+* Tabella origini dati
+* Tabella della cronologia
+* Barra degli strumenti
+
+
+
+
+== Tabella origini dati
+
+La tabella origini dati elenca le origini dati esistenti. È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La seguente tabella elenca gli operatori supportati per le colonne alfabetiche e numeriche nella tabella origini dati, disponibile nella casella di testo del filtro *Cerca*.
+
+[cols="2*"]
+|===
+| Alfabetico | Numerico 
+
+
+ a| 
+* Contiene
+* Non contiene
+* Inizia con
+* Termina con
+* Uguale a
+* Non uguale
+* Resettare
+
+ a| 
+* Uguale a
+* Non uguale
+* Inferiore a.
+* Maggiore di
+* Minore o uguale a.
+* Maggiore o uguale a.
+* Tra
+* Resettare
+
+
+|===
+La tabella origini dati contiene le seguenti colonne:
+
+* *Nome*
++
+Visualizza il nome dell'origine dati.
+
+* *Tipo origine dati*
++
+Visualizza il tipo di origine dati.
+
+* *Nome host*
++
+Visualizza il nome host o l'indirizzo IP dell'origine dati.
+
+* *Schema*
++
+Visualizza lo schema di caching associato all'origine dati. Ad esempio, uno schema di caching delle macchine virtuali contiene dati rilevanti per l'ambiente virtuale, ad esempio macchine virtuali, host e datastore. Le informazioni relative allo schema sono ottenute dalla fonte dei dati.
+
+* *Intervallo (minuti)*
++
+Visualizza l'intervallo (in minuti) tra due acquisizioni consecutive di un'origine dati.
+
+* *Ora di inizio*
++
+Visualizza la data e l'ora in cui è stato avviato il processo di acquisizione dei dati.
+
++
+Fare clic sull'icona del calendario nella casella di testo del filtro *Search* per cercare origini dati con una data di inizio specifica.
+
+* *Durata (secondi)*
++
+Visualizza il tempo (in secondi) necessario per elaborare l'ultima acquisizione dati dall'origine dati.
+
+* *Stato*
++
+Visualizza lo stato del processo di acquisizione dati corrente (se presente) o dell'ultimo processo di acquisizione dati. Le opzioni di stato includono:
+
++
+** Tutto
+** Interruzione
+** Annullato
+** Completato
+** Non riuscito
+** Nessuna acquisizione
+** Obsoleto
+** In sospeso
+** In esecuzione
+** Pianificato
+
+
+* *Messaggio*
++
+Visualizza un messaggio di errore quando il processo di acquisizione dei dati incontra errori e si interrompe.
+
+
+
+
+
+== Tabella della cronologia
+
+La tabella History (Cronologia) visualizza nell'intestazione il nome dell'origine dati selezionata nella tabella Data Source (origine dati) ed elenca i dettagli di ciascun processo di acquisizione dati per l'origine dati selezionata. L'elenco dei processi viene aggiornato dinamicamente, man mano che si verificano i processi di acquisizione dei dati. È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La seguente tabella elenca gli operatori supportati per le colonne alfabetiche e numeriche nella tabella Cronologia, disponibile nella casella di testo del filtro *Ricerca*.
+
+[cols="2*"]
+|===
+| Alfabetico | Numerico 
+
+
+ a| 
+* Contiene
+* Non contiene
+* Inizia con
+* Termina con
+* Uguale a
+* Non uguale
+* Resettare
+
+ a| 
+* Uguale a
+* Non uguale
+* Inferiore a.
+* Maggiore di
+* Minore o uguale a.
+* Maggiore o uguale a.
+* Tra
+* Resettare
+
+
+|===
+La tabella Cronologia contiene le seguenti colonne:
+
+* *ID*
++
+Visualizza il numero di identificazione del processo di acquisizione dei dati.
+
++
+Il numero di identificazione è univoco e viene assegnato dal server quando avvia il processo di acquisizione dei dati.
+
+* *Ora di inizio*
++
+Visualizza la data e l'ora in cui è stato avviato il processo di acquisizione dei dati.
+
++
+Fare clic sull'icona del calendario nella casella di testo del filtro *Search* per cercare i processi di acquisizione dati avviati in una data specifica.
+
+* *Durata (secondi)*
++
+Visualizza la durata (in secondi) dell'ultimo processo di acquisizione dall'origine dati.
+
+* *Acquisizione pianificata*
++
+Visualizza la data e l'ora pianificate per il processo di acquisizione dei dati.
+
++
+Fare clic sull'icona del calendario nella casella di testo del filtro *Search* per cercare le acquisizioni di dati programmate per una data specifica.
+
+* *Tipo di pianificazione*
++
+Visualizza il tipo di pianificazione. I tipi di pianificazione includono:
+
++
+** Tutto
+** Immediato
+** Ricorrente
+** Sconosciuto
+
+
+* *Stato*
++
+Visualizza lo stato del processo di acquisizione dati corrente (se presente) o dell'ultimo processo di acquisizione dati. Le opzioni di stato includono:
+
++
+** Tutto
+** Interruzione
+** Annullato
+** Completato
+** Non riuscito
+** Obsoleto
+** In sospeso
+** In esecuzione
+** Pianificato
+** Nessuna acquisizione
+
+
+* *Messaggio*
++
+Visualizza un messaggio relativo all'errore che si è verificato durante il processo di acquisizione dei dati, quando il processo si è interrotto e non è stato possibile continuare.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra le intestazioni di colonna della tabella origini dati. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È inoltre possibile eseguire queste azioni utilizzando il menu di scelta rapida nella finestra.
+
+* *image:../media/new_wfa_icon.gif["Nuova icona"] (Novità)*
++
+Apre la finestra di dialogo Nuova origine dati, che consente di aggiungere una nuova origine dati.
+
+* *image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] (Modifica)*
++
+Apre la finestra di dialogo Edit Data Source (Modifica origine dati), che consente di modificare l'origine dati selezionata.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo di conferma Elimina origine dati, che consente di eliminare l'origine dati selezionata.
+
+* *image:../media/acquire_now_wfa_icon.gif["Icona Acquire Now (Acquisisci ora)"] (Acquisisci ora)*
++
+Avvia il processo di acquisizione per l'origine dati selezionata.
+
+* *image:../media/reset_scheme_wfa_icon.gif["Icona di ripristino dello schema"] (Ripristina schema)*
++
+Apre la finestra di dialogo di conferma Reset Scheme (Ripristina schema). Questa finestra di dialogo consente di ripristinare lo storage della cache per lo schema selezionato. La cache viene reimpostata durante il successivo processo di acquisizione dei dati.
+
++
+
+IMPORTANT: Il processo di ripristino elimina tutti i dati memorizzati nella cache, incluse tutte le tabelle. L'intera cache viene creata dall'inizio durante il successivo processo di acquisizione dei dati.
+
+

@@ -1,0 +1,41 @@
+---
+permalink: windows-install/task-configure-mscs-to-install-wfa.html 
+sidebar: sidebar 
+keywords: configure, mscs, install, workflow, automation 
+summary: 'Prima di installare Workflow Automation (Wfa) in Microsoft Cluster Server (MSCS), è necessario configurare l"ambiente MSCS.' 
+---
+= Configurare MSCS per installare Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di installare Workflow Automation (Wfa) in Microsoft Cluster Server (MSCS), è necessario configurare l'ambiente MSCS.
+
+* MSCS deve essere installato dal server manager.
+* Facoltativo: È necessario installare SnapDrive per Windows.
++
+La versione minima supportata è Windows 2012.
+
+* La stessa versione di WFA deve essere installata utilizzando lo stesso percorso su entrambi i nodi del cluster.
+* Entrambi i nodi del cluster devono essere aggiunti allo stesso dominio.
+
+
+È necessario completare questa attività utilizzando Cluster Manager nell'interfaccia MSCS.
+
+.Fasi
+. Accedere a Cluster Manager come amministratore di dominio.
+. Verificare che i LUN siano accessibili a entrambi i nodi utilizzando una delle seguenti opzioni:
++
+** Gestione nativa delle LUN.
+** Utilizzando SnapDrive per Windows:
++
+... Installare e configurare SnapDrive per Windows su entrambi i nodi.
+... Creare un LUN utilizzando SnapDrive per Windows e configurare il LUN per entrambi i nodi.
+
+
+
+
+. Da failover Cluster Manager, aggiungere il disco al cluster.
+

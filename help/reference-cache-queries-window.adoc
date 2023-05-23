@@ -1,0 +1,130 @@
+---
+permalink: help/reference-cache-queries-window.html 
+sidebar: sidebar 
+keywords: cache, queries, window, enable, manage, dictionary, entries, data, source, types 
+summary: La finestra cache Query consente di gestire le query della cache per le voci del dizionario WFA e i tipi di origine dati associati. 
+---
+= Finestra delle query della cache
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra cache Query consente di gestire le query della cache per le voci del dizionario WFA e i tipi di origine dati associati.
+
+Una query cache è una query SQL che recupera i dati richiesti dalla tabella specificata nella query. Una query della cache è associata a una voce del dizionario e a uno o più tipi di origine dati. È possibile definire una query della cache quando si desidera recuperare alcune informazioni, ad esempio un volume da una tabella di un'origine dati di OnCommand Unified Manager 6.0 nella cache WFA.
+
+* Tabella delle query della cache
+* Barra degli strumenti
+
+
+
+
+== Elenco delle query della cache
+
+La tabella Query cache elenca le voci del dizionario e i tipi di origine dati associati. È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella Query cache contiene le seguenti colonne:
+
+* *Certificazione*
++
+Indica se la query della cache è stata creata dall'utente (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), community (image:../media/community_certification.gif[""]), bloccato dall'utente (image:../media/lock_icon_wfa.gif[""]), o con certificazione NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Schema*
++
+Indica un nome di schema (schema) che contiene dati rilevanti per l'ambiente. Ad esempio, uno schema di caching *cm_storage* contiene dati relativi a Clustered Data ONTAP. Le informazioni relative allo schema sono ottenute dalla fonte dei dati.
+
+* *Voce dizionario*
++
+Visualizza la voce del dizionario associata allo schema.
+
+* *Versione entità*
++
+Visualizza il numero di versione dell'oggetto in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Tipi di origine dati*
++
+Visualizza il tipo di origine dati associato alla voce del dizionario.
+
+* *Ultimo aggiornamento in data*
++
+Visualizza la data e l'ora dell'ultimo aggiornamento della query della cache.
+
+* *Aggiornato da*
++
+Visualizza l'utente che ha aggiornato la query della cache.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/new_wfa_icon.gif["Nuova icona"] (Novità)*
++
+Apre la finestra di dialogo Add cache Query (Aggiungi query cache), che consente di creare una query cache.
+
+* *image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] (Modifica)*
++
+Apre la finestra di dialogo Edit cache Query (Modifica query cache) per la query della cache selezionata, che consente di modificare la query della cache.
+
+* *image:../media/clone_wfa_icon.gif["Icona Clona"] (Clone)*
++
+Apre la finestra di dialogo Add cache Query (Aggiungi query cache), che consente di creare un clone o una copia della query della cache selezionata.
+
+* *image:../media/lock_wfa_icon.gif["Icona a forma di lucchetto"] (Blocco)*
++
+Apre la finestra di dialogo di conferma che consente di bloccare la query della cache selezionata.
+
+* *image:../media/unlock_wfa_icon.gif["Icona di sblocco"] (Sblocca)*
++
+Apre la finestra di dialogo di conferma che consente di sbloccare la query della cache selezionata. Questa opzione è abilitata solo per le query della cache bloccate dall'utente. Tuttavia, gli amministratori possono sbloccare le query della cache bloccate da altri utenti.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo di conferma che consente di eliminare la query della cache creata dall'utente.
+
++
+
+NOTE: Non è possibile eliminare query WFA, PS o cache di esempio.
+
+* *image:../media/export_wfa_icon.gif["Icona Export (Esporta)"] (Esportazione)*
++
+Apre la finestra di dialogo di conferma che consente di esportare la query della cache creata dall'utente.
+
++
+
+NOTE: Non è possibile esportare query WFA, PS o cache di esempio.
+
+* *image:../media/test_wfa_icon.gif["icona di test"] (Test)*
++
+Apre la finestra di dialogo Test cache Query, che consente di verificare la query della cache selezionata.
+
+* *image:../media/add_to_pack.png["icona add to pack (aggiungi al pacchetto)"] (Aggiungi al pacchetto)*
++
+Apre la finestra di dialogo Add to Pack cache Query, che consente di aggiungere la query cache e le relative entità affidabili a un pacchetto, modificabile.
+
++
+
+NOTE: La funzione Add to Pack (Aggiungi al pacchetto) è attivata solo per la query della cache per la quale la certificazione è impostata su *None.*
+
+* *image:../media/remove_from_pack.png["icona remove from pack (rimuovi dalla confezione)"] (Remove from Pack)*
++
+Apre la finestra di dialogo Remove from Pack cache Query per la query della cache selezionata, che consente di eliminare o rimuovere la query della cache dal pacchetto.
+
++
+
+NOTE: La funzione Remove from Pack (Rimuovi da pacchetto) è abilitata solo per la query cache per la quale la certificazione è impostata su *None.*
+
+

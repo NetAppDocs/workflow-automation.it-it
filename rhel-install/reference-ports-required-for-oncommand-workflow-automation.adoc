@@ -1,0 +1,162 @@
+---
+permalink: rhel-install/reference-ports-required-for-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: ports, required, workflow, automation 
+summary: 'Se si utilizza un firewall, è necessario conoscere le porte richieste per l"automazione del flusso di lavoro (WFA).' 
+---
+= Porte richieste per l'automazione del workflow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si utilizza un firewall, è necessario conoscere le porte richieste per l'automazione del flusso di lavoro (WFA).
+
+I numeri di porta predefiniti sono elencati in questa sezione. Se si desidera utilizzare un numero di porta non predefinito, è necessario aprire tale porta per la comunicazione. Per ulteriori informazioni, consultare la documentazione sul firewall.
+
+La seguente tabella elenca le porte predefinite che devono essere aperte sul server WFA:
+
+[cols="4*"]
+|===
+| Porta | Protocollo | Direzione | Scopo 
+
+
+ a| 
+80, 443
+ a| 
+HTTP, HTTPS
+ a| 
+In entrata
+ a| 
+Apertura di WFA e accesso
+
+
+
+ a| 
+80, 443, 22
+ a| 
+HTTP, HTTPS, SSH
+ a| 
+In uscita
+ a| 
+Esecuzione dei comandi (ZAPI, PowerCLI)
+
+
+
+ a| 
+445, 139, 389, 636
+ a| 
+Microsoft-DS, NetBIOS-ssn, ad LDAP, ad LDAPS
+ a| 
+In uscita
+ a| 
+Autenticazione LDAP di Microsoft Active Directory
+
+
+
+ a| 
+161
+ a| 
+SNMP
+ a| 
+In uscita
+ a| 
+Invio di messaggi SNMP sullo stato dei flussi di lavoro
+
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+In entrata
+ a| 
+Utente di sola lettura per il caching
+
+
+
+ a| 
+25
+ a| 
+SMTP
+ a| 
+In uscita
+ a| 
+Notifica via email
+
+
+
+ a| 
+80, 443, 25
+ a| 
+HTTP, HTTPS, SMTP
+ a| 
+In uscita
+ a| 
+Invio di messaggi AutoSupport
+
+
+
+ a| 
+514
+ a| 
+Syslog
+ a| 
+In uscita
+ a| 
+Invio di log a un server syslog
+
+|===
+La seguente tabella elenca le porte predefinite che devono essere aperte sul server Unified Manager:
+
+[cols="4*"]
+|===
+| Porta | Protocollo | Direzione | Scopo 
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+In entrata
+ a| 
+Caching dei dati da Active IQ Unified Manager 6.0 e versioni successive
+
+|===
+La seguente tabella elenca la porta predefinita che deve essere aperta su VMware vCenter:
+
+[cols="4*"]
+|===
+| Porta | Protocollo | Direzione | Scopo 
+
+
+ a| 
+443
+ a| 
+HTTPS
+ a| 
+In entrata
+ a| 
+Caching dei dati da VMware vCenter
+
+|===
+La seguente tabella elenca la porta predefinita che deve essere aperta sul computer host SNMP:
+
+[cols="4*"]
+|===
+| Porta | Protocollo | Direzione | Scopo 
+
+
+ a| 
+162
+ a| 
+SNMP
+ a| 
+In entrata
+ a| 
+Ricezione di messaggi SNMP sullo stato dei flussi di lavoro
+
+|===

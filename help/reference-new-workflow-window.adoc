@@ -1,0 +1,110 @@
+---
+permalink: help/reference-new-workflow-window.html 
+sidebar: sidebar 
+keywords: new, workflow, window, display, created, associated, command 
+summary: 'La finestra New Workflow (nuovo flusso di lavoro) visualizza un flusso di lavoro appena creato e i relativi comandi associati.' 
+---
+= Nuova finestra Workflow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra *New Workflow* (nuovo flusso di lavoro) visualizza un nuovo flusso di lavoro creato e i relativi comandi associati.
+
+
+
+== Nuovo flusso di lavoro
+
+La finestra *New Workflow* (nuovo flusso di lavoro) visualizza il nome del flusso di lavoro nell'intestazione della finestra. I comandi associati vengono visualizzati sotto forma di caselle blu in colonne che vengono presentate in ordine sequenziale di esecuzione: Da sinistra a destra, dall'alto verso il basso. Le variabili e gli oggetti di ciascun comando vengono visualizzati come caselle grigie nella colonna del comando.
+
+* *Inserire una riga*
++
+Aggiunge una nuova riga sopra o sotto la riga selezionata nel flusso di lavoro.
+
++
+Fare clic su image:../media/add_row2_wfa_icon.gif[""] per aggiungere una riga sotto l'ultima riga disponibile.
+
+* *Copia riga*
++
+Copia la riga selezionata dal flusso di lavoro e la salva negli Appunti. La copia di una riga non copia i dettagli di ripetizione impostati per la riga.
+
+* *Incolla riga*
++
+Inserisce l'ultimo elemento salvato negli Appunti in una nuova riga sotto la riga selezionata. I nomi univoci vengono utilizzati per le variabili; tuttavia, le variabili nelle espressioni non vengono modificate.
+
+* *Ripeti riga*
++
+Apre la finestra di dialogo *Dettagli ripetizione riga*.
+
+* *Modifica ripetizione riga*
++
+Apre la finestra di dialogo *Row Repetition Details* (Dettagli ripetizione riga), che consente di modificare il set di azioni *Repeat Row* per la riga selezionata.
+
+* *Rimuovi ripetizione riga*
++
+Annulla l'azione *Repeat Row* impostata nella finestra di dialogo *Row Repetition Details* (Dettagli ripetizione riga) per la riga selezionata.
+
+* *Aggiungi condizione*
++
+Apre la finestra di dialogo Conditions for Row <row number> (Condizioni per la creazione di righe), che consente di selezionare una condizione. La condizione selezionata è applicabile a tutti i comandi della riga. Tutti i comandi nella riga verranno eseguiti solo se la condizione selezionata viene soddisfatta.
+
+* *Rimuovi riga*
++
+Elimina la riga selezionata dal flusso di lavoro.
+
+* *Nuovo punto di approvazione*
++
+Fare clic su image:../media/approval_point_disabled.gif[""] Per aprire la finestra di dialogo *nuovo punto di approvazione*, che consente di aggiungere un punto di approvazione prima dell'esecuzione del comando.
+
+* *Modifica punto di approvazione*
++
+Fare clic su image:../media/approval_point_enabled.gif[""] Per aprire la finestra di dialogo *Edit Approval Point* (Modifica punto di approvazione), che consente di modificare il commento del punto di approvazione.
+
+* *Aggiungi parametri di comando*
++
+Aggiunge i parametri per un comando nella riga selezionata.
+
++
+È possibile posizionare il cursore sotto il comando selezionato, nella riga desiderata, quindi fare clic su image:../media/add_object_wfa_icon.gif[""] Per aprire la finestra di dialogo parametri per <command_name>.
+
+* *Edit Command Parameters* (Modifica parametri comando)
++
+Apre la finestra di dialogo parametri per <command_name> per consentire di modificare i parametri selezionati per un comando.
+
++
+È possibile posizionare il cursore sulla casella grigia che si desidera modificare e fare clic per aprire la finestra di dialogo parametri per <command_name>.
+
+* *Delete Command Parameters*
++
+Rimuove il parametro.
+
++
+È possibile spostare il cursore sulla casella grigia che si desidera eliminare e fare clic sulla "`X`" nell'angolo superiore destro della casella grigia.
+
+
+
+
+
+== Pulsanti di comando
+
+I pulsanti di comando sono disponibili nella parte inferiore della finestra del flusso di lavoro. È possibile accedere ai comandi anche dal menu di scelta rapida nella finestra.
+
+* *Anteprima*
++
+Apre la finestra di dialogo *Anteprima flusso di lavoro*, che consente di specificare gli attributi di input dell'utente.
+
+* *Salva con nome*
++
+Consente di salvare il flusso di lavoro con un nuovo nome.
+
+* *Salva*
++
+Salva il flusso di lavoro.
+
+* *Chiudi*
++
+Chiude la finestra. Durante il processo, se sono state apportate modifiche alla configurazione, viene visualizzata la finestra di dialogo *Salva conferma modifiche*, che richiede di salvare le modifiche, chiudere la finestra senza salvare le modifiche o annullare l'azione di chiusura.
+
+

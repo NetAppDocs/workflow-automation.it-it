@@ -1,0 +1,187 @@
+---
+permalink: help/reference-edit-command-definition-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, command, definition, dialog box, enable, select 
+summary: La finestra di dialogo Modifica definizione comando consente di modificare il comando selezionato. 
+---
+= Finestra di dialogo Edit Command Definition (Modifica definizione comando)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo *Modifica definizione comando* consente di modificare il comando selezionato.
+
+* Scheda Proprietà
+* Scheda Code (Codice)
+* Scheda definizione parametri
+* Scheda mappatura parametri
+* Scheda prenotazione
+* Scheda verifica
+
+
+
+
+== Scheda Proprietà
+
+La scheda Proprietà consente di modificare le proprietà del comando, ad esempio il nome, la descrizione e il linguaggio di scripting.
+
+* *Nome*
++
+Consente di modificare il nome del comando. Immettere un nome per salvare il comando.
+
+* *Versione entità*
++
+Consente di immettere il numero di versione del comando in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Descrizione*
++
+Consente di modificare la descrizione del comando.
+
+* *Rappresentazione stringa*
++
+Consente di specificare una rappresentazione stringa per il comando utilizzando la sintassi MVEL. Per salvare il comando, è necessario specificare la rappresentazione della stringa.
+
+* *Timeout (s)*
++
+Consente di specificare il valore di timeout (in secondi) per il comando. Il valore predefinito è 600 secondi.
+
+* *Tipo di comando*
++
+Consente di specificare il tipo di esecuzione del comando.
+
++
+** *Esecuzione standard*
++
+Consente di eseguire il comando senza alcun periodo di attesa. L'esecuzione standard è selezionata per impostazione predefinita.
+
+** *Attendere la condizione*
++
+Consente di specificare il tempo (in secondi) di attesa del comando prima dell'esecuzione. Il valore predefinito è 60 secondi.
+
+
+
+* *Versioni minime del software*
++
+Specifica le versioni minime del software necessarie per il funzionamento del comando. Ad esempio, il software può essere Clustered Data ONTAP 8.2.0 e vCenter 6.0. Le versioni vengono visualizzate come valori separati da virgole.
+
+
+
+
+
+== Scheda Code (Codice)
+
+Questa scheda consente di modificare il codice del comando in Perl, PowerShell o entrambi. È possibile aggiungere un nuovo linguaggio di scripting facendo clic su image:../media/add_lang_icon.gif[""] Quindi selezionare la lingua desiderata dall'elenco a discesa Lingua script.
+
+* *Test*
++
+Apre la finestra di dialogo verifica, che consente di verificare i parametri per lo script di verifica specificato.
+
+* *Rileva parametri*
++
+Copia i parametri definiti nel codice PowerShell nella tabella Parameters Definition e nella tabella Parameters Mapping. Il pulsante Discover Parameters (rileva parametri) è disattivato per i codici Perl.
+
+
+
+
+
+== Scheda definizione parametri
+
+Questa scheda visualizza i parametri definiti nel codice inserito nella scheda Codice.
+
+* *Nome*
++
+Visualizza il nome del parametro.
+
+* *Descrizione*
++
+Visualizza la descrizione del parametro.
+
+* *Obbligatorio*
++
+Visualizza una casella di controllo selezionata per i parametri obbligatori.
+
+* *Tipo*
++
+Visualizza il tipo di parametro, ad esempio string e enum.
+
+* *Valori*
++
+Visualizza il valore impostato per il parametro.
+
+* *Aggiungi parametro*
++
+Consente di aggiungere un parametro al comando se il linguaggio di scripting selezionato è Perl.
+
+* *Remove Parameter* (Rimuovi parametro)
++
+Consente di rimuovere un parametro dal comando se il linguaggio di scripting selezionato è Perl.
+
+
+
+
+
+== Scheda mappatura parametri
+
+Questa scheda consente di associare i parametri agli oggetti del dizionario e di specificare l'attributo e il nome dell'oggetto.
+
+* *Nome*
++
+Visualizza il nome del parametro.
+
+* *Tipo*
++
+Consente di selezionare l'oggetto dizionario per il parametro.
+
+* *Attributo*
++
+Consente di specificare l'attributo richiesto. È possibile selezionare l'attributo, se disponibile, oppure immetterlo.
+
+* *Nome oggetto*
++
+Consente di immettere un nome per l'oggetto.
+
+
+
+
+
+== Scheda prenotazione
+
+Questa scheda consente di riservare le risorse richieste dal comando. Per ulteriori informazioni sulle prenotazioni, consulta la _Guida per sviluppatori sul flusso di lavoro OnCommand Workflow Automation_.
+
+* *Script di prenotazione*
++
+Consente di immettere una query SQL per riservare le risorse richieste dal comando. Ciò garantisce che le risorse siano disponibili durante l'esecuzione di un flusso di lavoro pianificato.
+
+* *Rappresentazione delle prenotazioni*
++
+Consente di specificare una rappresentazione stringa per la prenotazione utilizzando la sintassi MVEL. La rappresentazione stringa viene utilizzata per visualizzare i dettagli della prenotazione nella finestra Prenotazioni.
+
+
+
+
+
+== Scheda verifica
+
+Questa scheda consente di verificare una prenotazione e di rimuovere la prenotazione una volta completata l'esecuzione del comando. Per ulteriori informazioni sulla verifica delle prenotazioni, consulta la _Guida per sviluppatori sul flusso di lavoro OnCommand Workflow Automation_.
+
+* *Script di verifica*
++
+Consente di inserire una query SQL per verificare l'utilizzo delle risorse riservate dallo script di prenotazione. Verifica inoltre se la cache WFA viene aggiornata e rimuove la prenotazione dopo l'acquisizione della cache.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Salva*
++
+Salva le modifiche e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

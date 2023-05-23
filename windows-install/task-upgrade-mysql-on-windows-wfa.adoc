@@ -1,0 +1,42 @@
+---
+permalink: windows-install/task-upgrade-mysql-on-windows-wfa.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade mysql 
+summary: 'È possibile aggiornare le nuove versioni di MySQL per OnCommand Workflow Automation (Wfa) sul server Windows. È possibile eseguire l"aggiornamento a una versione più recente di MySQL per ottenere correzioni per le vulnerabilità di sicurezza sul server Windows.' 
+---
+= Aggiorna MySQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiornare le nuove versioni di MySQL per OnCommand Workflow Automation (Wfa) sul server Windows. È possibile eseguire l'aggiornamento a una versione più recente di MySQL per ottenere correzioni per le vulnerabilità di sicurezza sul server Windows.
+
+È necessario disporre dei privilegi di amministratore di Windows e della password per L'utente root MYSQL sul server WFA.
+
+
+NOTE: Prima di reinstallare WFA 4.2 o versioni successive, è necessario eliminare la directory dei dati MySQL se MySQL è stato disinstallato.
+
+Tenere presente le seguenti limitazioni:
+
+* Puoi eseguire l'aggiornamento in qualsiasi versione di MySQL 5.7.
++
+Ad esempio, è possibile eseguire l'aggiornamento da MySQL 5.7.1 a MySQL 5.7.2.
+
+* Non è possibile eseguire l'aggiornamento da MySQL 5.7 a MySQL 5.8
+
+
+.Fasi
+. Accedere come utente amministratore sul computer host WFA.
+. Scarica la versione appropriata di MySQL sul sistema di destinazione.
+. Utilizzare la console dei servizi Windows per arrestare i seguenti servizi WFA:
++
+** Database NetApp WFA o MYSQL57
+** Server NetApp WFA
+
+
+. Fare clic sul pacchetto MySQL msi per richiamare l'aggiornamento di MySQL.
+. Seguire le istruzioni sullo schermo per completare l'installazione di MySQL.
+. Avviare i servizi WFA utilizzando la console dei servizi Windows.
+

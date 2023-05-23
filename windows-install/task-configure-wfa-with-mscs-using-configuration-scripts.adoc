@@ -1,0 +1,151 @@
+---
+permalink: windows-install/task-configure-wfa-with-mscs-using-configuration-scripts.html 
+sidebar: sidebar 
+keywords: configure, workflow, automation, mscs 
+summary: 'Dopo aver installato Workflow Automation (Wfa) in Microsoft Cluster Server (MSCS), è necessario configurare Wfa per l"alta disponibilità in MSCS utilizzando gli script di configurazione.' 
+---
+= Configurare l'automazione del flusso di lavoro con MSCS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver installato Workflow Automation (Wfa) in Microsoft Cluster Server (MSCS), è necessario configurare Wfa per l'alta disponibilità in MSCS utilizzando gli script di configurazione.
+
+È necessario aver creato un backup di WFA.
+
+
+NOTE: Prima di avviare la configurazione, assicurarsi che la chiave di crittografia WFA sia impostata in modo coerente su entrambi i nodi del cluster MSCS. Se non è impostato su entrambi i nodi, quando si verifica il failover, le credenziali non possono essere decifrate sul secondo nodo causando errori nel flusso di lavoro.
+
+.Fasi
+. Accedere al primo nodo del cluster MSCS ed eseguire le seguenti operazioni:
++
+[cols="2*"]
+|===
+| Per... | Eseguire questa operazione... 
+
+
+ a| 
+Windows 2012, Windows 2016, Windows 2019
+ a| 
+.. Da failover Cluster Manager, fare clic con il pulsante destro del mouse su *ruoli del servizio*.
+.. Selezionare *Crea ruolo di servizio vuoto*, quindi rinominare il ruolo in "`WFA`".
+.. Aggiungere la risorsa indirizzo IP al ruolo "`WFA`" appena creato:
++
+... Da failover Cluster Manager, fare clic con il pulsante destro del mouse sul ruolo "`WFA`" appena creato.
+... Selezionare *risorsa* > *altre risorse* > *Indirizzo IP*.
+... Configurare l'indirizzo IP del cluster.
+
+
+
+
+|===
+. Modificare il `mscs_data_parameters.xml` E impostare il percorso relativo alla directory dei dati MySQL:
++
+[listing]
+----
+<dir>
+    <description>Data directory</description>
+    <srcpath>..\..\..\..\..\ProgramData\MySQL\MySQLServerData</srcpath>
+    <destpath>wfa</destpath>
+</dir>
+----
+. Modificare il `mscs_resource_properties.xml` archiviare ed effettuare i seguenti aggiornamenti:
++
+.. Eseguire una ricerca/sostituzione per `NA_WFA_DB` nome del servizio e aggiornarlo a. `MYSQL57`.
+.. Impostare `vip_res <prettyname>` Al nome dell'indirizzo IP virtuale:
++
+[listing]
+----
+<resource>
+    <type>essential</type>
+    <id>vip_res</id>
+    <prettyname>WFA IP address</prettyname>
+</resource>
+----
+.. Impostare `data_res <prettyname>` al nome del disco assegnato alla risorsa del disco di condivisione:
++
+[listing]
+----
+<resource>
+    <type>essential</type>
+    <id>datadisk_res</id>
+    <prettyname>Cluster Disk 2</prettyname>
+</resource>
+----
+.. Copiare i file XML dal primo nodo al secondo nodo:
++
+`copy “\\node1\D$\Program Files\NetApp\WFA\bin\ha\*xml” “D:\Program Files\NetApp\WFA\bin\ha”`
+
+.. Eseguire il comando per unire il secondo nodo al cluster:
++
+`D:\Program Files\NetApp\WFA\bin\ha>perl ha_setup.pl --join -t mscs -f E:\`
+
+
+
+. Al prompt dei comandi, eseguire lo script ha_setup.pl per spostare i dati WFA nella posizione condivisa e configurare WFA con MSCS per il failover. Lo script è disponibile in WFA_install_location.
++
+`perl ha_setup.pl --first [-t type_of_cluster_vcs] [-g cluster_group_name] [-i IP_address_name] [-n cluster_name] [-k shared_disk_resource_name] [-f shared_drive_path]`
+
++
+Lo script ha_setup.pl prevede un input utilizzando la risorsa IP Address per il cluster MSCS. Durante l'installazione su MSCS 2016, la risorsa deve essere aggiunta in base al nome, non all'indirizzo IP, `WFA IP address`. Ad esempio:
+
++
+`perl ha_setup.pl --first -t mscs -g WFA -i "WFA IP address" -n wfa_cluster -k "Cluster Disk 2" -f E:\`
+
+. Verificare che le risorse MSCS siano state create controllando che il messaggio sia stato configurato correttamente nell'output.
++
+[listing]
+----
+Successfully configured MSCS cluster resources on this node
+----
+. Arrestare i servizi WFA da failover Cluster Manager:
++
+[cols="2*"]
+|===
+| Per... | Eseguire questa operazione... 
+
+
+ a| 
+Windows 2012, Windows 2016, Windows 2019
+ a| 
+.. Selezionare *ruoli servizio*, quindi selezionare il ruolo "`WFA`" appena creato.
+.. Nel riquadro delle risorse, fare clic con il pulsante destro del mouse su *MYSQL57*, quindi selezionare *Take Offline*.
+.. Nel riquadro delle risorse, fare clic con il pulsante destro del mouse su *NA_Wfa_SRV*, quindi selezionare *Take Offline*.
+
+
+|===
+
+
+Il servizio di database WFA e il servizio del server WFA devono essere portati offline. I servizi WFA non devono essere arrestati dai servizi Windows.
+
+. Spostare manualmente le risorse WFA nel nodo secondario.
+. Verificare che il disco condiviso sia accessibile dal secondo nodo.
+. Al prompt dei comandi, eseguire lo script ha_setup.pl sul nodo secondario del cluster per configurare WFA per l'utilizzo dei dati dalla posizione condivisa:
++
+`perl ha_setup.pl --join [-t type_of_cluster_mscs] [-f shared_drive_path]`
+
++
+Lo script ha_setup.pl è disponibile su WFA_install_location.
+
++
+`perl ha_setup.pl --join -t mscs -f E:\`
+
+. Da failover Cluster Manager, portare online le risorse WFA:
++
+[cols="2*"]
+|===
+| Per... | Eseguire questa operazione... 
+
+
+ a| 
+Windows 2012, Windows 2016, Windows 2019
+ a| 
+.. Fare clic con il pulsante destro del mouse sul ruolo "`WFA`" appena creato, quindi selezionare *Avvia ruolo*. Il ruolo deve essere in esecuzione e le singole risorse devono essere in linea.
+
+
+|===
+. Passare manualmente al secondo nodo del cluster MSCS.
+. Verificare che i servizi WFA vengano avviati correttamente sul secondo nodo del cluster.
+

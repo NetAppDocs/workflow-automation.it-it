@@ -1,0 +1,185 @@
+---
+permalink: help/reference-finders-window.html 
+sidebar: sidebar 
+keywords: finders, window, display, available, alphabetical order, access, select, workflow, design 
+summary: 'La finestra Finders (Finders) visualizza i finder disponibili in ordine alfabetico. Per accedere a questa finestra, selezionare Workflow Design (progettazione flusso di lavoro) > Finders (Finders).' 
+---
+= Finestra dei finder
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Finders (Finders) visualizza i finder disponibili in ordine alfabetico. Per accedere a questa finestra, selezionare *Workflow Design* > *Finders*.
+
+
+NOTE: A seconda del ruolo e dei privilegi dell'account, questa finestra potrebbe non essere visualizzata.
+
+Un Finder è un'operazione di ricerca per individuare le risorse. Un Finder è costituito da regole di filtraggio che rimuovono le risorse irrilevanti. I finder cercano informazioni sugli oggetti WFA nei repository WFA-cached.
+
+* Tabella dei finder
+* Barra degli strumenti
+
+
+
+
+== Tabella dei finder
+
+La tabella Finders elenca i finder disponibili.
+
+Ciascuna voce è identificata come una delle seguenti:
+
+* image:../media/community_certification.gif[""] - contenuto creato dagli utenti
+* image:../media/ps_certified_icon_wfa.gif[""] Contenuto sviluppato da Professional Services (PS), disponibile solo per installazioni personalizzate realizzate da PS
+* image:../media/community_certification.gif[""] - pacchetti sviluppati dagli utenti
+* image:../media/lock_icon_wfa.gif[""] - contenuto creato dagli utenti bloccati
+* image:../media/netapp_certified.gif[""] - Contenuti certificati NetApp
+
+
+È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella Finders contiene le seguenti colonne:
+
+* *Certificazione*
++
+Indica se il Finder è stato creato dall'utente (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), community (image:../media/community_certification.gif[""]), bloccato dall'utente (image:../media/lock_icon_wfa.gif[""]), o con certificazione NetApp (image:../media/netapp_certified.gif[""]).
+
++
+È possibile cercare i finder selezionando le caselle di controllo desiderate dall'elenco dei filtri.
+
+* *Nome*
++
+Visualizza il nome del Finder.
+
++
+Puoi cercare un Finder inserendo il suo nome nella casella di testo Search filter (filtro di ricerca).
+
+* *Schema*
++
+Visualizza lo schema associato ai finder. Uno schema rappresenta il modello di dati per un sistema. Ad esempio, uno schema vc contiene dati rilevanti per l'ambiente virtuale, come macchine virtuali, host e datastore.
+
++
+È possibile cercare un Finder inserendo il relativo schema nella casella di testo Search filter (filtro di ricerca).
+
+* *Tipo*
++
+Visualizza il tipo di oggetto dizionario del Finder (ad esempio, array aggregato o CIFS).
+
++
+È possibile cercare i finder immettendo il tipo nella casella di testo Search filter (filtro di ricerca).
+
+* *Versione entità*
++
+Visualizza il numero di versione dell'oggetto in `major.minor.revision` format--ad esempio, 1.0.0.
+
++
+È possibile cercare un Finder inserendo il numero di versione nella casella di testo Search filter (filtro di ricerca).
+
+* *Descrizione*
++
+Visualizza la descrizione del Finder.
+
++
+È possibile cercare un Finder inserendo la relativa descrizione nella casella di testo del filtro di ricerca.
+
+* *Ultimo aggiornamento in data*
++
+Visualizza la data e l'ora dell'ultimo aggiornamento del Finder.
+
++
+È possibile cercare i finder selezionando la categoria di tempo dall'elenco a discesa del filtro.
+
+* *Aggiornato da*
++
+Visualizza l'utente che ha aggiornato il Finder.
+
++
+È possibile cercare i finder immettendo il nome utente nella casella di testo Search filter (filtro di ricerca).
+
+* *Bloccato da*
++
+Visualizza l'utente che ha bloccato il Finder.
+
++
+È possibile cercare i finder immettendo il nome utente nella casella di testo Search filter (filtro di ricerca).
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/new_wfa_icon.gif["Nuova icona"] (Novità)*
++
+Apre la finestra nuovo Finder, che consente di creare un Finder.
+
+* *image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] (Modifica)*
++
+Apre la finestra <finder_name> del Finder per il Finder selezionato, che consente di modificare il Finder.
+
++
+Puoi anche fare doppio clic sul Finder per aprire la finestra Edit Finder (Modifica Finder).
+
+* *image:../media/clone_wfa_icon.gif["Icona Clona"] (Clone)*
++
+Apre la finestra New Finder <finder_name> - Copy (nuovo Finder - copia), che consente di creare una copia del Finder selezionato.
+
+* *image:../media/lock_wfa_icon.gif["Icona a forma di lucchetto"] (Blocco)*
++
+Apre la finestra di dialogo di conferma di Lock Finder, che consente di bloccare il Finder selezionato.
+
+* *image:../media/unlock_wfa_icon.gif["Icona di sblocco"] (Sblocca)*
++
+Apre la finestra di dialogo di conferma Sblocca Finder, che consente di sbloccare il Finder selezionato.
+
++
+Questa opzione è abilitata solo per i finder bloccati. Gli amministratori possono sbloccare i finder bloccati da altri utenti.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo Delete Finder confirmation (Elimina Finder), che consente di eliminare il Finder selezionato creato dall'utente.
+
++
+
+NOTE: Non è possibile eliminare un Finder WFA, un Finder PS o un cercatore di campioni.
+
+* *image:../media/export_wfa_icon.gif["Icona Export (Esporta)"] (Esportazione)*
++
+Consente di esportare il Finder creato dall'utente selezionato.
+
++
+
+NOTE: Non è possibile esportare un Finder WFA, un Finder PS o un cercatore di campioni.
+
+* *image:../media/test_wfa_icon.gif["icona di test"] (Test)*
++
+Apre la finestra di dialogo Test Finder, che consente di testare il Finder selezionato.
+
+* *image:../media/add_to_pack.png["icona add to pack (aggiungi al pacchetto)"] (Aggiungi al pacchetto)*
++
+Apre la finestra di dialogo Add to Pack Finders, che consente di aggiungere il Finder e le relative entità affidabili a un pacchetto, modificabile.
+
++
+
+NOTE: La funzione Add to Pack (Aggiungi al pacchetto) è abilitata solo per i finder per i quali la certificazione è impostata su *None.*
+
+* *image:../media/remove_from_pack.png["icona remove from pack (rimuovi dalla confezione)"] (Remove from Pack)*
++
+Apre la finestra di dialogo Remove from Pack Finders (Rimuovi da pacchetti) per il Finder selezionato, che consente di eliminare o rimuovere il Finder dal pacchetto.
+
++
+
+NOTE: La funzione Remove from Pack (Rimuovi dal pacchetto) è abilitata solo per i finder per i quali la certificazione è impostata su *None.*
+
+

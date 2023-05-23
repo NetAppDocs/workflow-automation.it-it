@@ -1,0 +1,55 @@
+---
+permalink: rhel-install/task-create-local-users.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, create, local users 
+summary: 'OnCommand Workflow Automation (WFA) consente di creare e gestire utenti WFA locali con autorizzazioni specifiche per diversi ruoli, ad esempio guest, operatore, approvatore, architetto, admin e backup.' 
+---
+= Creare utenti locali
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) consente di creare e gestire utenti WFA locali con autorizzazioni specifiche per diversi ruoli, ad esempio guest, operatore, approvatore, architetto, admin e backup.
+
+È necessario aver installato WFA e aver effettuato l'accesso come amministratore.
+
+WFA consente di creare utenti per i seguenti ruoli:
+
+* *Ospite*
++
+Questo utente può visualizzare il portale e lo stato dell'esecuzione di un flusso di lavoro e può essere informato di una modifica dello stato dell'esecuzione di un flusso di lavoro.
+
+* *Operatore*
++
+A questo utente è consentito visualizzare in anteprima ed eseguire i flussi di lavoro per i quali l'utente ha accesso.
+
+* *Approvatore*
++
+A questo utente è consentito visualizzare in anteprima, eseguire, approvare e rifiutare i flussi di lavoro per i quali l'utente ha accesso.
+
++
+
+NOTE: Si consiglia di fornire l'ID email del responsabile dell'approvazione. Se sono presenti più responsabili dell'approvazione, è possibile fornire un ID e-mail di gruppo nel campo *e-mail*.
+
+* *Architetto*
++
+Questo utente ha pieno accesso alla creazione di flussi di lavoro, ma non può modificare le impostazioni globali del server WFA.
+
+* *Amministratore*
++
+Questo utente ha accesso completo al server WFA.
+
+* *Backup*
++
+Si tratta dell'unico utente in grado di generare in remoto i backup del server WFA. Tuttavia, l'utente non può accedere ad altri tipi di accesso.
+
+
+
+.Fasi
+. Fare clic su *Impostazioni* e in *Gestione* fare clic su *utenti*.
+. Creare un nuovo utente facendo clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+. Inserire le informazioni richieste nella finestra di dialogo nuovo utente.
+. Fare clic su *Save* (Salva).
+

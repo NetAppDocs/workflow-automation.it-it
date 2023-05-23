@@ -1,0 +1,38 @@
+---
+permalink: workflows/task-test-the-wfa-reservation-script-for-commands.html 
+sidebar: sidebar 
+keywords: test, reservation, scripts, written, oncommand, workflow, automation, commands, playground, database, ensure, affect, table 
+summary: 'È possibile verificare gli script di prenotazione scritti per i comandi OnCommand Workflow Automation (Wfa) nel database del parco giochi per verificare che gli script funzionino correttamente e non influiscano sulle tabelle del database WFA.' 
+---
+= Verificare lo script di prenotazione per i comandi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile verificare gli script di prenotazione scritti per i comandi OnCommand Workflow Automation (Wfa) nel database del parco giochi per verificare che gli script funzionino correttamente e non influiscano sulle tabelle del database WFA.
+
+.A proposito di questa attività
+In questa procedura viene utilizzato il percorso di installazione predefinito di WFA. Se è stata modificata la posizione predefinita durante l'installazione, è necessario utilizzare il percorso di installazione WFA modificato.
+
+.Fasi
+. Aprire un prompt dei comandi sul server WFA e modificare le directory nella posizione seguente: `c:\Program Files\NetApp\WFA\mysql\bin`
+. Creare un dump del database WFA utilizzando il seguente comando: `mysqldump -u wfa -pWfa123 --single-transaction --skip-add-drop-table database_tables> dump_location`
++
+Comando per creare un dump delle tabelle del database cm_storage: `mysqldump -u wfa -pWfa123 --single-transaction --skip-add-drop-table cm_storage> c:\tmp\cmSt2.sql`
+
+. Ripristinare il dump creato nel database del parco giochi WFA utilizzando il seguente comando: `mysql -u wfa -pWfa123 playground < dump_location`
++
+`mysql -u wfa -pWfa123 playground < c:\tmp\cmSt2.sql`
+
+. Creare o modificare un comando WFA e scrivere lo script di prenotazione nella scheda *Reservation*.
++
+È necessario assicurarsi che gli script di prenotazione e verifica utilizzino solo il database del parco giochi.
+
+. Creare o modificare un flusso di lavoro, includere il comando nel flusso di lavoro ed eseguire il flusso di lavoro.
+. Verificare che gli script di prenotazione e verifica funzionino come previsto.
++
+Il processo di acquisizione dell'origine dei dati WFA non aggiorna il database del parco giochi. È necessario rimuovere manualmente le prenotazioni create dal comando.
+
+

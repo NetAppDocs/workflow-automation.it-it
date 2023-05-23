@@ -1,0 +1,84 @@
+---
+permalink: help/reference-new-filter-dialog-box.html 
+sidebar: sidebar 
+keywords: use, new, filter, dialog box, create, develop, finders 
+summary: È possibile utilizzare la finestra di dialogo nuovo filtro per creare un nuovo filtro. È possibile utilizzare il filtro per sviluppare i finder. 
+---
+= Finestra di dialogo nuovo filtro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la finestra di dialogo nuovo filtro per creare un nuovo filtro. È possibile utilizzare il filtro per sviluppare i finder.
+
+* Scheda Proprietà
+* Scheda Query
+
+
+
+
+== Scheda Proprietà
+
+La scheda *Proprietà* consente di specificare un nome per il filtro, selezionare un oggetto dizionario e immettere una descrizione per il filtro.
+
+* *Nome*
++
+Consente di immettere un nome per il filtro.
+
+* *Tipo*
++
+Consente di selezionare un oggetto dizionario dall'elenco.
+
+* *Versione entità*
++
+Consente di immettere il numero di versione del filtro in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Descrizione*
++
+Consente di immettere una descrizione per il filtro.
+
+
+
+
+
+== Scheda Query
+
+Consente di immettere una query SQL e modificare l'etichetta e la descrizione degli attributi.
+
+* *Query SQL*
++
+Consente di immettere una query SQL per il filtro.
+
+* *Tabella Input Parameters*
++
+Visualizza l'elenco dei parametri della query SQL immessi che richiedono l'input dell'utente quando viene utilizzato il filtro. È possibile fare clic sulla colonna *Label* o *Description* di un parametro per modificare l'etichetta o inserire una descrizione.
+
+* *Tabella attributi restituita*
++
+Visualizza l'elenco degli attributi restituiti dalla query SQL.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Test*
++
+Consente di verificare il filtro definito.
+
+* *Aggiorna*
++
+Compila la tabella *Input Parameters* e la tabella *restituita Attributes* con i valori modificati, se presenti.
+
+* *Salva*
++
+Salva il filtro e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Non salva il filtro e chiude la finestra di dialogo.
+
+

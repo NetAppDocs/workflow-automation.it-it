@@ -1,0 +1,43 @@
+---
+permalink: help/reference-incremental-naming-wizard.html 
+sidebar: sidebar 
+keywords: incremental, naming, wizard, enable, define, value, attribute, search, existing, parameter 
+summary: 'La procedura guidata Incremental Naming (Naming incrementale) consente di definire il valore di un attributo in base alla ricerca di un parametro esistente.' 
+---
+= Naming Wizard incrementale
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La procedura guidata Incremental Naming (Naming incrementale) consente di definire il valore di un attributo in base alla ricerca di un parametro esistente.
+
+* *Criteri di ricerca per <dictionary object> esistente*
++
+Apre la finestra di dialogo *Resource Selection*, che consente di specificare i criteri di ricerca per l'oggetto dizionario.
+
+* *Inserire un valore per <attribute> se nessun <dictionary object> corrisponde ai criteri di ricerca indicati sopra*
++
+Consente di specificare un valore per <attribute> quando il <dictionary object> non viene trovato utilizzando i criteri di ricerca specificati.
+
+* *Se <dictionary object> è stato trovato utilizzando i criteri di ricerca sopra indicati, impostare il valore per <attribute> by*
++
+Consente di specificare un valore per <attribute> quando il <dictionary object> non viene trovato utilizzando i criteri di ricerca specificati.
+
+* *Inserire un valore per <attribute> se nessun <dictionary object> corrisponde ai criteri di ricerca indicati sopra*
++
+Consente di selezionare un metodo per impostare il valore per <attribute> se il <dictionary object> viene trovato utilizzando i criteri di ricerca specificati.
+
++
+** *fornendo un valore di incremento e un suffisso*
++
+Consente di immettere un valore numerico per gli incrementi e, facoltativamente, un suffisso del nome dell'attributo.
+
+** *fornitura di un'espressione personalizzata*
++
+Consente di immettere un'espressione personalizzata per il valore dell'attributo. È possibile utilizzare la sintassi MVFLEX Expression Language (MVEL) per specificare il valore.
+
+
+
+

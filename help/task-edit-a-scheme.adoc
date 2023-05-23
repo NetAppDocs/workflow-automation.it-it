@@ -1,0 +1,32 @@
+---
+permalink: help/task-edit-a-scheme.html 
+sidebar: sidebar 
+keywords: edit, display, name, description, entity, version, scheme, create 
+summary: 'È possibile modificare il nome visualizzato, la descrizione e la versione dell"entità di uno schema creato.' 
+---
+= Modificare uno schema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare il nome visualizzato, la descrizione e la versione dell'entità di uno schema creato.
+
+*Cosa ti serve*
+
+* È necessario aver installato WFA.
+* È necessario disporre dei privilegi di amministratore o delle credenziali di architetto per WFA.
+
+
+*A proposito di questa attività*
+
+Non è possibile modificare schemi predefiniti.
+
+.Fasi
+. Accedere a WFA tramite un browser Web come amministratore o architetto.
+. Fare clic su *Data Source Design* > *Schemes*.
+. Selezionare lo schema che si desidera modificare, quindi fare clic su image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] sulla barra degli strumenti.
+. Modificare le informazioni richieste nella finestra di dialogo *Schemes <SchemeName>*.
+. Fare clic su *Save* (Salva).
+

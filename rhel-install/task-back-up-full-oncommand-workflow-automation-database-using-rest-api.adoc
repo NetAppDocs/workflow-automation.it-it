@@ -1,0 +1,23 @@
+---
+permalink: rhel-install/task-back-up-full-oncommand-workflow-automation-database-using-rest-api.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, perform, full backup, wfa, database, rest, apis 
+summary: 'È possibile eseguire un backup completo del database OnCommand Workflow Automation (Wfa) utilizzando le API REST. In un backup completo, viene eseguito il backup del database WFA, della configurazione WFA e della chiave.' 
+---
+= Eseguire un backup completo del database WFA utilizzando le API REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire un backup completo del database OnCommand Workflow Automation (Wfa) utilizzando le API REST. In un backup completo, viene eseguito il backup del database WFA, della configurazione WFA e della chiave.
+
+È necessario disporre delle credenziali di amministratore o architetto.
+
+.Fase
+. Immettere il seguente URL nel browser Web: `+https://IP address of the WFA server/rest/backups?full=true+`
++
+Per ulteriori informazioni, consultare la documentazione REST.
+
+

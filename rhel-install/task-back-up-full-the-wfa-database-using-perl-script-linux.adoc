@@ -1,0 +1,38 @@
+---
+permalink: rhel-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa, database, cli 
+summary: 'È possibile eseguire un backup completo del database OnCommand Workflow Automation (Wfa) utilizzando l"interfaccia della riga di comando (CLI) di Wfa. In un backup completo, viene eseguito il backup del database WFA, della configurazione WFA e della chiave.' 
+---
+= Eseguire il backup completo del database WFA utilizzando la CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire un backup completo del database OnCommand Workflow Automation (Wfa) utilizzando l'interfaccia della riga di comando (CLI) di Wfa. In un backup completo, viene eseguito il backup del database WFA, della configurazione WFA e della chiave.
+
+È necessario disporre delle credenziali dell'utente amministratore o dell'architetto.
+
+In un ambiente ad alta disponibilità, è necessario creare backup pianificati utilizzando API REST. Non è possibile creare backup utilizzando la CLI quando WFA è in modalità di failover.
+
+Per ulteriori informazioni, consultare la documentazione REST.
+
+.Fasi
+. Al prompt della shell, accedere alla seguente directory sul server WFA: `WFA_install_location/wfa/bin/`
++
+WFA_install_location è la directory di installazione di WFA.
+
+. Backup del database WFA: `.\wfa --backup --user=USER [--password=PASS] [--location=PATH] [--full]`
++
+** user (utente) è il nome utente dell'utente di backup.
+** password è la password dell'utente di backup.
++
+Se la password non è stata fornita, è necessario immetterla quando richiesto.
+
+** percorso è il percorso completo della directory per il file di backup.
+
+
+. Verificare che il file di backup sia stato creato nella posizione specificata.
+

@@ -1,0 +1,29 @@
+---
+permalink: windows-install/task-add-an-upgraded-unified-manager-server-data-source.html 
+sidebar: sidebar 
+keywords: add, upgraded, unified manager server, data source 
+summary: 'Se il server Unified Manager (5.x o 6.x) viene aggiunto come origine dati a WFA e il server Unified Manager viene aggiornato, È necessario aggiungere il server Unified Manager aggiornato come origine dati perché i dati associati alla versione aggiornata non vengono popolati in WFA, a meno che non venga aggiunto manualmente come origine dati.' 
+---
+= Aggiungere un server Unified Manager aggiornato come origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se il server Unified Manager (5.x o 6.x) viene aggiunto come origine dati a WFA e il server Unified Manager viene aggiornato, È necessario aggiungere il server Unified Manager aggiornato come origine dati perché i dati associati alla versione aggiornata non vengono popolati in WFA, a meno che non venga aggiunto manualmente come origine dati.
+
+.Fasi
+. Accedere alla GUI Web di WFA come amministratore.
+. Fare clic su *Impostazioni* e in *Setup*, fare clic su *origini dati*.
+. Fare clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+. Nella finestra di dialogo Nuova origine dati, selezionare il tipo di origine dati richiesto, quindi immettere un nome per l'origine dati e il nome host.
++
+In base al tipo di origine dati selezionato, i campi porta, nome utente, password e timeout potrebbero essere popolati automaticamente con i dati predefiniti, se disponibili. È possibile modificare queste voci in base alle esigenze.
+
+. Fare clic su *Save* (Salva).
+. Selezionare la versione precedente del server Unified Manager e fare clic su image:../media/delete_wfa_icon.gif["Icona Elimina"] sulla barra degli strumenti.
+. Nella finestra di dialogo di conferma dell'eliminazione del tipo di origine dati, fare clic su *Sì*.
+. Nella tabella origini dati, selezionare l'origine dati, quindi fare clic su image:../media/acquire_now_wfa_icon.gif["Icona Acquire Now (Acquisisci ora)"] sulla barra degli strumenti.
+. Verificare lo stato di acquisizione dei dati nella tabella History (Cronologia).
+

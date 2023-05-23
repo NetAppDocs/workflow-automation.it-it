@@ -1,0 +1,111 @@
+---
+permalink: help/reference-schedules-window.html 
+sidebar: sidebar 
+keywords: schedules, window, enable, create, edit, delete, schedule, workflow, particular, date, time, execution 
+summary: 'La finestra Pianificazioni consente di creare, modificare ed eliminare la pianificazione di un flusso di lavoro. È possibile pianificare l"esecuzione di un flusso di lavoro in una data e un"ora specifiche. Per accedere a questa finestra, selezionare Execution > Schedules (esecuzione > programmi).' 
+---
+= Finestra programmi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Pianificazioni consente di creare, modificare ed eliminare la pianificazione di un flusso di lavoro. È possibile pianificare l'esecuzione di un flusso di lavoro in una data e un'ora specifiche. Per accedere a questa finestra, selezionare *esecuzione* > *programmi*.
+
+* Tabella delle pianificazioni
+* Barra degli strumenti
+
+
+
+
+== Tabella delle pianificazioni
+
+La tabella Pianificazioni elenca le pianificazioni esistenti per l'esecuzione del flusso di lavoro in formato tabella. È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La seguente tabella elenca gli operatori supportati per le colonne alfabetiche e numeriche nella tabella Pianificazioni, disponibile nella casella di testo del filtro *Ricerca*.
+
+[cols="2*"]
+|===
+| Alfabetico | Numerico 
+
+
+ a| 
+* Contiene
+* Non contiene
+* Inizia con
+* Termina con
+* Uguale a
+* Non uguale
+* Resettare
+
+ a| 
+* Uguale a
+* Non uguale
+* Inferiore a.
+* Maggiore di
+* Minore o uguale a.
+* Maggiore o uguale a.
+* Tra
+* Resettare
+
+
+|===
+La tabella Pianificazioni contiene le seguenti colonne:
+
+* *ID*
++
+Visualizza l'identificativo della pianificazione.
+
+* *Nome*
++
+Visualizza il nome della pianificazione.
+
+* *Descrizione*
++
+Visualizza la descrizione della pianificazione.
+
+* *Conteggio associazioni*
++
+Visualizza il numero di flussi di lavoro associati alla pianificazione.
+
+* *Aggiornato alle*
++
+Visualizza la data e l'ora in cui è stata modificata la pianificazione.
+
++
+Fare clic sull'icona del calendario nella casella di testo del filtro *Cerca* per cercare i programmi aggiornati in una data specifica.
+
+* *Aggiornato da*
++
+Visualizza il nome dell'utente che ha modificato la pianificazione.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/new_wfa_icon.gif["Nuova icona"] (Novità)*
++
+Apre la finestra di dialogo New Schedule (Nuova pianificazione), che consente di aggiungere una nuova pianificazione.
+
+* *image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] (Modifica)*
++
+Apre la finestra di dialogo Edit Schedule (Modifica pianificazione), che consente di modificare la pianificazione selezionata.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo Delete Schedule confirmation (Conferma eliminazione pianificazione), che consente di eliminare la pianificazione selezionata.
+
+

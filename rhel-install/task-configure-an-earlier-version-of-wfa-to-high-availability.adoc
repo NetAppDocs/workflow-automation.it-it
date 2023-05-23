@@ -1,0 +1,46 @@
+---
+permalink: rhel-install/task-configure-an-earlier-version-of-wfa-to-high-availability.html 
+sidebar: sidebar 
+keywords: configure, earlier version, oncommand, workflow, automation, high availability 
+summary: 'È possibile configurare le versioni di OnCommand Workflow Automation (Wfa) precedenti alla 3.1 per la disponibilità elevata.' 
+---
+= Configurare una versione precedente di OnCommand Workflow Automation per la disponibilità elevata
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare le versioni di OnCommand Workflow Automation (Wfa) precedenti alla 3.1 per la disponibilità elevata.
+
+.Fasi
+. Aggiornare la versione esistente di WFA all'ultima versione disponibile di WFA.
++
+link:task-upgrade-from-wfa-4-2.html["Aggiornare Wfa"]
+
++
+Questa versione aggiornata di WFA è il nodo principale del cluster.
+
+. Creare un backup del database WFA.
++
+link:reference-backing-up-of-the-oncommand-workflow-automation-database.html["Backup del database WFA"]
+
++
+Se uno dei parametri è stato modificato manualmente, è necessario creare un backup del database WFA, disinstallare l'installazione WFA esistente, installare l'ultima versione disponibile di WFA, ripristinare il backup e procedere con la configurazione di Veritas Cluster Server (VCS).
+
+. Configurare VCS per installare WFA sul nodo primario.
++
+link:task-configure-vcs-to-install-wfa.html["Configurare VCS per installare Wfa"]
+
+. Installare la versione più recente di WFA disponibile sul nodo secondario.
++
+link:task-install-oncommand-workflow-automation.html["Installare WFA"]
+
+. Configurare WFA in VCS.
++
+link:task-configure-wfa-with-vcs-using-configuration-scripts-linux.html["Configurare WFA in VCS"]
+
++
+Il server WFA è configurato per l'alta disponibilità.
+
+

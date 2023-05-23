@@ -1,0 +1,38 @@
+---
+permalink: workflows/task-create-recurring-schedules.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, schedule, options, execute, specific, time, create, recurring, associate, routinely 
+summary: 'OnCommand Workflow Automation (Wfa) offre due opzioni di pianificazione per i flussi di lavoro. È possibile pianificare un flusso di lavoro da eseguire una volta a un"ora specifica oppure creare pianificazioni ricorrenti e associare le pianificazioni ai flussi di lavoro in modo che i flussi di lavoro vengano eseguiti regolarmente.' 
+---
+= Creare pianificazioni ricorrenti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (Wfa) offre due opzioni di pianificazione per i flussi di lavoro. È possibile pianificare un flusso di lavoro da eseguire una volta a un'ora specifica oppure creare pianificazioni ricorrenti e associare le pianificazioni ai flussi di lavoro in modo che i flussi di lavoro vengano eseguiti regolarmente.
+
+.A proposito di questa attività
+Un programma creato può essere riutilizzato e associato a diversi flussi di lavoro.
+
+.Fasi
+. Fare clic su *esecuzione* > *programmi*.
+. Fare clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+. Nella finestra di dialogo *New Schedule* (Nuova pianificazione), immettere o selezionare un nome, una descrizione e una frequenza per la pianificazione.
++
+Per la frequenza, inserire l'ora nel formato 24 ore. L'ora del server WFA viene applicata alle pianificazioni.
+
+. Fare clic su *OK*.
+
+
+
+
+== Al termine
+
+* È possibile associare la pianificazione a un flusso di lavoro quando si esegue il flusso di lavoro utilizzando l'opzione *Esegui in modo ricorrente*.
+* È possibile visualizzare i dettagli di un flusso di lavoro e la relativa associazione a una pianificazione facendo clic su *esecuzione* > *Pianificazioni ricorrenti*.
++
+La pianificazione delle risorse e dell'esecuzione per i flussi di lavoro pianificati per essere eseguiti una sola volta viene eseguita immediatamente quando i flussi di lavoro sono pianificati. Tuttavia, la pianificazione delle risorse e dell'esecuzione per i flussi di lavoro con pianificazione ricorrente avviene all'ora pianificata e non quando la pianificazione è associata a un flusso di lavoro.
+
+

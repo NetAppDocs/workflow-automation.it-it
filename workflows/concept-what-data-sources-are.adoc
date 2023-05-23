@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-data-sources-are.html 
+sidebar: sidebar 
+keywords: data, source, method, establishing, connection, systems, files, databases, order, extract, example, active iq, unified manager 9.4, type 
+summary: 'Un"origine dati è un metodo per stabilire una connessione ad altri sistemi, file e database per estrarre i dati. Ad esempio, un"origine dati può essere una connessione a un database Active IQ Unified Manager di tipo origine dati Active IQ Unified Manager 9.4.' 
+---
+= Quali sono le origini dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un'origine dati è un metodo per stabilire una connessione ad altri sistemi, file e database per estrarre i dati. Ad esempio, un'origine dati può essere una connessione a un database Active IQ Unified Manager di tipo origine dati Active IQ Unified Manager 9.4.
+
+È possibile aggiungere un'origine dati personalizzata a OnCommand Workflow Automation (Wfa) per l'acquisizione dei dati dopo aver definito il tipo di origine dati richiesto associando lo schema di caching, la porta richiesta e il metodo di acquisizione al tipo di origine dati.
+
+WFA memorizza le informazioni nella cache attraverso varie origini dati. WFA raccoglie le informazioni sulle risorse dalle origini dati e le formatta per lo schema di caching. Le tabelle della cache, che sono le tabelle all'interno degli schemi di caching, sono formattate in modo da corrispondere agli oggetti delle voci del dizionario. Quando si utilizza un Finder nei flussi di lavoro, restituisce un oggetto dizionario e i dati dell'oggetto dizionario vengono popolati dalle tabelle della cache. Il processo di acquisizione dei dati dalle origini dati è noto come _acquisizione origine dati_. È possibile utilizzare un metodo basato su script o un metodo basato su driver per l'acquisizione dell'origine dati. Le origini possono essere diverse l'una dall'altra e l'acquisizione dell'origine dati potrebbe campionarle a intervalli di tempo diversi. WFA unisce quindi tali informazioni nel database e sovrappone i dati di prenotazione per mantenere aggiornate le informazioni sulle risorse nel database.
+
+Il database WFA include diversi schemi di caching. Uno schema di caching è un insieme di tabelle e ciascuna tabella include informazioni provenienti da un determinato tipo di voce del dizionario; tuttavia, le tabelle potrebbero includere informazioni combinate provenienti da più origini di un tipo di origine dati specifico. WFA utilizza le informazioni del database per comprendere lo stato delle risorse, eseguire calcoli ed eseguire comandi sulle risorse.

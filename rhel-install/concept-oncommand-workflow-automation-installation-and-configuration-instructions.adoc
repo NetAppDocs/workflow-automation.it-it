@@ -1,0 +1,18 @@
+---
+permalink: rhel-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, installation, setup, overview 
+summary: 'L"installazione di OnCommand Workflow Automation (WFA) include l"esecuzione di attività come la preparazione per l"installazione, il download del programma di installazione di WFA e l"esecuzione del programma di installazione. Una volta completata l"installazione, è possibile configurare WFA per soddisfare i propri requisiti.' 
+---
+= Panoramica dell'installazione e della configurazione di OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'installazione di OnCommand Workflow Automation (WFA) include l'esecuzione di attività come la preparazione per l'installazione, il download del programma di installazione di WFA e l'esecuzione del programma di installazione. Una volta completata l'installazione, è possibile configurare WFA per soddisfare i propri requisiti.
+
+Il seguente diagramma di flusso illustra le attività di installazione e configurazione:
+
+image::../media/wfa_isg_flowchart.gif[diagramma di flusso di wfa isg]

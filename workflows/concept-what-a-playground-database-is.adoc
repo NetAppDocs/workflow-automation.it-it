@@ -1,0 +1,85 @@
+---
+permalink: workflows/concept-what-a-playground-database-is.html 
+sidebar: sidebar 
+keywords: playground, database, mysql, include, Workflow, automation, server, installation, add, tables, information, filters, queries, user, input 
+summary: 'Il database del parco giochi è un database MySQL, incluso nell"installazione del server Workflow Automation (WFA). È possibile aggiungere tabelle al database del parco giochi per includere informazioni, che possono essere utilizzate da filtri e query SQL per gli input degli utenti.' 
+---
+= Che cos'è un database di giochi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il database del parco giochi è un database MySQL, incluso nell'installazione del server Workflow Automation (WFA). È possibile aggiungere tabelle al database del parco giochi per includere informazioni, che possono essere utilizzate da filtri e query SQL per gli input degli utenti.
+
+Il database del parco giochi è uno schema a cui non è possibile accedere attraverso il portale Web WFA. Per accedere al database è possibile utilizzare un client MySQL, ad esempio SQLyog, Toad per MySQL e MySQL Workbench o un'interfaccia a riga di comando (CLI).
+
+Per accedere al database del parco giochi, è necessario utilizzare le seguenti credenziali:
+
+* Nome utente: wfa
+* Password: Wfa123
+
+
+Le credenziali forniscono un accesso completo al database del parco giochi e l'accesso in sola lettura ad altri schemi definiti nel database MySQL WFA. È possibile creare le tabelle richieste nel database del parco giochi.
+
+È possibile aggiungere i tag o i metadati utilizzati per gli oggetti di storage nell'ambiente a una tabella nel database del parco giochi. I tag o i metadati possono quindi essere utilizzati insieme alle informazioni contenute in altre tabelle cache WFA da filtri WFA e query di input dell'utente.
+
+Ad esempio, è possibile utilizzare il database dei giochi per i seguenti casi di utilizzo:
+
+* Contrassegnare gli aggregati con il nome della business unit (BU) e allocare i volumi sul bus in base a questi tag
+* Contrassegnare le unità vFiler con i nomi BU
+* Aggiunta di dettagli geografici o di posizione agli oggetti di storage
+* Definizione dell'accesso degli amministratori dei database ai database
+
+
+Ad esempio, se si utilizza il nome della BU come tag per gli oggetti di storage, ad esempio aggregati e unità vFiler, è possibile creare una tabella nel database del parco giochi che includa il nome della BU. Il nome BU può quindi essere utilizzato dai filtri e dalle query di input dell'utente per i flussi di lavoro.
+
+Di seguito è riportato un esempio di tabella del database del parco giochi (playground.volume_bu):
+
+[cols="3*"]
+|===
+| array_ip | nome_volume | BU 
+
+
+ a| 
+10.225.126.23
+ a| 
+data_11
+ a| 
+Marketing
+
+
+
+ a| 
+10.225.126.28
+ a| 
+arch_11
+ a| 
+FC
+
+|===
+Di seguito è riportato un esempio di query SQL che è possibile utilizzare per filtrare i volumi in base alla BU:
+
+[listing]
+----
+SELECT
+    vol.name,
+    array.ip AS 'array.ip'
+FROM
+    storage.volume AS vol,
+    storage.array AS array,
+    playground.volume_bu AS vol_bu
+WHERE
+    vol.array_id = array.id
+    AND array.ip = vol_bu.array_ip
+    AND vol.name = vol_bu.volume_name
+    AND vol_bu.bu = '{$bu}'
+----
+*Informazioni correlate*
+
+https://www.webyog.com/["SQLYog"^]
+
+http://www.mysql.com/products/workbench/["MySQL Workbench"^]
+
+http://www.quest.com/toad-for-mysql/["Toad per MySQL"^]

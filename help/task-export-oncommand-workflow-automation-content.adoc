@@ -1,0 +1,72 @@
+---
+permalink: help/task-export-oncommand-workflow-automation-content.html 
+sidebar: sidebar 
+keywords: save, user-created, oncommand, workflow, automation, content, file, share, users, include, entire, specific, items, workflows, finders, comands, dictionary 
+summary: 'È possibile salvare il contenuto OnCommand Workflow Automation (Wfa) creato dall"utente come file .dar e condividerlo con altri utenti. Il contenuto WFA può includere l"intero contenuto creato dall"utente o elementi specifici come flussi di lavoro, finder, comandi e termini del dizionario.' 
+---
+= Esportare contenuto OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile salvare il contenuto WFA (OnCommand Workflow Automation) creato dall'utente come `.dar` archiviare e condividere il contenuto con altri utenti. Il contenuto WFA può includere l'intero contenuto creato dall'utente o elementi specifici come flussi di lavoro, finder, comandi e termini del dizionario.
+
+*Cosa ti serve*
+
+* È necessario disporre dell'accesso al contenuto WFA che si desidera esportare.
+* Se il contenuto da esportare contiene riferimenti a contenuto certificato, i pacchetti di contenuto certificati corrispondenti devono essere disponibili sul sistema al momento dell'importazione del contenuto.
++
+Questi pacchetti possono essere scaricati dallo Storage Automation Store.
+
+
+
+*A proposito di questa attività*
+
+* Non è possibile esportare i seguenti tipi di contenuto certificato:
++
+** image:../media/netapp_certified.gif[""] - Contenuti certificati NetApp
+** image:../media/ps_certified_icon_wfa.gif[""] Contenuto sviluppato da Professional Services (PS), disponibile solo per installazioni personalizzate realizzate da PS
+** image:../media/community_certification.gif[""] - pacchetti sviluppati dagli utenti
+
+
+* Vengono esportati anche tutti gli oggetti che dipendono dall'oggetto esportato.
++
+Ad esempio, l'esportazione di un flusso di lavoro esporta anche i comandi, i filtri e i finder dipendenti per il flusso di lavoro.
+
+* È possibile esportare oggetti bloccati.
++
+Gli oggetti rimangono bloccati quando vengono importati da altri utenti.
+
+
+
+.Fasi
+. Accedere a WFA tramite un browser Web.
+. Esportare il contenuto necessario:
++
+[cols="2*"]
+|===
+| Se si desidera... | Eseguire questa operazione... 
+
+
+ a| 
+Esportare tutto il contenuto creato dall'utente come singolo file .dar
+ a| 
+.. Fare clic su *Impostazioni* e sotto *manutenzione* fare clic su *Esporta tutti i flussi di lavoro*.
+.. Specificare un nome file per `.dar` Quindi fare clic su *Esporta*.
+
+
+
+
+ a| 
+Esportare contenuto specifico
+ a| 
+.. Accedere alla finestra dalla quale si desidera esportare il contenuto.
+.. Selezionare uno o più elementi dalla finestra, quindi fare clic su image:../media/export_wfa_icon.gif["Icona Export (Esporta)"].
+.. Nella finestra di dialogo Esporta come, specificare un nome file per `.dar` Quindi fare clic su *Esporta*.
+
+
+|===
+. Nella finestra di dialogo Salva con nome, specificare la posizione in cui si desidera salvare `.dar` Quindi fare clic su *Salva*.
+

@@ -1,0 +1,119 @@
+---
+permalink: help/reference-edit-variable-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, variable, dialog box, enable, user, input, attributes, workflow 
+summary: 'La finestra di dialogo Modifica variabile: <UserInputName> consente di modificare gli attributi di input utente di un flusso di lavoro.' 
+---
+= Finestra di dialogo Edit Variable (Modifica variabile)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Modifica variabile: <UserInputName> consente di modificare gli attributi di input utente di un flusso di lavoro.
+
+
+
+== Proprietà
+
+* *Nome variabile*
++
+Consente di modificare il nome dell'input dell'utente. La ridenominazione dell'input dell'utente aggiorna tutti i riferimenti all'input dell'utente nel flusso di lavoro.
+
+* *Nome visualizzato*
++
+Consente di specificare o modificare il nome visualizzato per l'input dell'utente. È possibile specificare un nome di visualizzazione univoco se sono stati creati attributi di input utente con un nome simile.
+
+* *Descrizione*
++
+Consente di specificare o modificare una descrizione per l'input dell'utente. La descrizione viene visualizzata come descrizione quando si esegue o si visualizza un'anteprima del flusso di lavoro.
+
+* *Tipo*
++
+Consente di selezionare il tipo di input dell'utente. I campi o un collegamento a una finestra di dialogo vengono visualizzati in base alle opzioni selezionate. Le opzioni disponibili includono:
+
++
+** String (stringa): Consente di immettere un'espressione regolare per i valori validi nel campo RegEx (ad esempio, a*).
+** Number (numero): Consente di immettere un intervallo numerico nel campo Range (intervallo), ad esempio da 1 a 15.
+** Enum: Consente di inserire un elenco chiuso di valori nel campo Enum Values (valori enum).
+** Query: Consente di inserire una semplice query SQL per ottenere il risultato.
++
+Gli utenti possono selezionare solo i valori dalla prima colonna del risultato.
+
+** Query (selezione multipla): Consente di inserire una query SQL che ottiene un elenco di valori.
++
+Gli utenti possono selezionare uno o più valori durante l'esecuzione del flusso di lavoro, ad esempio, è possibile selezionare un singolo volume, più volumi o volumi con le relative condivisioni ed esportazioni.
+
++
+È possibile selezionare i valori da qualsiasi colonna visualizzata nel risultato. Selezionando una riga, vengono selezionati i valori di tutte le colonne della riga selezionata.
+
+** Booleano: Consente di visualizzare una casella di controllo nella finestra di dialogo ingressi utente.
+** Tabella: Consente di specificare le intestazioni di colonna della tabella che possono essere utilizzate per immettere più valori durante l'esecuzione del flusso di lavoro, ad esempio una tabella che può essere utilizzata per specificare un elenco di nomi di nodi e di nomi di porta.
++
+È inoltre possibile configurare il tipo di input dell'utente della colonna e le proprietà associate all'input dell'utente della colonna. Viene visualizzata una finestra di dialogo in base al tipo di input dell'utente selezionato. Le opzioni disponibili includono:
+
++
+*** String (stringa): Consente di immettere un'espressione regolare per i valori validi nel campo RegEx (ad esempio, a*).
+*** Number (numero): Consente di immettere un intervallo numerico nel campo Range (intervallo), ad esempio da 1 a 15.
+*** Enum: Consente di inserire un elenco chiuso di valori nel campo Enum Values (valori enum).
+*** Query: Consente di inserire una semplice query SQL per ottenere il risultato.
++
+Gli utenti possono selezionare solo i valori dalla prima colonna del risultato. Una query all'interno della colonna dell'input utente della tabella non può fare riferimento ad altri input dell'utente all'interno della query.
+
+*** Booleano: Consente di selezionare "`true`" o "`false`" come valore booleano dall'elenco a discesa.
+
+
+** Password: Consente di crittografare una password fornita come input dall'utente.
++
+Una volta crittografata, la password viene visualizzata come una sequenza di caratteri asterisco nell'applicazione WFA e nei file di registro.
+
+** Dictionary (Dizionario): Consente di aggiungere i dati della tabella per la voce del dizionario selezionata.
++
+L'attributo dictionary entry seleziona l'attributo da restituire. È possibile selezionare uno o più valori durante l'esecuzione del flusso di lavoro. Ad esempio, è possibile selezionare un singolo volume, più volumi o volumi con le relative condivisioni ed esportazioni. Per impostazione predefinita, vengono selezionati valori singoli. È inoltre possibile selezionare regole per il filtraggio. Una regola è costituita da un attributo di voce del dizionario, un operatore e un valore. L'attributo può anche includere gli attributi dei relativi riferimenti. Ad esempio, è possibile specificare una regola per gli aggregati elencando tutti gli aggregati con nome che inizia con la stringa "`aggr`" e hanno una dimensione disponibile superiore a 5 GB. La prima regola del gruppo è l'attributo `name`, con l'operatore `starts-with`e il valore kaggr. La seconda regola per lo stesso gruppo è l'attributo `available_size_mb`, con l'operatore `>` e il valore 5000.
+
+
+
+* *Valori di blocco*
++
+Consente di specificare se all'utente è consentito inserire un valore diverso dai valori restituiti dalla query. La selezione della casella di controllo non consente all'utente di fornire un valore; è possibile selezionare solo i valori restituiti dalla query. Questa opzione viene utilizzata con le opzioni Enum (Enum) e Query type (tipo di query).
+
+* *Valore predefinito*
++
+Consente di impostare il valore predefinito dell'input dell'utente.
+
+* *Obbligatorio*
++
+Consente di specificare se l'input dell'utente è obbligatorio per l'esecuzione del flusso di lavoro.
+
+
+
+
+
+== Gruppo
+
+* *Nome gruppo*
++
+Consente di raggruppare gli attributi di input dell'utente correlati. Gli attributi di input dell'utente vengono visualizzati in gruppi definiti durante l'anteprima o l'esecuzione del flusso di lavoro. Ad esempio, è possibile raggruppare gli attributi di input dell'utente relativi ai dettagli del volume.
+
+* *Espandere il gruppo per impostazione predefinita*
++
+Consente di visualizzare tutti gli attributi di input dell'utente specificati in un gruppo come elenco esteso. Se la casella di controllo non è selezionata, il gruppo di input utente viene compresso.
+
+
+
+
+
+== Dipendenza
+
+Consente di attivare un input utente in base al valore immesso per un altro input utente. Ad esempio, in un flusso di lavoro che configura il protocollo NAS, è possibile specificare l'input utente richiesto per il protocollo come "`NFS`" per abilitare l'input utente "`read-write host lists`" o "`CIFS`" per abilitare "`CIFS ACL Configuration`".
+
+* *Scegliere l'input dell'utente da cui dipende*
++
+Consente di selezionare l'input utente richiesto per attivare l'input utente visualizzato nel campo Nome variabile.
+
+* *Valori applicabili (separati da virgole)*
++
+Consente di specificare il valore dell'input utente condizionale che abilita l'input utente visualizzato nel campo Nome variabile.
+
+

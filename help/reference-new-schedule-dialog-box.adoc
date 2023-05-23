@@ -1,0 +1,52 @@
+---
+permalink: help/reference-new-schedule-dialog-box.html 
+sidebar: sidebar 
+keywords: use, new, schedule, dialog box, create, workflow, execute, specified, frequency, monday 
+summary: 'È possibile utilizzare la finestra di dialogo New Schedule (Nuova pianificazione) per creare una nuova pianificazione per qualsiasi flusso di lavoro in modo che il flusso di lavoro venga eseguito su una frequenza specificata. Ad esempio, è possibile pianificare l"esecuzione di un flusso di lavoro ogni lunedì.' 
+---
+= Nuova pianificazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la finestra di dialogo New Schedule (Nuova pianificazione) per creare una nuova pianificazione per qualsiasi flusso di lavoro in modo che il flusso di lavoro venga eseguito su una frequenza specificata. Ad esempio, è possibile pianificare l'esecuzione di un flusso di lavoro ogni lunedì.
+
+
+
+== Nuove proprietà di Schedule Configuration
+
+* *Nome*
++
+Consente di specificare un nome per la pianificazione.
+
+* *Descrizione*
++
+Consente di immettere una descrizione per la pianificazione.
+
+* *Frequenza*
++
+Consente di specificare la frequenza con cui deve essere eseguito il flusso di lavoro associato alla pianificazione. L'opzione orario è selezionata per impostazione predefinita. La frequenza può essere oraria, giornaliera, settimanale o mensile.
+
++
+Ad esempio, se si desidera eseguire un flusso di lavoro ogni martedì alle 9:00, selezionare l'opzione settimanale e immettere l'ora come `9:00` e giorno dopo `Tuesday.` Quando si specifica l'ora, è necessario utilizzare i due punti.
+
++
+È supportato il formato 24 ore. I dati immessi si basano sull'ora del server.
+
+
+
+
+
+== Pulsanti di comando
+
+* *OK*
++
+Salva le impostazioni di configurazione e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

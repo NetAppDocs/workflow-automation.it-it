@@ -1,0 +1,104 @@
+---
+permalink: help/reference-row-repetition-details-dialog-box.html 
+sidebar: sidebar 
+keywords: row, repetition, details, dialog box, enable, specify, parameters, row, repeated 
+summary: 'La finestra di dialogo Row Repetition Details (Dettagli ripetizione riga) consente di specificare la modalità di ripetizione dei parametri nella riga.' 
+---
+= Finestra di dialogo Row Repetition Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Row Repetition Details (Dettagli ripetizione riga) consente di specificare la modalità di ripetizione dei parametri nella riga.
+
+
+
+== Si ripete
+
+Consente di selezionare il tipo di opzione di ripetizione desiderata. L'opzione *numero di volte* è selezionata per impostazione predefinita.
+
+* *Numero di volte*
++
+Consente di specificare quanto segue:
+
++
+** Il numero di volte in cui deve essere eseguita la riga specifica
+** Variabile di indice
+** Variabili
+** *Numero di volte*
++
+Consente di specificare un numero per il numero di volte in cui deve essere eseguita la riga specifica.
+
+** *Variabile indice*
++
+Consente di specificare il nome della variabile di indice per la ripetizione della riga.
+
+** *Variabili*
++
+Consente di includere ulteriori variabili da utilizzare durante la ripetizione delle righe.
+
++
+*** *Aggiungi*
++
+Aggiunge una nuova riga nella tabella Variables.
+
+*** *Rimuovi*
++
+Rimuove la riga selezionata dalla tabella Variables.
+
+
+
+
+
+* *Per ogni risorsa di un gruppo*
++
+Consente di specificare quanto segue:
+
++
+** Tipo di risorsa
+** Criteri di ricerca delle risorse
+** Variabile di risorsa
+** Variabile di indice
+** Variabile dimensione gruppo
+** Variabili
+** *Tipo di risorsa*
++
+Consente di selezionare il tipo di risorsa.
+
+** *Criteri di ricerca delle risorse*
++
+Apre la finestra di dialogo Resource Selection (selezione risorsa), che consente di specificare i criteri per la ricerca delle risorse del tipo di risorsa selezionato. Il loop viene eseguito per ogni risorsa ricercata in base ai criteri specificati.
+
+** *Variabile risorsa*
++
+Consente di immettere un nome per la variabile resource.
+
+** *Variabile indice*
++
+Consente di specificare l'indice per la ripetizione della riga.
+
+** *Variabile dimensione gruppo*
++
+Consente di immettere un nome per la variabile delle dimensioni del gruppo.
+
+** *Variabili*
++
+Consente di includere ulteriori variabili da utilizzare durante la ripetizione delle righe.
+
+
+
+* *Pulsanti di comando*
++
+** *OK*
++
+Salva le impostazioni e chiude la finestra di dialogo.
+
+** *Annulla*
++
+Non salva eventuali modifiche e chiude la finestra di dialogo.
+
+
+
+

@@ -1,0 +1,117 @@
+---
+permalink: help/reference-new-finder-dialog-box.html 
+sidebar: sidebar 
+keywords: new, finder, dialog box, enable, create 
+summary: La finestra di dialogo nuovo Finder consente di creare nuovi finder. 
+---
+= Finestra di dialogo nuovo Finder
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo nuovo Finder consente di creare nuovi finder.
+
+* Scheda Proprietà
+* Filtri
+* Scheda attributi restituiti
+
+
+
+
+== Scheda Proprietà
+
+La scheda *Proprietà* consente di specificare un nome per il Finder, selezionare il tipo di oggetto dizionario WFA e immettere una descrizione per il Finder. La scheda visualizza anche i parametri di input dopo aver selezionato un filtro nella scheda *filtri*.
+
+* *Nome*
++
+Consente di immettere un nome per il Finder.
+
+* *Tipo*
++
+Consente di selezionare il tipo di oggetto dall'elenco, ad esempio aggregato, igroup e cluster. I filtri per l'oggetto selezionato vengono visualizzati nella scheda *filtri*.
+
+* *Versione entità*
++
+Consente di inserire il numero di versione del Finder in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Descrizione*
++
+Consente di inserire una descrizione per il Finder.
+
+* *Tabella Input Parameters*
++
+Visualizza i parametri di input per i filtri selezionati.
+
+
+
+
+
+== Scheda Filters (filtri)
+
+Consente di selezionare i filtri richiesti dall'elenco di filtri disponibili.
+
+* *Filtri disponibili*
++
+Visualizza l'elenco dei filtri disponibili per l'oggetto selezionato nella scheda *Proprietà*.
+
+* *Filtri selezionati*
++
+Visualizza l'elenco dei filtri selezionati dai filtri disponibili.
+
+* *Pulsanti di selezione*
++
+Sposta la voce selezionata da una casella all'altra.
+
+
+
+
+
+== Scheda attributi restituiti
+
+Consente di visualizzare i dettagli sui filtri disponibili, selezionare gli attributi richiesti dei filtri disponibili e specificare il criterio di ordinamento degli attributi.
+
+* *Disponibile*
++
+Visualizza i filtri disponibili e gli attributi per i filtri.
+
+* *Selezionato*
++
+Visualizza i filtri selezionati e gli attributi, gli alias e l'ordinamento dei filtri selezionati.
+
+* *Pulsanti di comando*
++
+** *Su*
++
+Sposta la voce selezionata in alto di una riga nella tabella selezionata.
+
+** *Giù*
++
+Sposta la voce selezionata in basso di una riga nella tabella selezionata.
+
+** *Pulsanti di selezione*
++
+Sposta la voce selezionata da una tabella all'altra.
+
+
+
+
+
+
+
+== Pulsanti di comando
+
+* *Test*
++
+Consente di testare il Finder definito.
+
+* *Salva*
++
+Salva il Finder e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Non salva il Finder e chiude la finestra di dialogo.
+
+

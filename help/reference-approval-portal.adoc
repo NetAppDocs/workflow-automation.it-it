@@ -1,0 +1,46 @@
+---
+permalink: help/reference-approval-portal.html 
+sidebar: sidebar 
+keywords: approval, portal, window, enable, reject, workflow 
+summary: 'La finestra Approval Portal (Portale di approvazione) consente di approvare o rifiutare un flusso di lavoro.' 
+---
+= Finestra del portale di approvazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Approval Portal (Portale di approvazione) consente di approvare o rifiutare un flusso di lavoro.
+
+È possibile accedere alla finestra Approval Portal dal link fornito nella notifica e-mail per l'approvazione del flusso di lavoro.
+
+* *Torna a WFA*
++
+Consente di tornare all'applicazione WFA dalla finestra Approval Portal.
+
+
+
+
+
+== Portale di approvazione
+
+* *Inserisci commento*
++
+Consente di inserire un commento per l'approvazione o il rifiuto del flusso di lavoro.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Approva e Riprendi*
++
+Consente di approvare il flusso di lavoro, che riprende il flusso di lavoro.
+
+* *Rifiuta e Interrompi*
++
+Consente di rifiutare il flusso di lavoro, che interrompe il flusso di lavoro.
+
+

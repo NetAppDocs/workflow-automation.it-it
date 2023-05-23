@@ -1,0 +1,34 @@
+---
+permalink: help/reference-preview-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: preview, workflow, dialog box, enable, specify, value, user input, associated 
+summary: 'La finestra di dialogo Anteprima del flusso di lavoro consente di specificare i valori per gli input utente associati a un flusso di lavoro e quindi di visualizzare in anteprima l"esecuzione di tale flusso di lavoro con i valori specificati.' 
+---
+= Finestra di dialogo Anteprima del flusso di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Anteprima del flusso di lavoro consente di specificare i valori per gli input utente associati a un flusso di lavoro e quindi di visualizzare in anteprima l'esecuzione di tale flusso di lavoro con i valori specificati.
+
+
+
+== L'utente inserisce i valori
+
+La finestra di dialogo Preview Workflow (Anteprima flusso di lavoro) visualizza gli input dell'utente associati al flusso di lavoro selezionato e consente di impostare i valori per gli input dell'utente.
+
+
+
+== Pulsanti di comando
+
+* *Anteprima*
++
+Apre la finestra Monitoring (monitoraggio) per il flusso di lavoro associato.
+
+* *Annulla*
++
+Chiude la finestra di dialogo.
+
+

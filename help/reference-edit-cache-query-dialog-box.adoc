@@ -1,0 +1,58 @@
+---
+permalink: help/reference-edit-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, cache, query, dialog box, enable, associate, dictionary, entry 
+summary: 'La finestra di dialogo Edit cache Query (Modifica query cache) consente di modificare una query della cache associata a una voce del dizionario.' 
+---
+= Finestra di dialogo Edit cache Query (Modifica query cache)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Edit cache Query (Modifica query cache) consente di modificare una query della cache associata a una voce del dizionario.
+
+* *Voce dizionario*
++
+Specifica una voce del dizionario associata alla query della cache.
+
+* *Versione entità*
++
+Consente di immettere il numero di versione della query cache in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Tipi di origine dati*
++
+Specifica il tipo di origine dati associato alla query della cache.
+
+
+
+
+
+== Struttura della tabella
+
+Visualizza gli attributi e la sintassi SQL associati alla voce del dizionario.
+
+* *Query selezione SQL*
++
+Consente di modificare la query SQL associata alla voce del dizionario e al tipo di provider di dati selezionato.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Test*
++
+Consente di verificare la query SQL immessa nel campo *query selezione SQL*.
+
+* *Salva*
++
+Salva la query della cache e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

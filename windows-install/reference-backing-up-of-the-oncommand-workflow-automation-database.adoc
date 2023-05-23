@@ -1,0 +1,46 @@
+---
+permalink: windows-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html 
+sidebar: sidebar 
+keywords: back up, oncommand, workflow, automation, database 
+summary: 'Un backup del database OnCommand Workflow Automation (Wfa) include le impostazioni di configurazione del sistema e le informazioni sulla cache, incluso il database del parco giochi. È possibile utilizzare il backup a scopo di ripristino sullo stesso sistema o su un altro sistema.' 
+---
+= Backup del database OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un backup del database OnCommand Workflow Automation (Wfa) include le impostazioni di configurazione del sistema e le informazioni sulla cache, incluso il database del parco giochi. È possibile utilizzare il backup a scopo di ripristino sullo stesso sistema o su un altro sistema.
+
+Un backup automatico del database viene creato ogni giorno alle 2:00 E viene salvato come file .zip nel seguente percorso: wfa_install_location/Wfa-backups.
+
+WFA salva fino a cinque backup nella directory Wfa-backups e sostituisce il backup più vecchio con quello più recente. La directory WFA-backups non viene eliminata quando si disinstalla WFA. È possibile utilizzare il backup creato automaticamente per il ripristino se non è stato creato un backup del database WFA durante la disinstallazione di WFA.
+
+È inoltre possibile eseguire il backup manuale del database WFA quando si devono salvare modifiche specifiche per il ripristino, ad esempio se si desidera eseguire il backup delle modifiche apportate prima che si verifichi il backup automatico.
+
+[NOTE]
+====
+* È possibile ripristinare un backup del database WFA solo su un sistema che esegue la stessa versione o una versione successiva di WFA.
++
+Ad esempio, se è stato creato un backup su un sistema che esegue WFA 4.2, il backup può essere ripristinato solo sui sistemi che eseguono WFA 4.2 o versioni successive.
+
+* Non è possibile utilizzare l'interfaccia utente Web per eseguire il backup del database WFA durante il disaster recovery in una configurazione ad alta disponibilità.
+
+
+====
+
+
+== Backup e ripristino delle credenziali dell'utente
+
+Il backup del database WFA include le credenziali utente WFA.
+
+
+NOTE: Il database WFA è incluso anche nei dati AutoSupport; tuttavia, la password di qualsiasi utente WFA non è inclusa nei dati AutoSupport.
+
+Quando un database WFA viene ripristinato da un backup, vengono conservati i seguenti elementi:
+
+* Le credenziali dell'utente amministratore create durante l'installazione corrente di WFA.
+* Se un utente con privilegi di amministratore diversi da quelli predefiniti ripristina il database, le credenziali di entrambi gli utenti admin.
+* Tutte le altre credenziali utente dell'installazione WFA corrente vengono sostituite con le credenziali utente del backup.
+

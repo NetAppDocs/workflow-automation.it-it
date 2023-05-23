@@ -1,0 +1,32 @@
+---
+permalink: help/concept-what-incremental-naming-is.html 
+sidebar: sidebar 
+keywords: incremental, naming, algorithm, enable, attribute, workflow, search, results, parameter, attribute, incremental, value, custom, expression, functionality, help, implement, convention, requirement 
+summary: 'La naming incrementale è un algoritmo che consente di assegnare un nome agli attributi di un flusso di lavoro in base ai risultati della ricerca di un parametro. È possibile assegnare un nome agli attributi in base a un valore incrementale o a un"espressione personalizzata. La funzionalità di naming incrementale consente di implementare una convenzione di naming in base ai requisiti.' 
+---
+= Che cos'è la naming incrementale
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La naming incrementale è un algoritmo che consente di assegnare un nome agli attributi di un flusso di lavoro in base ai risultati della ricerca di un parametro. È possibile assegnare un nome agli attributi in base a un valore incrementale o a un'espressione personalizzata. La funzionalità di naming incrementale consente di implementare una convenzione di naming in base ai requisiti.
+
+È possibile utilizzare la funzionalità di naming incrementale durante la progettazione dei flussi di lavoro per assegnare un nome dinamico agli oggetti creati dal flusso di lavoro. La funzionalità consente di specificare i criteri di ricerca per un oggetto utilizzando la funzione di selezione delle risorse e il valore restituito dai criteri di ricerca viene utilizzato per l'attributo dell'oggetto. Inoltre, è possibile specificare un valore per l'attributo se non è stato trovato alcun oggetto con i criteri di ricerca specificati.
+
+È possibile utilizzare una delle seguenti opzioni per assegnare un nome agli attributi:
+
+* Fornendo un valore di incremento e un suffisso
++
+È possibile fornire un valore da utilizzare insieme al valore dell'oggetto trovato dai criteri di ricerca e incrementare con il numero specificato. Ad esempio, se si desidera creare volumi con la convenzione di naming di `_filer name_unique number_environment,_` è possibile utilizzare un finder per trovare l'ultimo volume in base al prefisso del nome e incrementare il numero univoco di 1, oltre a aggiungere il nome del suffisso al nome del volume. Se l'ultimo prefisso del nome del volume trovato era _vf_023_prod_ e si stanno creando tre volumi, i nomi dei volumi creati sono _vf_024_prod, vf_025_prod,_ e _vf_026_prod._
+
+* Fornire un'espressione personalizzata
++
+È possibile fornire un valore da utilizzare insieme al valore dell'oggetto trovato dai criteri di ricerca e aggiungere altri valori in base all'espressione immessa. Ad esempio, se si desidera creare un volume con la convenzione di naming di `last volume name_environment name padded with 1,` è possibile immettere l'espressione `last_volume.name + '_' + nextName("lab1")`. Se l'ultimo nome del volume trovato era _vf_023,_ il nome del volume creato è _vf_023_lab2._
+
+
+
+La seguente illustrazione mostra come è possibile fornire un'espressione personalizzata per specificare una convenzione di denominazione:
+
+image::../media/incrmnmgwzd.png[incl. mnmgwzd]

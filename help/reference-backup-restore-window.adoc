@@ -1,0 +1,50 @@
+---
+permalink: help/reference-backup-restore-window.html 
+sidebar: sidebar 
+keywords: backup, restore, window, enable, backup, oncommand, workflow, automation, database, contain, system, configuration, settings, cache, information, core, include, powershell, toolkits, perl toolkits, save, upgrade, reinstall 
+summary: 'La finestra Backup e ripristino consente di eseguire il backup del database OnCommand Workflow Automation (Wfa), che contiene le impostazioni di configurazione del sistema, le informazioni sulla cache e i core pack che includono toolkit PowerShell e toolkit Perl. È inoltre possibile ripristinare il database salvato quando si aggiorna o si reinstalla WFA.' 
+---
+= Finestra Backup and Restore (Backup e ripristino)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Backup e ripristino consente di eseguire il backup del database OnCommand Workflow Automation (Wfa), che contiene le impostazioni di configurazione del sistema, le informazioni sulla cache e i core pack che includono toolkit PowerShell e toolkit Perl. È inoltre possibile ripristinare il database salvato quando si aggiorna o si reinstalla WFA.
+
+
+
+== Sezione di backup
+
+Per accedere a questa finestra, selezionare *Impostazioni* e sotto *manutenzione* fare clic su *Backup e ripristino*.
+
+* *Backup*
++
+Apre la finestra di dialogo Download del file, che consente di salvare il database corrente come file compresso in una posizione specifica.
+
+
+
+
+
+== Sezione Restore (Ripristina)
+
+* *Scegliere file*
++
+Consente di cercare il file di database di backup.
+
+* *Ripristina*
++
+Consente di ripristinare le impostazioni di configurazione e le informazioni della cache dal file di database di backup alla configurazione WFA corrente, se applicabile.
+
++
+La versione più recente dei toolkit e dei core pack è disponibile dopo un'operazione di ripristino.
+
++
+
+NOTE: Se il backup include pacchetti più recenti rispetto a quelli presenti sul sistema, sono disponibili i pacchetti successivi al ripristino.
+
++
+Prima di importare un core pack, è necessario interrompere qualsiasi flusso di lavoro in esecuzione.
+
+

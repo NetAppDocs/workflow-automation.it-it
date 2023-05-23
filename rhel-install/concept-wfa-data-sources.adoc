@@ -1,0 +1,22 @@
+---
+permalink: rhel-install/concept-wfa-data-sources.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, data, sources 
+summary: 'OnCommand Workflow Automation (Wfa) opera sui dati acquisiti dalle origini dati. Sono disponibili varie versioni di Active IQ Unified Manager e VMware vCenter Server come tipi di origine dati WFA predefiniti. È necessario conoscere i tipi di origine dati predefiniti prima di impostare le origini dati per l"acquisizione.' 
+---
+= Origini dati OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (Wfa) opera sui dati acquisiti dalle origini dati. Sono disponibili varie versioni di Active IQ Unified Manager e VMware vCenter Server come tipi di origine dati WFA predefiniti. È necessario conoscere i tipi di origine dati predefiniti prima di impostare le origini dati per l'acquisizione.
+
+Un'origine dati è una struttura di dati di sola lettura che funge da connessione all'oggetto origine dati di un tipo di origine dati specifico. Ad esempio, un'origine dati può essere una connessione a un database Active IQ Unified Manager di un tipo di origine dati Active IQ Unified Manager 6.3. È possibile aggiungere un'origine dati personalizzata a WFA dopo aver definito il tipo di origine dati richiesto.
+
+Per ulteriori informazioni sui tipi di origine dati predefiniti, vedere la matrice di interoperabilità.
+
+*Informazioni correlate*
+
+https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^]

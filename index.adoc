@@ -1,0 +1,16 @@
+---
+layout: astra 
+sidebar: sidebar 
+permalink: index.html 
+lead: Welcome to the OnCommand Workflow Automation 5.1 Information Library. 
+summary: Benvenuto nella raccolta di informazioni di OnCommand Workflow Automation 5.1. 
+---
+= Documentazione OnCommand Workflow Automation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

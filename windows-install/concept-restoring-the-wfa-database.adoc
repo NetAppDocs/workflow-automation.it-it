@@ -1,0 +1,33 @@
+---
+permalink: windows-install/concept-restoring-the-wfa-database.html 
+sidebar: sidebar 
+keywords: restore, oncommand, workflow, automation, database 
+summary: 'Il ripristino del database OnCommand Workflow Automation (Wfa) include il ripristino delle impostazioni di configurazione del sistema e delle informazioni della cache, incluso il database del parco giochi.' 
+---
+= Ripristino del database OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il ripristino del database OnCommand Workflow Automation (Wfa) include il ripristino delle impostazioni di configurazione del sistema e delle informazioni della cache, incluso il database del parco giochi.
+
+* Il ripristino di un database WFA cancella il database WFA corrente.
+* È possibile ripristinare un backup del database WFA solo su un sistema che esegue la stessa versione o una versione successiva di WFA.
++
+Ad esempio, se è stato creato un backup su un sistema che esegue WFA 4.2, il backup può essere ripristinato solo sui sistemi che eseguono WFA 4.2 o versioni successive.
+
+* Una volta completata l'operazione di ripristino, il certificato SSL Wfa viene sostituito con il certificato SSL nel file di backup.
+
+
+[NOTE]
+====
+* Durante il disaster recovery è necessaria un'operazione completa di ripristino di database e configurazioni WFA, che può essere utilizzata sia in ambienti standalone che ad alta disponibilità.
+* Non è possibile creare un backup completo utilizzando l'interfaccia utente Web.
++
+È possibile utilizzare solo i comandi CLI o le API REST per eseguire il backup e il ripristino completo del database WFA durante il disaster recovery.
+
+
+
+====

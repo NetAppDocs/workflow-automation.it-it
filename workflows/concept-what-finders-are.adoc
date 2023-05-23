@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-finders-are.html 
+sidebar: sidebar 
+keywords: finders, combination, filters, together, identify, common, results, workflows, select, required, resources, execution 
+summary: 'Un Finder è una combinazione di uno o più filtri utilizzati insieme per identificare i risultati comuni. È possibile utilizzare un Finder nei flussi di lavoro per selezionare le risorse necessarie per l"esecuzione del flusso di lavoro.' 
+---
+= Quali sono i finder
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un Finder è una combinazione di uno o più filtri utilizzati insieme per identificare i risultati comuni. È possibile utilizzare un Finder nei flussi di lavoro per selezionare le risorse necessarie per l'esecuzione del flusso di lavoro.
+
+I finder potrebbero applicare un ordine di ordinamento per differenziare i risultati applicabili. I finder restituiscono la risorsa migliore in base ai criteri di selezione e all'ordinamento.
+
+I finder restituiscono un risultato o nessun risultato; pertanto, possono essere utilizzati per verificare l'esistenza di determinati elementi di storage. Tuttavia, quando un Finder viene utilizzato come parte di una definizione di riga ripetuta, i set di risultati vengono utilizzati per formare l'elenco dei membri del gruppo. I filtri utilizzati nei finder restituiscono almeno la chiave naturale del tipo di dizionario, ma potrebbero restituire campi aggiuntivi, di cui si può fare riferimento al valore. È possibile applicare un ordinamento a qualsiasi campo restituito della query SQL di un filtro.
+
+È possibile verificare i risultati di un Finder. Durante il test di un Finder, è possibile visualizzare i risultati comuni di tutti i filtri WFA, dove il risultato effettivo del Finder è evidenziato nei risultati. Quando si utilizza un Finder in un flusso di lavoro, è possibile creare un messaggio di errore personalizzato per trasmettere informazioni significative all'operatore dello storage.

@@ -1,0 +1,114 @@
+---
+permalink: workflows/reference-guidelines-for-logging.html 
+sidebar: sidebar 
+keywords: aware, guidelines, logging, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 'È necessario conoscere le linee guida per la registrazione quando si scrive uno script PowerShell o Perl per OnCommand Workflow Automation (Wfa).' 
+---
+= Linee guida per la registrazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario conoscere le linee guida per la registrazione quando si scrive uno script PowerShell o Perl per OnCommand Workflow Automation (Wfa).
+
+
+
+== Registrazione PowerShell
+
+[cols="2*"]
+|===
+| Linee guida | Esempio 
+
+
+ a| 
+Utilizzare il cmdlet Get-WFALogger per la registrazione.
+ a| 
+[listing]
+----
+Get-WFALogger -Info -message “Creating volume”
+----
+
+
+ a| 
+Registra ogni azione che richiede l'interazione con pacchetti interni come Data ONTAP, VMware e PowerCLI. Tutti i messaggi di log sono disponibili nei registri di esecuzione nella cronologia dello stato di esecuzione dei flussi di lavoro.
+ a| 
+Nessuno
+
+
+
+ a| 
+Registrare tutti gli argomenti pertinenti che vengono passati ai pacchetti interni.
+ a| 
+Nessuno
+
+
+
+ a| 
+Utilizzare i livelli di registro appropriati quando si utilizza il cmdlet Get-WFALogger, a seconda del contesto di utilizzo. -Info, -Error, -WARN e -Debug sono i vari livelli di log disponibili. Se non viene specificato un livello di log, il livello di log predefinito è Debug.
+ a| 
+Nessuno
+
+|===
+
+
+== Registrazione delle prestazioni
+
+[cols="2*"]
+|===
+| Linee guida | Esempio 
+
+
+ a| 
+Utilizzare WFAUtil sendLog per la registrazione.
+ a| 
+[listing]
+----
+my wfa_util = WFAUtil->new();
+eval {
+$wfa_util->sendLog('INFO', "Connecting to the
+cluster: $DestinationCluster");
+}
+----
+
+
+ a| 
+Registra ogni azione che richiede l'interazione con qualsiasi elemento esterno al comando, come Data ONTAP, VMware e WFA. Tutti i messaggi di log creati utilizzando la routine WFAUtil sendLog vengono memorizzati nel database WFA. Questi messaggi di log sono disponibili per il flusso di lavoro e il comando eseguiti.
+ a| 
+Nessuno
+
+
+
+ a| 
+Registrare tutti gli argomenti pertinenti passati alla routine chiamata.
+ a| 
+Nessuno
+
+
+
+ a| 
+Utilizzare i livelli di log appropriati.-Info, -Error, -warn e -Debug sono i vari livelli di log disponibili.
+ a| 
+Nessuno
+
+
+
+ a| 
+Quando si accede al livello -Info, essere precisi e concisi. Non specificare dettagli di implementazione come il nome della classe e il nome della funzione nei messaggi di log. Descrivere la procedura esatta o l'errore esatto in inglese.
+ a| 
+Il seguente frammento di codice mostra un esempio di messaggio valido e non valido:
+
+[listing]
+----
+$wfa_util->sendLog('WARN', "Removing volume:
+'.$VolumeName);
+# Good Message
+----
+[listing]
+----
+$wfa_util->sendLog('WARN', 'Invoking volume-
+destroy ZAPI: '.$VolumeName);
+# Bad message
+----
+|===

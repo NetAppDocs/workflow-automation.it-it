@@ -1,0 +1,43 @@
+---
+permalink: workflows/concept-what-approval-points-are.html 
+sidebar: sidebar 
+keywords: approval, points, check, inputs, workflow, pause, execution, resume, based, user 
+summary: 'I punti di approvazione sono punti di controllo utilizzati in un flusso di lavoro per sospendere l"esecuzione del flusso di lavoro e riprenderla in base all"approvazione dell"utente.' 
+---
+= Quali punti di approvazione sono
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I punti di approvazione sono punti di controllo utilizzati in un flusso di lavoro per sospendere l'esecuzione del flusso di lavoro e riprenderla in base all'approvazione dell'utente.
+
+La barra verticale blu mostrata nell'illustrazione seguente è un punto di approvazione:
+
+image::../media/approval_point.png[punto di approvazione]
+
+È possibile utilizzare i punti di approvazione per l'esecuzione incrementale di un flusso di lavoro, in cui le sezioni del flusso di lavoro devono essere eseguite solo dopo aver soddisfatto una determinata condizione. Ad esempio, quando la sezione successiva deve essere approvata o quando l'esecuzione della prima sezione viene convalidata. I punti di approvazione non gestiscono alcun processo tra la pausa e la ripresa di un flusso di lavoro. Vengono inviate notifiche e-mail e SNMP, come specificato nella configurazione WFA, e all'operatore dello storage può essere richiesto di eseguire determinate azioni alla ricezione della notifica di pausa del flusso di lavoro. Ad esempio, l'operatore di storage può inviare i dettagli della pianificazione all'amministratore, al responsabile dell'approvazione o all'operatore per l'approvazione e riprendere il flusso di lavoro quando l'approvazione viene ricevuta.
+
+Le approvazioni potrebbero non essere richieste in qualsiasi momento. In alcuni scenari, l'approvazione potrebbe essere necessaria solo se viene soddisfatta una determinata condizione e le condizioni possono essere configurate quando viene aggiunto un punto di approvazione. Ad esempio, si consideri un flusso di lavoro progettato per aumentare le dimensioni di un volume. È possibile aggiungere un punto di approvazione all'inizio del flusso di lavoro per l'operatore dello storage per ottenere l'approvazione dai manager quando l'aumento delle dimensioni del volume determina un utilizzo del 85% dello spazio nell'aggregato che contiene il volume. Durante l'esecuzione del flusso di lavoro e selezionando un volume che risulta in questa condizione, l'esecuzione viene interrotta fino all'approvazione.
+
+La condizione impostata per il punto di approvazione può avere una delle seguenti opzioni:
+
+* Senza alcuna condizione
+* Quando viene trovata la variabile specificata
+* Quando la variabile specificata non viene trovata
+* Quando l'espressione specificata restituisce true
+
+
+Non vi sono limiti al numero di punti di approvazione in un flusso di lavoro. È possibile inserire punti di approvazione prima dei comandi in un flusso di lavoro e impostare i comandi dopo il punto di approvazione in modo che attendano l'approvazione prima dell'esecuzione. I punti di approvazione forniscono informazioni, ad esempio l'ora del cambiamento, l'utente e i commenti, consentendo di visualizzare quando e perché l'esecuzione del workflow è stata sospesa o ripresa. I commenti dei punti di approvazione possono includere espressioni MVEL.
+
+
+
+== Esempi di punti di approvazione nei flussi di lavoro predefiniti
+
+È possibile aprire i seguenti flussi di lavoro predefiniti nella finestra di progettazione per comprendere come vengono utilizzati i punti di approvazione:
+
+* Rimuovere un volume Clustered Data ONTAP
+* Upgrade di controller e shelf di una coppia ha
+* Migrare i volumi
+

@@ -1,0 +1,45 @@
+---
+permalink: windows-install/task-migrate-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: migrate, oncommand, workflow, automation, installation 
+summary: 'È possibile migrare un"installazione di OnCommand Workflow Automation (Wfa) per mantenere la chiave di database WFA univoca installata durante l"installazione di WFA. Ad esempio, è possibile migrare l"installazione WFA da un server Windows 2012 a un server Windows 2016.' 
+---
+= Eseguire la migrazione dell'installazione di OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile migrare un'installazione di OnCommand Workflow Automation (Wfa) per mantenere la chiave di database WFA univoca installata durante l'installazione di WFA. Ad esempio, è possibile migrare l'installazione WFA da un server Windows 2012 a un server Windows 2016.
+
+* Questa procedura deve essere eseguita solo se si desidera migrare un'installazione WFA che include la chiave di database WFA su un server diverso.
+* Un ripristino del database WFA non esegue la migrazione della chiave WFA.
+* La migrazione di un'installazione WFA non esegue la migrazione dei certificati SSL.
+* In questa procedura viene utilizzato il percorso di installazione predefinito di WFA.
++
+Se è stata modificata la posizione predefinita durante l'installazione, è necessario utilizzare il percorso di installazione WFA modificato.
+
+
+
+.Fasi
+. Accedere a WFA tramite un browser Web come amministratore.
+. Eseguire il backup del database WFA.
+. Aprire un prompt dei comandi sul server WFA e modificare le directory nella posizione seguente: `c:\Program Files\NetApp\WFA\bin`
+. Immettere quanto segue al prompt dei comandi per ottenere la chiave del database:
++
+`wfa.cmd -key`
+
+. Annotare la chiave del database visualizzata.
+. Disinstallare WFA.
+. Installare WFA sul sistema richiesto.
+. Aprire il prompt dei comandi sul nuovo server WFA e modificare le directory nella posizione seguente: `c:\Program Files\NetApp\WFA\bin`
+. Immettere quanto segue al prompt dei comandi per installare la chiave del database:
++
+`wfa.cmd -key=yourdatabasekey`
+
++
+Il databasekey è la chiave annotata dalla precedente installazione WFA.
+
+. Ripristinare il database WFA dal backup creato.
+

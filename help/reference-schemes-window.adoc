@@ -1,0 +1,167 @@
+---
+permalink: help/reference-schemes-window.html 
+sidebar: sidebar 
+keywords: scheme, window, display, available, scheme, enable, manage, oncommand, workflow, automation, acquire, data, relevant, environment 
+summary: 'La finestra Schemes (Schemi) visualizza gli schemi disponibili e consente di gestirli. OnCommand Workflow Automation (WFA) utilizza schemi per acquisire dati rilevanti per un ambiente.' 
+---
+= Finestra Schemi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Schemes (Schemi) visualizza gli schemi disponibili e consente di gestirli. OnCommand Workflow Automation (WFA) utilizza schemi per acquisire dati rilevanti per un ambiente.
+
+Uno schema rappresenta il modello di dati per un sistema. Il modello di dati è un insieme di voci del dizionario. È possibile definire uno schema e quindi un tipo di origine dati. L'origine dei dati definisce il modo in cui i dati vengono acquisiti e lo schema viene popolato. Ad esempio, uno schema _vc_ contiene dati rilevanti per il tuo ambiente virtuale, come macchine virtuali, host e datastore.
+
+
+
+== Tabella degli schemi
+
+La tabella degli schemi elenca le voci di schema disponibili. Ciascuna voce è identificata come una delle seguenti:
+
+* image:../media/community_certification.gif[""] - contenuto creato dagli utenti
+* image:../media/ps_certified_icon_wfa.gif[""] Contenuto sviluppato da Professional Services (PS), disponibile solo per installazioni personalizzate realizzate da PS
+* image:../media/community_certification.gif[""] - pacchetti sviluppati dagli utenti
+* image:../media/lock_icon_wfa.gif[""] - contenuto creato dagli utenti bloccati
+* image:../media/netapp_certified.gif[""] - Contenuti certificati NetApp
+
+
+È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella degli schemi contiene le seguenti colonne:
+
+* *Certificazione*
++
+Indica se lo schema è stato creato dall'utente (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), community (image:../media/community_certification.gif[""]), bloccato dall'utente (image:../media/lock_icon_wfa.gif[""]), o con certificazione NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Nome*
++
+Visualizza il nome dello schema.
+
++
+È possibile cercare uno schema inserendo il nome nella casella di testo del filtro *Cerca*.
+
+* *Nome visualizzato*
++
+Visualizza il nome dello schema.
+
++
+È possibile cercare uno schema inserendo il nome nella casella di testo del filtro *Cerca*.
+
+* *Versione entità*
++
+Visualizza il numero di versione dell'oggetto in `major.minor.revision` format--ad esempio, 1.0.0.
+
++
+È possibile cercare uno schema inserendo il numero di versione nella casella di testo del filtro *Cerca*.
+
+* *Descrizione*
++
+Visualizza la descrizione dello schema.
+
++
+È possibile cercare uno schema inserendo la relativa descrizione nella casella di testo del filtro *Cerca*.
+
+* *Tipo*
++
+Indica se lo schema viene utilizzato per acquisire dati da un sistema remoto o direttamente da flussi di lavoro o comandi. I valori possibili sono Data Source Acquisition (acquisizione origine dati) e Other (Altro).
+
++
+È possibile cercare schemi inserendo il tipo nella casella di testo del filtro *Cerca*.
+
+* *Reset Flag*
++
+Indica se lo schema viene ripristinato durante il ciclo di acquisizione dati successivo. I valori possibili sono vero e falso.
+
+* *Ultimo aggiornamento in data*
++
+Visualizza la data e l'ora dell'ultimo aggiornamento dello schema.
+
++
+È possibile cercare gli schemi selezionando la categoria di tempo desiderata dall'elenco a discesa del filtro.
+
+* *Aggiornato da*
++
+Visualizza il nome dell'utente che ha aggiornato lo schema.
+
++
+È possibile cercare schemi inserendo il nome utente nella casella di testo del filtro *Cerca*.
+
+* *Bloccato da*
++
+Visualizza il nome dell'utente che ha bloccato lo schema.
+
++
+È possibile cercare schemi inserendo il nome utente nella casella di testo del filtro *Cerca*.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/new_wfa_icon.gif["Nuova icona"] (Novità)*
++
+Apre la finestra di dialogo nuovi schemi, che consente di creare un nuovo schema.
+
+* *image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] (Modifica)*
++
+Apre la finestra di dialogo Scheme <SchemeName> (Modifica schema) per lo schema selezionato, che consente di modificare lo schema.
+
+* *image:../media/lock_wfa_icon.gif["Icona a forma di lucchetto"] (Blocco)*
++
+Apre la finestra di dialogo Lock the Scheme confirmation (Blocca lo schema), che consente di bloccare lo schema selezionato. Questa opzione è abilitata solo per gli schemi creati.
+
+* *image:../media/unlock_wfa_icon.gif["Icona di sblocco"] (Sblocca)*
++
+Apre la finestra di dialogo Unlock the Scheme confirmation (Sblocca lo schema), che consente di sbloccare lo schema selezionato. Questa opzione è abilitata solo per gli schemi bloccati. Gli amministratori possono sbloccare schemi bloccati da altri utenti.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo Delete Scheme confirmation (Conferma eliminazione schema), che consente di eliminare gli schemi creati dall'utente.
+
++
+
+NOTE: Non è possibile eliminare uno schema WFA o PS.
+
+* *image:../media/export_wfa_icon.gif["Icona Export (Esporta)"] (Esportazione)*
++
+Consente di esportare lo schema creato dall'utente selezionato.
+
++
+
+NOTE: Non è possibile esportare uno schema WFA o PS.
+
+* *image:../media/reset_scheme_wfa_icon.gif["Icona di ripristino dello schema"] (Ripristina schema)*
++
+Consente di reimpostare lo schema durante il ciclo di acquisizione dei dati successivo.
+
+* *image:../media/add_to_pack.png["icona add to pack (aggiungi al pacchetto)"] (Aggiungi al pacchetto)*
++
+Apre la finestra di dialogo Add to Pack schemes (Aggiungi a schemi di imballaggio), che consente di aggiungere lo schema e le relative entità affidabili a un pacchetto, modificabile.
+
++
+
+NOTE: La funzione Add to Pack (Aggiungi al pacchetto) è attivata solo per gli schemi per i quali la certificazione è impostata su *None.*
+
+* *image:../media/remove_from_pack.png["icona remove from pack (rimuovi dalla confezione)"] (Remove from Pack)*
++
+Apre la finestra di dialogo Remove from Pack Schemes (Rimuovi dagli schemi pacchetto) per lo schema selezionato, che consente di eliminare o rimuovere lo schema dal pacchetto.
+
++
+
+NOTE: La funzione Remove from Pack (Rimuovi dal pacchetto) è abilitata solo per gli schemi per i quali la certificazione è impostata su *None.*
+
+

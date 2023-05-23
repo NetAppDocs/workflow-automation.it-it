@@ -1,0 +1,94 @@
+---
+permalink: help/reference-new-dictionary-entry-dialog-box.html 
+sidebar: sidebar 
+keywords: new, dictionary, entry, dialog box, enable, create, object, specify, definition 
+summary: 'La finestra di dialogo New Dictionary Entry consente di creare un nuovo oggetto dizionario e di specificare una definizione per l"oggetto.' 
+---
+= Finestra di dialogo New Dictionary Entry
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo New Dictionary Entry consente di creare un nuovo oggetto dizionario e di specificare una definizione per l'oggetto.
+
+* *Nome del tipo di oggetto*
++
+Consente di specificare un nome per l'oggetto dizionario.
+
+* *Descrizione*
++
+Consente di fornire una descrizione per l'oggetto dizionario.
+
+* *Schema*
++
+Consente di selezionare uno schema da associare all'oggetto. È possibile aggiungere voci dizionario personalizzate agli schemi certificati.
+
+* *Versione entità*
++
+Consente di immettere il numero di versione per la voce del dizionario in `major.minor.revision` format--ad esempio, 1.0.0.
+
+
+
+
+
+== Tabella degli attributi
+
+Consente di specificare un elenco di attributi che definiscono l'oggetto dizionario.
+
+* *Nome*
++
+Consente di immettere un nome per l'attributo.
+
+* *Tipo*
++
+Consente di selezionare il tipo di attributo, ad esempio stringa, booleano e intero, per il controllo del tipo. È inoltre possibile fare riferimento a una voce del dizionario dallo schema selezionato.
+
+* *Lunghezza stringa*
++
+Consente di specificare la lunghezza della stringa in numeri, se per l'attributo è stato selezionato il tipo di stringa.
+
+* *Valori*
++
+Consente di specificare un elenco di valori separati da virgole, se per l'attributo è stato selezionato il tipo di enum.
+
+* *Chiave naturale*
++
+Consente di specificare se l'attributo dictionary fa parte della chiave naturale dell'oggetto dizionario.
+
++
+Una chiave naturale è l'identificatore univoco di un oggetto dizionario. Ad esempio, i qtree sono identificati dal nome del qtree, dal nome del volume e dall'indirizzo IP dell'array.
+
+* *Da memorizzare nella cache*
++
+Consente di specificare se l'attributo deve essere memorizzato nella cache.
+
++
+Una voce del dizionario può includere sia gli attributi memorizzati nella cache che quelli non memorizzati nella cache. Viene creata una tabella cache contenente gli attributi contrassegnati per il caching durante l'acquisizione della cache dello schema. Quando viene selezionato almeno un attributo da memorizzare nella cache, viene creata una tabella cache per un oggetto dizionario.
+
+* *Può essere nullo*
++
+Consente di specificare se il valore dell'attributo può essere nullo. Questa impostazione è valida solo per gli attributi selezionati per la memorizzazione nella cache.
+
+* *Descrizione*
++
+Consente di specificare una descrizione per l'attributo.
+
+* *I valori nelle colonne delle chiavi naturali sono sensibili al maiuscolo/minuscolo*
++
+Consente di specificare che le chiavi naturali sono sensibili al maiuscolo/minuscolo.
+
+* *Pulsanti di comando*
++
+** *Aggiungi riga*
++
+Consente di aggiungere una riga alla tabella utilizzata per specificare un attributo.
+
+** *Rimuovi riga*
++
+Consente di eliminare la riga selezionata.
+
+
+
+

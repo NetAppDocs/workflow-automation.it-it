@@ -1,0 +1,23 @@
+---
+permalink: windows-install/task-configure-snmp.html 
+sidebar: sidebar 
+keywords: configure, snmp 
+summary: 'È possibile configurare OnCommand Workflow Automation (Wfa) per inviare trap SNMP (Simple Network Management Protocol) sullo stato delle operazioni del flusso di lavoro.' 
+---
+= Configurare SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare OnCommand Workflow Automation (Wfa) per inviare trap SNMP (Simple Network Management Protocol) sullo stato delle operazioni del flusso di lavoro.
+
+WFA ora supporta i protocolli SNMP v1 e SNMP v3. SNMP v3 offre funzionalità di sicurezza aggiuntive.
+
+Il file .mib WFA fornisce informazioni sui trap inviati dal server WFA. Il file .mib si trova nella directory <WFA_install_location> del server WFA.
+
+
+NOTE: Il server WFA invia tutte le notifiche trap con un identificatore di oggetto generico (1.3.6.1.4.1.789.1.1.12.0).
+
+Non è possibile utilizzare stringhe di comunità SNMP come community_string@SNMP_host per la configurazione SNMP.

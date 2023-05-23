@@ -1,0 +1,64 @@
+---
+permalink: help/reference-edit-approval-point-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, approval, point, dialog box, enable, modify, check point, workflow, execution, resume 
+summary: 'La finestra di dialogo Edit Approval Point (Modifica punto di approvazione) consente di modificare un punto di approvazione aggiunto come punto di controllo in un flusso di lavoro per sospendere l"esecuzione del flusso di lavoro e riprenderla in base all"approvazione.' 
+---
+= Finestra di dialogo Modifica punto di approvazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Edit Approval Point (Modifica punto di approvazione) consente di modificare un punto di approvazione aggiunto come punto di controllo in un flusso di lavoro per sospendere l'esecuzione del flusso di lavoro e riprenderla in base all'approvazione.
+
+* *Inserire un commento (facoltativo)*
++
+Consente di fornire informazioni, ad esempio l'ora della modifica, l'utente e i commenti, che consentono di visualizzare quando e perché l'esecuzione del flusso di lavoro è stata sospesa o ripresa.
+
++
+I commenti dei punti di approvazione possono includere espressioni MVFLEX Expression Language (MVEL).
+
+* *Inserire la condizione di esecuzione (se presente)*
++
+Consente di specificare le seguenti condizioni per l'esecuzione di un comando:
+
++
+** Sempre
++
+Esegue il comando senza condizioni.
+
+** Se è stata trovata la seguente variabile
++
+Consente di eseguire un comando solo quando viene trovata la variabile specificata. È possibile specificare la variabile nella casella.
+
+** Se la variabile seguente non è stata trovata
++
+Consente di eseguire un comando solo quando la variabile specificata non viene trovata. È possibile specificare la variabile nella casella.
+
+** Se la seguente espressione è VERA
++
+Consente di eseguire un comando solo quando l'espressione MVEL specificata è "`true`". È possibile specificare l'espressione nella casella.
+
+
+
+
+
+
+
+== Pulsanti di comando
+
+* *Rimuovi approvazione*
++
+Consente di rimuovere il punto di approvazione prima dell'esecuzione del comando.
+
+* *OK*
++
+Consente di modificare le modifiche alle impostazioni del punto di approvazione.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

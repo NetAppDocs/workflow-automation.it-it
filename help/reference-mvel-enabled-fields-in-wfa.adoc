@@ -1,0 +1,78 @@
+---
+permalink: help/reference-mvel-enabled-fields-in-wfa.html 
+sidebar: sidebar 
+keywords: field, oncommand, workflow, automation, enable, expression, language, syntax, design 
+summary: 'Diversi campi in OnCommand Workflow Automation (WFA) sono abilitati per MVFLEX Expression Language (MVEL). È possibile utilizzare le sintassi MVEL in questi campi durante la progettazione dei flussi di lavoro.' 
+---
+= Campi abilitati per MVEL in OnCommand Workflow Automation
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diversi campi in OnCommand Workflow Automation (WFA) sono abilitati per MVFLEX Expression Language (MVEL). È possibile utilizzare le sintassi MVEL in questi campi durante la progettazione dei flussi di lavoro.
+
+La seguente tabella spiega quando e dove è possibile utilizzare le sintassi MVEL nell'interfaccia WFA:
+
+[cols="2*"]
+|===
+| Quando... | Dove utilizzare... 
+
+
+ a| 
+Creazione o modifica di un flusso di lavoro
+ a| 
+* _Menu:Workflow_[Dettagli > parametri restituiti > valore parametro]
+* _Menu:Workflow_[Dettagli > costanti > valore]
+
+
+
+
+ a| 
+Creazione o modifica dei dettagli dei comandi in un flusso di lavoro
+ a| 
+* Menu:comandi[parametri per _nome_parametro_ > Inserisci criteri di ricerca > selezione risorsa > Finder > parametri]
+* Menu:comandi[parametri per _nome_parametro_ > Inserisci criteri di ricerca > selezione risorsa > Avanzate > Esegui ricerca solo quando l'espressione seguente restituisce TRUE]
+* Menu:comandi[parametri per _nome_parametro_ > Avanzate > se L'espressione seguente è VERA]
+* Menu:comandi[parametri per _nome_parametro_ > altri parametri]
+* Menu:comandi[_nome_parametro_ > attributi]
+
+
+
+
+ a| 
+Creazione o modifica di un comando
+ a| 
+* Menu:comandi[definizione comando _nome_comando_ > Proprietà > rappresentazione stringa]
+
+
+
+
+ a| 
+Creazione o modifica di una funzione
+ a| 
+* Menu:funzioni[funzione _nome_funzione_ > definizione della funzione]
+
+
+
+
+ a| 
+Creazione o modifica di un modello
+ a| 
+* Menu:Template[parametri per _nome_parametro_ > Nome_modello_ > attributi > valore]
+
+
+
+
+ a| 
+Modifica di una riga
+ a| 
+* _Menu:Workflow_[flusso di lavoro > Ripeti riga > ripetizioni > numero di volte]
+* _Menu:Workflow_[flusso di lavoro > riga di ripetizione > variabili > variabili per _valore_iniziale_ e _espressione_]
+* _Menu:Workflow_[flusso di lavoro > riga di ripetizione > ripetizioni > per ogni risorsa in un gruppo > Criteri di ricerca delle risorse > parametri da filtrare]
+* _Menu:Workflow_[flusso di lavoro > Aggiungi condizione > se LA seguente espressione è VERA]
+
+
+|===

@@ -1,0 +1,19 @@
+---
+permalink: help/reference-log-viewer-directory-window.html 
+sidebar: sidebar 
+keywords: log, viewer, window, list, available, oncommand, workflow, automation, access, select, maintenance, click, log viewer 
+summary: La finestra Visualizzatore registro elenca tutti i registri disponibili in OnCommand Workflow Automation. Per accedere a questa finestra, selezionare Impostazioni e fare clic su Log Viewer in manutenzione. 
+---
+= Finestra Log Viewer (Visualizzatore log)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Visualizzatore registro elenca tutti i registri disponibili in OnCommand Workflow Automation. Per accedere a questa finestra, selezionare *Impostazioni* e sotto *manutenzione* fare clic su *Log Viewer*.
+
+La finestra Log Viewer (Visualizzatore log) elenca i file di log (in ordine alfabetico) e include la dimensione e la data in cui ciascun file è stato generato.
+
+
+NOTE: Questa funzione non è supportata in Microsoft Windows Server 2003.

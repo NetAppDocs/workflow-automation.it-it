@@ -1,0 +1,25 @@
+---
+permalink: rhel-install/task-add-active-directory-group-names.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, add, active directory groups 
+summary: 'È possibile aggiungere gruppi Active Directory in OnCommand Workflow Automation (WFA).' 
+---
+= Aggiungere gruppi Active Directory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere gruppi Active Directory in OnCommand Workflow Automation (WFA).
+
+.Fasi
+. Accedere a WFA tramite un browser Web come amministratore.
+. Fare clic su *Impostazioni* e in *Gestione*, fare clic su *gruppi Active Directory*.
+. Nella finestra gruppi Active Directory, fare clic sull'icona *nuovo*.
+. Nella finestra di dialogo New Active Directory Group (nuovo gruppo Active Directory), immettere le informazioni richieste.
++
+Se si seleziona *Approvatore* dall'elenco a discesa *ruolo*, si consiglia di fornire l'ID email del responsabile dell'approvazione. Se sono presenti più responsabili dell'approvazione, è possibile fornire un ID e-mail di gruppo nel campo *e-mail*. Selezionare i diversi eventi del flusso di lavoro per cui la notifica deve essere inviata al gruppo Active Directory specifico.
+
+. Fare clic su *Save* (Salva).
+

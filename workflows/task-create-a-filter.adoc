@@ -1,0 +1,53 @@
+---
+permalink: workflows/task-create-a-filter.html 
+sidebar: sidebar 
+keywords: create, wfa, filter, search, resources, predefined, suitable, task 
+summary: 'È possibile creare un filtro WFA in grado di cercare le risorse se non esiste un filtro WFA predefinito adatto all"attività.' 
+---
+= Creare un filtro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un filtro WFA in grado di cercare le risorse se non esiste un filtro WFA predefinito adatto all'attività.
+
+.Di cosa hai bisogno
+Per creare il filtro, è necessario conoscere le sintassi SQL appropriate.
+
+.Fasi
+. Fare clic su *Workflow Design* > *Filters*.
+. Fare clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+. Nella scheda *Proprietà* della finestra di dialogo *nuovo filtro*, immettere o selezionare i dettagli richiesti nei campi *Nome*, *tipo di dizionario* e *Descrizione*.
+. Nella scheda *Query*, immettere la query SQL appropriata per il filtro.
++
+È necessario immettere una singola query SQL e, facoltativamente, utilizzare i parametri di input. Utilizzare la seguente sintassi per utilizzare un parametro di input: `+${ParameterName}+`.
+
++
+[listing]
+----
+SELECT
+	array.ip
+FROM
+	storage.array
+WHERE
+	array.name = '${ArrayName}'
+----
+. Fare clic su *Refresh* (Aggiorna) per popolare la tabella *Input Parameters* (parametri di input) e l'elenco *Represented Attributes* (attributi restituiti)
++
+Queste informazioni vengono ottenute dalla query SQL inserita. Ad esempio, se si utilizza l'esempio di query SQL del passaggio precedente, l'ip viene visualizzato in attributi restituiti e il nome utente viene visualizzato in parametri di input. È possibile modificare le voci nelle colonne *etichetta* e *Descrizione*.
+
+. *Opzionale:* fare clic su *Test* per verificare il filtro.
++
+.. Nella finestra di dialogo *Test Filter <FilterName>*, immettere i parametri di test richiesti.
+.. Deselezionare la casella di controllo *Usa i dati di prenotazione nel test* se non si desidera utilizzare i dati di prenotazione per il test del filtro.
+.. Fare clic su *Test*.
++
+Viene visualizzato il risultato del test.
+
+.. Chiudere le finestre di dialogo.
+
+
+. Fare clic su *Save* (Salva).
+

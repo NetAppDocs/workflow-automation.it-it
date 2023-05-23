@@ -1,0 +1,139 @@
+---
+permalink: workflows/task-create-a-command.html 
+sidebar: sidebar 
+keywords: create, wfa command, complete, specific, task, workflow, predefined, suitable 
+summary: 'È possibile creare un comando WFA per completare un"attività specifica nel flusso di lavoro se non esiste un comando WFA predefinito adatto all"attività.' 
+---
+= Creare un comando
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un comando WFA per completare un'attività specifica nel flusso di lavoro se non esiste un comando WFA predefinito adatto all'attività.
+
+.Di cosa hai bisogno
+È necessario sapere come scrivere il codice richiesto per il comando utilizzando PowerShell o Perl.
+
+.Fasi
+. Fare clic su *Workflow Design* > *Commands*.
+. Fare clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+. Nella scheda *Proprietà* della finestra di dialogo *definizione nuovo comando*, immettere o selezionare i dettagli richiesti nei campi *Nome*, *Descrizione* e *Timeout*.
++
+.. Nel campo *rappresentazione stringa*, immettere una rappresentazione stringa per il comando utilizzando la sintassi MVEL.
++
+`+VolumeName + "=>" + SnapshotName+`
+
++
+La rappresentazione stringa di un comando viene utilizzata per visualizzare le informazioni che si desidera visualizzare nella progettazione del flusso di lavoro durante la pianificazione e l'esecuzione. Per un comando, è necessario utilizzare solo i parametri del comando nella rappresentazione stringa.
+
+.. *Opzionale:* se si sta creando un comando di attesa, selezionare *wait for condition* nella sezione *tipo di comando* e impostare il valore richiesto nel campo *Waiting interval (s)*.
+
+
+. Nella scheda *Code*, attenersi alla seguente procedura:
++
+.. Selezionare il linguaggio di scripting richiesto per il comando dall'elenco *linguaggio script*.
++
+È possibile fare clic su + e selezionare una lingua aggiuntiva per il comando.
+
+.. Inserire il codice appropriato per il comando nella scheda Selected language (lingua selezionata).
++
+Se si desidera utilizzare il tipo di password per gli input dell'utente nello script PowerShell, è necessario creare un alias per il parametro e includere `_Password` nell'attributo. Per lo script Perl, è possibile specificare il tipo *Password* nella scheda *definizione parametri*.
+
++
+
+NOTE: I seguenti caratteri speciali non sono supportati nell'editor dei comandi: "<", "&amp" e tag XML "< >".
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="Specify an AD administrator password.")]
+  [Alias("ADAdminPassword_Password")]  [string]$ADAdminPassword
+)
+----
+
+
+. Nella scheda *definizione parametri*, attenersi alla seguente procedura:
++
+.. Fare clic su *Discover Parameters* (rileva parametri) per popolare la tabella di definizione dei parametri.
++
+I parametri e i relativi attributi vengono estratti dal codice e visualizzati nella tabella. Ad esempio, i parametri Array e VolumeName vengono estratti dal seguente codice:
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$true, HelpMessage="Array name or IP address")]
+  [string]$Array,
+
+  [parameter(Mandatory=$true, HelpMessage="Volume name")]
+  [string]$VolumeName,
+)
+----
+.. Fare clic sulla colonna Description (Descrizione) dei parametri per modificare la descrizione.
++
+Non è possibile modificare altri campi in questa scheda.
+
+
+
+. Nella scheda *mappatura parametri*, eseguire le seguenti operazioni per ciascun parametro:
++
+.. Dalla colonna *Type*, selezionare l'oggetto dizionario appropriato.
+.. Nella colonna *attributo*, inserire o selezionare gli attributi appropriati per l'oggetto dizionario dall'elenco.
++
+Dopo aver inserito un attributo, è possibile inserire un punto (.) e includere un altro attributo dell'oggetto.
+
++
+Invio `cm_storage.volume` come tipo e. `aggregate.name` Come attributo per il parametro AggregateName.
+
+.. Nella colonna *Nome oggetto*, immettere un nome oggetto.
++
+Il nome dell'oggetto viene utilizzato per raggruppare i parametri in una scheda della finestra di dialogo parametri per <command> quando si specificano i dettagli del comando in un flusso di lavoro.
+
+
+
++
+I parametri non mappati vengono visualizzati nella scheda *altri parametri* della finestra di dialogo parametri per <command> quando si specificano i dettagli del comando in un flusso di lavoro.
+
+. Nella scheda *Reservation*, inserire uno script di prenotazione utilizzando query SQL per riservare le risorse richieste dal comando durante l'esecuzione di un flusso di lavoro pianificato:
++
+.. *Opzionale:* nel campo *rappresentazione prenotazione*, inserire una rappresentazione stringa per la prenotazione utilizzando la sintassi MVEL.
++
+`"Aggiungi regola per l'etichetta SnapMirror `
+
++
+`" + SnapMirrorLabel + "[.code]` Alla policy di SnapMirror `
+
++
+`" + PolicyName + "`"`
+
++
+La rappresentazione stringa viene utilizzata per visualizzare i dettagli delle risorse riservate nella finestra Prenotazioni.
+
+
+
++
+
+NOTE: Lo script di prenotazione non deve eseguire alcuna operazione sui database ad eccezione di cm_storage, cm_performance, storage, performance, vc, e schemi personalizzati.
+
+. *Opzionale:* nella scheda *verifica*, immettere una query SQL per verificare se il comando ha influenzato le origini dati e la cache WFA come previsto, in modo da poter rimuovere la prenotazione.
++
+La query SQL immessa può essere costituita solo da istruzioni SQL SELECT.
+
++
+.. Fare clic su *Test Verification* (verifica test) per verificare lo script di verifica.
+.. Nella finestra di dialogo *verifica*, immettere i parametri di test richiesti.
+.. Se non si desidera utilizzare i dati di prenotazione per testare lo script di verifica, deselezionare il campo *use *reservation data in test*.
+.. Fare clic su *Test*.
+.. Dopo aver esaminato il risultato del test, chiudere la finestra di dialogo.
+
+
+. Fare clic su *Test* per verificare il comando.
+. Nella finestra di dialogo *Test Command <command name>*, fare clic su *Test*.
++
+Il risultato del test viene visualizzato nella sezione Log messages della finestra di dialogo.
+
+. Fare clic su *Save* (Salva).
+

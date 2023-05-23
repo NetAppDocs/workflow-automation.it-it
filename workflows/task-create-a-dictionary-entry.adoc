@@ -1,0 +1,42 @@
+---
+permalink: workflows/task-create-a-dictionary-entry.html 
+sidebar: sidebar 
+keywords: create, wfa, dictionary, entry, define, object, type, relationship, storage, environment 
+summary: 'È possibile creare una voce del dizionario WFA quando si desidera definire un nuovo tipo di oggetto e la relativa relazione nell"ambiente di storage.' 
+---
+= Creare una voce del dizionario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare una voce del dizionario WFA quando si desidera definire un nuovo tipo di oggetto e la relativa relazione nell'ambiente di storage.
+
+.Fasi
+. Fare clic su *Data Source Design* > *Dictionary*.
+. Fare clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+. Nella finestra di dialogo *New Dictionary Entry*, immettere i dettagli richiesti nei campi *Name of object type* (Nome del tipo di oggetto) e *Description* (Descrizione).
+. Per il campo *Scheme*, eseguire una delle seguenti operazioni:
++
+** Selezionare uno degli schemi disponibili dall'elenco.
+** Fare clic su *Add New Scheme* (Aggiungi nuovo schema), immettere il nome desiderato *Scheme Name* (Nome schema) nella finestra di dialogo New Scheme (nuovo schema), quindi fare clic su *Add* (Aggiungi).
+
+
+. Fare clic su *Aggiungi riga* ed eseguire i seguenti passaggi per descrivere l'attributo:
++
+.. Fare clic sulla colonna *Nome* e immettere il nome dell'attributo.
+.. Nella colonna *Type*, selezionare il tipo desiderato.
++
+La colonna *lunghezza stringa* viene compilata ed è modificabile se si seleziona stringa come tipo. Inoltre, la colonna *valori* è modificabile se si seleziona *enum* come tipo.
+
+.. Selezionare le caselle di controllo appropriate per l'attributo da `Natural Key, To be Cached`, e. `Can be Null columns`.
++
+Se è stata selezionata la casella di controllo *chiave naturale*, non è possibile selezionare la casella di controllo *può essere nullo*.
+
+.. Aggiungere gli attributi richiesti per l'oggetto dizionario.
+.. *Opzionale:* selezionare la casella di controllo *i valori nelle colonne delle chiavi naturali sono sensibili al maiuscolo/minuscolo* se si desidera che le chiavi naturali siano sensibili al maiuscolo/minuscolo.
+
+
+. Fare clic su *Save* (Salva).
+

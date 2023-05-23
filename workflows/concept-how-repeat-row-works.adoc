@@ -1,0 +1,48 @@
+---
+permalink: workflows/concept-how-repeat-row-works.html 
+sidebar: sidebar 
+keywords: workflow, contain, commands, details, arranged, rows, specify, repeat, fixed, number, iterations, dynamic, results, search, criteria 
+summary: Un flusso di lavoro contiene i comandi e i dettagli dei comandi disposti in righe. È possibile specificare i comandi in una riga da ripetere per un numero fisso di iterazioni o un numero dinamico di iterazioni in base ai risultati dei criteri di ricerca. 
+---
+= Come funziona la ripetizione della riga
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un flusso di lavoro contiene i comandi e i dettagli dei comandi disposti in righe. È possibile specificare i comandi in una riga da ripetere per un numero fisso di iterazioni o un numero dinamico di iterazioni in base ai risultati dei criteri di ricerca.
+
+È possibile specificare i dettagli del comando in una riga per ripetere un certo numero di volte o quando è stato progettato il flusso di lavoro. Il flusso di lavoro può anche essere progettato in modo che sia possibile specificare il numero di ripetizioni della riga quando il flusso di lavoro viene eseguito o pianificato per un'esecuzione. È possibile specificare i criteri di ricerca per un oggetto e impostare i comandi in una riga in modo che si ripetano tutte le volte in cui gli oggetti vengono restituiti dai criteri di ricerca. Le righe possono anche essere impostate in modo che si ripetano quando vengono soddisfatte determinate condizioni.
+
+
+
+== Variabili di ripetizione delle righe
+
+È possibile specificare le variabili nell'elenco delle variabili che possono essere modificate durante le iterazioni delle righe. Per le variabili, è possibile specificare un nome, un valore con cui le variabili sono inizializzate e un'espressione MVFLEX Expression Language (MVEL) che viene valutata dopo ogni iterazione della ripetizione della riga.
+
+La figura seguente mostra le opzioni di ripetizione della riga e un esempio di variabile di ripetizione della riga:
+
+image::../media/row_repetition_details.png[dettagli sulla ripetizione delle righe]
+
+
+
+== Ripetizione delle righe con punti di approvazione
+
+Una volta specificate le iterazioni delle righe di ripetizione per i comandi e inclusi i punti di approvazione, vengono eseguite tutte le iterazioni dei comandi prima di un punto di approvazione. Dopo aver approvato il punto di approvazione, l'esecuzione di tutte le iterazioni dei comandi successivi prosegue fino al punto di approvazione successivo.
+
+La seguente illustrazione mostra come vengono eseguite le iterazioni delle righe di ripetizione quando un punto di approvazione viene incluso in un flusso di lavoro:
+
+image::../media/approval_repetition.png[ripetizione dell'approvazione]
+
+
+
+== Ripetere gli esempi di riga nei flussi di lavoro predefiniti
+
+È possibile aprire i seguenti flussi di lavoro predefiniti nella finestra di progettazione per comprendere come vengono utilizzate le righe di ripetizione:
+
+* Creare un volume NFS Data ONTAP in cluster
+* Creare un archivio dati VMware NFS su storage Clustered Data ONTAP
+* Stabilire il peering dei cluster
+* Rimuovere un volume Clustered Data ONTAP
+

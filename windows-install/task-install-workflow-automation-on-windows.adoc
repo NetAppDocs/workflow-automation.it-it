@@ -1,0 +1,252 @@
+---
+permalink: windows-install/task-install-workflow-automation-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, windows 
+summary: 'È possibile installare OnCommand Workflow Automation (Wfa) per creare e personalizzare i flussi di lavoro dello storage per automatizzare le attività di storage eseguite nell"ambiente.' 
+---
+= Installare OnCommand Workflow Automation su Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile installare OnCommand Workflow Automation (Wfa) per creare e personalizzare i flussi di lavoro dello storage per automatizzare le attività di storage eseguite nell'ambiente.
+
+* È necessario aver esaminato i prerequisiti di installazione.
++
+xref:reference-prerequisites-for-installing-workflow-automation.adoc[Prerequisiti per l'installazione di Workflow Automation]
+
+* Se si installa WFA su un sistema in cui WFA è stato precedentemente installato e quindi disinstallato, è necessario assicurarsi che non vi siano servizi WFA su tale sistema.
+* È necessario aver scaricato il programma di installazione WFA dal sito del supporto NetApp.
+* Se si installa WFA su una macchina virtuale (VM), il nome della macchina virtuale non deve includere il carattere di sottolineatura (_).
+* ActiveState ActivePerl viene installato prima dell'installazione di WFA.
++
+Questa installazione non interessa altre istanze di ActivePerl installate sul server WFA.
+
+* Prima di reinstallare WFA 4.2 o versioni successive, è necessario eliminare la directory dei dati MySQL se MySQL è stato disinstallato.
+
+
+.Fasi
+. Accedere a Windows utilizzando un account con autorizzazioni amministrative.
+. Aprire Esplora risorse, quindi passare alla directory in cui si trova il file di installazione.
+. Installare WFA:
++
+** Installazione interattiva
++
+... Fare clic con il pulsante destro del mouse ed eseguire il file eseguibile del programma di installazione WFA (.exe) come utente amministratore.
+... Fare clic su *Avanti*.
+... Immettere le credenziali per l'utente amministratore predefinito, quindi fare clic su *Avanti*.
++
+La password admin predefinita deve soddisfare i seguenti criteri:
+
++
+**** Minimo otto caratteri
+**** Un carattere maiuscolo
+**** Un carattere minuscolo
+**** Un numero
+**** Un carattere speciale
+**** I seguenti caratteri speciali non sono supportati in una password e causano un errore di installazione:
++
+`" ; < > , = & {caret} |
+
++
+[NOTE]
+====
+Annotare le credenziali dell'utente amministratore.
+
+====
+
+
+... Immettere un nome utente e una password per l'accesso al servizio WFA. Per un utente di dominio, fornire un nome utente nel formato DOMINIO/UTENTE. Per un utente di sistema locale, il formato è solo un nome utente. Il nome utente predefinito è "wfa".
++
+IL programma di installazione DI WFA crea un utente locale se non ne esiste uno. Se esiste un utente locale e la password immessa è diversa da quella esistente, WFA aggiorna la password.
+
++
+[NOTE]
+====
+Assicurarsi che la password sia conforme ai criteri configurati per gli utenti locali sul sistema. Se la password non è conforme al criterio della password, l'installazione non riesce.
+
+====
+... Selezionare le porte per la configurazione WFA, quindi fare clic su *Avanti*.
+... Immettere il nome di un sito e la società, quindi fare clic su *Avanti*.
++
+Il nome del sito può includere la posizione dell'installazione WFA, ad esempio Pittsburgh, PA.
+
+... Se si desidera modificare il percorso di installazione predefinito, selezionare il percorso in cui si desidera installare WFA, quindi fare clic su *Avanti*.
+... Se si desidera modificare la posizione di installazione predefinita per i prodotti di terze parti, selezionare la posizione in cui si desidera installare i prodotti di terze parti, quindi fare clic su *Avanti*.
+... Se non si desidera modificare la posizione predefinita del database WFA, fare clic su *Avanti*.
+... Fare clic su *Installa* per continuare l'installazione.
+... Fare clic su *fine* per completare l'installazione.
+... Verificare che WFA sia stato installato correttamente scegliendo una delle seguenti azioni:
++
+**** Accedere a WFA tramite un browser Web.
+**** Utilizzare la console dei servizi Windows per verificare che il servizio NetApp WFA Server e il servizio NetApp WFA Database siano in esecuzione.
+
+
+
+
+** Installazione automatica (dal prompt dei comandi):
++
+ WFA-version_number-build_number.exe /s /v"WFA_ADMIN_USERNAME=wfa_username WFA_ADMIN_PASSWORD=password WFA_ADMIN_CONFIRM_PASSWORD=confirm admin password / WFA_MYSQL_PASS=password CONFIRM_WFA_MYSQL_PASS=confirm MySQL password WFA_INSTALL_SITE=site WFA_INSTALL_ORGANIZATION=organization_name WFA_HTTP_PORT=port WFA_HTTPS_PORT=port INSTALLDIR=install_directory JDKINSTALLDIR=jdk_directory PerlDir=perl_directory MySqlInstallDir=mysql_directory WFA_SERVICE_LOGON_USERNAME=wfa service logon username WFA_SERVICE_LOGON_PASSWORD=wfa service logon user password MYSQL_DATA_DIR= mysql data directory /qr /l*v C:\install.log"
++
+*Esempio*
+
++
+WFA-x64-V5.1.0.0.1-B5355278.exe <NOME_UTENTE_WFA_ADMIN=admin WFA_ADMIN_PASSWORD=Azienda*123 WFA_ADMIN_CONFIRM_PASSWORD=Azienda*123 80 WFA_MYSQL_PASS=MySQL_WFA_WFA_MYSQL_PASS=MySQL_WFA_INSTALLAZIONE_SITO=wfa_INSTALLAZIONE_wfa_WFA_WFA_WFA_123 1234<NOME_ACCESSO_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_123 443<WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA_WFA
+
++
+[NOTE]
+====
+L'opzione /qn non è supportata da WFA.
+
+====
++
+I parametri dei comandi sono i seguenti:
+
++
+[cols="2*"]
+|===
+| Parametro | Descrizione 
+
+
+ a| 
+WFA_ADMIN_USERNAME
+ a| 
+Admin user name parametro opzionale. Se non si specifica un valore, il valore predefinito è admin.
+
+
+
+ a| 
+WFA_ADMIN_PASSWORD
+ a| 
+Admin user password Mandatory parameter. (Password utente amministratore obbligatoria.) La password admin predefinita deve soddisfare i seguenti criteri:
+
+*** Minimo otto caratteri
+*** Un carattere maiuscolo
+*** Un carattere minuscolo
+*** Un numero
+*** Un carattere speciale
+*** I seguenti caratteri non sono consentiti e causano un errore nell'immissione della password:
++
+`" ; < > , = & {caret} |
+
+
+
+
+
+ a| 
+WFA_ADMIN_CONFIRM_PASSWORD
+ a| 
+Admin user password Mandatory parameter. (Password utente amministratore obbligatoria.
+
+
+
+ a| 
+WFA_MYSQL_PASS
+ a| 
+MySQL user password parametro obbligatorio
+
+
+
+ a| 
+CONFIRM_WFA_MYSQL_PASS
+ a| 
+MySQL user password parametro obbligatorio
+
+
+
+ a| 
+WFA_INSTALL_SITE
+ a| 
+Unità organizzativa in cui viene installato il parametro obbligatorio WFA
+
+
+
+ a| 
+WFA_INSTALL_ORGANIZATION
+ a| 
+Nome dell'organizzazione o della società in cui viene installato il parametro obbligatorio WFA
+
+
+
+ a| 
+PORTA_HTTP_WFA
+ a| 
+Porta HTTP parametro opzionale. Se non si specifica un valore, il valore predefinito è 80.
+
+
+
+ a| 
+PORTA_HTTPS_WFA
+ a| 
+Porta HTTPS parametro opzionale. Se non si specifica un valore, il valore predefinito è 443.
+
+
+
+ a| 
+INSTALLDIR
+ a| 
+Percorso della directory di installazione parametro opzionale. Se non si specifica un valore, il percorso predefinito è "C: File di programma/NetApp".
+
+
+
+ a| 
+JDKINSTALLDIR
+ a| 
+Percorso della directory di installazione di JDK parametro opzionale. Se non si specifica un valore, il percorso predefinito è "C: File di programma".
+
+
+
+ a| 
+PerlDir
+ a| 
+Perl installation directory path parametro opzionale. Se non si specifica un valore, il percorso predefinito è "C:".
+
+
+
+ a| 
+MySqlInstallDir
+ a| 
+MySQL installation directory path parametro opzionale. Se non si specifica un valore, il percorso predefinito è "C: File di programma".
+
+
+
+ a| 
+NOME_ACCESSO_SERVIZIO_WFA
+ a| 
+Nome utente per il parametro opzionale di accesso al servizio WFA. Se non si specifica un valore, il nome utente predefinito è "wfa".
+
+Per un utente di dominio, fornire un nome utente nel formato DOMINIO/UTENTE. Per un utente di sistema locale, il formato è solo un nome utente.
+
+IL programma di installazione DI WFA crea un utente locale se non ne esiste uno. Se esiste un utente locale e la password immessa è diversa da quella esistente, WFA aggiorna la password.
+
+[NOTE]
+====
+Assicurarsi che la password sia conforme ai criteri configurati per gli utenti locali sul sistema. Se la password non è conforme al criterio della password, l'installazione non riesce.
+
+====
+
+
+ a| 
+WFA_SERVICE_LOGON_PASSWORD
+ a| 
+Password per il parametro obbligatorio di accesso al servizio WFA
+
+
+
+ a| 
+MYSQL_DATA_DIR
+ a| 
+Directory per DATI MYSQL parametro opzionale. Se non si specifica un valore, il percorso predefinito è "C: ProgramData/MySQL/MySQLServerData"
+
+Disponibile solo per una nuova installazione.
+
+|===
+
+
+
+
+*Informazioni correlate*
+
+https://mysupport.netapp.com/site/["Supporto NetApp"^]

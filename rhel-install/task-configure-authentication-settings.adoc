@@ -1,0 +1,60 @@
+---
+permalink: rhel-install/task-configure-authentication-settings.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, authentication, settings 
+summary: 'È possibile configurare OnCommand Workflow Automation (Wfa) in modo che utilizzi un server LDAP (Lightweight Directory Access Protocol) per l"autenticazione e l"autorizzazione.' 
+---
+= Configurare le impostazioni di autenticazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare OnCommand Workflow Automation (Wfa) in modo che utilizzi un server LDAP (Lightweight Directory Access Protocol) per l'autenticazione e l'autorizzazione.
+
+È necessario aver configurato un server Microsoft ad LDAP nel proprio ambiente.
+
+Per Wfa è supportata solo l'autenticazione Microsoft ad LDAP. Non è possibile utilizzare altri metodi di autenticazione LDAP, inclusi Microsoft ad Lightweight Directory Services (ad LDS) o Microsoft Global Catalog.
+
+
+NOTE: Durante la comunicazione, LDAP invia il nome utente e la password in testo normale. Tuttavia, la comunicazione LDAPS (LDAP Secure) è crittografata e sicura.
+
+.Fasi
+. Accedere a WFA tramite un browser Web come amministratore.
+. Aggiungere un elenco di nomi di gruppi Active Directory ai ruoli richiesti.
++
+
+NOTE: È possibile aggiungere un elenco di nomi di gruppi ad ai ruoli richiesti nella finestra gruppi Active Directory.
+
++
+xref:task-add-active-directory-group-names.adoc[Finestra Active Directory Groups (gruppi Active Directory)]
+
+. Fare clic su *Amministrazione* > *Configurazione WFA*.
+. Nella finestra di dialogo Configurazione WFA, fare clic sulla scheda *autenticazione*, quindi selezionare la casella di controllo *attiva Active Directory*.
+. Inserire le informazioni richieste nei campi:
++
+.. Se si desidera utilizzare il formato utente@dominio per gli utenti di dominio, sostituire sAMAccountName con userPrincipalName nel campo *User name Attribute*.
+.. Se per l'ambiente sono richiesti valori univoci, modificare i campi obbligatori.
+
+
+. Fare clic su *Add* (Aggiungi) per aggiungere Active Directory nella tabella Active Directory Servers (Server Active Directory) in formato URI: `ldap://active_directory_server_address\[:port\]`
++
+ldap://NB-T01.example.com[:389]
+
++
+Se LDAP su SSL è stato attivato, è possibile utilizzare il seguente formato URI: `ldaps://active_directory_server_address\[:port\]`
+
+. Fornire le credenziali per collegare il server LDAP e il DN di base.
+. Verificare l'autenticazione dell'utente:
++
+.. Immettere il nome utente e la password.
+.. Fare clic su *Test Authentication*.
+
+
++
+
+NOTE: È necessario aver aggiunto il gruppo Active Directory per verificare l'autenticazione dell'utente in WFA.
+
+. Fare clic su *Save* (Salva).
+

@@ -1,0 +1,135 @@
+---
+permalink: workflows/reference-guidelines-for-sql-in-wfa.html 
+sidebar: sidebar 
+keywords: aware, guidelines, use, sql, oncommand, workflow, automation, write, sql, queries, wfa 
+summary: 'È necessario conoscere le linee guida per l"utilizzo di SQL in OnCommand Workflow Automation (Wfa) per scrivere query SQL per Wfa.' 
+---
+= Linee guida per SQL in WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario conoscere le linee guida per l'utilizzo di SQL in OnCommand Workflow Automation (Wfa) per scrivere query SQL per Wfa.
+
+SQL viene utilizzato nei seguenti punti di WFA:
+
+* Query SQL per popolare gli input dell'utente per la selezione
+* Query SQL per la creazione di filtri per filtrare gli oggetti di un tipo di voce dizionario specifico
+* Dati statici nelle tabelle del database del parco giochi
+* Tipo di origine dati personalizzata di tipo SQL in cui i dati devono essere estratti da un'origine dati esterna, ad esempio un database di gestione della configurazione personalizzato (CMDB).
+* Query SQL per script di prenotazione e verifica
+
+
+[cols="2*"]
+|===
+| Linee guida | Esempio 
+
+
+ a| 
+Le parole chiave riservate di SQL devono essere in caratteri maiuscoli.
+ a| 
+[listing]
+----
+SELECT
+    vserver.name
+FROM
+    cm_storage.vserver vserver
+----
+
+
+ a| 
+I nomi delle tabelle e delle colonne devono essere costituiti da caratteri minuscoli.
+ a| 
+Tabella: Aggregato
+
+Colonna: Used_space_mb
+
+
+
+ a| 
+Separare le parole con un carattere di sottolineatura (_). Gli spazi non sono consentiti.
+ a| 
+array_performance
+
+
+
+ a| 
+Il nome della tabella è definito in singolare. Una tabella è una raccolta di una o più voci.
+ a| 
+"`function`", non "`functions`"
+
+
+
+ a| 
+Utilizzare alias di tabella con nomi significativi nelle query SELEZIONATE.
+ a| 
+[listing]
+----
+SELECT
+	vserver.name
+FROM
+	cm_storage.cluster cluster,
+	cm_storage.vserver vserver
+WHERE
+	vserver.cluster_id = cluster.id
+	AND cluster.name = '${ClusterName}'
+	AND vserver.type = 'cluster'
+ORDER BY
+	vserver.name ASC
+----
+
+
+ a| 
+Se si deve fare riferimento a un parametro di input del filtro o a un parametro di input dell'utente in una query di filtro o utente, utilizzare la sintassi come '{inputVariableName}. È inoltre possibile utilizzare la sintassi per fare riferimento a un parametro di definizione del comando negli script di prenotazione e di verifica.
+ a| 
+[listing]
+----
+SELECT
+	volume.name AS Name,
+	aggregate.name as Aggregate,
+	volume.size_mb AS 'Total Size (MB)',
+	voulme.used_size_mb AS 'Used Size (MB)',
+	volume.space_guarantee AS 'Space Guarantee'
+FROM
+	cm_storage.cluster,
+	cm_storage.aggregate,
+	cm_storage.vserver,
+	cm_storage.volume
+WHERE
+	cluster.id = vserver.cluster_id
+	AND aggregate.id = volume.aggregate_id
+	AND vserver.id = voulme.vserver_id
+	AND vserver.name = '${VserverName}'
+	AND cluster.name = '${ClusterName}'
+ORDER BY
+	volume.name ASC
+----
+
+
+ a| 
+Utilizzare i commenti per query complesse. Alcuni degli stili di commento supportati nelle query sono i seguenti:
+
+* "`--`" fino alla fine della riga
++
+Uno spazio è obbligatorio dopo il secondo trattino in questo stile di commento.
+
+* Da un carattere "` n.`" fino alla fine della riga
+* Da "`/*`" to the following "`sequenza */`
+
+ a| 
+[listing]
+----
+/*
+multi-line
+comment
+*/
+--line comment
+SELECT
+	ip as ip, # comment till end of this line
+	NAME as name
+FROM --end of line comment
+	storage.array
+----
+|===

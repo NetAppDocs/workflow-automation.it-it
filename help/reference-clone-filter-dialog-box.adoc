@@ -1,0 +1,84 @@
+---
+permalink: help/reference-clone-filter-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, filter, dialog box, enable, copy, edit 
+summary: 'La finestra di dialogo Clone Filter (filtro clone) consente di copiare un filtro e modificarlo.' 
+---
+= Finestra di dialogo Clona filtro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Clone Filter (filtro clone) consente di copiare un filtro e modificarlo.
+
+* Scheda Proprietà
+* Scheda Query
+
+
+
+
+== Scheda Proprietà
+
+La scheda *Proprietà* consente di modificare il nome del filtro, selezionare un oggetto dizionario e modificare la descrizione del filtro.
+
+* *Nome*
++
+Consente di modificare il nome del filtro. Il nome del filtro selezionato per la clonazione viene utilizzato come nome per il clone e aggiunto con _copy per impostazione predefinita.
+
+* *Tipo di dizionario*
++
+Consente di selezionare un oggetto dizionario dall'elenco.
+
+* *Versione entità*
++
+Consente di immettere il numero di versione del filtro in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Descrizione*
++
+Consente di modificare la descrizione del filtro.
+
+
+
+
+
+== Scheda Query
+
+Consente di modificare la query SQL, l'etichetta e la descrizione degli attributi.
+
+* *Query SQL*
++
+Consente di modificare la query SQL del filtro.
+
+* *Tabella Input Parameters*
++
+Visualizza l'elenco dei parametri della query SQL immessi che richiedono l'input dell'utente quando viene utilizzato il filtro. È possibile fare clic sulla colonna *Label* o *Description* di un parametro per modificare l'etichetta o la descrizione.
+
+* *Tabella attributi restituita*
++
+Visualizza l'elenco degli attributi restituiti dalla query SQL.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Test*
++
+Consente di verificare il filtro.
+
+* *Aggiorna*
++
+Compila la tabella *Input Parameters* e la tabella *restituita Attributes* con i valori modificati, se presenti.
+
+* *Salva*
++
+Salva il filtro e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Non salva il filtro e chiude la finestra di dialogo.
+
+

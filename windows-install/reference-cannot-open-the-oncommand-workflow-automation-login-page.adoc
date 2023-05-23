@@ -1,0 +1,16 @@
+---
+permalink: windows-install/reference-cannot-open-the-oncommand-workflow-automation-login-page.html 
+sidebar: sidebar 
+keywords: cannot, oncommand, workflow, automation, login page 
+summary: 'Se è stato installato .Net 3.5, Internet Information Services (IIS) viene installato con esso. IIS occupa la porta 80, utilizzata da WFA.' 
+---
+= Impossibile aprire la pagina di accesso OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se è stato installato .Net 3.5, Internet Information Services (IIS) viene installato con esso. IIS occupa la porta 80, utilizzata da WFA.
+
+Assicurarsi che il ruolo IIS sia stato rimosso o che IIS sia disattivato nel server WFA.

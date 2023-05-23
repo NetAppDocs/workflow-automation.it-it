@@ -1,0 +1,50 @@
+---
+permalink: help/reference-clone-template-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, template, dialog box, enable, create, copy, template, edit 
+summary: La finestra di dialogo Clone Template consente di creare una copia del modello e di modificarlo. 
+---
+= Finestra di dialogo Clona modello
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Clone Template consente di creare una copia del modello e di modificarlo.
+
+* *Nome*
++
+Consente di modificare il nome del modello.
+
+* *Tipo*
++
+Consente di selezionare un oggetto dizionario dall'elenco. Il nome del modello selezionato per la clonazione viene utilizzato come nome per il clone e aggiunto con - copy per impostazione predefinita.
+
+* *Versione entità*
++
+Consente di immettere il numero di versione del modello in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Descrizione*
++
+Consente di modificare la descrizione del modello.
+
+* *Attributi*
++
+Visualizza gli attributi per l'oggetto dizionario selezionato e consente di immettere un valore per ciascun attributo, ad esempio enum e Function.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Salva*
++
+Salva il modello e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Non salva il modello e chiude la finestra di dialogo.
+
+

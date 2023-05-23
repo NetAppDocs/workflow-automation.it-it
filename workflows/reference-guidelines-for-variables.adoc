@@ -1,0 +1,303 @@
+---
+permalink: workflows/reference-guidelines-for-variables.html 
+sidebar: sidebar 
+keywords: aware, guidelines, powershell, perl, variables, oncommand, automation, create, command, data, source, type 
+summary: 'Quando si crea un comando o un tipo di origine dati, è necessario conoscere le linee guida per le variabili PowerShell e Perl in OnCommand Workflow Automation (Wfa).' 
+---
+= Linee guida per le variabili
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si crea un comando o un tipo di origine dati, è necessario conoscere le linee guida per le variabili PowerShell e Perl in OnCommand Workflow Automation (Wfa).
+
+
+
+== Variabili PowerShell
+
+[cols="2*"]
+|===
+| Linee guida | Esempio 
+
+
+ a| 
+Per i parametri di input dello script:
+
+* USA il caso Pascal.
+* Non utilizzare i caratteri di sottolineatura.
+* Non utilizzare abbreviazioni.
+
+ a| 
+`$VolumeName`
+
+`$AutoDeleteOptions`
+
+`$Size`
+
+
+
+ a| 
+Per le variabili interne dello script:
+
+* USA la custodia Camel.
+* Non utilizzare i caratteri di sottolineatura.
+* Non utilizzare abbreviazioni.
+
+ a| 
+`$newVolume`
+
+`$qtreeName`
+
+`$time`
+
+
+
+ a| 
+Per le funzioni:
+
+* USA il caso Pascal.
+* Non utilizzare i caratteri di sottolineatura.
+* Non utilizzare abbreviazioni.
+
+ a| 
+`GetVolumeSize`
+
+
+
+ a| 
+I nomi delle variabili non sono sensibili al maiuscolo/minuscolo. Tuttavia, per migliorare la leggibilità, non utilizzare maiuscole diverse per lo stesso nome.
+ a| 
+`$variable` è uguale a. `$Variable.`
+
+
+
+ a| 
+I nomi delle variabili devono essere in inglese e devono essere correlati alla funzionalità dello script.
+ a| 
+Utilizzare `$name` e non `$a.`
+
+
+
+ a| 
+Dichiarare esplicitamente il tipo di dati per ogni variabile.
+ a| 
+nome [stringa]
+
+[int]dimensione
+
+
+
+ a| 
+Non utilizzare caratteri speciali (! @ N. e % , .) e spazi.
+ a| 
+Nessuno
+
+
+
+ a| 
+Non utilizzare parole chiave riservate di PowerShell.
+ a| 
+Nessuno
+
+
+
+ a| 
+Raggruppare i parametri di input inserendo prima i parametri obbligatori seguiti dai parametri facoltativi.
+ a| 
+[listing]
+----
+param(
+[parameter(Mandatory=$true)]
+[string]$Type,
+
+[parameter(Mandatory=$true)]
+[string]$Ip,
+
+[parameter(Mandatory=$false)]
+[string]$VolumeName
+)
+----
+
+
+ a| 
+Commentare tutte le variabili di input utilizzando `_HelpMessage_` annotazione con un messaggio di aiuto significativo.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="LUN to map")]
+[string]$LUNName
+----
+
+
+ a| 
+Non utilizzare "`Filer`" come nome di variabile; utilizzare invece "`Array`".
+ a| 
+Nessuno
+
+
+
+ a| 
+Utilizzare `_ValidateSet_` annotazione nei casi in cui l'argomento ottiene valori enumerati. Questo si traduce automaticamente in tipo di dati Enum per il parametro.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="Volume state")]
+[ValidateSet("online","offline","restricted")]
+[string]$State
+----
+
+
+ a| 
+Aggiungere un alias a un parametro che termina con "`_Capacity`" per indicare che il parametro è del tipo di capacità.
+ a| 
+Il comando "`Create Volume`" utilizza gli alias come segue:
+
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="Volume increment size in MB")]
+[Alias("AutosizeIncrementSize_Capacity")]
+[int]$AutosizeIncrementSize
+----
+
+
+ a| 
+Aggiungere un alias a un parametro che termina con "`_Password`" per indicare che il parametro è di tipo password.
+ a| 
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="In order to create an Active Directory machine account for the CIFS server or setup CIFS service for Storage Virtual Machine, you must supply the password of a Windows account with sufficient privileges")]  [Alias("Pwd_Password")]  [string]$ADAdminPassword
+)
+----
+|===
+
+
+== Variabili Perl
+
+[cols="2*"]
+|===
+| Linee guida | Esempio 
+
+
+ a| 
+Per i parametri di input dello script:
+
+* USA il caso Pascal.
+* Non utilizzare i caratteri di sottolineatura.
+* Non utilizzare abbreviazioni.
+
+ a| 
+`$VolumeName`
+
+`$AutoDeleteOptions`
+
+`$Size`
+
+
+
+ a| 
+Non utilizzare abbreviazioni per le variabili interne dello script.
+ a| 
+`$new_volume`
+
+`$qtree_name`
+
+`$time`
+
+
+
+ a| 
+Non utilizzare abbreviazioni per le funzioni.
+ a| 
+`get_volume_size`
+
+
+
+ a| 
+I nomi delle variabili sono sensibili al maiuscolo/minuscolo. Per migliorare la leggibilità, non utilizzare maiuscole diverse per lo stesso nome.
+ a| 
+`$variable` non è uguale a. `$Variable.`
+
+
+
+ a| 
+I nomi delle variabili devono essere in inglese e devono essere correlati alla funzionalità dello script.
+ a| 
+Utilizzare `$name` e non `$a.`
+
+
+
+ a| 
+Raggruppare i parametri di input inserendo per primi i parametri obbligatori, seguiti dai parametri facoltativi.
+ a| 
+Nessuno
+
+
+
+ a| 
+Nella funzione GetOptions, dichiarare esplicitamente il tipo di dati di ciascuna variabile per i parametri di input.
+ a| 
+[listing]
+----
+GetOptions(
+	"Name=s"=>\$Name,
+	"Size=i"=>\$Size
+)
+----
+
+
+ a| 
+Non utilizzare "`Filer`" come nome di variabile; utilizzare invece "`Array`".
+ a| 
+Nessuno
+
+
+
+ a| 
+Perl non include `_ValidateSet_` annotazione per i valori enumerati. Utilizzare istruzioni "`if`" esplicite per i casi in cui l'argomento ottiene valori enumerati.
+ a| 
+[listing]
+----
+if
+(defined$SpaceGuarantee&&!($SpaceGuaranteeeq'none'||$SpaceGuaranteeeq'volume'||$SpaceGuaranteeeq'file'))
+{
+	die'Illegal SpaceGuarantee argument: \''.$SpaceGuarantee.'\'';
+}
+----
+
+
+ a| 
+Tutti i comandi Perl WFA devono utilizzare il pragma "`strit`" per scoraggiare l'utilizzo di costrutti non sicuri per variabili, riferimenti e subroutine.
+ a| 
+[listing]
+----
+use strict;
+# the above is equivalent to
+use strictvars;
+use strictsubs;
+use strictrefs;
+----
+
+
+ a| 
+Tutti i comandi Perl WFA devono utilizzare i seguenti moduli Perl:
+
+* Getopt
++
+Viene utilizzato per specificare i parametri di input.
+
+* WFAUtil
++
+Viene utilizzato per le funzioni di utility fornite per la registrazione dei comandi, il reporting dell'avanzamento dei comandi, la connessione ai controller di array e così via.
+
+
+ a| 
+[listing]
+----
+use Getopt::Long;
+use NaServer;
+use WFAUtil;
+----
+|===

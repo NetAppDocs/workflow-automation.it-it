@@ -1,0 +1,49 @@
+---
+permalink: workflows/task-create-workflow-help-content.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, admins, architects, design, workflows, create, help, content, include 
+summary: 'Gli amministratori e gli architetti di OnCommand Workflow Automation (WFA) che progettano i flussi di lavoro possono creare contenuti di aiuto per i flussi di lavoro e includerli nel flusso di lavoro.' 
+---
+= Creare contenuti della guida per il workflow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli amministratori e gli architetti di OnCommand Workflow Automation (WFA) che progettano i flussi di lavoro possono creare contenuti di aiuto per i flussi di lavoro e includerli nel flusso di lavoro.
+
+.Di cosa hai bisogno
+È necessario conoscere come creare pagine Web utilizzando HTML.
+
+.A proposito di questa attività
+La guida deve fornire informazioni sul flusso di lavoro e sugli input dell'utente per il flusso di lavoro all'operatore dello storage che esegue il flusso di lavoro.
+
+.Fasi
+. Creare una cartella con il seguente nome: Workflow-help.
+. Creare il contenuto della guida utilizzando un editor HTML o un editor di testo e salvarlo come `index.htm` nel `workflow-help` cartella.
++
+Non includere i file JavaScript nel contenuto della guida. Di seguito sono riportate le estensioni di file supportate:
+
++
+** .jpg
+** .jpeg
+** gif
+** .png
+** xml
+** .thmx
+** .htm
+** html
+** .css
+
+
++
+È inoltre possibile includere il `Thumbs.db` File, creato da Windows.
+
+. Verificare che il `index.htm` il file e gli altri file associati al contenuto della guida, ad esempio le immagini, sono disponibili in `workflow-help` cartella.
+. Creare un `.zip` della cartella e assicurarsi che le dimensioni di `.zip` Il file non supera i 2 MB.
++
+`Create an NFS volume-help.zip`
+
+. Modificare il flusso di lavoro per il quale è stato creato il contenuto della guida, quindi fare clic su *Setup* > *Help Content* > *Browse* per caricare `.zip` file.
+

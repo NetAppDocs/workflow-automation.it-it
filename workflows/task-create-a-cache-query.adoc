@@ -1,0 +1,60 @@
+---
+permalink: workflows/task-create-a-cache-query.html 
+sidebar: sidebar 
+keywords: define, cache, query, cache, information, dictionary, object, wfa database, data source, create, associate, entry, active iq, unified manager 
+summary: È possibile definire una query della cache quando si desidera memorizzare nella cache le informazioni relative a un oggetto dizionario nel database WFA da un tipo di origine dati. È possibile creare una query cache e associarla a una voce del dizionario e a uno o più tipi di origine dati, ad esempio Active IQ Unified Manager 6.1. 
+---
+= Creare una query della cache
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile definire una query della cache quando si desidera memorizzare nella cache le informazioni relative a un oggetto dizionario nel database WFA da un tipo di origine dati. È possibile creare una query cache e associarla a una voce del dizionario e a uno o più tipi di origine dati, ad esempio Active IQ Unified Manager 6.1.
+
+.Di cosa hai bisogno
+Per creare una query della cache, è necessario conoscere le sintassi SQL appropriate.
+
+.Fasi
+. Fare clic su *Data Source Design* > *cache Query*.
+. Fare clic su image:../media/new_wfa_icon.gif["Nuova icona"] sulla barra degli strumenti.
+. Nella finestra di dialogo *Add cache Query* (Aggiungi query cache), selezionare la voce del dizionario e il tipo di origine dati richiesti.
+. Nella sezione "`SQL Select query`", immettere la query SQL appropriata.
++
+La seguente query SQL memorizza nella cache le informazioni sull'oggetto dizionario disco dal tipo di origine dati di Active IQ Unified Manager 6.1:
+
++
+[listing]
+----
+SELECT
+    disk.objId AS id,
+    disk.name AS NAME,
+    disk.uid AS uid,
+    disk.effectiveInterfaceType AS TYPE,
+    disk.rpm AS rpm,
+    disk.homeNodeId AS home_node_id,
+    disk.ownerNodeId AS owner_node_id,
+    disk.model AS model,
+    disk.serialNumber AS serial_number,
+    disk.totalBytes/1024/1024 AS size_mb,
+    disk.shelf AS shelf,
+    disk.shelfBay AS shelf_bay,
+    disk.pool AS pool,
+    disk.vendor AS vendor,
+    LOWER(disk.raidPosition) AS raid_position,
+    disk.containerTypeRaw AS container_type,
+    disk.clusterId AS cluster_id
+FROM
+    netapp_model_view.disk disk
+----
+. Per verificare la query SQL, fare clic su *Test*.
++
+Se sono stati selezionati più tipi di origine dati, viene visualizzata la finestra di dialogo Test cache Query (Test query cache) che consente di selezionare il tipo di origine dati richiesto.
+
++
+Viene visualizzato il risultato del test.
+
+. Chiudere la finestra di dialogo.
+. Fare clic su *Save* (Salva).
+

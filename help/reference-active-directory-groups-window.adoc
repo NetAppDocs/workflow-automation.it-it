@@ -1,0 +1,141 @@
+---
+permalink: help/reference-active-directory-groups-window.html 
+sidebar: sidebar 
+keywords: active, directory, group, window, enable, view, create, edit, delete, oncommand, workflow, automation, access, select, settings, management, click 
+summary: 'La finestra gruppi di Active Directory consente di visualizzare, creare, modificare ed eliminare i gruppi di Active Directory di OnCommand Workflow Automation (WFA). Per accedere a questa finestra, selezionare Impostazioni e, in Gestione, fare clic su gruppi Active Directory.' 
+---
+= Finestra Active Directory Groups (gruppi Active Directory)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra gruppi di Active Directory consente di visualizzare, creare, modificare ed eliminare i gruppi di Active Directory di OnCommand Workflow Automation (WFA). Per accedere a questa finestra, selezionare *Impostazioni* e in *Gestione* fare clic su *gruppi Active Directory*.
+
+
+NOTE: A seconda del ruolo e dei privilegi dell'account, questa finestra potrebbe non essere visualizzata.
+
+* Tabella dei gruppi di Active Directory
+* Barra degli strumenti
+
+
+
+
+== Tabella gruppi Active Directory
+
+La finestra gruppi Active Directory visualizza i gruppi Active Directory esistenti. È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella seguente elenca gli operatori supportati per le colonne alfabetiche e numeriche nella tabella gruppi di Active Directory, disponibile nella casella di testo del filtro *Cerca*.
+
+[cols="2*"]
+|===
+| Alfabetico | Numerico 
+
+
+ a| 
+* Contiene
+* Non contiene
+* Inizia con
+* Termina con
+* Uguale a
+* Non uguale
+* Resettare
+
+ a| 
+* Uguale a
+* Non uguale
+* Inferiore a.
+* Maggiore di
+* Minore o uguale a.
+* Maggiore o uguale a.
+* Tra
+* Resettare
+
+
+|===
+La tabella gruppi di Active Directory contiene le seguenti colonne:
+
+* *Nome gruppo*
++
+Visualizza il nome del gruppo per Active Directory.
+
+* *Ruolo*
++
+Visualizza il ruolo assegnato al gruppo. I ruoli possono includere:
+
++
+** *Ospite*
++
+Questo gruppo può solo visualizzare lo stato dell'esecuzione di un flusso di lavoro o essere informato di una modifica dello stato dell'esecuzione di un flusso di lavoro.
+
+** *Operatore*
++
+A questo gruppo è consentito visualizzare in anteprima ed eseguire i flussi di lavoro per i quali il gruppo ha accesso.
+
+** *Approvatore*
++
+A questo gruppo è consentito visualizzare in anteprima, eseguire, approvare e rifiutare i flussi di lavoro per i quali il gruppo ha accesso.
+
++
+
+NOTE: È necessario fornire l'ID e-mail del responsabile dell'approvazione e lo stato del flusso di lavoro che deve essere notificato al responsabile dell'approvazione. Se sono presenti più responsabili dell'approvazione, è possibile fornire un ID e-mail di gruppo nel campo *e-mail*.
+
+** *Architetto*
++
+Questo gruppo dispone dell'accesso completo per creare flussi di lavoro, ma non può modificare le impostazioni globali del server WFA.
+
+** *Amministratore*
++
+Questo gruppo ha accesso completo al server WFA.
+
+
+
+* *Categorie*
++
+Visualizza la categoria di flusso di lavoro assegnata a un operatore, che fornisce l'autorizzazione e i privilegi del flusso di lavoro all'operatore designato.
+
++
+È possibile impostare questa impostazione di autorizzazione facendo clic su *Content Management* > *Categories*.
+
+* *E-mail*
++
+Visualizza l'indirizzo e-mail del gruppo. Puoi utilizzare questo messaggio e-mail per ricevere notifiche sullo stato del flusso di lavoro.
+
+* *Notifiche attivate*
++
+Indica se il gruppo può ricevere notifiche via email (vero o falso) sullo stato delle esecuzioni del flusso di lavoro attivate da quel gruppo.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/new_wfa_icon.gif["Nuova icona"] (Novità)*
++
+Apre la finestra di dialogo nuovo gruppo Active Directory, che consente di aggiungere un nuovo gruppo Active Directory.
+
++
+
+NOTE: Prima di aggiungere il gruppo Active Directory, è necessario attivare o configurare il gruppo Active Directory.
+
+* *image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] (Modifica)*
++
+Apre la finestra di dialogo Edit Active Directory Group (Modifica gruppo Active Directory), che consente di modificare il gruppo Active Directory selezionato.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo di conferma Elimina gruppo Active Directory, che consente di eliminare il gruppo Active Directory selezionato.
+
+

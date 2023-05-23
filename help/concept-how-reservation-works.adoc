@@ -1,0 +1,36 @@
+---
+permalink: help/concept-how-reservation-works.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, resource, reservation, capability, require, resource, ensure, available, successful, execution, workflow 
+summary: La funzione di prenotazione delle risorse di OnCommand Workflow Automation riserva le risorse necessarie per garantire che le risorse siano disponibili per la corretta esecuzione dei flussi di lavoro. 
+---
+= Come funziona la prenotazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La funzione di prenotazione delle risorse di OnCommand Workflow Automation riserva le risorse necessarie per garantire che le risorse siano disponibili per la corretta esecuzione dei flussi di lavoro.
+
+I comandi WFA possono riservare le risorse necessarie e rimuovere la prenotazione dopo che la risorsa è disponibile nel database cache WFA, in genere dopo un'acquisizione della cache. La funzione di prenotazione garantisce che le risorse riservate siano disponibili per il flusso di lavoro fino al periodo di scadenza della prenotazione configurato nelle impostazioni di configurazione WFA.
+
+È possibile utilizzare la funzione di prenotazione per escludere le risorse riservate da altri flussi di lavoro durante la selezione delle risorse. Ad esempio, se un flusso di lavoro che ha riservato 100 GB di spazio su un aggregato viene pianificato per l'esecuzione dopo una settimana, Inoltre, si sta eseguendo un altro flusso di lavoro che utilizza il comando *Create Volume*, il flusso di lavoro in esecuzione non consuma lo spazio riservato dal flusso di lavoro pianificato per creare un nuovo volume. Inoltre, la funzione di prenotazione consente di eseguire i flussi di lavoro in parallelo.
+
+Durante l'anteprima di un flusso di lavoro per l'esecuzione, il pianificatore WFA prende in considerazione tutti gli oggetti riservati, inclusi gli oggetti esistenti nel database della cache. Se è stata attivata la prenotazione, gli effetti dei flussi di lavoro pianificati e dei flussi di lavoro in esecuzione in parallelo e l'esistenza di elementi di storage vengono presi in considerazione durante la pianificazione del flusso di lavoro.
+
+La freccia nell'illustrazione seguente mostra che la prenotazione è abilitata per il flusso di lavoro:
+
+image::../media/reservation.png[prenotazione]
+
+
+
+== Esempi di prenotazione in flussi di lavoro predefiniti
+
+È possibile aprire i seguenti flussi di lavoro predefiniti in Designer per comprendere come viene utilizzata la prenotazione:
+
+* Ambiente di clonazione
+* Creare un volume Data ONTAP in cluster
+* Stabilire il peering dei cluster
+* Rimuovere un volume Clustered Data ONTAP
+

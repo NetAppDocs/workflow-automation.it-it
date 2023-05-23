@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-creating-workflows.html 
+sidebar: sidebar 
+keywords: predefined, workflows, match, requirements, create, understand, capabilities, available, designer, checklist 
+summary: Se i flussi di lavoro predefiniti non corrispondono ai requisiti, è possibile creare il flusso di lavoro richiesto. Prima di creare i flussi di lavoro, è necessario comprendere le funzionalità disponibili nella finestra di progettazione WFA e creare un elenco di controllo del flusso di lavoro. 
+---
+= Creazione di flussi di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se i flussi di lavoro predefiniti non corrispondono ai requisiti, è possibile creare il flusso di lavoro richiesto. Prima di creare i flussi di lavoro, è necessario comprendere le funzionalità disponibili nella finestra di progettazione WFA e creare un elenco di controllo del flusso di lavoro.

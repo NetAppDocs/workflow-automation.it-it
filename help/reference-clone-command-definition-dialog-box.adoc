@@ -1,0 +1,195 @@
+---
+permalink: help/reference-clone-command-definition-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, command, definition, dialog box, enable, copy, edit 
+summary: La finestra di dialogo Clone Command Definition consente di copiare un comando e modificare il comando clonato. 
+---
+= Finestra di dialogo Clona definizione comando
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Clone Command Definition consente di copiare un comando e modificare il comando clonato.
+
+* Scheda Proprietà
+* Scheda Code (Codice)
+* Scheda definizione parametri
+* Scheda mappatura parametri
+* Scheda prenotazione
+* Scheda verifica
+
+
+
+
+== Scheda Proprietà
+
+Consente di modificare le proprietà del comando clonato, ad esempio il nome, la descrizione e la versione dell'entità.
+
+* *Nome*
++
+Consente di modificare il nome del comando clonato. Per impostazione predefinita, il nome del comando selezionato per la clonazione viene utilizzato come nome del clone, aggiunto con "`- copy`".
+
+* *Versione entità*
++
+Consente di modificare il numero di versione del comando in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Descrizione*
++
+Consente di modificare la descrizione del comando.
+
+* *Rappresentazione stringa*
++
+Consente di specificare una rappresentazione di stringa per il comando utilizzando la sintassi MVFLEX Expression Language (MVEL). Per salvare il comando, è necessario specificare la rappresentazione della stringa.
+
+* *Timeout (s)*
++
+Consente di specificare il valore di timeout (in secondi) per il comando. Il valore predefinito è 600 secondi.
+
+* *Tipo di comando*
++
+Consente di specificare il tipo di esecuzione del comando.
+
++
+** *Esecuzione standard*
++
+Consente di eseguire il comando senza alcun periodo di attesa. L'esecuzione standard è selezionata per impostazione predefinita.
+
+** *Attendere la condizione*
++
+Consente di specificare il tempo (in secondi) di attesa del comando prima dell'esecuzione. Il valore predefinito è 60 secondi.
+
+
+
+* *Versioni minime del software*
++
+Specifica le versioni minime del software necessarie per il funzionamento del comando. Ad esempio, il software può essere Clustered Data ONTAP 8.2.0 e vCenter 6.0. Le versioni vengono visualizzate come valori separati da virgole.
+
+* *Conservare gli script di prenotazione e verifica dal comando originale*
++
+Consente di conservare gli script di prenotazione e verifica originariamente specificati per il comando che si desidera clonare.
+
+
+
+
+
+== Scheda Code (Codice)
+
+Consente di modificare il codice del comando.
+
+* *Rileva parametri*
++
+Copia i parametri definiti nel codice PowerShell nella tabella Parameters Definition e nella tabella Parameters Mapping.
+
+
+
+
+
+== Scheda definizione parametri
+
+Visualizza i parametri definiti nel codice inserito nella scheda Codice.
+
+* *Nome*
++
+Visualizza il nome del parametro.
+
+* *Descrizione*
++
+Visualizza la descrizione del parametro.
+
+* *Obbligatorio*
++
+Visualizza una casella di controllo selezionata per i parametri obbligatori.
+
+* *Tipo*
++
+Visualizza il tipo di parametro, ad esempio string o enum.
+
+* *Valori*
++
+Visualizza i valori impostati per il parametro.
+
+* *Aggiungi parametro*
++
+Consente di aggiungere un parametro al comando se il linguaggio di scripting selezionato è Perl.
+
+* *Remove Parameter* (Rimuovi parametro)
++
+Consente di rimuovere un parametro dal comando se il linguaggio di scripting selezionato è Perl.
+
+
+
+
+
+== Scheda mappatura parametri
+
+Consente di associare i parametri agli oggetti del dizionario e di specificare l'attributo e il nome dell'oggetto.
+
+* *Nome*
++
+Visualizza il nome del parametro.
+
+* *Tipo*
++
+Consente di selezionare un oggetto dizionario per il parametro.
+
+* *Attributo*
++
+Consente di specificare l'attributo richiesto. È possibile selezionare l'attributo (se disponibile) oppure immettere il nome dell'attributo.
+
+* *Nome oggetto*
++
+Consente di specificare un nome per l'oggetto dizionario.
+
+
+
+
+
+== Scheda prenotazione
+
+Consente di riservare le risorse richieste dal comando.
+
+* *Script di prenotazione*
++
+Consente di immettere una query SQL per riservare le risorse richieste dal comando. In questo modo è possibile garantire che le risorse necessarie siano disponibili durante l'esecuzione di un flusso di lavoro pianificato.
+
+* *Rappresentazione delle prenotazioni*
++
+Consente di specificare una rappresentazione stringa per la prenotazione utilizzando la sintassi MVEL. La rappresentazione stringa viene utilizzata per visualizzare i dettagli della prenotazione nella finestra Prenotazioni.
+
+
+
+
+
+== Scheda verifica
+
+Consente di verificare una prenotazione e di rimuovere la prenotazione dopo l'esecuzione del comando.
+
+* *Script di verifica*
++
+Consente di inserire una query SQL per verificare l'utilizzo delle risorse riservate dallo script di prenotazione. Lo script di verifica verifica inoltre se la cache WFA viene aggiornata e rimuove la prenotazione dopo l'acquisizione della cache.
+
+* *Verifica del test*
++
+Apre la finestra di dialogo verifica, che consente di verificare i parametri dello script di verifica.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Test*
++
+Apre la finestra di dialogo Test Command <CommandName> in <ScriptLanguage>, che consente di testare il comando.
+
+* *Salva*
++
+Salva il comando e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

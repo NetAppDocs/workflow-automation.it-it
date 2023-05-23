@@ -1,0 +1,36 @@
+---
+permalink: help/reference-portal-workflow-window.html 
+sidebar: sidebar 
+keywords: workflow, window, displays, ready, production, edit, execute, authorization, access, clicking 
+summary: 'La finestra dei flussi di lavoro visualizza i flussi di lavoro contrassegnati come pronti per la produzione. È possibile modificare o eseguire i flussi di lavoro per i quali si dispone dell"autorizzazione. Per accedere a questa finestra, fare clic sulla scheda flussi di lavoro.' 
+---
+= Finestra flussi di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra dei flussi di lavoro visualizza i flussi di lavoro contrassegnati come pronti per la produzione. È possibile modificare o eseguire i flussi di lavoro per i quali si dispone dell'autorizzazione. Per accedere a questa finestra, fare clic sulla scheda flussi di lavoro.
+
+
+
+== Pannello Category (Categoria)
+
+Il riquadro delle categorie consente di cercare i flussi di lavoro in base alle categorie. Un flusso di lavoro non assegnato a nessuna categoria è elencato in "`Nessuna categoria`". A destra dell'intestazione della categoria, viene visualizzato il numero totale di flussi di lavoro all'interno di tale categoria. Questo numero include i flussi di lavoro contrassegnati come pronti per la produzione. Ad esempio, "`DATA Protection (7)`" indica che sette flussi di lavoro sono pronti per la produzione nella categoria "`DATA Protection`".
+
+
+
+== Schemi
+
+Il menu schemi consente di selezionare gli schemi.
+
+Gli schemi visualizzati si basano sulla selezione effettuata dall'amministratore nell'opzione Mostra contenuto per schemi in *Impostazioni* > *Setup* > *Impostazioni flusso di lavoro*. È possibile selezionare gli schemi che si desidera visualizzare selezionando o deselezionando le caselle di controllo. Questa selezione è valida solo per la sessione corrente.
+
+
+
+== Riquadro del flusso di lavoro
+
+I flussi di lavoro contrassegnati come pronti per la produzione vengono visualizzati sotto forma di caselle grigie nel riquadro del flusso di lavoro. Le caselle del flusso di lavoro includono il nome del flusso di lavoro e un'icona per indicare che la modalità è supportata dal flusso di lavoro. È possibile eseguire un flusso di lavoro facendo clic sulla casella del flusso di lavoro.
+
+Se sei un amministratore o un architetto, puoi modificare un flusso di lavoro facendo clic su image:../media/portal_edit_object_wfa_icon.gif[""] icona. Il image:../media/info_icon_execute_wfa.gif[""] l'icona fornisce ulteriori informazioni sul flusso di lavoro.

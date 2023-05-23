@@ -1,0 +1,62 @@
+---
+permalink: windows-install/task-upgrade-from-oncommand-workflow-automation-3-1-or-later-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, later versions 
+summary: 'È possibile eseguire un aggiornamento in-place da OnCommand Workflow Automation (WFA) 3.1 o versioni successive alle ultime versioni disponibili di WFA per utilizzare le nuove funzionalità e i miglioramenti.' 
+---
+= Eseguire l'aggiornamento da OnCommand Workflow Automation 3.1 o versioni successive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire un aggiornamento in-place da OnCommand Workflow Automation (WFA) 3.1 o versioni successive alle ultime versioni disponibili di WFA per utilizzare le nuove funzionalità e i miglioramenti.
+
+È necessario aver scaricato il file binario .exe dal NetApp Support Site sul computer host WFA.
+
+La connessione cluster WFA 5.1 deve accettare il certificato SSL. Quando si esegue l'aggiornamento da una versione precedente di WFA a WFA 5.1, è necessario certificare la connessione del cluster. Salvare i dettagli della connessione al cluster per la certificazione del cluster dopo l'aggiornamento in-place.
+
+Non è possibile installare MySQL da solo quando si esegue l'aggiornamento da versioni precedenti di WFA. Tuttavia, puoi installare MySQL da solo:
+
+* Durante una nuova installazione di WFA 4.2 e versioni successive oppure
+* Quando si esegue l'aggiornamento da WFA 4.2 a versioni successive di WFA.
+
+
+.Fase
+. Eseguire l'aggiornamento da WFA 3.1 o versioni successive scegliendo uno dei seguenti metodi:
++
+** Installazione interattiva
++
+... Accedere al file binario .exe nel computer host WFA ed eseguire il file.
+... Seguire le istruzioni visualizzate nella procedura guidata per completare l'aggiornamento.
+
+
+** Installazione invisibile all'utente
++
+Al prompt dei comandi, immettere quanto segue:
+
++
+`WFA-version_number-build_number.exe /s /v"WFA_ADMIN_USERNAME_UP=wfa username WFA_ADMIN_PASSWORD_UP=password /qr /l*v C:\upgrade.log"`
+
++
+*Esempio*:
+
++
+`WFA-x64-v4.2.0.0.0-B2973881.exe /s /v"WFA_ADMIN_USERNAME_UP=admin WFA_ADMIN_PASSWORD_UP=password*123 /qr /l*v C:\upgrade.log"`
+
++
+
+NOTE: L'opzione /qn non è supportata da WFA.
+
++
+Se si desidera eseguire un aggiornamento invisibile all'utente, è necessario includere i valori per tutti i parametri del comando:
+
++
+*** WFA_ADMIN_USERNAME_UP è il nome utente di un utente WFA autorizzato a creare un backup del database WFA.
+*** WFA_ADMIN_PASSWORD_UP è la password dell'utente.
+
+
+
+
+

@@ -1,0 +1,112 @@
+---
+permalink: help/reference-edit-pack-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, pack, dialog, enable 
+summary: 'La finestra di dialogo Edit Pack (Modifica pacchetto) consente di modificare il pacchetto.' 
+---
+= Finestra di dialogo Edit Pack (Modifica pacchetto)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Edit Pack (Modifica pacchetto) consente di modificare il pacchetto.
+
+* Scheda Dettagli
+* Scheda contenuto della confezione
+
+
+
+
+== Scheda Dettagli
+
+* *Nome*
++
+Consente di inserire un nome e salvare il pacchetto.
+
+* *Versione*
++
+Consente di inserire una versione e salvare il pacchetto.
+
+* *Autore*
++
+Consente di inserire il nome dell'autore e salvare il pacchetto.
+
+* *Descrizione*
++
+Consente di inserire una descrizione e salvare il pacchetto.
+
+
+
+
+
+== Scheda contenuto della confezione
+
+* *Flusso di lavoro*
++
+L'opzione *Workflow* consente di visualizzare il *Nome* e la *versione dell'entità* del flusso di lavoro.
+
+* *Finders*
++
+L'opzione *Finders* consente di visualizzare *Nome* e *versione entità* del Finder.
+
+* *Filtri*
++
+L'opzione *Filters* consente di visualizzare il *Nome* e la *versione dell'entità* del filtro.
+
+* *Comandi*
++
+L'opzione *comands* consente di visualizzare il *Nome* e *versione entità* del comando.
+
+* *Funzioni*
++
+L'opzione *Functions* consente di visualizzare il *Nome* e la *versione dell'entità* della funzione.
+
+* *Modelli*
++
+L'opzione *Templates* consente di visualizzare il *Nome* e la *versione dell'entità* del modello.
+
+* *Dizionario*
++
+L'opzione *Dictionary* consente di visualizzare il *Nome* e la *versione dell'entità* del dizionario.
+
+* *Schemi*
++
+L'opzione *schemi* consente di visualizzare il *Nome* e la *versione dell'entità* dello schema.
+
+* *Query cache*
++
+L'opzione *cache Query* consente di visualizzare il *Nome* e la *versione dell'entità* della query della cache.
+
+* *Tipi di origine dati SQL*
++
+L'opzione *SQL Data Source Types* consente di visualizzare *Name* e *Entity Version* del tipo di origine dati SQL.
+
+* *Tipi di origine dati script*
++
+L'opzione *script Data Source Types* consente di visualizzare il *Nome* e la *versione dell'entità* del tipo di origine dati dello script.
+
+* *Categorie*
++
+L'opzione *Categorie* consente di visualizzare il *Nome* e la *versione dell'entità* della categoria.
+
+* *Tipi di sistema remoto*
++
+L'opzione *Remote System Types* (tipi di sistema remoto) consente di visualizzare *Name* (Nome) e *Entity Version* (versione entità) del tipo di sistema remoto.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Salva*
++
+Salva il pacchetto e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Chiude la finestra di dialogo senza salvare.
+
+

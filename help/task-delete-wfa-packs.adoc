@@ -1,0 +1,33 @@
+---
+permalink: help/task-delete-wfa-packs.html 
+sidebar: sidebar 
+keywords: delete, pack, oncommand, workflow, automation, require, delete, entities, associate 
+summary: 'È possibile eliminare un pacchetto da OnCommand Workflow Automation (WFA) se non è più necessario. Se si elimina un pacchetto, tutte le entità associate al pacchetto vengono eliminate.' 
+---
+= Eliminare i OnCommand Workflow Automation Pack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare un pacchetto da OnCommand Workflow Automation (WFA) se non è più necessario. Se si elimina un pacchetto, tutte le entità associate al pacchetto vengono eliminate.
+
+*A proposito di questa attività*
+
+* Non è possibile eliminare un pacchetto se esistono dipendenze sulle entità che fanno parte del pacchetto.
++
+Ad esempio, se si tenta di eliminare un pacchetto che include un comando che fa parte di un flusso di lavoro personalizzato, l'operazione di eliminazione non riesce perché il flusso di lavoro personalizzato dipende dal pacchetto. È possibile eliminare il pacchetto solo dopo aver eliminato il flusso di lavoro personalizzato.
+
+* Le entità che fanno parte di un pacchetto non possono essere eliminate singolarmente.
++
+Per eliminare un'entità che fa parte di un pacchetto, è necessario eliminare il pacchetto che contiene tale entità. Se un'entità fa parte di più pacchetti, l'entità verrà eliminata dal server WFA solo quando tutti i pacchetti contenenti tale entità verranno cancellati.
+
+
+
+.Fasi
+. Accedere a WFA tramite un browser Web come amministratore.
+. Fare clic su *Content Management* > *Packs*.
+. Selezionare il pacchetto che si desidera eliminare e fare clic su image:../media/delete_wfa_icon.gif["Icona Elimina"].
+. Nella finestra di dialogo di conferma *Delete Pack*, fare clic su *OK*.
+

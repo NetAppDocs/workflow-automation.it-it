@@ -1,0 +1,22 @@
+---
+permalink: workflows/reference-wfa-powershell-functions.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, several, powershell, cmdlets, perl, function, use, wfa commands 
+summary: 'OnCommand Workflow Automation (Wfa) offre diversi cmdlet PowerShell, oltre a funzioni PowerShell e Perl che è possibile utilizzare nei comandi Wfa.' 
+---
+= Cmdlet E funzioni DI WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (Wfa) offre diversi cmdlet PowerShell, oltre a funzioni PowerShell e Perl che è possibile utilizzare nei comandi Wfa.
+
+È possibile visualizzare tutti i cmdlet e le funzioni PowerShell fornite dal server WFA utilizzando i seguenti comandi PowerShell:
+
+* `Get-Command -Module WFAWrapper`
+* `Get-Command -Module WFA`
+
+
+È possibile visualizzare tutte le funzioni Perl fornite dal server WFA in `WFAUtil.pm` modulo. Le sezioni della guida, la guida ai cmdlet di WFA PowerShell e la guida ai metodi di WFA Perl, del modulo Guida di WFA Support Links consentono di accedere a tutti i cmdlet e alle funzioni di PowerShell e alle funzioni di Perl.

@@ -1,0 +1,26 @@
+---
+permalink: help/task-add-approval-points.html 
+sidebar: sidebar 
+keywords: add, approval, point, checkpoint, workflow, pause, execution, resume, incremental, section, certain, condition, example, successful, validate 
+summary: 'È possibile aggiungere un punto di approvazione come checkpoint in un flusso di lavoro per sospendere l"esecuzione del flusso di lavoro e riprenderla in base all"approvazione. È possibile utilizzare i punti di approvazione per l"esecuzione incrementale di un flusso di lavoro, in cui le sezioni del flusso di lavoro vengono eseguite solo dopo il soddisfacimento di una determinata condizione, ad esempio quando la sezione successiva deve essere approvata o quando viene convalidata l"esecuzione della prima sezione.' 
+---
+= Aggiungere punti di approvazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere un punto di approvazione come checkpoint in un flusso di lavoro per sospendere l'esecuzione del flusso di lavoro e riprenderla in base all'approvazione. È possibile utilizzare i punti di approvazione per l'esecuzione incrementale di un flusso di lavoro, in cui le sezioni del flusso di lavoro vengono eseguite solo dopo il soddisfacimento di una determinata condizione, ad esempio quando la sezione successiva deve essere approvata o quando viene convalidata l'esecuzione della prima sezione.
+
+.Fasi
+. Accedere a WFA tramite un browser Web come architetto o amministratore.
+. Fare clic su *Workflow Design* > *Workflow*.
+. Nella finestra *Workflow*, fare doppio clic sul flusso di lavoro che si desidera modificare.
+. Nella finestra *Workflow <workflow name>*, fare clic su image:../media/approval_point_disabled.gif["Immagine per punto di approvazione"] a sinistra del passaggio per il quale si desidera aggiungere il punto di approvazione.
++
+È possibile aggiungere punti di approvazione per una o più fasi.
+
+. Nella finestra di dialogo *New Approval Point* (nuovo punto di approvazione), fornire i dettagli relativi al commento e alla condizione.
+. Fare clic su *OK*.
+

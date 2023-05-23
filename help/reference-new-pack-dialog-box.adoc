@@ -1,0 +1,46 @@
+---
+permalink: help/reference-new-pack-dialog-box.html 
+sidebar: sidebar 
+keywords: new, pack, dialog box, enable, create 
+summary: La finestra di dialogo nuovo pacchetto consente di creare un nuovo pacchetto. 
+---
+= Finestra di dialogo New Pack (nuovo pacchetto)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo nuovo pacchetto consente di creare un nuovo pacchetto.
+
+* *Nome*
++
+Consente di inserire un nome e salvare il pacchetto.
+
+* *Versione*
++
+Consente di inserire una versione e salvare il pacchetto.
+
+* *Autore*
++
+Consente di inserire il nome dell'autore e salvare il pacchetto.
+
+* *Descrizione*
++
+Consente di inserire una descrizione e salvare il pacchetto.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Salva*
++
+Salva il pacchetto e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Chiude la finestra di dialogo senza salvare.
+
+

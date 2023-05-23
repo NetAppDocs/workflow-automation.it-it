@@ -1,0 +1,29 @@
+---
+permalink: workflows/task-check-in-an-already-existing-pack-into-scm.html 
+sidebar: sidebar 
+keywords: check, existing, packs, source, control, management, scm server, oncommand, workflow, automation 
+summary: 'È possibile eseguire il check-in dei pacchetti già esistenti nel server di gestione del controllo del codice sorgente (SCM) da OnCommand Workflow Automation (Wfa).' 
+---
+= Eseguire il check-in dei pacchetti di workflow WFA esistenti nel server SCM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire il check-in dei pacchetti già esistenti nel server di gestione del controllo del codice sorgente (SCM) da OnCommand Workflow Automation (Wfa).
+
+.Di cosa hai bisogno
+È necessario configurare SCM e disporre delle credenziali di amministratore o architetto.
+
+.Fasi
+. Accedere alla finestra *WFA* tramite un browser Web.
+. Fare clic su *Content Management* > *Packs*.
+. Fare clic sull'icona *Export to Server* (Esporta sul server).
+. Nella finestra di dialogo *Export to Server Folder* (Esporta in cartella server), nel campo *Folder location at server system* (percorso cartella nel sistema server), immettere la posizione della cartella del server in cui il pacchetto viene salvato nel server.
++
+In questo modo il pacchetto viene esportato in un formato esploso nel file system in cui viene creato il client SCM.
+
+. Nella posizione del client SCM, eseguire il check-in del contenuto del pacchetto nel server SCM.
+. Utilizzare gli strumenti diff forniti da SCM per verificare le modifiche rispetto alla versione SCM del pacchetto.
+

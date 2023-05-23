@@ -1,0 +1,14 @@
+---
+permalink: windows-install/concept-setting-up-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: set up, oncommand, workflow, automation 
+summary: 'Una volta completata l"installazione di OnCommand Workflow Automation (Wfa), è necessario completare diverse impostazioni di configurazione. È necessario accedere a WFA, configurare gli utenti, configurare le origini dati, configurare le credenziali e configurare WFA.' 
+---
+= Configurazione di OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una volta completata l'installazione di OnCommand Workflow Automation (Wfa), è necessario completare diverse impostazioni di configurazione. È necessario accedere a WFA, configurare gli utenti, configurare le origini dati, configurare le credenziali e configurare WFA.

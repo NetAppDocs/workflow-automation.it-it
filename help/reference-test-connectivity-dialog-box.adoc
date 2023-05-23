@@ -1,0 +1,44 @@
+---
+permalink: help/reference-test-connectivity-dialog-box.html 
+sidebar: sidebar 
+keywords: test, connectivity, dialog box, enable, test, system, associated, credential, operation, trigger, search, path, first, look, exact, match, pattern, service, authentication 
+summary: 'La finestra di dialogo verifica connettività consente di verificare la connessione al sistema associato a una credenziale. L"operazione di verifica della connettività attiva il percorso di ricerca e cerca prima una corrispondenza esatta, quindi una corrispondenza di modello e infine l"autenticazione del servizio LDAP.' 
+---
+= Finestra di dialogo Test Connectivity (verifica connettività)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo verifica connettività consente di verificare la connessione al sistema associato a una credenziale. L'operazione di verifica della connettività attiva il percorso di ricerca e cerca prima una corrispondenza esatta, quindi una corrispondenza di modello e infine l'autenticazione del servizio LDAP.
+
+Il protocollo ICMP (Internet Control message Protocol) viene utilizzato per verificare se il sistema è in esecuzione prima di verificare la connettività.
+
+
+
+== Verificare i parametri di connettività
+
+* *Tipo*
++
+Consente di selezionare il tipo di credenziale dall'elenco a discesa.
+
+* *Nome/IP*
++
+Consente di specificare il nome host o l'indirizzo IP per la credenziale.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Test*
++
+Apre un tentativo di connessione al nome host o all'indirizzo IP.
+
+* *Chiudi*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

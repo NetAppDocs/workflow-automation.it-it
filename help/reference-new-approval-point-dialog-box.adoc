@@ -1,0 +1,60 @@
+---
+permalink: help/reference-new-approval-point-dialog-box.html 
+sidebar: sidebar 
+keywords: new, approval, point, dialog box, enable, add, point, checkpoint, workflow, pause, execution, resume 
+summary: 'La finestra di dialogo New Approval Point (nuovo punto di approvazione) consente di aggiungere un punto di approvazione come punto di verifica in un flusso di lavoro per sospendere l"esecuzione del flusso di lavoro e riprenderla in base all"approvazione.' 
+---
+= Finestra di dialogo nuovo punto di approvazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo New Approval Point (nuovo punto di approvazione) consente di aggiungere un punto di approvazione come punto di verifica in un flusso di lavoro per sospendere l'esecuzione del flusso di lavoro e riprenderla in base all'approvazione.
+
+* *Inserire un commento (facoltativo)*
++
+Consente di fornire informazioni, ad esempio l'ora della modifica, l'utente e i commenti, che consentono di visualizzare quando e perché l'esecuzione del flusso di lavoro è stata sospesa o ripresa.
+
++
+I commenti dei punti di approvazione possono includere espressioni MVFLEX Expression Language (MVEL).
+
+* *Inserire la condizione di esecuzione (se presente)*
++
+Consente di specificare le condizioni per l'esecuzione di un comando:
+
++
+** Sempre
++
+Esegue il comando senza condizioni.
+
+** Se è stata trovata la seguente variabile
++
+Consente di eseguire un comando solo quando viene trovata la variabile specificata. È possibile specificare la variabile nella casella.
+
+** Se la variabile seguente non è stata trovata
++
+Consente di eseguire un comando solo quando la variabile specificata non viene trovata. È possibile specificare la variabile nella casella.
+
+** Se la seguente espressione è VERA
++
+Consente di eseguire un comando solo quando l'espressione MVEL specificata è "`true`". È possibile specificare l'espressione nella casella.
+
+
+
+
+
+
+
+== Pulsanti di comando
+
+* *OK*
++
+Consente di aggiungere il punto di approvazione.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

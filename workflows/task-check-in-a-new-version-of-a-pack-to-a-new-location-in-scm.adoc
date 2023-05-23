@@ -1,0 +1,34 @@
+---
+permalink: workflows/task-check-in-a-new-version-of-a-pack-to-a-new-location-in-scm.html 
+sidebar: sidebar 
+keywords: update, version, pack, oncommand, workflow, automation, check, new, location, source, control, management, server 
+summary: 'È possibile aggiornare la versione di un pacchetto in OnCommand Workflow Automation (Wfa), quindi eseguire il check in del pacchetto aggiornato in una nuova posizione nel server di gestione del controllo del codice sorgente (SCM).' 
+---
+= Eseguire il check-in di una nuova versione di un pacchetto di workflow WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiornare la versione di un pacchetto in OnCommand Workflow Automation (Wfa), quindi eseguire il check in del pacchetto aggiornato in una nuova posizione nel server di gestione del controllo del codice sorgente (SCM).
+
+.Di cosa hai bisogno
+È necessario configurare SCM e disporre delle credenziali di amministratore o architetto.
+
+.Fasi
+. Accedere alla finestra *WFA* tramite un browser Web.
+. Fare clic su *Content Management* > *Packs*.
+. Fare clic sull'icona *Edit Pack* (Modifica pacchetto).
+. Nella finestra di dialogo *Pack <pack name>*, nel campo *versione*, aggiornare la versione del pacchetto.
+. Fare clic su *Save* (Salva).
+. Fare clic sull'icona *Export to Server* (Esporta sul server) a livello di pacchetto.
+. Nella finestra di dialogo *Export to Server Folder* (Esporta in cartella server), nel campo *Folder location at server system* (percorso cartella nel sistema server), immettere una nuova posizione del file system.
++
+Se il pacchetto è stato salvato in precedenza in `C:\p4\cdot\1.0.0` percorso del file system, quindi salvarlo in `C:\p4\cdot\2.0.0` posizione.
+
+. Nella posizione del client SCM, eseguire il check-in del contenuto del pacchetto in una nuova posizione nel server SCM.
++
+Se il pacchetto è stato salvato in precedenza in `//depot/wfa/packs/cdot/1.0.0` Percorso nel server SCM, è possibile salvarlo in un'altra posizione, ad esempio `//depot/wfa/packs/cdot/2.0.0.`
+
+

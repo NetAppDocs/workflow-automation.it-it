@@ -1,0 +1,26 @@
+---
+permalink: help/concept-what-remote-system-types-are.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, communicate, remote, system, types, remote, specify, configure, example, data, ontap, system 
+summary: 'OnCommand Workflow Automation (Wfa) comunica con i tipi di sistema remoti. Un tipo di sistema remoto specifica il tipo di sistema remoto con cui WFA può comunicare. È possibile configurare i tipi di sistema remoti in WFA. Ad esempio, il sistema Data ONTAP può essere configurato come tipo di sistema remoto.' 
+---
+= Quali sono i tipi di sistema remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (Wfa) comunica con i tipi di sistema remoti. Un tipo di sistema remoto specifica il tipo di sistema remoto con cui WFA può comunicare. È possibile configurare i tipi di sistema remoti in WFA. Ad esempio, il sistema Data ONTAP può essere configurato come tipo di sistema remoto.
+
+Un tipo di sistema remoto presenta i seguenti attributi:
+
+* Nome
+* Descrizione
+* Versione
+* Protocollo
+* Porta
+* Timeout
+
+
+È possibile disporre di uno script Perl per ogni tipo di sistema remoto per convalidare le credenziali del sistema remoto. È possibile memorizzare le credenziali per i sistemi remoti configurati su WFA. È possibile aggiungere o modificare un nuovo tipo di sistema remoto personalizzato. È inoltre possibile clonare un tipo di sistema remoto esistente. È possibile eliminare un tipo di sistema remoto solo se non è associato alcun sistema.

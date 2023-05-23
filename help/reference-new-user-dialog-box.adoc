@@ -1,0 +1,76 @@
+---
+permalink: help/reference-new-user-dialog-box.html 
+sidebar: sidebar 
+keywords: new, user, dialog box, enable, create, account 
+summary: La finestra di dialogo nuovo utente consente di creare un nuovo account utente. 
+---
+= Finestra di dialogo nuovo utente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo nuovo utente consente di creare un nuovo account utente.
+
+* *Nome utente*
++
+Specifica il nome utente.
+
+* *Ruolo*
++
+Consente di selezionare uno dei seguenti ruoli utente:
+
++
+** Guest: Questo utente può solo visualizzare lo stato di un'esecuzione del flusso di lavoro o essere informato di una modifica dello stato di un'esecuzione del flusso di lavoro.
+** Operatore: A questo utente è consentito visualizzare in anteprima ed eseguire i flussi di lavoro per i quali l'utente ha accesso.
+** Architect: Questo utente dispone dell'accesso completo per creare flussi di lavoro, ma non può modificare le impostazioni globali del server WFA.
+** Admin (Amministratore): Questo utente ha accesso completo al server WFA.
+** Backup: Questo utente è l'unico in grado di generare in remoto i backup del server WFA; tuttavia, l'utente è limitato da tutti gli altri accessi.
+
+
+* *E-mail*
++
+Consente di specificare l'indirizzo e-mail dell'utente a cui inviare le notifiche se l'opzione notifica su è selezionata.
+
+* *Password*
++
+Specifica la password per l'utente.
+
+* *Conferma*
++
+Specifica nuovamente la password.
+
+* *Notifica attivata*
++
+Consente di selezionare quando l'utente dell'account deve ricevere una notifica via email. Le notifiche sullo stato di esecuzione del workflow sono specifiche dei flussi di lavoro eseguiti dall'utente. È possibile selezionare qualsiasi combinazione delle seguenti opzioni:
+
++
+** Esecuzione del flusso di lavoro avviata: Notifica all'utente quando inizia l'esecuzione del flusso di lavoro.
+** Esecuzione del flusso di lavoro non riuscita/parzialmente riuscita: Notifica all'utente se l'esecuzione del flusso di lavoro non riesce o se il flusso di lavoro è stato eseguito correttamente anche se una o più fasi non sono riuscite.
++
+L'esecuzione viene completata perché i passaggi non riusciti sono stati configurati in modo che l'esecuzione del flusso di lavoro continui anche quando il passaggio non è riuscito.
+
+** Esecuzione del flusso di lavoro completata correttamente: Notifica all'utente quando l'esecuzione del flusso di lavoro è stata completata correttamente.
+** Esecuzione del flusso di lavoro in attesa di approvazione: Notifica all'utente se l'esecuzione del flusso di lavoro è in attesa di approvazione da parte di un utente Operator o Architect, a seconda dell'impostazione di configurazione WFA.
+** Acquisition failure (errore di acquisizione): Notifica all'utente quando l'acquisizione dei dati per le origini dati non riesce.
++
+Questa opzione è abilitata solo per gli utenti Admin e Architect.
+
+
+
+
+
+
+
+== Pulsanti di comando
+
+* *Salva*
++
+Salva le impostazioni di configurazione e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

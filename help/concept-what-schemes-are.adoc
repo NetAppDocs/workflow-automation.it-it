@@ -1,0 +1,48 @@
+---
+permalink: help/concept-what-schemes-are.html 
+sidebar: sidebar 
+keywords: scheme, represent, data, model, system, collection, dictionary, entries, define, source, type, acquire, populate, example, virtual, environment, machines, hosts, datastores 
+summary: 'Uno schema rappresenta il modello di dati per un sistema. Un modello di dati è un insieme di voci del dizionario. È possibile definire uno schema e quindi un tipo di origine dati. L"origine dei dati definisce il modo in cui i dati vengono acquisiti e lo schema viene popolato. Ad esempio, uno schema vc acquisisce i dati relativi all"ambiente virtuale, ad esempio macchine virtuali, host e datastore.' 
+---
+= Quali sono gli schemi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Uno schema rappresenta il modello di dati per un sistema. Un modello di dati è un insieme di voci del dizionario. È possibile definire uno schema e quindi un tipo di origine dati. L'origine dei dati definisce il modo in cui i dati vengono acquisiti e lo schema viene popolato. Ad esempio, uno schema vc acquisisce i dati relativi all'ambiente virtuale, ad esempio macchine virtuali, host e datastore.
+
+Gli schemi possono anche essere popolati direttamente con i dati attraverso flussi di lavoro personalizzati per risolvere problemi specifici.
+
+Le voci del dizionario vengono associate a uno schema esistente quando vengono create le voci del dizionario. Le voci del dizionario sono associate anche alle query della cache e le query della cache includono le query SQL.
+
+Gli schemi possono acquisire dati utilizzando un tipo di origine dati basato su script o un tipo di origine dati SQL. Gli script vengono definiti durante la creazione del tipo di origine dati e le query SQL vengono definite nelle query della cache.
+
+I seguenti schemi sono inclusi in WFA:
+
+* *7-Mode (storage)*
++
+Schema per l'acquisizione dei dati tramite Active IQ Unified Manager da Data ONTAP in 7-Mode.
+
+* *Clustered Data ONTAP (cm_storage)*
++
+Schema per l'acquisizione di dati tramite Active IQ Unified Manager da Clustered Data ONTAP.
+
+* *Prestazioni 7-Mode (performance)*
++
+Programma per acquisire i dati sulle performance di Data ONTAP in 7-Mode tramite Performance Advisor.
+
+* *Prestazioni di Clustered Data ONTAP (cm_performance)*
++
+Programma per acquisire i dati sulle performance di Clustered Data ONTAP attraverso Performance Advisor.
+
+* *VMware vCenter (vc)*
++
+Schema per l'acquisizione dei dati da VMware vCenter.
+
+* *Parco giochi*
++
+Schema in grado di popolare direttamente con i dati.
+
+

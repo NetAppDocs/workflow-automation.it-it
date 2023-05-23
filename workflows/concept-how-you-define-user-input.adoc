@@ -1,0 +1,149 @@
+---
+permalink: workflows/concept-how-you-define-user-input.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, user, input, data, options, available, during, execution, define, parameters, enhance, flexibility, usability 
+summary: 'Gli input utente di OnCommand Workflow Automation (WFA) sono opzioni di input dei dati disponibili durante l"esecuzione dei flussi di lavoro. È necessario definire i parametri di input dell"utente per i flussi di lavoro per migliorare la flessibilità e l"usabilità dei flussi di lavoro.' 
+---
+= Come vengono definiti gli input dell'utente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli input utente di OnCommand Workflow Automation (WFA) sono opzioni di input dei dati disponibili durante l'esecuzione dei flussi di lavoro. È necessario definire i parametri di input dell'utente per i flussi di lavoro per migliorare la flessibilità e l'usabilità dei flussi di lavoro.
+
+Gli input dell'utente vengono visualizzati come campi di input, che possono essere compilati con i dati pertinenti durante l'anteprima o l'esecuzione dei flussi di lavoro. È possibile creare un campo di immissione dati utente quando si specificano i dettagli del comando in un flusso di lavoro, antefissando un'etichetta o una variabile con il simbolo del dollaro. Ad esempio, NomeVolumeName crea un campo di immissione dati utente Nome volume. WFA compila automaticamente la scheda User Inputs (input utente) nella finestra Workflow <workflow name> (Gestione flusso di lavoro) con le etichette di input dell'utente create. È inoltre possibile definire il tipo di input dell'utente e personalizzare i campi di input modificando gli attributi di input dell'utente, ad esempio tipo, nome visualizzato, valori predefiniti e valori di convalida.
+
+
+
+== Opzioni del tipo di input dell'utente
+
+* *Stringa*
++
+È possibile utilizzare un'espressione regolare per valori validi, ad esempio a*.
+
++
+Stringhe, ad esempio `0d` e. `0f`, sono valutati come numeri simili a. `0d` valutato come 0 di tipo double.
+
+* *Numero*
++
+È possibile definire un intervallo numerico che può essere selezionato, ad esempio da 1 a 15.
+
+* *Enum*
++
+È possibile creare valori di enumerazione che possono essere selezionati durante la compilazione del campo di input dell'utente utilizzando il tipo di enum. Facoltativamente, è possibile bloccare i valori enum creati per assicurarsi che siano selezionati solo i valori creati per l'input dell'utente.
+
+* *Query*
++
+È possibile selezionare il tipo di query quando si desidera che l'input dell'utente venga selezionato tra i valori disponibili nella cache WFA. Ad esempio, è possibile utilizzare la seguente query per compilare automaticamente i campi di immissione dati dell'utente con i valori di indirizzo IP e nome della cache WFA: *`SELECT ip, name FROM storage.array.`* È possibile bloccare i valori recuperati da una query in modo che vengano selezionati solo i risultati riprovati dalla query.
+
+* *Query (selezione multipla)*
++
+Il tipo di query (multi-select), simile al tipo di query, consente la selezione di più valori durante l'esecuzione del flusso di lavoro. Ad esempio, gli utenti possono selezionare più volumi o un volume insieme alle relative condivisioni ed esportazioni. È possibile consentire agli utenti di selezionare più righe o limitare la selezione a una singola riga. Selezionando una riga, vengono selezionati i valori di tutte le colonne della riga selezionata.
+
+
+
+È possibile utilizzare le seguenti funzioni quando si utilizza il tipo di input utente di query (multi-select):
+
+* GetSize
+* GetValueAt
+* GetValueAt2D
+* GetValueFrom2DByRowKey
++
+** *Booleano*
++
+È possibile utilizzare il tipo booleano per visualizzare una casella di controllo nella finestra di dialogo di input dell'utente. È necessario utilizzare il tipo booleano per gli input utente che hanno "`true`" e "`false`" come valori possibili.
+
+** *Tabella*
++
+È possibile utilizzare il tipo di tabella di input utente per specificare le intestazioni di colonna di una tabella che può essere utilizzata per inserire più valori durante l'esecuzione del flusso di lavoro. Ad esempio, una tabella che può essere utilizzata per specificare un elenco di nomi di nodi e di porte. È inoltre possibile specificare uno dei seguenti tipi di input utente per le intestazioni di colonna per convalidare i valori immessi durante la fase di esecuzione:
+
+
+
+* Stringa
+* Numero
+* Enum
+* Booleano
+* Query
+`String` è il tipo di input utente predefinito per le intestazioni di colonna. Fare doppio clic sulla colonna Type per specificare un tipo di input utente diverso.
++
+È possibile aprire il flusso di lavoro Create SnapMirror policy and rules (Crea policy e regole SnapMirror) in Designer per vedere come vengono utilizzati i tipi di input utente nell'input utente "`SnapMirrorPolicyRule`".
+
++
+È possibile utilizzare le seguenti funzioni quando si utilizza il tipo di tabella di input utente:
+
+* GetSize
+* GetValueAt
+* GetValueAt2D
+* GetValueFrom2DByRowKey è possibile aprire il flusso di lavoro *Create and configure a Storage Virtual Machine with Infinite Volume* nella finestra di progettazione per vedere come viene utilizzato il tipo di tabella.
++
+** *Password*
++
+È possibile utilizzare il tipo di password per gli input dell'utente destinati all'immissione delle password. La password immessa dall'utente viene crittografata e visualizzata sotto forma di asterisco nell'applicazione WFA e nei file di registro. È possibile utilizzare le seguenti funzioni per decrittare la password, che può essere utilizzata dal comando:
+
+
+
+* Per i comandi Perl: WFAUtil::getWfaInputPassword (password)
+* Per i comandi PowerShell: Get-WfaInputPassword -EncryptedPassword Password
++
+Qui, la password è la password crittografata che viene passata da WFA al comando.
+
++
+** *Dizionario*
++
+È possibile aggiungere i dati della tabella per la voce del dizionario selezionata. L'attributo dictionary entry seleziona l'attributo da restituire. È possibile selezionare uno o più valori durante l'esecuzione del flusso di lavoro. Ad esempio, è possibile selezionare uno o più volumi. Per impostazione predefinita, vengono selezionati valori singoli. È inoltre possibile selezionare regole per il filtraggio. Una regola è costituita da un attributo di voce del dizionario, un operatore e un valore. L'attributo può anche includere gli attributi dei relativi riferimenti.
+
++
+Ad esempio, è possibile specificare una regola per gli aggregati elencando tutti gli aggregati con nome che inizia con la stringa "`aggr`" e hanno una dimensione disponibile superiore a 5 GB. La prima regola del gruppo è l'attributo `name`, con l'operatore `starts-with`e il valore aggr. La seconda regola per lo stesso gruppo è l'attributo `available_size_mb`, con l'operatore `>` e il valore `5000.`
+
+
+
+
+
+La seguente tabella elenca le opzioni che è possibile applicare ai tipi di input dell'utente:
+
+[cols="2*"]
+|===
+| Opzione | Descrizione 
+
+
+ a| 
+Convalida in corso
+ a| 
+È possibile convalidare il tipo di input dell'utente in modo che gli utenti inserano solo valori validi:
+
+* I tipi di stringa e numero di input dell'utente possono essere validati con i valori immessi durante il tempo di esecuzione del flusso di lavoro.
+* Il tipo di stringa può essere validato anche con un'espressione regolare.
+* Il tipo di numero è un campo numerico a virgola mobile e può essere validato utilizzando un intervallo numerico specificato.
+
+
+
+
+ a| 
+Valori di blocco
+ a| 
+È possibile bloccare i valori dei tipi di query e enum per impedire all'utente di sovrascrivere i valori a discesa e per attivare la selezione solo dei valori visualizzati.
+
+
+
+ a| 
+Contrassegno obbligatorio
+ a| 
+È possibile contrassegnare gli input dell'utente come obbligatori in modo che gli utenti debbano inserire determinati input dell'utente per continuare con l'esecuzione del flusso di lavoro.
+
+
+
+ a| 
+Raggruppamento
+ a| 
+È possibile raggruppare gli input utente correlati e fornire un nome per il gruppo di input utente. I gruppi possono essere espansi e compressi nella finestra di dialogo di input dell'utente. È possibile selezionare un gruppo da espandere per impostazione predefinita.
+
+
+
+ a| 
+Condizioni di applicazione
+ a| 
+Con la funzionalità di input condizionale dell'utente, è possibile impostare il valore di un input dell'utente in base al valore immesso per un altro input dell'utente. Ad esempio, in un flusso di lavoro che configura il protocollo NAS, è possibile specificare l'input utente richiesto per il protocollo come NFS per abilitare l'input utente "`Read/Write host lists`".
+
+|===

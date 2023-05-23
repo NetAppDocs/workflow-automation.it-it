@@ -1,0 +1,152 @@
+---
+permalink: workflows/reference-guidelines-for-commands.html 
+sidebar: sidebar 
+keywords: must, aware, guidelines, create, commands, oncommand, workflow, automation 
+summary: 'È necessario conoscere le linee guida per la creazione dei comandi in OnCommand Workflow Automation (Wfa).' 
+---
+= Linee guida per i comandi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario conoscere le linee guida per la creazione dei comandi in OnCommand Workflow Automation (Wfa).
+
+[cols="2*"]
+|===
+| Linee guida | Esempio 
+
+
+ a| 
+Utilizzare un nome facilmente identificabile per i comandi.
+ a| 
+`Create Qtree`
+
+
+
+ a| 
+Utilizzare gli spazi per delimitare le parole e ciascuna parola deve iniziare con un carattere maiuscolo.
+ a| 
+`Create Volume`
+
+
+
+ a| 
+Fornire una descrizione per spiegare la funzionalità del comando, compreso il risultato previsto dei parametri opzionali.
+ a| 
+Nessuno
+
+
+
+ a| 
+Per impostazione predefinita, il timeout per i comandi standard è di 600 secondi. Il timeout predefinito viene impostato durante la creazione del comando. Modificare il valore predefinito solo se il completamento del comando potrebbe richiedere più tempo.
+ a| 
+`Create Volume` comando
+
+
+
+ a| 
+In caso di operazioni a esecuzione prolungata, creare due comandi, uno per richiamare l'operazione a esecuzione prolungata e l'altro per segnalare periodicamente l'avanzamento dell'operazione. Il primo comando deve essere un `Standard Execution` il tipo di comando e il secondo dovrebbe essere `Wait for Condition` tipo di comando.
+ a| 
+`Create VSM` e. `Wait for VSM` comandi
+
+
+
+ a| 
+Inserire il prefisso `Wait for condition` Nomi dei comandi con "`wait`" per una facile identificazione.
+ a| 
+`Wait for CM Volume Move`
+
+
+
+ a| 
+Utilizzare un intervallo di attesa appropriato per i comandi "`wait for condition`". Il valore specificato regola l'intervallo di esecuzione del comando di polling per verificare se l'operazione a esecuzione prolungata è completa.
+ a| 
+intervallo di campionamento di 60 secondi per `Wait for VSM` comando
+
+
+
+ a| 
+Per `Wait for condition` utilizzare un timeout appropriato in base al tempo previsto per il completamento dell'operazione a lungo termine. Il tempo previsto potrebbe essere notevolmente più lungo se l'operazione comporta il trasferimento dei dati su una rete.
+ a| 
+Il completamento di un trasferimento di riferimento VSM può richiedere molti giorni. Pertanto, il timeout specificato è di 6 giorni.
+
+|===
+
+
+== Rappresentazione di stringhe
+
+La rappresentazione stringa di un comando visualizza i dettagli di un comando in una progettazione del flusso di lavoro durante la pianificazione e l'esecuzione. Nella rappresentazione stringa di un comando possono essere utilizzati solo i parametri del comando.
+
+[cols="2*"]
+|===
+| Linee guida | Esempio 
+
+
+ a| 
+Evitare di utilizzare attributi che non hanno alcun valore. Un attributo senza valore viene visualizzato come NA.
+ a| 
+VolName 10.68.66.212[NA]aggr1/testVol7
+
+
+
+ a| 
+Separare le diverse voci nella rappresentazione della stringa utilizzando i seguenti delimitatori: [ ] , / :
+ a| 
+`_ArrayName[ArrayIp]_`
+
+
+
+ a| 
+Fornire etichette significative per ogni valore nella rappresentazione della stringa.
+ a| 
+`_Volume name=VolumeName_`
+
+|===
+
+
+== Linguaggio di definizione dei comandi
+
+I comandi possono essere scritti utilizzando i seguenti linguaggi di scripting supportati:
+
+* PowerShell
+* Perl
+
+
+
+
+== Definizione del parametro del comando
+
+I parametri dei comandi sono descritti in base a Nome, Descrizione, tipo, un valore predefinito per il parametro e se il parametro è obbligatorio. Il tipo di parametro può essere String, Boolean, Integer, Long, Double, Enum, DateTime, Capacity, Array, Hashtable, Password o XmlDocument. Sebbene i valori per la maggior parte dei tipi siano intuitivi, i valori per Array e Hashtable devono essere in un formato particolare, come descritto nella tabella seguente:
+
+[cols="2*"]
+|===
+| Linee guida | Esempio 
+
+
+ a| 
+Assicurarsi che il valore di un tipo di input Array sia un elenco di valori, separati da una virgola.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Months in which the schedule executes.")]
+[array]$CronMonths
+----
+L'input viene passato come segue: 0,3,6,9
+
+
+
+ a| 
+Assicurarsi che il valore di un tipo di input Hashtable sia un elenco di coppie chiave=valore, separate da punto e virgola.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Volume names and size (in MB)")]
+[hashtable]$VolumeNamesAndSize
+----
+L'input viene passato come segue: Volume1=100;Volume2=250;Volume3=50
+
+|===

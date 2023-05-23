@@ -1,0 +1,117 @@
+---
+permalink: help/reference-edit-data-source-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, data, source, dialog box, enable, modify, existing 
+summary: 'La finestra di dialogo Edit Data Source (Modifica origine dati) consente di modificare un"origine dati esistente.' 
+---
+= Finestra di dialogo Edit Data Source (Modifica origine dati)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Edit Data Source (Modifica origine dati) consente di modificare un'origine dati esistente.
+
+
+
+== Proprietà di configurazione origine dati
+
+* *Nome*
++
+Consente di modificare il nome dell'origine dati.
+
+* *Tipo di origine dati*
++
+Visualizza il tipo di origine dati per l'origine dati. Impossibile modificare questo campo.
+
+* *Nome host*
++
+Consente di specificare il nome host o l'indirizzo IP (IPv4 o IPv6) per l'origine dati.
+
++
+
+NOTE: Il tipo di origine dati Active IQ Unified Manager non supporta gli indirizzi IPv6.
+
+* *Porta*
++
+Visualizza il numero di porta associato, se presente, per il tipo di origine dati selezionato. È possibile modificare il numero di porta predefinito per l'origine dati.
+
+* *Schema*
++
+Visualizza lo schema associato al tipo di origine dati selezionato, ad esempio _cm_storage_ per Unified Manager - 6.0 (MYSQL).
+
++
+Impossibile modificare questa proprietà.
+
+* *Nome utente*
++
+Visualizza il nome utente associato, se presente, per il tipo di origine dati selezionato.
+
++
+Specificare il nome utente appropriato per questa origine dati per sovrascrivere il nome utente predefinito:
+
++
+** Per Unified Manager 6.0 e versioni successive, è necessario immettere il nome utente dell'account utente del database creato sul server Unified Manager.
+** Per Performance Advisor, è necessario immettere il nome utente di un utente Active IQ Unified Manager con un ruolo minimo di GlobalRead.
+
+
+* *Password*
++
+Consente di specificare una password per il tipo di origine dati selezionato.
+
++
+Specificare una password per sovrascrivere la password predefinita per il nome utente di questa origine dati:
+
++
+** Per Unified Manager 6.0 e versioni successive, è necessario immettere la password dell'account utente del database creato sul server.
+** Per Performance Advisor, è necessario inserire la password di un utente di Unified Manager con un ruolo minimo di GlobalRead.
+
+
+* *Database*
++
+Visualizza il nome del database associato, se presente, per il tipo di origine dati selezionato.
+
+* *Intervallo (minuti)*
++
+Consente di fare clic sul valore e selezionare un intervallo (in minuti) utilizzando le frecce su e giù.
+
++
+
+NOTE: Se l'intervallo è impostato su zero (0), il campionamento automatico viene disattivato.
+
++
+L'intervallo predefinito per il campionamento dei dati è:
+
++
+** Tipo di origine dati basata su script: 1440 (performance e vc)
+** Tipo di origine dati basata su SQL: 30 (cm_storage, storage e cm_performance)
+
+
+* *Consultare la Guida alle istruzioni di installazione*
++
+Apre la finestra di dialogo Setup Instruction Guide (Guida alle istruzioni di installazione), che illustra i passaggi per la configurazione dell'origine dati.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Ripristina schema*
++
+Apre la finestra di dialogo di conferma Reset Scheme (Ripristina schema). Questa finestra di dialogo consente di reimpostare la memoria cache per lo schema selezionato, che si verifica durante la successiva acquisizione dei dati.
+
++
+
+IMPORTANT: Il processo di ripristino elimina tutti i dati memorizzati nella cache, incluse tutte le tabelle. L'intera cache viene creata dall'inizio durante la successiva acquisizione dei dati.
+
+* *Salva*
++
+Salva le impostazioni di configurazione e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

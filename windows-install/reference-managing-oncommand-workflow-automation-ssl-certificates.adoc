@@ -1,0 +1,16 @@
+---
+permalink: windows-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html 
+sidebar: sidebar 
+keywords: manage, oncommand, workflow, automation, ssl certificate 
+summary: 'È possibile sostituire il certificato SSL predefinito di OnCommand Workflow Automation (Wfa) con un certificato autofirmato o firmato da un"autorità di certificazione (CA).' 
+---
+= Gestione del certificato SSL OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire il certificato SSL predefinito di OnCommand Workflow Automation (Wfa) con un certificato autofirmato o firmato da un'autorità di certificazione (CA).
+
+Il certificato SSL WFA autofirmato predefinito viene generato durante l'installazione di WFA. Quando si esegue l'aggiornamento, il certificato per l'installazione precedente viene sostituito con il nuovo certificato. Se si utilizza un certificato autofirmato non predefinito o un certificato firmato da una CA, è necessario sostituire il certificato SSL Wfa predefinito con il certificato.

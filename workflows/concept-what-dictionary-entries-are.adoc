@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-what-dictionary-entries-are.html 
+sidebar: sidebar 
+keywords: dictionary, entries, oncommand, workflow, automation, building, blocks, use, represent, object, types, relationships, storage, environments, filters, return, value, natural, keys 
+summary: 'Le voci del dizionario sono uno dei blocchi costitutivi di OnCommand Workflow Automation (WFA). È possibile utilizzare le voci del dizionario per rappresentare i tipi di oggetti e le relative relazioni negli ambienti di storage e relativi allo storage. È quindi possibile utilizzare i filtri nei flussi di lavoro per restituire il valore delle chiavi naturali delle voci del dizionario.' 
+---
+= Quali voci del dizionario sono
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le voci del dizionario sono uno dei blocchi costitutivi di OnCommand Workflow Automation (WFA). È possibile utilizzare le voci del dizionario per rappresentare i tipi di oggetti e le relative relazioni negli ambienti di storage e relativi allo storage. È quindi possibile utilizzare i filtri nei flussi di lavoro per restituire il valore delle chiavi naturali delle voci del dizionario.
+
+Una voce del dizionario è la definizione di un tipo di oggetto supportato da WFA. Ogni voce del dizionario rappresenta un tipo di oggetto e la relativa relazione negli ambienti storage e di storage supportati. Un oggetto dizionario è costituito da un elenco di attributi, che potrebbero essere selezionati per il tipo. Un oggetto dizionario con valori completi descrive un'istanza di oggetto di un tipo. Inoltre, gli attributi di riferimento descrivono la relazione dell'oggetto con l'ambiente; ad esempio, un oggetto dizionario di volume ha molti attributi, come name, size_mb e volume_Guarantee. Inoltre, l'oggetto dizionario volume include riferimenti all'aggregato e alla matrice contenente il volume sotto forma di array_id e aggregate_ID.
+
+La tabella cache di un oggetto è un database contenente alcuni o tutti gli attributi della voce del dizionario contrassegnati per il caching. Affinché una voce del dizionario includa una tabella cache, è necessario contrassegnare almeno uno degli attributi della voce del dizionario per il caching. Le voci del dizionario includono chiavi naturali, che sono identificatori univoci per gli oggetti; ad esempio, i volumi 7-Mode sono identificati in modo univoco dal loro nome e dall'indirizzo IP dell'array che li contiene. I qtree sono identificati dal nome del qtree, dal nome del volume e dall'indirizzo IP dell'array. Durante la creazione delle voci del dizionario, è necessario identificare gli attributi del dizionario che fanno parte delle chiavi naturali della voce del dizionario.

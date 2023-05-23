@@ -1,0 +1,43 @@
+---
+permalink: windows-install/task-back-up-oncommand-workflow-automation-using-powershell-script.html 
+sidebar: sidebar 
+keywords: back up, wfa, database, powershell script 
+summary: 'Se si desidera eseguire frequentemente il backup del database OnCommand Workflow Automation (Wfa), è possibile utilizzare lo script PowerShell fornito con il pacchetto di installazione Wfa.' 
+---
+= Eseguire il backup del database WFA utilizzando lo script PowerShell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si desidera eseguire frequentemente il backup del database OnCommand Workflow Automation (Wfa), è possibile utilizzare lo script PowerShell fornito con il pacchetto di installazione Wfa.
+
+È necessario disporre di credenziali utente amministratore, credenziali architetto o di backup.
+
+Per ulteriori informazioni, consultare la documentazione REST.
+
+.Fasi
+. Aprire Windows PowerShell come utente amministratore, quindi eseguire il backup del database WFA: `<WFA_install_location\WFA\bin\Backup.ps1> -User user_name -Password password -Path backup_file_path`
++
+** WFA_install_location è la directory di installazione di WFA.
+** user_name è il nome utente dell'utente amministratore, dell'architetto o dell'utente di backup.
+** password è la password dell'utente amministratore, dell'architetto o dell'utente di backup.
+** percorso_file_backup è il percorso completo della directory per il file di backup.
+
+
+
+
+[NOTE]
+====
+Il file di backup è un file zip con il nome nel seguente formato: wfa_backup_servername_.zip
+
+====
+* wfa_backup_ è una parte fissa del nome del file, ovvero il nome del server di backup.
+* Il nome server viene estratto dall'ambiente del server Windows.
+* _.zip è una parte fissa del nome del file.
+`C:\Program Files\NetApp\WFA\bin\Backup.ps1 -User backup -Password MyPassword123 -Path C:\WFA_backups\backup_10_08_12`
++
+Una volta completato il backup, viene visualizzato il seguente output: C: Backup_10__08_12 wfa_backup_myserver__.zip . Verificare che il file di backup sia stato creato nella posizione specificata.
+
+

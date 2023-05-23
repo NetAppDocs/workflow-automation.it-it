@@ -1,0 +1,171 @@
+---
+permalink: help/reference-monitoring-window.html 
+sidebar: sidebar 
+keywords: monitoring, window, display, details, result, planning, execution, phase, workflow, tab, read-only, content, areas, application, select, preview, option 
+summary: 'La finestra Monitoring (monitoraggio) visualizza i dettagli relativi ai risultati della fase di pianificazione o di esecuzione del flusso di lavoro. Le schede della finestra visualizzano il contenuto di sola lettura. È possibile accedere a questa finestra da diverse aree dell"applicazione WFA quando si selezionano le opzioni Dettagli, Anteprima o Esegui.' 
+---
+= Finestra di monitoraggio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Monitoring (monitoraggio) visualizza i dettagli relativi ai risultati della fase di pianificazione o di esecuzione del flusso di lavoro. Le schede della finestra visualizzano il contenuto di sola lettura. È possibile accedere a questa finestra da varie aree dell'applicazione WFA selezionando le opzioni *Dettagli*, *Anteprima* o *Esegui*.
+
+* Area di stato
+* Scheda Flow (flusso)
+* Scheda Dettagli
+* Scheda piano di esecuzione
+* Input dell'utente
+* Scheda parametri di ritorno
+* Scheda History (Cronologia)
+
+
+
+
+== Area di stato
+
+L'area Status (Stato) sopra le schede visualizza informazioni dettagliate sul risultato del processo di pianificazione o di esecuzione.
+
+* *Stato del flusso di lavoro*
++
+Nella parte superiore della finestra, un'intestazione con codice colore visualizza il risultato del processo di pianificazione o di esecuzione:
+
++
+** Il verde indica un'azione riuscita, ad esempio Pianificazione completata o esecuzione completata.
+** Il rosso indica un errore, ad esempio Pianificazione non riuscita o esecuzione non riuscita.
+
+
+* *Azione less/more info*
++
+Questo link di azione è disponibile quando il processo di anteprima o di esecuzione non riesce. È possibile alternare tra *meno informazioni* e *ulteriori informazioni* utilizzando il link di azione. A seconda dell'azione, il collegamento apre o chiude la finestra di informazioni per visualizzare più o meno informazioni sul risultato non riuscito.
+
+* *Stato dettagliato*
++
+Questa casella è disponibile quando il processo di anteprima o di esecuzione non riesce. Visualizza i dettagli del processo di pianificazione o di esecuzione. Quando un processo non riesce, questa casella viene aperta per impostazione predefinita e fornisce informazioni dettagliate sulla causa dell'errore.
+
+
+
+
+
+== Scheda Flow (flusso)
+
+La scheda Flow (flusso) fornisce una presentazione grafica del flusso di lavoro.
+
+I comandi e i flussi di lavoro secondari vengono visualizzati nella riga superiore con gli oggetti e le variabili visualizzati di seguito. Lo stato dei dettagli del comando e dei flussi di lavoro secondari durante l'anteprima o l'esecuzione viene visualizzato utilizzando diversi colori.
+
+La seguente tabella mostra quanto segue:
+
+* Schema di colori utilizzato per visualizzare lo stato dell'esecuzione del comando o del flusso di lavoro
+* Le icone utilizzate nella finestra
+
+
+[cols="25h,~"]
+|===
+| Combinazione di colori e icona | Stato 
+
+
+ a| 
+image:../media/execution_successful.gif["casella verde"]
+ a| 
+Esecuzione riuscita
+
+
+
+ a| 
+image:../media/execution_failed.gif["casella rossa"]
+ a| 
+Esecuzione non riuscita
+
+
+
+ a| 
+image:../media/execution_in_progress.gif["casella blu"]
+ a| 
+Esecuzione in corso
+
+
+
+ a| 
+image:../media/execution_skipped.gif["casella grigia"]
+ a| 
+Esecuzione ignorata
+
+
+
+ a| 
+image:../media/waiting_for_approval.gif["casella blu"]
+ a| 
+Intestazione del flusso di lavoro secondario
+
+
+
+ a| 
+image:../media/info_icon_execute_wfa.gif[""]
+ a| 
+Apre i registri
+
+
+
+ a| 
+image:../media/approval_point_icon.gif["Icona del punto di approvazione"]
+ a| 
+Il flusso di lavoro secondario include un punto di approvazione
+
+|===
+
+
+== Scheda Dettagli
+
+La scheda Dettagli fornisce informazioni più dettagliate sul flusso di lavoro. Le informazioni vengono fornite in formato tabella, con i comandi nella riga di intestazione e gli oggetti e le variabili associati elencati di seguito. Questa scheda fornisce a ciascun comando tutti i relativi argomenti e parametri.
+
+Questa scheda è utile per eseguire il debug di un'anteprima o di un'esecuzione non riuscite del flusso di lavoro.
+
+
+
+== Scheda piano di esecuzione
+
+La scheda Execution Plan (piano di esecuzione) fornisce un elenco tradotto dei comandi del flusso di lavoro e dei relativi argomenti che vengono eseguiti (script o comandi).
+
+È possibile utilizzare questa scheda per eseguire il debug di un'anteprima o di un'esecuzione non riuscite del flusso di lavoro.
+
+
+
+== Scheda User Inputs
+
+La scheda User Inputs (ingressi utente) visualizza i valori immessi dagli utenti durante l'anteprima o l'esecuzione del flusso di lavoro.
+
+È possibile utilizzare le frecce di ordinamento (image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] oppure image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"]) nell'intestazione della colonna per ordinare le voci della colonna in ordine crescente o decrescente.
+
+
+
+== Scheda parametri di ritorno
+
+La scheda parametri restituiti elenca l'output del flusso di lavoro, in base al nome del parametro e al valore del parametro.
+
+È possibile accedere a questi parametri di ritorno utilizzando i servizi Web.
+
+
+
+== Scheda History (Cronologia)
+
+La scheda History (Cronologia) elenca le modifiche apportate agli stati del flusso di lavoro, il momento in cui si è verificata la modifica dello stato, l'autore dell'azione e il messaggio associato alla modifica dello stato.
+
+
+
+== Pulsanti di comando
+
+* *Download Logs*
++
+Consente di scaricare un `zip` file di tutti i file di log, inclusi i log di esecuzione specifici.
+
+* *Visibilità della colonna*
++
+Consente di visualizzare o nascondere le colonne nella scheda Dettagli.
+
+* *OK*
++
+Chiude la finestra Monitoring (monitoraggio).
+
+

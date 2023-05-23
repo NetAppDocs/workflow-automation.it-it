@@ -1,0 +1,175 @@
+---
+permalink: help/reference-workflows-window.html 
+sidebar: sidebar 
+keywords: workflow, window, display, available, workflow, alphabetical order, access, design 
+summary: La finestra dei flussi di lavoro visualizza tutti i flussi di lavoro disponibili in ordine alfabetico. Per accedere a questa finestra, selezionare progettazione flusso di lavoro > flussi di lavoro. 
+---
+= Finestra dei flussi di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra dei flussi di lavoro visualizza tutti i flussi di lavoro disponibili in ordine alfabetico. Per accedere a questa finestra, selezionare *Workflow Design* > *Workflow*.
+
+A seconda del ruolo e dei privilegi dell'account, questa finestra potrebbe non essere visualizzata.
+
+* Tabella dei flussi di lavoro
+* Barra degli strumenti
+
+
+
+
+== Tabella dei flussi di lavoro
+
+La tabella dei flussi di lavoro elenca i flussi di lavoro disponibili. È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella dei flussi di lavoro contiene le seguenti colonne:
+
+* *Certificazione*
++
+Indica se il flusso di lavoro è stato creato dall'utente (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), community (image:../media/community_certification.gif[""]), bloccato dall'utente (image:../media/lock_icon_wfa.gif[""]), o con certificazione NetApp (image:../media/netapp_certified.gif[""]).
+
++
+È possibile cercare i flussi di lavoro selezionando le caselle di controllo dell'opzione desiderata dall'elenco dei filtri.
+
+* *Nome*
++
+Visualizza il nome del flusso di lavoro.
+
++
+È possibile cercare un flusso di lavoro immettendo il relativo nome nella casella di testo del filtro *Cerca*.
+
+* *Schema*
++
+Visualizza gli schemi associati ai flussi di lavoro. Uno schema rappresenta il modello di dati per un sistema. Ad esempio, uno schema vc contiene dati rilevanti per l'ambiente virtuale, come macchine virtuali, host e datastore.
+
++
+È possibile cercare un flusso di lavoro immettendo uno dei relativi schemi nella casella di testo del filtro *Cerca*.
+
+* *Versione entità*
++
+Visualizza il numero di versione dell'oggetto in `major.minor.revision` format--ad esempio, 1.0.0.
+
++
+È possibile cercare un flusso di lavoro inserendo il numero di versione nella casella di testo del filtro *Ricerca*.
+
+* *Descrizione*
++
+Visualizza la descrizione del flusso di lavoro.
+
++
+È possibile cercare un flusso di lavoro immettendo la relativa descrizione nella casella di testo del filtro *Cerca*.
+
+* *Compatibilità del sistema operativo*
++
+Indica se il flusso di lavoro è compatibile con il sistema operativo host.
+
+* *Min. Versioni software*
++
+Specifica le versioni minime del software necessarie per eseguire il flusso di lavoro. Ad esempio, il software può essere Clustered Data ONTAP 8.2.0 e vCenter 6.0. Le versioni vengono visualizzate come valori separati da virgole.
+
+* *Categorie*
++
+Visualizza le etichette definite dall'utente associate ai flussi di lavoro.
+
++
+È possibile utilizzare le categorie per organizzare raccolte di flussi di lavoro. Ad esempio, per distinguere i flussi di lavoro, potrebbe esserci una categoria separata per le attività di provisioning, una categoria per le attività di manutenzione e una categoria per le attività di decommissionamento. Inoltre, le categorie vengono utilizzate per limitare l'esecuzione del flusso di lavoro per operatori specifici.
+
++
+È possibile cercare i flussi di lavoro immettendo una categoria nella casella di testo del filtro *Ricerca*.
+
+* *Ultimo aggiornamento in data*
++
+Visualizza la data e l'ora dell'ultimo aggiornamento del flusso di lavoro.
+
++
+È possibile cercare i flussi di lavoro selezionando la categoria di tempo richiesta dall'elenco a discesa del filtro.
+
+* *Aggiornato da*
++
+Visualizza il nome dell'utente che ha aggiornato il flusso di lavoro.
+
++
+È possibile cercare i flussi di lavoro immettendo il nome utente nella casella di testo del filtro *Cerca*.
+
+* *Bloccato da*
++
+Visualizza il nome dell'utente che ha bloccato il flusso di lavoro.
+
++
+È possibile cercare i flussi di lavoro immettendo il nome utente nella casella di testo del filtro *Cerca*.
+
+* *Pronto per la produzione*
++
+Identifica se il flusso di lavoro è contrassegnato come pronto per la produzione (vero o falso).
+
++
+È possibile cercare i flussi di lavoro selezionando la casella di controllo dell'opzione di produzione richiesta dall'elenco dei filtri.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/new_wfa_icon.gif["Nuova icona"] (Novità)*
++
+Apre la finestra New Workflow (nuovo flusso di lavoro), che consente di inserire i dettagli del nuovo flusso di lavoro.
+
+* *image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] (Modifica)*
++
+Apre l'editor del flusso di lavoro per il flusso di lavoro selezionato, che consente di modificare il flusso di lavoro. È inoltre possibile fare doppio clic sul flusso di lavoro per aprire l'editor del flusso di lavoro.
+
+* *image:../media/clone_wfa_icon.gif["Icona Clona"] (Clone)*
++
+Apre la finestra New Workflow <selected_workflow_name> - Copy (nuovo flusso di lavoro - copia), che consente di creare un clone o una copia del flusso di lavoro selezionato.
+
+* *image:../media/lock_wfa_icon.gif["Icona a forma di lucchetto"] (Blocco)*
++
+Apre la finestra di dialogo Lock Workflow confirmation (Blocca flusso di lavoro), che consente di bloccare il flusso di lavoro selezionato. Questa opzione è abilitata solo per i flussi di lavoro creati.
+
+* *image:../media/unlock_wfa_icon.gif["Icona di sblocco"] (Sblocca)*
++
+Apre la finestra di dialogo di conferma Sblocca flusso di lavoro, che consente di sbloccare il flusso di lavoro selezionato. Questa opzione è attivata solo per i flussi di lavoro bloccati dall'utente. Tuttavia, gli amministratori possono sbloccare i flussi di lavoro bloccati da altri utenti.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo Delete Workflow confirmation (Conferma eliminazione flusso di lavoro), che consente di eliminare il flusso di lavoro selezionato. Questa opzione è abilitata solo per i flussi di lavoro creati.
+
+* *image:../media/export_wfa_icon.gif["Icona Export (Esporta)"] (Esportazione)*
++
+Apre la finestra di dialogo Download del file, che consente di salvare il flusso di lavoro selezionato come file .dar. Questa opzione è abilitata solo per i flussi di lavoro creati.
+
+* *image:../media/execute_wfa_icon.gif["Icona di esecuzione"] (Eseguire)*
++
+Apre la finestra di dialogo Execute Workflow <selected_workflow_name> (Esegui flusso di lavoro) per il flusso di lavoro selezionato, che consente di eseguire il flusso di lavoro.
+
+* *image:../media/add_to_pack.png["icona add to pack (aggiungi al pacchetto)"] (Aggiungi al pacchetto)*
++
+Apre la finestra di dialogo Add to Pack Workflow, che consente di aggiungere il flusso di lavoro e le relative entità affidabili a un pacchetto, modificabile.
+
++
+
+NOTE: La funzione Add to Pack (Aggiungi al pacchetto) è attivata solo per i flussi di lavoro per i quali la certificazione è impostata su *None.*
+
+* *image:../media/remove_from_pack.png["icona remove from pack (rimuovi dalla confezione)"] (Remove from Pack)*
++
+Apre la finestra di dialogo Remove from Pack Workflow (Rimuovi da flusso di lavoro pacchetto) per il flusso di lavoro selezionato, che consente di eliminare o rimuovere il flusso di lavoro dal pacchetto.
+
++
+
+NOTE: La funzione Remove from Pack (Rimuovi dal pacchetto) è attivata solo per il flusso di lavoro per il quale la certificazione è impostata su *None.*
+
+

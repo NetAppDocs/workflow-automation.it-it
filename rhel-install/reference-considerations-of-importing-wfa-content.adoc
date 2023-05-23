@@ -1,0 +1,44 @@
+---
+permalink: rhel-install/reference-considerations-of-importing-wfa-content.html 
+sidebar: sidebar 
+keywords: considerations, import, oncommand, workflow, automation, content 
+summary: 'Quando si importano contenuti creati dall"utente, esportati da un"altra installazione OnCommand Workflow Automation (Wfa) o scaricati dall"archivio di automazione dello storage o dalla community WFA, è necessario tenere presente alcune considerazioni.' 
+---
+= Considerazioni sull'importazione di contenuto OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si importano contenuti creati dall'utente, esportati da un'altra installazione OnCommand Workflow Automation (Wfa) o scaricati dall'archivio di automazione dello storage o dalla community WFA, è necessario tenere presente alcune considerazioni.
+
+* Il contenuto WFA viene salvato come file .dar e può includere l'intero contenuto creato dall'utente da un altro sistema o elementi specifici come flussi di lavoro, finder, comandi e termini del dizionario.
+* Quando una categoria esistente viene importata da un file .dar, il contenuto importato viene Unito al contenuto esistente nella categoria.
++
+Ad esempio, nel server WFA sono presenti due flussi di lavoro WF1 e WF2 nella categoria A. Se i flussi di lavoro WF3 e WF4 della categoria A vengono importati nel server WFA, la categoria A conterrà i flussi di lavoro WF1, WF2, WF3 e WF4 dopo l'importazione.
+
+* Se il file .dar contiene voci del dizionario, le tabelle della cache corrispondenti alle voci del dizionario vengono aggiornate automaticamente.
++
+Se le tabelle della cache non vengono aggiornate automaticamente, viene registrato un messaggio di errore nel file wfa.log.
+
+* Quando si importa un file .dar che ha una dipendenza da un pacchetto non presente nel server WFA, WFA tenta di identificare se tutte le dipendenze sulle entità sono soddisfatte.
++
+** Se mancano una o più entità o se viene trovata una versione inferiore di un'entità, l'importazione non riesce e viene visualizzato un messaggio di errore.
++
+Il messaggio di errore fornisce i dettagli dei pacchetti che devono essere installati per soddisfare le dipendenze.
+
+** Se viene trovata una versione superiore di un'entità o se la certificazione è stata modificata, viene visualizzata una finestra di dialogo generica relativa alla mancata corrispondenza della versione e l'importazione viene completata.
++
+I dettagli della mancata corrispondenza della versione vengono registrati in un file wfa.log.
+
+
+
+* Le domande e le richieste di supporto per quanto segue devono essere indirizzate alla community WFA:
++
+** Qualsiasi contenuto scaricato dalla community WFA
+** Contenuto WFA personalizzato creato
+** Contenuto WFA modificato
+
+
+

@@ -1,0 +1,109 @@
+---
+permalink: help/reference-parameters-for-commands-dialog-box.html 
+sidebar: sidebar 
+keywords: specify, parameters, settings, execution, commands, through, parameters, dialog box 
+summary: 'È possibile specificare i parametri e altre impostazioni per l"esecuzione dei comandi attraverso la finestra di dialogo parametri per i comandi.' 
+---
+= Finestra di dialogo parametri per i comandi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile specificare i parametri e altre impostazioni per l'esecuzione dei comandi attraverso la finestra di dialogo parametri per i comandi.
+
+La finestra di dialogo visualizza una o più schede oggetto dizionario e le seguenti schede:
+
+* Altri parametri
+* Avanzato
+
+
+
+
+== Schede <Dictionary objects>
+
+* *Definisci <dictionary object>*
++
+Consente di specificare i parametri di comando mappati all'oggetto dizionario specificando gli attributi, utilizzando un oggetto precedentemente definito o cercando un oggetto esistente.
+
++
+** *inserendo gli attributi*
++
+Consente di immettere gli attributi per questa variabile. È possibile utilizzare la finestra di dialogo Resource Selection (selezione risorse) per i campi contrassegnati da image:../media/resource_selection_icon_wfa.gif[""]. Facoltativamente, è possibile utilizzare un modello che include valori predefiniti per determinati attributi dell'oggetto. È possibile visualizzare e utilizzare attributi aggiuntivi deselezionando la casella di controllo *Mostra solo attributi utilizzati da <dictionary object>*. La casella accanto a *define <dictionary object>* visualizza il nome predefinito della variabile selezionata. È possibile modificare il nome della variabile. Gli attributi obbligatori sono contrassegnati da un asterisco (*) e dal bordo rosso per la casella.
+
+** *utilizzando un <dictionary object> definito in precedenza*
++
+Consente di selezionare una variabile precedentemente definita. È possibile selezionare l'oggetto dizionario definito in precedenza nella casella accanto a *Definisci <dictionary object>*.
+
+** *cercando un <dictionary object> esistente*
++
+Consente di definire una variabile cercando un oggetto dizionario esistente. È possibile specificare i criteri di ricerca per l'oggetto dizionario. Se viene trovato l'oggetto dizionario, è possibile specificare una delle seguenti azioni:
+
++
+*** Interrompere il flusso di lavoro
+*** Disattivare il comando
+*** Inserire gli attributi per <dictionary object> ed eseguire il comando
++
+
+NOTE: Questa opzione è simile all'opzione *by filling-in attribues*.
+
+
+
+
+
+
+
+
+
+== Altri parametri
+
+Consente di specificare i parametri di comando che non sono mappati a nessun oggetto dizionario per l'esecuzione del comando.
+
+
+
+== Avanzato
+
+Consente di specificare le condizioni per l'esecuzione del comando e fornire una descrizione. È inoltre possibile configurare il flusso di lavoro in modo che l'esecuzione del flusso di lavoro continui anche se uno o più comandi nel flusso di lavoro non sono riusciti.
+
+* *Eseguire questo comando*
++
+** *Sempre*
++
+Esegue il comando senza condizioni.
+
+** *Se è stata trovata la seguente variabile*
++
+Consente di eseguire un comando solo quando viene trovata la variabile specificata. È possibile specificare la variabile nella casella adiacente.
+
+** *Se la seguente variabile non è stata trovata*
++
+Consente di eseguire un comando solo quando la variabile specificata non viene trovata. È possibile specificare la variabile nella casella adiacente.
+
+** *Se la seguente espressione è VERA*
++
+Consente di eseguire un comando solo quando l'espressione MVFLEX Expression Language (MVEL) specificata è "`true`". È possibile specificare l'espressione nella casella adiacente.
+
+
+
+* *Descrizione*
++
+Consente di immettere una descrizione per il comando.
+
+* *Se l'esecuzione non riesce*
++
+** *Interruzione dell'esecuzione del flusso di lavoro*
++
+Consente di terminare l'esecuzione del flusso di lavoro.
+
+** *Continuare l'esecuzione dal passaggio successivo*
++
+Consente di continuare l'esecuzione del flusso di lavoro dalla fase successiva.
+
+** *Continuare l'esecuzione dalla riga successiva*
++
+Consente di continuare l'esecuzione del flusso di lavoro dalla riga successiva.
+
+
+
+

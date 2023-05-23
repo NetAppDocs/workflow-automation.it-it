@@ -1,0 +1,79 @@
+---
+permalink: help/task-define-filter-rules.html 
+sidebar: sidebar 
+keywords: define, set, rules, filtering, dictionary, entry, resources, vfiler, units, aggregates, virtual, machines, customize, existing, workflow, create 
+summary: È possibile definire un set di regole per filtrare le risorse di voci del dizionario, ad esempio unità vFiler, aggregati e macchine virtuali. È possibile personalizzare le regole per i flussi di lavoro esistenti e per i nuovi flussi di lavoro durante la creazione. 
+---
+= Definire le regole di filtro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile definire un set di regole per filtrare le risorse di voci del dizionario, ad esempio unità vFiler, aggregati e macchine virtuali. È possibile personalizzare le regole per i flussi di lavoro esistenti e per i nuovi flussi di lavoro durante la creazione.
+
+.Fasi
+. Accedere a WFA tramite un browser Web come amministratore.
+. Fare clic su *Workflow Design* > *Workflow*.
+. Nella finestra *Workflow*, fare doppio clic sul flusso di lavoro che si desidera modificare.
++
+Viene visualizzata la finestra Workflow <workflow name> (Gestione flusso di lavoro).
+
+. Definire una serie di regole scegliendo una delle seguenti opzioni:
++
+[cols="2*"]
+|===
+| Se si desidera... | Quindi... 
+
+
+ a| 
+Cercare le risorse quando i comandi in una riga vengono ripetuti
+ a| 
+.. Fare clic su un numero di riga e selezionare *Ripeti riga*.
+.. Nella finestra di dialogo Row Repetitions (ripetizioni riga), selezionare l'opzione *per ogni risorsa del gruppo* dall'elenco a discesa *Repetions* (ripetizioni *).
+.. Selezionare un tipo di risorsa.
+.. Fare clic sul collegamento *Inserisci criteri di ricerca*.
+
+
+
+
+ a| 
+Cercare le risorse richieste negli input dei comandi
+ a| 
+.. Fare clic su image:../media/add_object_wfa_icon.gif["Icona per aggiungere un comando"].
+.. Nella finestra di dialogo parametri per <command_name>, selezionare l'opzione *cercando un <dictionary object>* esistente dall'elenco a discesa *Definisci <dictionary object>*.
+.. Fare clic sul collegamento *Inserisci criteri di ricerca*.
+
+
+
+
+ a| 
+Cerca le risorse a cui fanno riferimento le variabili negli input dei comandi
+ a| 
+.. Fare clic su image:../media/add_object_wfa_icon.gif["Icona per aggiungere un comando"].
+.. Nella finestra di dialogo parametri per <command_name>, selezionare l'opzione *inserendo gli attributi* dall'elenco a discesa *Definisci <dictionary object>*.
+.. Fare clic su image:../media/ellipses.gif[""] per un campo contrassegnato con image:../media/resource_selection_icon_wfa.gif["Icona per gli oggetti di riferimento"].
+
+
+
+
+ a| 
+Input del comando Name del tipo String
+ a| 
+.. Fare clic su image:../media/add_object_wfa_icon.gif["Icona per aggiungere un comando"].
+.. Nella finestra di dialogo parametri per <command_name>, selezionare l'opzione *inserendo gli attributi* dall'elenco a discesa *Definisci <dictionary object>*.
+.. Fare clic su image:../media/ellipses.gif["Icona per ellissi"] per un campo stringa.
+
+
+|===
+. Nella finestra di dialogo *selezione risorsa*, selezionare la casella di controllo *Definisci regole filtro*.
++
+Se è stata selezionata una delle opzioni dall'elenco a discesa Finder della finestra di dialogo selezione risorsa, la casella di controllo Definisci regole filtro è disattivata. Il valore per il Finder deve essere impostato su "`None`" (Nessuno) per attivare le regole di filtro define.
+
+. Inserire l'attributo, l'operatore e il valore della regola.
++
+Il valore deve essere fornito tra virgolette singole. Le regole di filtro possono contenere uno o più gruppi.
+
+. Fare clic su *OK*.
+

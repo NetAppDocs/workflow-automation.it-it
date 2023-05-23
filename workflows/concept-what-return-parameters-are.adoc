@@ -1,0 +1,74 @@
+---
+permalink: workflows/concept-what-return-parameters-are.html 
+sidebar: sidebar 
+keywords: return, parameters, available, after, planning, phase, workflow, values, useful, debugging, workflow, work, debug 
+summary: I parametri restituiti sono parametri disponibili dopo la fase di pianificazione di un flusso di lavoro. I valori restituiti da questi parametri sono utili per il debug di un flusso di lavoro. È necessario comprendere il funzionamento dei parametri di ritorno e quali parametri possono essere utilizzati come parametri di ritorno per i flussi di lavoro di debug. 
+---
+= Come funzionano i parametri restituiti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I parametri restituiti sono parametri disponibili dopo la fase di pianificazione di un flusso di lavoro. I valori restituiti da questi parametri sono utili per il debug di un flusso di lavoro. È necessario comprendere il funzionamento dei parametri di ritorno e quali parametri possono essere utilizzati come parametri di ritorno per i flussi di lavoro di debug.
+
+È possibile designare un insieme di parametri, ad esempio attributi variabili, espressioni e valori di input dell'utente, in un flusso di lavoro come parametri restituiti. Durante l'esecuzione del flusso di lavoro, i valori dei parametri designati vengono popolati nella fase di pianificazione e viene avviata l'esecuzione del flusso di lavoro. I valori di questi parametri vengono quindi restituiti nel modo in cui sono stati calcolati nell'esecuzione specifica del flusso di lavoro. Se si desidera eseguire il debug del flusso di lavoro, fare riferimento ai valori restituiti dai parametri.
+
+È possibile specificare i parametri di ritorno richiesti in un flusso di lavoro quando si desidera visualizzare i valori calcolati o selezionati per tali parametri. Ad esempio, quando si utilizza la logica di selezione delle risorse per selezionare un aggregato in un flusso di lavoro, è possibile specificare aggregato come parametro di ritorno in modo da visualizzare l'aggregato selezionato durante la pianificazione del flusso di lavoro.
+
+Prima di fare riferimento ai valori dei parametri restituiti per il debug del flusso di lavoro, è necessario confermare che l'esecuzione del flusso di lavoro è completa. I valori dei parametri restituiti vengono impostati per ogni esecuzione del flusso di lavoro. Se è stato aggiunto un parametro di ritorno dopo diverse esecuzioni di un flusso di lavoro, il valore di tale parametro è disponibile solo per le esecuzioni dopo l'aggiunta del parametro.
+
+
+
+== Parametri che possono essere utilizzati come parametri restituiti
+
+[cols="2*"]
+|===
+| Parametri restituiti | Esempio 
+
+
+ a| 
+Attributi variabili scalari
+ a| 
+`volume1.name,` che è un attributo della variabile "`volume name`"
+
+
+
+ a| 
+Costanti
+ a| 
+MAX_VOLUME_SIZE
+
+
+
+ a| 
+Input dell'utente
+ a| 
+NomeclusterName
+
+
+
+ a| 
+Espressioni MVEL che coinvolgono attributi variabili, costanti e input dell'utente
+ a| 
+volume1.name+'-'+$clusterName
+
+
+
+ a| 
+Il parametro restituito che un comando aggiunge durante l'esecuzione
+ a| 
+Il `$volumeUUID` Il parametro viene aggiunto come parametro restituito quando si utilizza la seguente riga in un comando PowerShell: `Add-WfaWorkflowParameter -Name "VolumeUUID" -Value "`12345`" -AddAsReturnParameter $true.`
+
+|===
+
+
+== Esempi di parametri restituiti nei flussi di lavoro predefiniti
+
+Se si desidera comprendere come vengono specificati i parametri di ritorno, è possibile aprire i seguenti flussi di lavoro predefiniti nella finestra di progettazione ed esaminare i parametri di ritorno specificati:
+
+* Creare un volume NFS in un vFiler
+* Creare una condivisione CIFS Qtree in un vFiler
+* Creare una condivisione CIFS del volume Clustered Data ONTAP
+

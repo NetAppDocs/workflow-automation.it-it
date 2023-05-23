@@ -1,0 +1,14 @@
+---
+permalink: windows-install/concept-managing-high-availability.html 
+sidebar: sidebar 
+keywords: manage, high availability 
+summary: 'È possibile configurare una configurazione ad alta disponibilità per fornire un supporto costante per le operazioni di rete. In caso di guasto di uno dei componenti, il componente mirrorato dell"installazione assume il controllo dell"operazione e fornisce risorse di rete senza interruzioni. È inoltre possibile eseguire il backup del database WFA e delle configurazioni supportate in modo da poter ripristinare i dati in caso di disastro.' 
+---
+= Gestione dell'alta disponibilità
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare una configurazione ad alta disponibilità per fornire un supporto costante per le operazioni di rete. In caso di guasto di uno dei componenti, il componente mirrorato dell'installazione assume il controllo dell'operazione e fornisce risorse di rete senza interruzioni. È inoltre possibile eseguire il backup del database WFA e delle configurazioni supportate in modo da poter ripristinare i dati in caso di disastro.

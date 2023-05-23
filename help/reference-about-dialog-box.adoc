@@ -1,0 +1,40 @@
+---
+permalink: help/reference-about-dialog-box.html 
+sidebar: sidebar 
+keywords: about, dialog, box, display, details, current, version, install, application 
+summary: 'La finestra di dialogo informazioni su visualizza i dettagli relativi alla versione corrente dell"applicazione WFA installata.' 
+---
+= Finestra di dialogo informazioni su
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo informazioni su visualizza i dettagli relativi alla versione corrente dell'applicazione WFA installata.
+
+
+
+== Informazioni sulla versione DI WFA
+
+* *Versione*
++
+Visualizza il numero della versione corrente dell'applicazione WFA installata.
+
++
+Il numero di versione ha il seguente formato: `A.B.C.`
+
++
+`A.B.C` Riflette i numeri di release Major.minor.Maintenance.
+
++
+Ad esempio: `2.0.0`.
+
+* *ID sistema*
++
+Identifica l'installazione del sistema WFA per scopi di tracciamento e AutoSupport.
+
++
+Si tratta di un identificatore univoco generato dal sistema.
+
+

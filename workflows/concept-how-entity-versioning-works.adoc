@@ -1,0 +1,181 @@
+---
+permalink: workflows/concept-how-entity-versioning-works.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, entities, commands, version number, easily, manage, change 
+summary: 'Le entità OnCommand Workflow Automation (WFA), come comandi e flussi di lavoro, sono con versione. È possibile utilizzare i numeri di versione per gestire facilmente le modifiche alle entità WFA.' 
+---
+= Come funziona il controllo delle versioni delle entità
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le entità OnCommand Workflow Automation (WFA), come comandi e flussi di lavoro, sono con versione. È possibile utilizzare i numeri di versione per gestire facilmente le modifiche alle entità WFA.
+
+Ogni entità WFA include un numero di versione in `major.minor.revision` format--ad esempio, 1.1.20. È possibile includere fino a tre cifre in ciascuna parte del numero di versione.
+
+Prima di modificare il numero di versione di un'entità WFA, è necessario conoscere le seguenti regole:
+
+* I numeri di versione non possono essere modificati dalla versione corrente a una versione precedente.
+* Ogni parte della versione deve essere un numero compreso tra 0 e 999.
+* Per impostazione predefinita, le nuove entità WFA hanno la versione 1.0.0.
+* Il numero di versione di un'entità viene conservato durante la clonazione o quando si utilizza *Salva con nome* per salvare una copia dell'entità.
+* In un'installazione WFA non possono esistere più versioni di un'entità.
+
+
+Quando si aggiorna la versione di un'entità WFA, la versione dell'entità padre immediata viene aggiornata automaticamente. Ad esempio, l'aggiornamento della versione del comando *Create Volume* aggiorna il flusso di lavoro *Create an NFS Volume*, poiché il flusso di lavoro *Create an NFS Volume* è un'entità padre immediata del comando *Create Volume*. L'aggiornamento automatico delle versioni viene applicato come segue:
+
+* La modifica della versione principale di un'entità aggiorna la versione minore delle sue entità principali immediate.
+* La modifica della versione minore di un'entità aggiorna la versione di revisione delle sue entità principali immediate.
+* La modifica della versione di revisione di un'entità non aggiorna alcuna parte della versione delle sue entità principali immediate.
+
+
+La tabella seguente elenca le entità WFA e le relative entità principali immediate:
+
+[cols="2*"]
+|===
+| Entità | Entità madre immediata 
+
+
+ a| 
+Query cache
+ a| 
+* Tipo di origine dati
+
+
+
+
+ a| 
+Modello
+ a| 
+* Workflow
+
+
+
+
+ a| 
+Funzione
+ a| 
+* Workflow
+* Modello
+
+
+
+NOTE: Se una funzione contiene caratteri maiuscoli o minuscoli speciali, la versione delle sue entità principali immediate potrebbe non essere aggiornata.
+
+
+
+ a| 
+Dizionario
+ a| 
+* Modello
+* Filtro
+* Query cache
+* Comando
+* Tipi di origine dati che utilizzano il metodo script
+
+
+
+
+ a| 
+Comando
+ a| 
+* Workflow
+
+
+
+
+ a| 
+Filtro
+ a| 
+* Finder
+* Workflow
+
+
+
+
+ a| 
+Finder
+ a| 
+* Workflow
+
+
+
+
+ a| 
+Tipo di origine dati
+ a| 
+Nessuno
+
+
+
+ a| 
+Workflow
+ a| 
+Nessuno
+
+|===
+È possibile cercare un'entità in WFA utilizzando le parti del numero di versione o il numero di versione completo.
+
+Se si elimina un'entità padre, le entità figlio vengono conservate e la relativa versione non viene aggiornata per l'eliminazione.
+
+
+
+== Funzionamento del controllo delle versioni durante l'importazione delle entità
+
+Se si importano entità da versioni precedenti a Workflow Automation 2.2, per impostazione predefinita le entità vengono aggiornate come 1.0.0. Se l'entità importata è già presente nel server WFA, l'entità esistente viene sovrascritta con l'entità importata.
+
+Di seguito sono riportate le potenziali modifiche alle entità WFA durante un'importazione:
+
+* Aggiornamento delle entità
++
+Le entità vengono sostituite con una versione successiva.
+
+* Eseguire il rollback delle entità
++
+Le entità vengono sostituite con una versione precedente.
+
++
+
+NOTE: Quando si esegue un rollback di un'entità, la versione delle sue entità principali immediate viene aggiornata.
+
+* Importazione di nuove entità
+
+
+
+NOTE: Non è possibile importare in modo selettivo le entità da a. `.dar` file.
+
+Se viene importata una versione successiva di un'entità, la versione delle sue entità principali immediate viene aggiornata.
+
+Se ci sono più entità figlio all'entità padre importata, all'entità padre viene applicato solo il più alto grado di cambiamento (maggiore, minore o revisione). I seguenti esempi spiegano il funzionamento di questa regola:
+
+* Per un'entità padre importata, se esiste un'entità figlio con una modifica minore e un'altra entità figlio con una modifica di revisione, la modifica minore viene applicata all'entità padre.
++
+La parte di revisione della versione del padre viene incrementata.
+
+* Per un'entità padre importata, se esiste un'entità figlio con una modifica principale e un'altra entità figlio con una modifica minore, la modifica principale viene applicata all'entità padre.
++
+La parte minore della versione del padre viene incrementata.
+
+
+
+
+
+== Esempio di come le versioni delle entità figlio importate influiscono sulla versione del padre
+
+Prendere in considerazione il seguente flusso di lavoro in WFA: "`Create Volume and export using NFS - Custom`" 1.0.0.
+
+I comandi esistenti inclusi nel flusso di lavoro sono i seguenti:
+
+* "`Create Export Policy - Custom`" 1.0.0
+* "`Create Volume - Custom`" 1.0.0
+
+
+I comandi inclusi in `.dar` i file da importare sono i seguenti:
+
+* "`Create Export Policy - Custom`" 1.1.0
+* "`Create Volume - Custom`" 2.0.0
+
+
+Al momento dell'importazione `.dar` File, la versione minore del flusso di lavoro "`Create Volume and export using NFS - Custom`" viene incrementata a 1.1.0.

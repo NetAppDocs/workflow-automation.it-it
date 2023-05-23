@@ -1,0 +1,25 @@
+---
+permalink: help/concept-what-continue-on-failure-is.html 
+sidebar: sidebar 
+keywords: continue, failure, feature, help, configure, step, workflow, execution, address, resolve, issue, cause, access, file, icon 
+summary: 'La funzione continua con errore consente di configurare un passaggio in un flusso di lavoro in modo che l"esecuzione del flusso di lavoro possa continuare anche in caso di errore. È possibile risolvere i passaggi non riusciti e risolvere il problema che ha causato l"errore accedendo al file wfa.log o facendo clic sull"icona.' 
+---
+= Come funziona la funzione continua in caso di guasto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La funzione continua con errore consente di configurare un passaggio in un flusso di lavoro in modo che l'esecuzione del flusso di lavoro possa continuare anche in caso di errore. È possibile risolvere i passaggi non riusciti e risolvere il problema che ha causato l'errore accedendo a. `wfa.log` o facendo clic su image:../media/info_icon_execute_wfa.gif[""] icona.
+
+Un flusso di lavoro con una o più fasi non riuscite si trova in stato parzialmente riuscito al termine dell'esecuzione. È possibile configurare un'operazione in modo che l'esecuzione del flusso di lavoro continui anche in caso di errore selezionando l'opzione richiesta nella scheda Avanzate della finestra di dialogo parametri per <command_name>.
+
+Se un passo non è configurato per continuare in caso di errore, l'esecuzione del flusso di lavoro viene interrotta se il passo non riesce.
+
+Se un passo configurato per continuare in caso di errore non riesce, è possibile impostare il flusso di lavoro in modo che venga eseguito utilizzando una delle seguenti opzioni:
+
+* Interrompere l'esecuzione del flusso di lavoro (opzione predefinita)
+* Continuare l'esecuzione dal passaggio successivo
+* Continuare l'esecuzione dalla riga successiva
+

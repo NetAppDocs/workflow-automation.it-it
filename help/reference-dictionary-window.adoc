@@ -1,0 +1,168 @@
+---
+permalink: help/reference-dictionary-window.html 
+sidebar: sidebar 
+keywords: dictionary, window, display, available, entry, alphabetical order 
+summary: La finestra Dizionario visualizza le voci del dizionario disponibili in ordine alfabetico. 
+---
+= Finestra Dizionario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra Dizionario visualizza le voci del dizionario disponibili in ordine alfabetico.
+
+Una voce del dizionario è la definizione di un tipo di oggetto supportato da OnCommand Workflow Automation (WFA). Ogni voce del dizionario rappresenta un tipo di oggetto e le relative relazioni negli ambienti di storage e relativi allo storage. Le voci del dizionario vengono convertite in tabelle nei database.
+
+
+NOTE: A seconda del ruolo e dei privilegi dell'account, questa finestra potrebbe non essere visualizzata.
+
+
+
+== Tabella Dizionario
+
+La tabella Dizionario elenca le voci disponibili nel dizionario. Ciascuna voce è identificata come una delle seguenti:
+
+* image:../media/community_certification.gif[""] - contenuto creato dagli utenti
+* image:../media/ps_certified_icon_wfa.gif[""] Contenuto sviluppato da Professional Services (PS), disponibile solo per installazioni personalizzate realizzate da PS
+* image:../media/community_certification.gif[""] - pacchetti sviluppati dagli utenti
+* image:../media/lock_icon_wfa.gif[""] - contenuto creato dagli utenti bloccati
+* image:../media/netapp_certified.gif[""] - Contenuti certificati NetApp
+
+
+È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella Dictionary contiene le seguenti colonne:
+
+* *Certificazione*
++
+Indica se la voce del dizionario è stata creata dall'utente (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), community (image:../media/community_certification.gif[""]), bloccato dall'utente (image:../media/lock_icon_wfa.gif[""]), o con certificazione NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Nome*
++
+Visualizza il nome della voce del dizionario.
+
+* *Schema*
++
+Visualizza lo schema associato alle voci del dizionario. Uno schema è un insieme di voci del dizionario che contengono dati rilevanti per il tuo ambiente. Ad esempio, uno schema vc contiene dati rilevanti per l'ambiente virtuale, come macchine virtuali, host e datastore.
+
+* *Versione entità*
++
+Visualizza il numero di versione dell'oggetto in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Descrizione*
++
+Visualizza la descrizione della voce del dizionario.
+
+* *Acquisizione abilitata*
++
+Visualizza un segno di spunta per le voci del dizionario abilitate per l'acquisizione dei dati.
+
+* *Ultimo aggiornamento in data*
++
+Visualizza la data e l'ora dell'ultimo aggiornamento della voce del dizionario.
+
+* *Aggiornato da*
++
+Visualizza il nome dell'utente che ha aggiornato la voce del dizionario.
+
+* *Bloccato da*
++
+Visualizza il nome dell'utente che ha bloccato la voce del dizionario.
+
+* *Chiavi naturali*
++
+Visualizza i tasti naturali associati alle voci del dizionario.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/new_wfa_icon.gif["Nuova icona"] (Novità)*
++
+Apre la finestra New Dictionary Entry (Nuova voce dizionario), che consente di creare una nuova voce del dizionario.
+
+* *image:../media/edit_wfa_icon.gif["Icona Edit (Modifica)"] (Modifica)*
++
+Apre la finestra Dictionary Entry <EntryName> per la voce del dizionario selezionata, che consente di modificare la voce del dizionario.
+
+* *image:../media/clone_wfa_icon.gif["Icona Clona"] (Clone)*
++
+Apre la finestra New Dictionary Entry <EntryName>_copy, che consente di creare una copia della voce del dizionario selezionata.
+
+* *image:../media/lock_wfa_icon.gif["Icona a forma di lucchetto"] (Blocco)*
++
+Apre la finestra di dialogo di conferma Blocca voce dizionario, che consente di bloccare la voce del dizionario selezionata.
+
++
+Questa opzione è abilitata solo per le voci del dizionario create.
+
+* *image:../media/unlock_wfa_icon.gif["Icona di sblocco"] (Sblocca)*
++
+Apre la finestra di dialogo Unlock the Dictionary Entry (Sblocca voce dizionario), che consente di sbloccare la voce del dizionario selezionata.
+
++
+Questa opzione è abilitata solo per le voci del dizionario bloccate. Gli amministratori possono sbloccare le voci del dizionario bloccate da altri utenti.
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo di conferma Elimina voce dizionario, che consente di eliminare la voce del dizionario creata dall'utente.
+
++
+
+NOTE: Non è possibile eliminare una voce del dizionario WFA o una voce del dizionario PS.
+
+* *image:../media/export_wfa_icon.gif["Icona Export (Esporta)"] (Esportazione)*
++
+Consente di esportare la voce del dizionario creata dall'utente.
+
++
+
+NOTE: Non è possibile esportare una voce del dizionario WFA o una voce del dizionario PS.
+
+* *image:../media/enable_acquisition_wfa_icon.gif["Attiva l'icona di acquisizione"] (Attiva acquisizione)*
++
+Fornisce l'opzione per abilitare l'acquisizione della cache per la voce del dizionario selezionata.
+
+* *image:../media/disable_acquisition_wfa_icon.gif["Icona di disattivazione dell'acquisizione"] (Disattiva acquisizione)*
++
+Consente di disattivare l'acquisizione della cache per la voce del dizionario selezionata.
+
+* *image:../media/reset_scheme_wfa_icon.gif["Icona di ripristino dello schema"] (Ripristina schema)*
++
+Consente di reimpostare lo schema associato alla voce del dizionario selezionata.
+
+* *image:../media/add_to_pack.png["icona add to pack (aggiungi al pacchetto)"] (Aggiungi al pacchetto)*
++
+Apre la finestra di dialogo Add to Pack Dictionary, che consente di aggiungere la voce del dizionario e le relative entità affidabili a un pacchetto, modificabile.
+
++
+
+NOTE: La funzione Add to Pack (Aggiungi al pacchetto) è attivata solo per le voci del dizionario per cui la certificazione è impostata su *None.*
+
+* *image:../media/remove_from_pack.png["icona remove from pack (rimuovi dalla confezione)"] (Remove from Pack)*
++
+Apre la finestra di dialogo Remove from Pack Dictionary (Rimuovi dal dizionario pacchetto) per la voce del dizionario selezionata, che consente di eliminare o rimuovere la voce del dizionario dal pacchetto.
+
++
+
+NOTE: La funzione Remove from Pack (Rimuovi dal pacchetto) è attivata solo per le voci del dizionario per le quali la certificazione è impostata su *None.*
+
+* *image:../media/inventory.png[""] (Inventario)*
++
+Apre la finestra di dialogo inventario per la voce del dizionario selezionata, che consente di visualizzare i dati della tabella.
+
+

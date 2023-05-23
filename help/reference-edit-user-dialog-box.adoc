@@ -1,0 +1,74 @@
+---
+permalink: help/reference-edit-user-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, user, dialog box, enable, view, modify, account, settings 
+summary: 'La finestra di dialogo Edit User (Modifica utente) consente di visualizzare e modificare le impostazioni dell"account utente.' 
+---
+= Finestra di dialogo Edit User (Modifica utente)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Edit User (Modifica utente) consente di visualizzare e modificare le impostazioni dell'account utente.
+
+A seconda dei privilegi e del ruolo dell'account, potrebbe non essere possibile accedere alla finestra utenti. Tuttavia, è possibile modificare le impostazioni dell'account selezionando *Impostazioni* e in *Gestione* fare clic su *Impostazioni account*.
+
+
+NOTE: I campi disponibili per la modifica dipendono dal ruolo assegnato e dai privilegi dell'account.
+
+* *Nome*
++
+Visualizza il nome utente dell'account utente.
+
+* *Ruolo*
++
+Visualizza il ruolo assegnato per l'account utente.
+
+* *E-mail*
++
+Specifica il messaggio di posta elettronica per l'account utente a cui vengono inviate le notifiche se è selezionata l'opzione notifica attivata.
+
+* *Modifica password*
++
+Consente di modificare la password corrente per l'account utente. Quando questa casella di controllo è selezionata, sono obbligatori i seguenti campi:
+
++
+** *Nuova password*--specifica la nuova password.
+** *Confirm*--specifica nuovamente la nuova password.
+
+
+* *Notifica attivata*
++
+Consente di selezionare quando l'utente dell'account deve essere avvisato tramite e-mail durante l'esecuzione del flusso di lavoro. Quando questa casella di controllo è selezionata, è possibile selezionare qualsiasi combinazione delle seguenti opzioni:
+
++
+** Esecuzione del flusso di lavoro avviata: Notifica all'utente quando inizia l'esecuzione del flusso di lavoro.
+** Esecuzione del flusso di lavoro non riuscita/parzialmente riuscita: Notifica all'utente se l'esecuzione del flusso di lavoro non riesce o se il flusso di lavoro è stato eseguito correttamente anche se una o più fasi non sono riuscite.
++
+L'esecuzione viene completata perché i passaggi non riusciti sono stati configurati in modo che l'esecuzione del flusso di lavoro continui anche quando il passaggio non è riuscito.
+
+** Esecuzione del flusso di lavoro completata correttamente: Notifica all'utente quando l'esecuzione del flusso di lavoro è stata completata correttamente.
+** Esecuzione del flusso di lavoro in attesa di approvazione: Notifica all'utente se l'esecuzione del flusso di lavoro è in attesa di approvazione da parte di un utente Operator o Architect, a seconda dell'impostazione di configurazione WFA.
+** Acquisition failure (errore di acquisizione): Notifica all'utente quando l'acquisizione dei dati per le origini dati non riesce.
++
+Questa opzione è abilitata solo per gli utenti Admin e Architect.
+
+
+
+
+
+
+
+== Pulsanti di comando
+
+* *Salva*
++
+Salva le impostazioni di configurazione e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le eventuali modifiche e chiude la finestra di dialogo.
+
+

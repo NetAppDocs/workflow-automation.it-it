@@ -1,0 +1,131 @@
+---
+permalink: help/reference-packs-window.html 
+sidebar: sidebar 
+keywords: pack, window, display, oncommand, automation, pack, imported, available, server, contain, information, file, workflow, commands, filters, functions, finders, templates 
+summary: La finestra pacchetti visualizza i pacchetti WFA di OnCommand Workflow Automation importati e disponibili nel server WFA. Ogni pacchetto contiene il file di informazioni sul pacchetto e il contenuto WFA, ad esempio flussi di lavoro, comandi, filtri, funzioni, finder e modelli. 
+---
+= Finestra dei pacchetti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra pacchetti visualizza i pacchetti WFA di OnCommand Workflow Automation importati e disponibili nel server WFA. Ogni pacchetto contiene il file di informazioni sul pacchetto e il contenuto WFA, ad esempio flussi di lavoro, comandi, filtri, funzioni, finder e modelli.
+
+* Tabella dei pacchetti
+* Barra degli strumenti
+
+
+
+
+== Tabella dei pacchetti
+
+La tabella dei pacchetti elenca in formato tabulare i pacchetti WFA disponibili nel server WFA. È possibile personalizzare la visualizzazione della tabella utilizzando le funzioni di filtraggio e ordinamento disponibili per ciascuna colonna, nonché riordinando l'ordine delle colonne.
+
+* image:../media/filter_icon_wfa.gif["Icona del filtro"] attiva o disattiva il filtraggio per l'intera tabella. Se il filtraggio è disattivato, sull'icona viene visualizzata una "x" rossa.
+* Doppio clic image:../media/filter_icon_wfa.gif["Icona del filtro"] cancella e ripristina le selezioni di filtraggio.
+* image:../media/wfa_filter_icon.gif["Icona del filtro"] in ciascuna intestazione di colonna è possibile filtrare in base al contenuto delle colonne. Fare clic su image:../media/wfa_filter_icon.gif["Icona del filtro"] in una colonna consente di filtrare un elemento specifico dall'elenco a discesa o da tutti gli elementi disponibili.
+* Fare clic sull'intestazione della colonna per alternare l'ordinamento crescente e decrescente. È possibile identificare l'ordinamento applicato in base alle frecce di ordinamento (image:../media/wfa_sortarrow_up_icon.gif["Icona di ordinamento"] per le operazioni in salita e. image:../media/wfa_sortarrow_down_icon.gif["Icona di ordinamento in basso"] per la discesa).
+* Per riorganizzare la posizione delle colonne, è possibile trascinare le colonne per posizionarle nell'ordine desiderato. Tuttavia, non è possibile nascondere o eliminare nessuna di queste colonne.
+* Facendo clic sulla casella di testo del filtro *Cerca* è possibile cercare contenuti specifici. Inoltre, è possibile effettuare una ricerca utilizzando gli operatori supportati per il tipo di colonna applicabile, alfabetico o numerico.
+
+
+La tabella dei pacchetti contiene le seguenti colonne:
+
+* *Certificazione*
++
+Indica se il pacchetto è stato creato dall'utente (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), community (image:../media/community_certification.gif[""]), bloccato dall'utente (image:../media/lock_icon_wfa.gif[""]), o con certificazione NetApp (image:../media/netapp_certified.gif[""])
+
++
+È possibile cercare i pacchetti selezionando le caselle di controllo dell'opzione desiderata dall'elenco dei filtri.
+
+* *Nome*
++
+Visualizza il nome del pacchetto.
+
++
+È possibile cercare un pacchetto inserendo il nome nella casella di testo *Search* filter (filtro *Ricerca*).
+
+* *Descrizione*
++
+Visualizza la descrizione del pacchetto.
+
++
+È possibile cercare un pacchetto inserendo la relativa descrizione nella casella di testo *Search* filter (filtro *Ricerca*).
+
+* *Versione entità*
++
+Visualizza il numero di versione del pacchetto in `major.minor.revision` format--ad esempio, 1.0.0.
+
+* *Ultimo aggiornamento in data*
++
+Visualizza la data e l'ora in cui il pacchetto è stato aggiornato.
+
++
+È possibile cercare i pacchetti selezionando la categoria di tempo richiesta dall'elenco a discesa del filtro.
+
+* *Aggiornato da*
++
+Visualizza il nome dell'utente che ha aggiornato il pacchetto.
+
++
+È possibile cercare un pacchetto inserendo il nome utente nella casella di testo del filtro *Cerca*.
+
+* *Dettagli*
++
+Visualizza i dettagli del pacchetto nel sito Web Storage Automation Store.
+
+
+
+
+
+== Barra degli strumenti
+
+La barra degli strumenti si trova sopra l'intestazione della colonna. È possibile utilizzare le icone della barra degli strumenti per eseguire varie azioni. È possibile accedere a queste azioni anche dal menu di scelta rapida nella finestra.
+
+* *image:../media/new_pack.png[""](Novità)*
++
+Apre la finestra di dialogo nuovo pacchetto, che consente di creare un nuovo pacchetto.
+
+* *image:../media/details_wfa_icon.gif["Icona Dettagli"] (Modifica)*
++
+Apre la finestra di dialogo contenuto pacchetto, che contiene le seguenti schede per informazioni dettagliate sul contenuto dei pacchetti:
+
++
+** Flussi di lavoro
+** I finder
+** Filtri
+** Comandi
+** Funzioni
+** Modelli
+** Dizionario
+** Schemi
+** Query della cache
+** Tipi di origine dati SQL
+** Tipi di origine dati script
+** Tipi di sistema remoto
+** Categorie
+
+
+* *image:../media/delete_wfa_icon.gif["Icona Elimina"] (Elimina)*
++
+Apre la finestra di dialogo Delete Pack confirmation (Conferma eliminazione pacchetto), che consente di eliminare il pacchetto selezionato.
+
+* *image:../media/unlock_wfa_icon.gif["Icona di sblocco"] (Sblocca)*
++
+Apre la finestra di dialogo Unlock Pack confirmation (Conferma sblocco pacchetto), che consente di sbloccare il pacchetto selezionato. Questa opzione è attivata solo per i pacchetti bloccati dall'utente. Tuttavia, gli amministratori possono sbloccare i pacchetti bloccati da altri utenti.
+
+* *image:../media/export_wfa_icon.gif["Icona Export (Esporta)"] (Esportazione)*
++
+Apre la finestra di dialogo Esporta, che consente di esportare il pacchetto selezionato.
+
+* *image:../media/import_from_server_folder.png[""] (Importa da cartella server)*
++
+Apre la finestra di dialogo Importa da cartella server, che consente di importare il pacchetto dalla posizione della cartella selezionata nel sistema server.
+
+* *image:../media/export_to_server_folder.png[""] (Esporta in cartella server)*
++
+Apre la finestra di dialogo Export to Server Folder (Esporta in cartella server), che consente di esportare il pacchetto nella cartella selezionata nel sistema server.
+
+
