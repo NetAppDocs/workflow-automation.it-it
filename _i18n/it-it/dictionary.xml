@@ -4833,7 +4833,6 @@
   <block id="2a63efbec52d8b2e0ea549ccad861fbe" category="paragraph">La versione più recente dei toolkit e dei core pack è disponibile dopo un'operazione di ripristino.</block>
   <block id="bcc7c0cdb2b134eccb8e9fdc3a8bbec2" category="admonition">Se il backup include pacchetti più recenti rispetto a quelli presenti sul sistema, sono disponibili i pacchetti successivi al ripristino.</block>
   <block id="42109b6698ffd636ec475442e6fe4b86" category="paragraph">Prima di importare un core pack, è necessario interrompere qualsiasi flusso di lavoro in esecuzione.</block>
-  <block id="95026804993f8a9226db7022cae41c9f" category="sidebar">Documenti di OnCommand Workflow Automation 5.1</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Note di rilascio</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Inizia subito</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">Note di rilascio</block>
@@ -4891,4 +4890,5 @@
   <block id="4c14da102137cfdc0846add51f76dd18" category="sidebar">Configurazione della guida di OnCommand Workflow Automation</block>
   <block id="492ccb4e44088a9740d152295f938bfb" category="sidebar">Configurare la guida SNMP</block>
   <block id="9af2f59c7f6e2e7dc584af7ea83ef4d7" category="sidebar">Finestra Workflow &lt;workflow name&gt;</block>
+  <block id="0d47320e619045e2de820e0c0e5fbcf0" category="sidebar">Documenti OnCommand Workflow Automation</block>
 </blocks>
